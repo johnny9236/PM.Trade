@@ -1,0 +1,9 @@
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.Task\PM.TaskBiz\PM.TaskBizInterface\bin\Debug\PM.TaskBizInterface.dll
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.Task\PM.TaskBiz\PM.TaskBizInterface\bin\Debug\PM.TaskBizInterface.pdb
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.Task\PM.TaskBiz\PM.TaskBizInterface\obj\Debug\PM.TaskBizInterface.dll
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.Task\PM.TaskBiz\PM.TaskBizInterface\obj\Debug\PM.TaskBizInterface.pdb
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.Task\PM.TaskBizInterface\bin\Debug\PM.TaskBizInterface.XML
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.Task\PM.TaskBizInterface\bin\Debug\PM.TaskBizInterface.dll
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.Task\PM.TaskBizInterface\bin\Debug\PM.TaskBizInterface.pdb
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.Task\PM.TaskBizInterface\obj\Debug\PM.TaskBizInterface.dll
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.Task\PM.TaskBizInterface\obj\Debug\PM.TaskBizInterface.pdb

@@ -1,0 +1,2764 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PM_QYKModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="PM_QYKModelStoreContainer">
+          <EntitySet Name="Corp_AgencyDetailInfo" EntityType="PM_QYKModel.Store.Corp_AgencyDetailInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Corp_Attachment" EntityType="PM_QYKModel.Store.Corp_Attachment" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Corp_BasicInfo" EntityType="PM_QYKModel.Store.Corp_BasicInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Corp_BiddingRecord" EntityType="PM_QYKModel.Store.Corp_BiddingRecord" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Corp_BiddingRecordRelationShip" EntityType="PM_QYKModel.Store.Corp_BiddingRecordRelationShip" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Corp_BulidingProject" EntityType="PM_QYKModel.Store.Corp_BulidingProject" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Corp_CapitalFund" EntityType="PM_QYKModel.Store.Corp_CapitalFund" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Corp_CapitalfundDetails" EntityType="PM_QYKModel.Store.Corp_CapitalfundDetails" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Corp_CARegist" EntityType="PM_QYKModel.Store.Corp_CARegist" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Corp_CARegistFail" EntityType="PM_QYKModel.Store.Corp_CARegistFail" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Corp_Certificate" EntityType="PM_QYKModel.Store.Corp_Certificate" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Corp_ChangeDataBak" EntityType="PM_QYKModel.Store.Corp_ChangeDataBak" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Corp_ChangeRecord" EntityType="PM_QYKModel.Store.Corp_ChangeRecord" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Corp_ChangeRecordItem" EntityType="PM_QYKModel.Store.Corp_ChangeRecordItem" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Corp_CheckInfos" EntityType="PM_QYKModel.Store.Corp_CheckInfos" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Corp_CheckOrderRecord" EntityType="PM_QYKModel.Store.Corp_CheckOrderRecord" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Corp_CheckQueue" EntityType="PM_QYKModel.Store.Corp_CheckQueue" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Corp_CreditInfo" EntityType="PM_QYKModel.Store.Corp_CreditInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Corp_DetailInfo" EntityType="PM_QYKModel.Store.Corp_DetailInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Corp_EnterAptitude" EntityType="PM_QYKModel.Store.Corp_EnterAptitude" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Corp_EnterpriseInfo" EntityType="PM_QYKModel.Store.Corp_EnterpriseInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Corp_Equipment" EntityType="PM_QYKModel.Store.Corp_Equipment" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Corp_ExtendInfo" EntityType="PM_QYKModel.Store.Corp_ExtendInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Corp_Financial" EntityType="PM_QYKModel.Store.Corp_Financial" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Corp_HolidaySettings" EntityType="PM_QYKModel.Store.Corp_HolidaySettings" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Corp_Manager" EntityType="PM_QYKModel.Store.Corp_Manager" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Corp_ManagerAptitudeCert" EntityType="PM_QYKModel.Store.Corp_ManagerAptitudeCert" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Corp_PausingRecord" EntityType="PM_QYKModel.Store.Corp_PausingRecord" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Corp_PurchaserDetailInfo" EntityType="PM_QYKModel.Store.Corp_PurchaserDetailInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Corp_RecordStatus" EntityType="PM_QYKModel.Store.Corp_RecordStatus" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Corp_SupplierDetailInfo" EntityType="PM_QYKModel.Store.Corp_SupplierDetailInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_HY_AptitudeCode" EntityType="PM_QYKModel.Store.T_HY_AptitudeCode" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_HY_EnterpriseSpeciality" EntityType="PM_QYKModel.Store.T_HY_EnterpriseSpeciality" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_HY_EntrpriseInfo" EntityType="PM_QYKModel.Store.T_HY_EntrpriseInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_HY_Personnel" EntityType="PM_QYKModel.Store.T_HY_Personnel" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_HY_PersonnelSpeciality" EntityType="PM_QYKModel.Store.T_HY_PersonnelSpeciality" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Corp_AgencyDetailInfo">
+          <Key>
+            <PropertyRef Name="CorpId" />
+          </Key>
+          <Property Name="CorpId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EnterShortName" Type="nvarchar" MaxLength="100" />
+          <Property Name="EnterType" Type="nvarchar" MaxLength="50" />
+          <Property Name="Summary" Type="nvarchar" MaxLength="100" />
+          <Property Name="SaveCode" Type="nvarchar" MaxLength="200" />
+          <Property Name="HigherEnter" Type="nvarchar" MaxLength="200" />
+          <Property Name="TaxOrg" Type="nvarchar" MaxLength="100" />
+          <Property Name="EmployNum" Type="int" />
+          <Property Name="TrainNum" Type="int" />
+          <Property Name="AboveSpecialNum" Type="int" />
+          <Property Name="HighPositionNum" Type="int" />
+          <Property Name="TotalSssets" Type="money" />
+          <Property Name="OwnerInterest" Type="money" />
+          <Property Name="TotalDebt" Type="money" />
+          <Property Name="IsSocialSecurity" Type="int" />
+          <Property Name="IsPayTax" Type="int" />
+          <Property Name="IsBreakLaw" Type="int" />
+          <Property Name="AptitudeName" Type="nvarchar" MaxLength="50" />
+          <Property Name="AptitudeCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="AptitudeNO" Type="nvarchar" MaxLength="50" />
+          <Property Name="ApprovOrg" Type="nvarchar" MaxLength="100" />
+          <Property Name="ApprovDate" Type="datetime" />
+          <Property Name="AptitudeEndDate" Type="datetime" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Corp_Attachment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="AttachmentType" Type="int" />
+          <Property Name="EntityId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FileName" Type="nvarchar" MaxLength="200" />
+          <Property Name="FileCode" Type="nvarchar" MaxLength="200" />
+          <Property Name="FilePath" Type="nvarchar" MaxLength="1000" />
+          <Property Name="FileSize" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Corp_BasicInfo">
+          <Key>
+            <PropertyRef Name="CorpId" />
+          </Key>
+          <Property Name="CorpId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EnterpriseId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CorpName" Type="nvarchar" MaxLength="100" />
+          <Property Name="OrganizationalCode" Type="nvarchar" MaxLength="200" />
+          <Property Name="CorpType" Type="nvarchar" MaxLength="50" />
+          <Property Name="ScopeofBusiness" Type="nvarchar" MaxLength="50" />
+          <Property Name="BusinessScope" Type="nvarchar" MaxLength="2000" />
+          <Property Name="SecondBusinessScope" Type="nvarchar" MaxLength="2000" />
+          <Property Name="RegistrationNumber" Type="nvarchar" MaxLength="40" />
+          <Property Name="RegisterAuthority" Type="nvarchar" MaxLength="255" />
+          <Property Name="RegisteredCapital" Type="float" Nullable="false" />
+          <Property Name="LegalRepresentative" Type="nvarchar" MaxLength="50" />
+          <Property Name="LawerMobile" Type="nvarchar" MaxLength="100" />
+          <Property Name="LawerContact" Type="nvarchar" MaxLength="100" />
+          <Property Name="LegalCertType" Type="nvarchar" MaxLength="50" />
+          <Property Name="LegalCertTypeCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="LegalCertNO" Type="nvarchar" MaxLength="50" />
+          <Property Name="AreaCode" Type="nvarchar" MaxLength="40" />
+          <Property Name="AreaName" Type="nvarchar" MaxLength="50" />
+          <Property Name="SetUpTime" Type="datetime" />
+          <Property Name="OpenBank" Type="nvarchar" MaxLength="50" />
+          <Property Name="BankUserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="BankAccountNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="BankFilePath" Type="nvarchar" MaxLength="2000" />
+          <Property Name="PayBankName" Type="nvarchar" MaxLength="50" />
+          <Property Name="PayBankProvince" Type="nvarchar" MaxLength="50" />
+          <Property Name="PayBankCity" Type="nvarchar" MaxLength="50" />
+          <Property Name="PayBankId" Type="nvarchar" MaxLength="50" />
+          <Property Name="PayBankNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="255" />
+          <Property Name="PostCode" Type="nvarchar" MaxLength="10" />
+          <Property Name="LinkMan" Type="nvarchar" MaxLength="50" />
+          <Property Name="LinkPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="LinkManDuty" Type="nvarchar" MaxLength="50" />
+          <Property Name="LinkMobile" Type="nvarchar" MaxLength="50" />
+          <Property Name="LinkFax" Type="nvarchar" MaxLength="50" />
+          <Property Name="LinkEmail" Type="nvarchar" MaxLength="20" />
+          <Property Name="Website" Type="nvarchar" MaxLength="200" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+          <Property Name="RecordNO" Type="nvarchar" MaxLength="50" />
+          <Property Name="RecordEndDate" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsPass" Type="int" Nullable="false" />
+          <Property Name="IsLocked" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="ComeFrom" Type="nvarchar" MaxLength="2" />
+          <Property Name="InputMan" Type="nvarchar" MaxLength="50" />
+          <Property Name="InputDate" Type="datetime" />
+          <Property Name="CreatUserId" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="submitcontent" Type="ntext" />
+          <Property Name="LegalPosition" Type="nvarchar" MaxLength="50" />
+          <Property Name="TradeStatus" Type="int" Nullable="false" />
+          <Property Name="TradeType" Type="nvarchar" MaxLength="50" />
+          <Property Name="TradeTypeCode" Type="nvarchar" MaxLength="100" />
+          <Property Name="RegistMoneyType" Type="nvarchar" MaxLength="20" />
+          <Property Name="IsInsuredMember" Type="bit" />
+          <Property Name="LastUpdateTime" Type="datetime" />
+          <Property Name="IsPreEntrepreneur" Type="bit" />
+        </EntityType>
+        <EntityType Name="Corp_BiddingRecord">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CorpId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="RecordName" Type="nvarchar" MaxLength="255" />
+          <Property Name="RecordNO" Type="nvarchar" MaxLength="50" />
+          <Property Name="RecordAptitudeCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="RecordAptitude" Type="nvarchar" MaxLength="255" />
+          <Property Name="GiveOrg" Type="nvarchar" MaxLength="200" />
+          <Property Name="GiveDate" Type="datetime" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="2000" />
+          <Property Name="DataStaus" Type="int" />
+          <Property Name="LastUpdateTime" Type="datetime" Nullable="false" />
+          <Property Name="LastUserId" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Corp_BiddingRecordRelationShip">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="AptitudeType" Type="int" Nullable="false" />
+          <Property Name="BiddingRecordId" Type="uniqueidentifier" />
+          <Property Name="EntityId" Type="uniqueidentifier" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Corp_BulidingProject">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CorpId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="MID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProManager" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProName" Type="nvarchar" MaxLength="200" />
+          <Property Name="Scale" Type="nvarchar" MaxLength="50" />
+          <Property Name="ContractTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="200" />
+          <Property Name="ProStatus" Type="int" Nullable="false" />
+          <Property Name="ProAddr" Type="nvarchar" MaxLength="200" />
+          <Property Name="SenderName" Type="nvarchar" MaxLength="200" />
+          <Property Name="SenderAddr" Type="nvarchar" MaxLength="200" />
+          <Property Name="SenderLink" Type="nvarchar" MaxLength="200" />
+          <Property Name="ContractPrice" Type="float" Nullable="false" />
+          <Property Name="StartTime" Type="nvarchar" MaxLength="20" />
+          <Property Name="EndTime" Type="nvarchar" MaxLength="20" />
+          <Property Name="DoWork" Type="nvarchar" MaxLength="200" />
+          <Property Name="Quality" Type="nvarchar" MaxLength="200" />
+          <Property Name="TecManager" Type="nvarchar" MaxLength="50" />
+          <Property Name="MainTecPhone" Type="nvarchar" MaxLength="200" />
+          <Property Name="ProDetail" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Pid" Type="uniqueidentifier" />
+          <Property Name="OrgMan" Type="nvarchar" MaxLength="200" />
+          <Property Name="Structure" Type="nvarchar" MaxLength="200" />
+          <Property Name="AgentCode" Type="nvarchar" MaxLength="200" />
+          <Property Name="AgentName" Type="nvarchar" MaxLength="200" />
+          <Property Name="ProjBidTm" Type="datetime" />
+          <Property Name="ProjmanagerPhone" Type="varchar" MaxLength="50" />
+          <Property Name="ProjAreaCode" Type="varchar" MaxLength="50" />
+          <Property Name="Creator" Type="uniqueidentifier" />
+          <Property Name="CreatDate" Type="datetime" />
+          <Property Name="LastUpdateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Corp_CapitalFund">
+          <Key>
+            <PropertyRef Name="CorpId" />
+          </Key>
+          <Property Name="CorpId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FixedAssets" Type="float" Nullable="false" />
+          <Property Name="MoveAssets" Type="float" Nullable="false" />
+          <Property Name="RealPaid" Type="float" Nullable="false" />
+          <Property Name="DebtMoney" Type="float" Nullable="false" />
+          <Property Name="FirYear" Type="nvarchar" MaxLength="10" />
+          <Property Name="FirYearEarn" Type="float" Nullable="false" />
+          <Property Name="SecYear" Type="nvarchar" MaxLength="10" />
+          <Property Name="SecYearEarn" Type="float" Nullable="false" />
+          <Property Name="ThirdYear" Type="nvarchar" MaxLength="10" />
+          <Property Name="ThidYearEarn" Type="float" Nullable="false" />
+          <Property Name="FirYearJEarn" Type="float" Nullable="false" />
+          <Property Name="SecFixedAssets" Type="float" Nullable="false" />
+          <Property Name="SecMoveAssets" Type="float" Nullable="false" />
+          <Property Name="SecRealPaid" Type="float" Nullable="false" />
+          <Property Name="SecDebtMoney" Type="float" Nullable="false" />
+          <Property Name="SecJEarn" Type="float" Nullable="false" />
+          <Property Name="ThidFixedAssets" Type="float" Nullable="false" />
+          <Property Name="ThidMoveAssets" Type="float" Nullable="false" />
+          <Property Name="ThidRealPaid" Type="float" Nullable="false" />
+          <Property Name="ThidDebtMoney" Type="float" Nullable="false" />
+          <Property Name="ThidThidJEarn" Type="float" Nullable="false" />
+          <Property Name="FstOutputVal" Type="float" Nullable="false" />
+          <Property Name="SedOutputVal" Type="float" Nullable="false" />
+          <Property Name="ThrdOutputVal" Type="float" Nullable="false" />
+          <Property Name="FstTax" Type="float" Nullable="false" />
+          <Property Name="SedTax" Type="float" Nullable="false" />
+          <Property Name="ThrdTax" Type="float" Nullable="false" />
+          <Property Name="FstContract" Type="float" Nullable="false" />
+          <Property Name="SedContract" Type="float" Nullable="false" />
+          <Property Name="ThrdContract" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Corp_CapitalfundDetails">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="StatisYear" Type="int" Nullable="false" />
+          <Property Name="CorpId" Type="uniqueidentifier" />
+          <Property Name="FixedAssets" Type="float" />
+          <Property Name="MoveAssets" Type="float" />
+          <Property Name="RealPaid" Type="float" />
+          <Property Name="DebtMoney" Type="float" />
+          <Property Name="Turnover" Type="float" />
+          <Property Name="NetProfits" Type="float" />
+          <Property Name="OutputValue" Type="float" />
+          <Property Name="Tax" Type="float" />
+          <Property Name="Contract" Type="float" />
+        </EntityType>
+        <EntityType Name="Corp_CARegist">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PID" Type="nvarchar" MaxLength="50" />
+          <Property Name="CorpId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="RegType" Type="int" Nullable="false" />
+          <Property Name="KeyNO" Type="nvarchar" MaxLength="200" />
+          <Property Name="KeyName" Type="nvarchar" MaxLength="200" />
+          <Property Name="CertNum" Type="nvarchar" MaxLength="200" />
+          <Property Name="InitZTBTime" Type="int" Nullable="false" />
+          <Property Name="ZTBUseTime" Type="int" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="100" />
+          <Property Name="Phone" Type="varchar" MaxLength="100" />
+          <Property Name="TradingLicense" Type="varchar" MaxLength="100" />
+          <Property Name="IsSale" Type="int" Nullable="false" />
+          <Property Name="SalesTime" Type="datetime" />
+          <Property Name="SalesPrice" Type="money" Nullable="false" />
+          <Property Name="AreaCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="KeyStatus" Type="int" Nullable="false" />
+          <Property Name="RealNO" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsMainKey" Type="int" Nullable="false" />
+          <Property Name="CreatUserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Corp_CARegistFail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PId" Type="nvarchar" MaxLength="50" />
+          <Property Name="RegType" Type="int" Nullable="false" />
+          <Property Name="KeyNO" Type="nvarchar" MaxLength="200" />
+          <Property Name="KeyName" Type="nvarchar" MaxLength="200" />
+          <Property Name="CertNum" Type="nvarchar" MaxLength="200" />
+          <Property Name="InitZTBTime" Type="int" Nullable="false" />
+          <Property Name="ZTBUseTime" Type="int" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="100" />
+          <Property Name="Phone" Type="varchar" MaxLength="100" />
+          <Property Name="TradingLicense" Type="varchar" MaxLength="100" />
+          <Property Name="IsSale" Type="int" Nullable="false" />
+          <Property Name="SalesTime" Type="datetime" />
+          <Property Name="SalesPrice" Type="money" Nullable="false" />
+          <Property Name="AreaCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="KeyStatus" Type="int" Nullable="false" />
+          <Property Name="IsSuccess" Type="int" Nullable="false" />
+          <Property Name="FailReason" Type="nvarchar" MaxLength="200" />
+          <Property Name="CreatUserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="CorpId" Type="nvarchar" MaxLength="50" />
+          <Property Name="RealNO" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsMainKey" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Corp_Certificate">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CorpId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CertType" Type="nvarchar" MaxLength="50" />
+          <Property Name="CertTypeName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CertName" Type="nvarchar" MaxLength="200" />
+          <Property Name="CertCode" Type="nvarchar" MaxLength="200" />
+          <Property Name="CertStartDate" Type="datetime" />
+          <Property Name="CertEndDate" Type="datetime" />
+          <Property Name="GiveOrg" Type="nvarchar" MaxLength="200" />
+          <Property Name="CertGiveDate" Type="datetime" />
+          <Property Name="BZ" Type="nvarchar" MaxLength="200" />
+          <Property Name="FilePath" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatUserId" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="GradeName" Type="nvarchar" MaxLength="100" />
+          <Property Name="GradeCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="Subject" Type="nvarchar" MaxLength="50" />
+          <Property Name="FileName" Type="nvarchar" MaxLength="255" />
+          <Property Name="LastUpdateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Corp_ChangeDataBak">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ParentId" Type="uniqueidentifier" />
+          <Property Name="EntityId" Type="uniqueidentifier" />
+          <Property Name="CorpInfoTabType" Type="int" />
+          <Property Name="ChangeTableName" Type="nvarchar" MaxLength="255" />
+          <Property Name="ChangeType" Type="int" />
+          <Property Name="JsonValue" Type="text" />
+          <Property Name="ExtendValue" Type="text" />
+          <Property Name="Creator" Type="uniqueidentifier" />
+          <Property Name="CreatDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Corp_ChangeRecord">
+          <Key>
+            <PropertyRef Name="ChangeRecordId" />
+          </Key>
+          <Property Name="ChangeRecordId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CorpId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="submitcontent" Type="nvarchar" MaxLength="1024" />
+          <Property Name="CreateUserId" Type="uniqueidentifier" />
+          <Property Name="CreateUserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="HasAttachFile" Type="int" Nullable="false" />
+          <Property Name="RefEntityRecordId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="Corp_ChangeRecordItem">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EntityId" Type="uniqueidentifier" />
+          <Property Name="CorpInfoTabType" Type="int" />
+          <Property Name="ChangeRecordId" Type="uniqueidentifier" />
+          <Property Name="ChangeTableName" Type="nvarchar" MaxLength="255" />
+          <Property Name="FieldName" Type="nvarchar" MaxLength="255" />
+          <Property Name="CurrentValue" Type="nvarchar" MaxLength="2000" />
+          <Property Name="NewValue" Type="nvarchar" MaxLength="2000" />
+          <Property Name="CustomField1" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreateUserId" Type="uniqueidentifier" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="FilePath" Type="nvarchar" MaxLength="255" />
+          <Property Name="DisplayName" Type="nvarchar" MaxLength="255" />
+          <Property Name="ChangeType" Type="int" />
+          <Property Name="IsHiden" Type="bit" />
+          <Property Name="CurrentDisplayValue" Type="nvarchar(max)" />
+          <Property Name="NewDisplayValue" Type="nvarchar" MaxLength="2000" />
+          <Property Name="IsAttachment" Type="bit" />
+          <Property Name="AttachmentRelationId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="Corp_CheckInfos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CorpId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CorpType" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="TabType" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Result" Type="int" Nullable="false" />
+          <Property Name="Createtime" Type="datetime" Nullable="false" />
+          <Property Name="SubmitContent" Type="nvarchar" MaxLength="2000" />
+          <Property Name="Creator" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="AuditingType" Type="int" />
+          <Property Name="Status" Type="int" />
+          <Property Name="FlowInstanceId" Type="uniqueidentifier" />
+          <Property Name="TaskId" Type="uniqueidentifier" />
+          <Property Name="ReceviceTime" Type="datetime" />
+          <Property Name="IsCurrent" Type="bit" />
+        </EntityType>
+        <EntityType Name="Corp_CheckOrderRecord">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="OrderId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EnterpriseId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CorpId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EntityId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="OrderType" Type="int" Nullable="false" />
+          <Property Name="OrderDate" Type="datetime" />
+          <Property Name="CheckUserId" Type="uniqueidentifier" />
+          <Property Name="DateKind" Type="int" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="2000" />
+          <Property Name="CreateId" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Corp_CheckQueue">
+          <Key>
+            <PropertyRef Name="QueueId" />
+          </Key>
+          <Property Name="QueueId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CheckUserId" Type="uniqueidentifier" />
+          <Property Name="Count" Type="int" />
+          <Property Name="TemplateType" Type="int" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="CreateId" Type="uniqueidentifier" />
+          <Property Name="Status" Type="int" />
+          <Property Name="ResetDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Corp_CreditInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CorpId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Records" Type="nvarchar" MaxLength="500" />
+          <Property Name="CreatUserId" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="FilePath" Type="nvarchar" MaxLength="255" />
+          <Property Name="Pid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Mid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TypeCode" Type="nvarchar" MaxLength="200" />
+          <Property Name="TypeName" Type="nvarchar" MaxLength="200" />
+          <Property Name="ProID" Type="varchar" MaxLength="50" />
+          <Property Name="BegDate" Type="datetime" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="ValidityTime" Type="int" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" />
+          <Property Name="HonorType" Type="varchar" MaxLength="50" />
+          <Property Name="TypeID" Type="varchar" MaxLength="50" />
+          <Property Name="FileName" Type="nvarchar" MaxLength="255" />
+          <Property Name="LastUpdateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Corp_DetailInfo">
+          <Key>
+            <PropertyRef Name="CorpId" />
+          </Key>
+          <Property Name="CorpId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EnterBH" Type="nvarchar" MaxLength="50" />
+          <Property Name="TradeCardNum" Type="nvarchar" MaxLength="40" />
+          <Property Name="UnitCardStTime" Type="datetime" />
+          <Property Name="UnitCardEdTime" Type="datetime" />
+          <Property Name="UnitTradCode" Type="nvarchar" MaxLength="200" />
+          <Property Name="UnitAddr" Type="nvarchar" MaxLength="200" />
+          <Property Name="UnitZipCode" Type="nvarchar" MaxLength="10" />
+          <Property Name="LocalAddr" Type="nvarchar" MaxLength="200" />
+          <Property Name="LocalZipCode" Type="nvarchar" MaxLength="10" />
+          <Property Name="QualLevel" Type="nvarchar" MaxLength="50" />
+          <Property Name="QualSignNum" Type="nvarchar" MaxLength="50" />
+          <Property Name="TecManager" Type="nvarchar" MaxLength="50" />
+          <Property Name="TecPosition" Type="nvarchar" MaxLength="50" />
+          <Property Name="TecPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="BranchLinkMan" Type="nvarchar" MaxLength="50" />
+          <Property Name="BranchLinkManPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="MainDepart" Type="nvarchar" MaxLength="50" />
+          <Property Name="NowWorkers" Type="int" />
+          <Property Name="Manager" Type="int" />
+          <Property Name="HightDuty" Type="int" />
+          <Property Name="MiddleDuty" Type="int" />
+          <Property Name="LowerDuty" Type="int" />
+          <Property Name="MechanicDuty" Type="int" />
+          <Property Name="DealMan" Type="nvarchar" MaxLength="200" />
+          <Property Name="CheckMan" Type="nvarchar" MaxLength="50" />
+          <Property Name="MainLader" Type="nvarchar" MaxLength="50" />
+          <Property Name="ZZJG" Type="nvarchar" MaxLength="50" />
+          <Property Name="EnterFLName" Type="nvarchar" MaxLength="50" />
+          <Property Name="EnterFLCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="SaveCode" Type="nvarchar" MaxLength="200" />
+          <Property Name="SafeDepManager" Type="nvarchar" MaxLength="50" />
+          <Property Name="SafeDepManagerPhone" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Corp_EnterAptitude">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PID" Type="uniqueidentifier" />
+          <Property Name="CorpId" Type="uniqueidentifier" />
+          <Property Name="CertName" Type="nvarchar" MaxLength="100" />
+          <Property Name="CertNO" Type="nvarchar" MaxLength="50" />
+          <Property Name="CertTypeCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="CertTypeName" Type="nvarchar" MaxLength="50" />
+          <Property Name="GiveOrg" Type="nvarchar" MaxLength="200" />
+          <Property Name="GiveDate" Type="datetime" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="FilePath" Type="nvarchar" MaxLength="255" />
+          <Property Name="CertCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="CertCodeName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sort" Type="int" />
+          <Property Name="IsDel" Type="int" />
+          <Property Name="IsYearCheck" Type="int" />
+          <Property Name="AgentRanges" Type="nvarchar" MaxLength="200" />
+          <Property Name="AgentRangeCodes" Type="nvarchar" MaxLength="500" />
+          <Property Name="FileName" Type="nvarchar" MaxLength="255" />
+          <Property Name="LastUpdateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Corp_EnterpriseInfo">
+          <Key>
+            <PropertyRef Name="EnterpriseId" />
+          </Key>
+          <Property Name="EnterpriseId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CorpName" Type="nvarchar" MaxLength="100" />
+          <Property Name="OrganizationalCode" Type="nvarchar" MaxLength="200" />
+          <Property Name="ScopeofBusiness" Type="nvarchar" MaxLength="50" />
+          <Property Name="RegistrationNumber" Type="nvarchar" MaxLength="40" />
+          <Property Name="RegisterAuthority" Type="nvarchar" MaxLength="255" />
+          <Property Name="RegisteredCapital" Type="float" Nullable="false" />
+          <Property Name="LegalRepresentative" Type="nvarchar" MaxLength="50" />
+          <Property Name="LawerMobile" Type="nvarchar" MaxLength="100" />
+          <Property Name="LawerContact" Type="nvarchar" MaxLength="100" />
+          <Property Name="LegalCertType" Type="nvarchar" MaxLength="50" />
+          <Property Name="LegalCertTypeCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="LegalCertNO" Type="nvarchar" MaxLength="50" />
+          <Property Name="AreaCode" Type="nvarchar" MaxLength="40" />
+          <Property Name="AreaName" Type="nvarchar" MaxLength="50" />
+          <Property Name="SetUpTime" Type="datetime" />
+          <Property Name="PostCode" Type="nvarchar" MaxLength="10" />
+          <Property Name="LinkMan" Type="nvarchar" MaxLength="50" />
+          <Property Name="LinkPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="LinkManDuty" Type="nvarchar" MaxLength="50" />
+          <Property Name="LinkMobile" Type="nvarchar" MaxLength="50" />
+          <Property Name="LinkFax" Type="nvarchar" MaxLength="50" />
+          <Property Name="LinkEmail" Type="nvarchar" MaxLength="20" />
+          <Property Name="Website" Type="nvarchar" MaxLength="200" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatUserId" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="LegalPosition" Type="nvarchar" MaxLength="50" />
+          <Property Name="RegistMoneyType" Type="nvarchar" MaxLength="20" />
+          <Property Name="OpenBank" Type="nvarchar" MaxLength="50" />
+          <Property Name="BankUserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="BankAccountNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="BankFilePath" Type="nvarchar" MaxLength="2000" />
+          <Property Name="PayBankName" Type="nvarchar" MaxLength="50" />
+          <Property Name="PayBankProvince" Type="nvarchar" MaxLength="50" />
+          <Property Name="PayBankCity" Type="nvarchar" MaxLength="50" />
+          <Property Name="PayBankId" Type="nvarchar" MaxLength="50" />
+          <Property Name="PayBankNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Corp_Equipment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CorpId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EquName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Model" Type="nvarchar" MaxLength="50" />
+          <Property Name="HowMany" Type="int" Nullable="false" />
+          <Property Name="MadeFrom" Type="nvarchar" MaxLength="50" />
+          <Property Name="MadeTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="Power" Type="nvarchar" MaxLength="50" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="200" />
+          <Property Name="CreatUserId" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="Pid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LastUpdateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Corp_ExtendInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CorpId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CustomFieldId" Type="uniqueidentifier" />
+          <Property Name="CustomFieldValue" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Corp_Financial">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PID" Type="varchar" MaxLength="50" />
+          <Property Name="CorpId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Financial_Year" Type="varchar" MaxLength="50" />
+          <Property Name="Financial_Remark" Type="text" />
+          <Property Name="Create_Tm" Type="datetime" />
+          <Property Name="Update_TM" Type="datetime" />
+          <Property Name="RealPaid" Type="float" />
+          <Property Name="DebtMoney" Type="float" />
+          <Property Name="FixedAssets" Type="float" />
+          <Property Name="MoveAssets" Type="float" />
+          <Property Name="NetProfits" Type="float" />
+          <Property Name="BusinessVolume" Type="float" />
+          <Property Name="LastUpdateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Corp_HolidaySettings">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="IsLawHoliday" Type="bit" Nullable="false" />
+          <Property Name="HolidayName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Holiday" Type="datetime" Nullable="false" />
+          <Property Name="WorkStatus" Type="int" Nullable="false" />
+          <Property Name="DateKind" Type="int" />
+          <Property Name="UserId" Type="uniqueidentifier" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="2000" />
+          <Property Name="CreateId" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Corp_Manager">
+          <Key>
+            <PropertyRef Name="MID" />
+          </Key>
+          <Property Name="MID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CorpId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sex" Type="nvarchar" MaxLength="2" />
+          <Property Name="Birthday" Type="nvarchar" MaxLength="50" />
+          <Property Name="IdCard" Type="nvarchar" MaxLength="50" />
+          <Property Name="Position" Type="nvarchar" MaxLength="255" />
+          <Property Name="OldQualLevel" Type="nvarchar" MaxLength="50" />
+          <Property Name="NowQualLevel" Type="nvarchar" MaxLength="50" />
+          <Property Name="QualNum" Type="nvarchar" MaxLength="40" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+          <Property Name="SaveNum" Type="nvarchar" MaxLength="50" />
+          <Property Name="TecPosition" Type="nvarchar" MaxLength="50" />
+          <Property Name="Degree" Type="nvarchar" MaxLength="50" />
+          <Property Name="School" Type="nvarchar" MaxLength="50" />
+          <Property Name="LeveTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="Specialty" Type="nvarchar" MaxLength="50" />
+          <Property Name="DictCodes" Type="nvarchar" MaxLength="800" />
+          <Property Name="DictNames" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Pid" Type="uniqueidentifier" />
+          <Property Name="PhotoPath" Type="nvarchar" MaxLength="200" />
+          <Property Name="FingerPrint1" Type="varchar" MaxLength="500" />
+          <Property Name="FingerPrint2" Type="varchar" MaxLength="500" />
+          <Property Name="FingerPrint3" Type="varchar" MaxLength="500" />
+          <Property Name="CreatUserId" Type="uniqueidentifier" />
+          <Property Name="CreatDate" Type="datetime" />
+          <Property Name="LastUpdateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Corp_ManagerAptitudeCert">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Mid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CertName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CertCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="GradeName" Type="nvarchar" MaxLength="100" />
+          <Property Name="GradeCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="GiveOrg" Type="nvarchar" MaxLength="50" />
+          <Property Name="GiveDate" Type="datetime" />
+          <Property Name="CertStartDate" Type="datetime" />
+          <Property Name="CertEndDate" Type="datetime" />
+          <Property Name="BZ" Type="nvarchar" MaxLength="200" />
+          <Property Name="RealName" Type="nvarchar" MaxLength="100" />
+          <Property Name="SaveName" Type="nvarchar" MaxLength="100" />
+          <Property Name="FilePath" Type="nvarchar" MaxLength="2000" />
+          <Property Name="FileDate" Type="nvarchar" MaxLength="50" />
+          <Property Name="FileSize" Type="nvarchar" MaxLength="50" />
+          <Property Name="FileType" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatUserId" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="Subject" Type="nvarchar" MaxLength="50" />
+          <Property Name="TypeCode" Type="nvarchar" MaxLength="200" />
+          <Property Name="TypeCodeName" Type="nvarchar" MaxLength="100" />
+          <Property Name="TradeType" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Corp_PausingRecord">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CorpId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CreatUserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="TradeType" Type="varchar" MaxLength="100" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="2000" />
+          <Property Name="StartTime" Type="datetime" />
+          <Property Name="EndTime" Type="datetime" />
+          <Property Name="Type" Type="varchar" MaxLength="10" />
+          <Property Name="IsValid" Type="int" Nullable="false" />
+          <Property Name="IsExeced" Type="int" Nullable="false" />
+          <Property Name="RestoreRemark" Type="nvarchar" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="Corp_PurchaserDetailInfo">
+          <Key>
+            <PropertyRef Name="CorpId" />
+          </Key>
+          <Property Name="CorpId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="BudgetNO" Type="nvarchar" MaxLength="50" />
+          <Property Name="DepartClass" Type="nvarchar" MaxLength="50" />
+          <Property Name="DepartClassCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="TopBudgeEnter" Type="nvarchar" MaxLength="50" />
+          <Property Name="TopBudgeEnterCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="FinanceCase" Type="nvarchar" MaxLength="50" />
+          <Property Name="FinanceCaseCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="Summary" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Corp_RecordStatus">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CorpId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TableName" Type="nvarchar" MaxLength="255" />
+          <Property Name="EntityId" Type="uniqueidentifier" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="2000" />
+          <Property Name="DataStaus" Type="int" />
+          <Property Name="Createtime" Type="datetime" Nullable="false" />
+          <Property Name="CreatUserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LastUpdateTime" Type="datetime" Nullable="false" />
+          <Property Name="LastUserId" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Corp_SupplierDetailInfo">
+          <Key>
+            <PropertyRef Name="CorpId" />
+          </Key>
+          <Property Name="CorpId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="IsBranchOrg" Type="int" Nullable="false" />
+          <Property Name="LastYearTurnOver" Type="money" Nullable="false" />
+          <Property Name="GoodsItems" Type="nvarchar" MaxLength="1000" />
+          <Property Name="GoodsItemCodes" Type="nvarchar" MaxLength="500" />
+          <Property Name="TradeTye" Type="nvarchar" MaxLength="50" />
+          <Property Name="TradeCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="TradeScale" Type="nvarchar" MaxLength="50" />
+          <Property Name="TradeScaleCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsTwoTax" Type="int" Nullable="false" />
+          <Property Name="CentralTaxNO" Type="nvarchar" MaxLength="50" />
+          <Property Name="FarmTaxNO" Type="nvarchar" MaxLength="50" />
+          <Property Name="CentralComputerNO" Type="nvarchar" MaxLength="50" />
+          <Property Name="FarmComputerNO" Type="nvarchar" MaxLength="50" />
+          <Property Name="ImExportEnterNO" Type="nvarchar" MaxLength="50" />
+          <Property Name="ImExportEnterAppNO" Type="nvarchar" MaxLength="50" />
+          <Property Name="Summary" Type="nvarchar" MaxLength="500" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="T_HY_AptitudeCode">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CodeID" Type="varchar" MaxLength="50" />
+          <Property Name="CodeType" Type="varchar" MaxLength="50" />
+          <Property Name="CodeName" Type="varchar" MaxLength="50" />
+          <Property Name="InCode" Type="varchar" MaxLength="50" />
+          <Property Name="IndexOf" Type="varchar" MaxLength="50" />
+          <Property Name="Match" Type="int" />
+          <Property Name="Flag" Type="int" />
+          <Property Name="Remark" Type="nvarchar(max)" />
+          <Property Name="CreateTm" Type="datetime" />
+          <Property Name="UpdateTm" Type="datetime" />
+        </EntityType>
+        <EntityType Name="T_HY_EnterpriseSpeciality">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Fid" Type="varchar" MaxLength="50" />
+          <Property Name="Trade_no" Type="varchar" MaxLength="50" />
+          <Property Name="Specialty" Type="varchar" MaxLength="50" />
+          <Property Name="Grading" Type="varchar" MaxLength="50" />
+          <Property Name="Bz" Type="varchar" MaxLength="50" />
+          <Property Name="Zzzsbh" Type="varchar" MaxLength="50" />
+          <Property Name="Yxsj" Type="varchar" MaxLength="50" />
+          <Property Name="Match" Type="int" />
+          <Property Name="Flag" Type="int" />
+          <Property Name="Remark" Type="nvarchar(max)" />
+          <Property Name="CreateTm" Type="datetime" />
+          <Property Name="UpdateTm" Type="datetime" />
+        </EntityType>
+        <EntityType Name="T_HY_EntrpriseInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CodeId" Type="varchar" MaxLength="50" />
+          <Property Name="Fprnumber" Type="varchar" MaxLength="300" />
+          <Property Name="Trade_license_no" Type="varchar" MaxLength="300" />
+          <Property Name="Enter_type" Type="varchar" MaxLength="300" />
+          <Property Name="PM_Enter_type" Type="varchar" MaxLength="300" />
+          <Property Name="Enter_name" Type="varchar" MaxLength="300" />
+          <Property Name="AREA" Type="varchar" MaxLength="300" />
+          <Property Name="Legal_rept" Type="varchar" MaxLength="300" />
+          <Property Name="Legal_repttime" Type="varchar" MaxLength="300" />
+          <Property Name="Tech_principal" Type="varchar" MaxLength="300" />
+          <Property Name="Tech_principaltime" Type="varchar" MaxLength="300" />
+          <Property Name="Enter_kind" Type="varchar" MaxLength="300" />
+          <Property Name="BusiLicense_no" Type="varchar" MaxLength="300" />
+          <Property Name="Contact_people" Type="varchar" MaxLength="300" />
+          <Property Name="Contact_tel" Type="varchar" MaxLength="300" />
+          <Property Name="Contact_fax" Type="varchar" MaxLength="300" />
+          <Property Name="Contact_address" Type="varchar" MaxLength="300" />
+          <Property Name="Email" Type="varchar" MaxLength="300" />
+          <Property Name="Postcode" Type="varchar" MaxLength="300" />
+          <Property Name="Trade_license_validtime" Type="varchar" MaxLength="300" />
+          <Property Name="Record_validtime" Type="varchar" MaxLength="300" />
+          <Property Name="Zczj" Type="varchar" MaxLength="300" />
+          <Property Name="Permanent_assets" Type="varchar" MaxLength="300" />
+          <Property Name="Engineer_staff" Type="varchar" MaxLength="300" />
+          <Property Name="Update_date" Type="varchar" MaxLength="300" />
+          <Property Name="Is_safetyconstruction" Type="varchar" MaxLength="300" />
+          <Property Name="Is_safetyconstructiontime" Type="varchar" MaxLength="300" />
+          <Property Name="Ryzsbh1" Type="varchar" MaxLength="300" />
+          <Property Name="Ryzsbh2" Type="varchar" MaxLength="300" />
+          <Property Name="Zdddz" Type="varchar" MaxLength="300" />
+          <Property Name="Zddfzr" Type="varchar" MaxLength="300" />
+          <Property Name="Zddlxr" Type="varchar" MaxLength="300" />
+          <Property Name="Zdd_fax" Type="varchar" MaxLength="300" />
+          <Property Name="Zddlxdh" Type="varchar" MaxLength="300" />
+          <Property Name="Shtg" Type="varchar" MaxLength="300" />
+          <Property Name="Lxdz" Type="varchar" MaxLength="300" />
+          <Property Name="Legal_M1" Type="varchar" MaxLength="300" />
+          <Property Name="Legal_M2" Type="varchar" MaxLength="300" />
+          <Property Name="RyzsbhM1" Type="varchar" MaxLength="300" />
+          <Property Name="RyzsbhM2" Type="varchar" MaxLength="300" />
+          <Property Name="Legal_M1time" Type="varchar" MaxLength="300" />
+          <Property Name="Legal_M2time" Type="varchar" MaxLength="300" />
+          <Property Name="Match" Type="int" />
+          <Property Name="Flag" Type="int" />
+          <Property Name="Remark" Type="nvarchar(max)" />
+          <Property Name="CreateTm" Type="datetime" />
+          <Property Name="UpdateTm" Type="datetime" />
+        </EntityType>
+        <EntityType Name="T_HY_Personnel">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="UnionPersonID" Type="varchar" MaxLength="50" />
+          <Property Name="Fid" Type="varchar" MaxLength="50" />
+          <Property Name="MemberType" Type="varchar" MaxLength="50" />
+          <Property Name="EnterpriseID" Type="varchar" MaxLength="50" />
+          <Property Name="Xm" Type="varchar" MaxLength="50" />
+          <Property Name="Sfz" Type="varchar" MaxLength="50" />
+          <Property Name="SafeCert" Type="varchar" MaxLength="50" />
+          <Property Name="SafeCertValidTime" Type="varchar" MaxLength="50" />
+          <Property Name="Xmjlzsbh" Type="varchar" MaxLength="50" />
+          <Property Name="Sex" Type="varchar" MaxLength="50" />
+          <Property Name="Insert_date" Type="varchar" MaxLength="50" />
+          <Property Name="Shyx" Type="varchar" MaxLength="50" />
+          <Property Name="ChiefEngineer" Type="varchar" MaxLength="50" />
+          <Property Name="ChiefEngineer_sz" Type="varchar" MaxLength="50" />
+          <Property Name="ChiefEngiValidTime" Type="varchar" MaxLength="50" />
+          <Property Name="Aqjlsgz" Type="varchar" MaxLength="50" />
+          <Property Name="Sgzyxq" Type="varchar" MaxLength="50" />
+          <Property Name="Match" Type="int" />
+          <Property Name="Flag" Type="int" />
+          <Property Name="Remark" Type="varchar(max)" />
+          <Property Name="CreateTm" Type="datetime" />
+          <Property Name="UpdateTm" Type="datetime" />
+        </EntityType>
+        <EntityType Name="T_HY_PersonnelSpeciality">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Fid" Type="varchar" MaxLength="50" />
+          <Property Name="UnionPersonID" Type="varchar" MaxLength="50" />
+          <Property Name="Memberid" Type="varchar" MaxLength="50" />
+          <Property Name="Zczs" Type="varchar" MaxLength="100" />
+          <Property Name="Zczy" Type="varchar" MaxLength="100" />
+          <Property Name="Zcdj" Type="varchar" MaxLength="100" />
+          <Property Name="Bz" Type="varchar" MaxLength="100" />
+          <Property Name="Match" Type="int" />
+          <Property Name="Flag" Type="int" />
+          <Property Name="Remark" Type="nvarchar(max)" />
+          <Property Name="CreateTm" Type="datetime" />
+          <Property Name="UpdateTm" Type="datetime" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PM_QYKModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="PM_QYKEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Corp_AgencyDetailInfo" EntityType="PM_QYKModel.Corp_AgencyDetailInfo" />
+          <EntitySet Name="Corp_Attachment" EntityType="PM_QYKModel.Corp_Attachment" />
+          <EntitySet Name="Corp_BasicInfo" EntityType="PM_QYKModel.Corp_BasicInfo" />
+          <EntitySet Name="Corp_BiddingRecord" EntityType="PM_QYKModel.Corp_BiddingRecord" />
+          <EntitySet Name="Corp_BiddingRecordRelationShip" EntityType="PM_QYKModel.Corp_BiddingRecordRelationShip" />
+          <EntitySet Name="Corp_BulidingProject" EntityType="PM_QYKModel.Corp_BulidingProject" />
+          <EntitySet Name="Corp_CapitalFund" EntityType="PM_QYKModel.Corp_CapitalFund" />
+          <EntitySet Name="Corp_CapitalfundDetails" EntityType="PM_QYKModel.Corp_CapitalfundDetails" />
+          <EntitySet Name="Corp_CARegist" EntityType="PM_QYKModel.Corp_CARegist" />
+          <EntitySet Name="Corp_CARegistFail" EntityType="PM_QYKModel.Corp_CARegistFail" />
+          <EntitySet Name="Corp_Certificate" EntityType="PM_QYKModel.Corp_Certificate" />
+          <EntitySet Name="Corp_ChangeDataBak" EntityType="PM_QYKModel.Corp_ChangeDataBak" />
+          <EntitySet Name="Corp_ChangeRecord" EntityType="PM_QYKModel.Corp_ChangeRecord" />
+          <EntitySet Name="Corp_ChangeRecordItem" EntityType="PM_QYKModel.Corp_ChangeRecordItem" />
+          <EntitySet Name="Corp_CheckInfos" EntityType="PM_QYKModel.Corp_CheckInfos" />
+          <EntitySet Name="Corp_CheckOrderRecord" EntityType="PM_QYKModel.Corp_CheckOrderRecord" />
+          <EntitySet Name="Corp_CheckQueue" EntityType="PM_QYKModel.Corp_CheckQueue" />
+          <EntitySet Name="Corp_CreditInfo" EntityType="PM_QYKModel.Corp_CreditInfo" />
+          <EntitySet Name="Corp_DetailInfo" EntityType="PM_QYKModel.Corp_DetailInfo" />
+          <EntitySet Name="Corp_EnterAptitude" EntityType="PM_QYKModel.Corp_EnterAptitude" />
+          <EntitySet Name="Corp_EnterpriseInfo" EntityType="PM_QYKModel.Corp_EnterpriseInfo" />
+          <EntitySet Name="Corp_Equipment" EntityType="PM_QYKModel.Corp_Equipment" />
+          <EntitySet Name="Corp_ExtendInfo" EntityType="PM_QYKModel.Corp_ExtendInfo" />
+          <EntitySet Name="Corp_Financial" EntityType="PM_QYKModel.Corp_Financial" />
+          <EntitySet Name="Corp_HolidaySettings" EntityType="PM_QYKModel.Corp_HolidaySettings" />
+          <EntitySet Name="Corp_Manager" EntityType="PM_QYKModel.Corp_Manager" />
+          <EntitySet Name="Corp_ManagerAptitudeCert" EntityType="PM_QYKModel.Corp_ManagerAptitudeCert" />
+          <EntitySet Name="Corp_PausingRecord" EntityType="PM_QYKModel.Corp_PausingRecord" />
+          <EntitySet Name="Corp_PurchaserDetailInfo" EntityType="PM_QYKModel.Corp_PurchaserDetailInfo" />
+          <EntitySet Name="Corp_RecordStatus" EntityType="PM_QYKModel.Corp_RecordStatus" />
+          <EntitySet Name="Corp_SupplierDetailInfo" EntityType="PM_QYKModel.Corp_SupplierDetailInfo" />
+          <EntitySet Name="T_HY_AptitudeCode" EntityType="PM_QYKModel.T_HY_AptitudeCode" />
+          <EntitySet Name="T_HY_EnterpriseSpeciality" EntityType="PM_QYKModel.T_HY_EnterpriseSpeciality" />
+          <EntitySet Name="T_HY_EntrpriseInfo" EntityType="PM_QYKModel.T_HY_EntrpriseInfo" />
+          <EntitySet Name="T_HY_Personnel" EntityType="PM_QYKModel.T_HY_Personnel" />
+          <EntitySet Name="T_HY_PersonnelSpeciality" EntityType="PM_QYKModel.T_HY_PersonnelSpeciality" />
+        </EntityContainer>
+        <EntityType Name="Corp_AgencyDetailInfo">
+          <Key>
+            <PropertyRef Name="CorpId" />
+          </Key>
+          <Property Name="CorpId" Type="Guid" Nullable="false" />
+          <Property Name="EnterShortName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="EnterType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Summary" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="SaveCode" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="HigherEnter" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="TaxOrg" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="EmployNum" Type="Int32" />
+          <Property Name="TrainNum" Type="Int32" />
+          <Property Name="AboveSpecialNum" Type="Int32" />
+          <Property Name="HighPositionNum" Type="Int32" />
+          <Property Name="TotalSssets" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="OwnerInterest" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TotalDebt" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="IsSocialSecurity" Type="Int32" />
+          <Property Name="IsPayTax" Type="Int32" />
+          <Property Name="IsBreakLaw" Type="Int32" />
+          <Property Name="AptitudeName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="AptitudeCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="AptitudeNO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ApprovOrg" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="ApprovDate" Type="DateTime" />
+          <Property Name="AptitudeEndDate" Type="DateTime" />
+          <Property Name="Remark" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Corp_Attachment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="AttachmentType" Type="Int32" />
+          <Property Name="EntityId" Type="Guid" Nullable="false" />
+          <Property Name="FileName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="FileCode" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="FilePath" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="FileSize" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="Corp_BasicInfo">
+          <Key>
+            <PropertyRef Name="CorpId" />
+          </Key>
+          <Property Name="CorpId" Type="Guid" Nullable="false" />
+          <Property Name="EnterpriseId" Type="Guid" Nullable="false" />
+          <Property Name="CorpName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="OrganizationalCode" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="CorpType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ScopeofBusiness" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="BusinessScope" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="SecondBusinessScope" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="RegistrationNumber" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+          <Property Name="RegisterAuthority" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="RegisteredCapital" Type="Double" Nullable="false" />
+          <Property Name="LegalRepresentative" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LawerMobile" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="LawerContact" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="LegalCertType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LegalCertTypeCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LegalCertNO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="AreaCode" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+          <Property Name="AreaName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SetUpTime" Type="DateTime" />
+          <Property Name="OpenBank" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="BankUserName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="BankAccountNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="BankFilePath" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="PayBankName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PayBankProvince" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PayBankCity" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PayBankId" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PayBankNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Address" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="PostCode" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="LinkMan" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LinkPhone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LinkManDuty" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LinkMobile" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LinkFax" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LinkEmail" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Website" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="Fax" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="RecordNO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="RecordEndDate" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="IsPass" Type="Int32" Nullable="false" />
+          <Property Name="IsLocked" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="ComeFrom" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+          <Property Name="InputMan" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="InputDate" Type="DateTime" />
+          <Property Name="CreatUserId" Type="Guid" />
+          <Property Name="CreateDate" Type="DateTime" />
+          <Property Name="submitcontent" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="LegalPosition" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TradeStatus" Type="Int32" Nullable="false" />
+          <Property Name="TradeType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TradeTypeCode" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="RegistMoneyType" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="IsInsuredMember" Type="Boolean" />
+          <Property Name="LastUpdateTime" Type="DateTime" />
+          <Property Name="IsPreEntrepreneur" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Corp_BiddingRecord">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="CorpId" Type="Guid" Nullable="false" />
+          <Property Name="RecordName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="RecordNO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="RecordAptitudeCode" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="RecordAptitude" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="GiveOrg" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="GiveDate" Type="DateTime" />
+          <Property Name="EndDate" Type="DateTime" />
+          <Property Name="Remark" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="DataStaus" Type="Int32" />
+          <Property Name="LastUpdateTime" Type="DateTime" Nullable="false" />
+          <Property Name="LastUserId" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Corp_BiddingRecordRelationShip">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="AptitudeType" Type="Int32" Nullable="false" />
+          <Property Name="BiddingRecordId" Type="Guid" />
+          <Property Name="EntityId" Type="Guid" />
+          <Property Name="Remark" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Corp_BulidingProject">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="CorpId" Type="Guid" Nullable="false" />
+          <Property Name="MID" Type="Guid" Nullable="false" />
+          <Property Name="ProManager" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ProName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="Scale" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ContractTime" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Remark" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="ProStatus" Type="Int32" Nullable="false" />
+          <Property Name="ProAddr" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="SenderName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="SenderAddr" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="SenderLink" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="ContractPrice" Type="Double" Nullable="false" />
+          <Property Name="StartTime" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="EndTime" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="DoWork" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="Quality" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="TecManager" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MainTecPhone" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="ProDetail" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="Pid" Type="Guid" />
+          <Property Name="OrgMan" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="Structure" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="AgentCode" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="AgentName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="ProjBidTm" Type="DateTime" />
+          <Property Name="ProjmanagerPhone" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ProjAreaCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Creator" Type="Guid" />
+          <Property Name="CreatDate" Type="DateTime" />
+          <Property Name="LastUpdateTime" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="Corp_CapitalFund">
+          <Key>
+            <PropertyRef Name="CorpId" />
+          </Key>
+          <Property Name="CorpId" Type="Guid" Nullable="false" />
+          <Property Name="FixedAssets" Type="Double" Nullable="false" />
+          <Property Name="MoveAssets" Type="Double" Nullable="false" />
+          <Property Name="RealPaid" Type="Double" Nullable="false" />
+          <Property Name="DebtMoney" Type="Double" Nullable="false" />
+          <Property Name="FirYear" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="FirYearEarn" Type="Double" Nullable="false" />
+          <Property Name="SecYear" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="SecYearEarn" Type="Double" Nullable="false" />
+          <Property Name="ThirdYear" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="ThidYearEarn" Type="Double" Nullable="false" />
+          <Property Name="FirYearJEarn" Type="Double" Nullable="false" />
+          <Property Name="SecFixedAssets" Type="Double" Nullable="false" />
+          <Property Name="SecMoveAssets" Type="Double" Nullable="false" />
+          <Property Name="SecRealPaid" Type="Double" Nullable="false" />
+          <Property Name="SecDebtMoney" Type="Double" Nullable="false" />
+          <Property Name="SecJEarn" Type="Double" Nullable="false" />
+          <Property Name="ThidFixedAssets" Type="Double" Nullable="false" />
+          <Property Name="ThidMoveAssets" Type="Double" Nullable="false" />
+          <Property Name="ThidRealPaid" Type="Double" Nullable="false" />
+          <Property Name="ThidDebtMoney" Type="Double" Nullable="false" />
+          <Property Name="ThidThidJEarn" Type="Double" Nullable="false" />
+          <Property Name="FstOutputVal" Type="Double" Nullable="false" />
+          <Property Name="SedOutputVal" Type="Double" Nullable="false" />
+          <Property Name="ThrdOutputVal" Type="Double" Nullable="false" />
+          <Property Name="FstTax" Type="Double" Nullable="false" />
+          <Property Name="SedTax" Type="Double" Nullable="false" />
+          <Property Name="ThrdTax" Type="Double" Nullable="false" />
+          <Property Name="FstContract" Type="Double" Nullable="false" />
+          <Property Name="SedContract" Type="Double" Nullable="false" />
+          <Property Name="ThrdContract" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Corp_CapitalfundDetails">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="StatisYear" Type="Int32" Nullable="false" />
+          <Property Name="CorpId" Type="Guid" />
+          <Property Name="FixedAssets" Type="Double" />
+          <Property Name="MoveAssets" Type="Double" />
+          <Property Name="RealPaid" Type="Double" />
+          <Property Name="DebtMoney" Type="Double" />
+          <Property Name="Turnover" Type="Double" />
+          <Property Name="NetProfits" Type="Double" />
+          <Property Name="OutputValue" Type="Double" />
+          <Property Name="Tax" Type="Double" />
+          <Property Name="Contract" Type="Double" />
+        </EntityType>
+        <EntityType Name="Corp_CARegist">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="PID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CorpId" Type="Guid" Nullable="false" />
+          <Property Name="RegType" Type="Int32" Nullable="false" />
+          <Property Name="KeyNO" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="KeyName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="CertNum" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="InitZTBTime" Type="Int32" Nullable="false" />
+          <Property Name="ZTBUseTime" Type="Int32" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="TradingLicense" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="IsSale" Type="Int32" Nullable="false" />
+          <Property Name="SalesTime" Type="DateTime" />
+          <Property Name="SalesPrice" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="AreaCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="KeyStatus" Type="Int32" Nullable="false" />
+          <Property Name="RealNO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="IsMainKey" Type="Int32" Nullable="false" />
+          <Property Name="CreatUserId" Type="Guid" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="Corp_CARegistFail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="PId" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="RegType" Type="Int32" Nullable="false" />
+          <Property Name="KeyNO" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="KeyName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="CertNum" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="InitZTBTime" Type="Int32" Nullable="false" />
+          <Property Name="ZTBUseTime" Type="Int32" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="TradingLicense" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="IsSale" Type="Int32" Nullable="false" />
+          <Property Name="SalesTime" Type="DateTime" />
+          <Property Name="SalesPrice" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="AreaCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="KeyStatus" Type="Int32" Nullable="false" />
+          <Property Name="IsSuccess" Type="Int32" Nullable="false" />
+          <Property Name="FailReason" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="CreatUserId" Type="Guid" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" />
+          <Property Name="CorpId" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="RealNO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="IsMainKey" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Corp_Certificate">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="PID" Type="Guid" Nullable="false" />
+          <Property Name="CorpId" Type="Guid" Nullable="false" />
+          <Property Name="CertType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CertTypeName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CertName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="CertCode" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="CertStartDate" Type="DateTime" />
+          <Property Name="CertEndDate" Type="DateTime" />
+          <Property Name="GiveOrg" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="CertGiveDate" Type="DateTime" />
+          <Property Name="BZ" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="FilePath" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="CreatUserId" Type="Guid" />
+          <Property Name="CreateDate" Type="DateTime" />
+          <Property Name="GradeName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="GradeCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Subject" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FileName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="LastUpdateTime" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="Corp_ChangeDataBak">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="ParentId" Type="Guid" />
+          <Property Name="EntityId" Type="Guid" />
+          <Property Name="CorpInfoTabType" Type="Int32" />
+          <Property Name="ChangeTableName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ChangeType" Type="Int32" />
+          <Property Name="JsonValue" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="ExtendValue" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Creator" Type="Guid" />
+          <Property Name="CreatDate" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="Corp_ChangeRecord">
+          <Key>
+            <PropertyRef Name="ChangeRecordId" />
+          </Key>
+          <Property Name="ChangeRecordId" Type="Guid" Nullable="false" />
+          <Property Name="CorpId" Type="Guid" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="submitcontent" Type="String" MaxLength="1024" Unicode="true" FixedLength="false" />
+          <Property Name="CreateUserId" Type="Guid" />
+          <Property Name="CreateUserName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" />
+          <Property Name="HasAttachFile" Type="Int32" Nullable="false" />
+          <Property Name="RefEntityRecordId" Type="Guid" />
+        </EntityType>
+        <EntityType Name="Corp_ChangeRecordItem">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="EntityId" Type="Guid" />
+          <Property Name="CorpInfoTabType" Type="Int32" />
+          <Property Name="ChangeRecordId" Type="Guid" />
+          <Property Name="ChangeTableName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="FieldName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="CurrentValue" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="NewValue" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="CustomField1" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="CreateUserId" Type="Guid" />
+          <Property Name="CreateTime" Type="DateTime" />
+          <Property Name="FilePath" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="DisplayName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ChangeType" Type="Int32" />
+          <Property Name="IsHiden" Type="Boolean" />
+          <Property Name="CurrentDisplayValue" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="NewDisplayValue" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="IsAttachment" Type="Boolean" />
+          <Property Name="AttachmentRelationId" Type="Guid" />
+        </EntityType>
+        <EntityType Name="Corp_CheckInfos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="CorpId" Type="Guid" Nullable="false" />
+          <Property Name="CorpType" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TabType" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Result" Type="Int32" Nullable="false" />
+          <Property Name="Createtime" Type="DateTime" Nullable="false" />
+          <Property Name="SubmitContent" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="Creator" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="AuditingType" Type="Int32" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="FlowInstanceId" Type="Guid" />
+          <Property Name="TaskId" Type="Guid" />
+          <Property Name="ReceviceTime" Type="DateTime" />
+          <Property Name="IsCurrent" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Corp_CheckOrderRecord">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="OrderId" Type="Guid" Nullable="false" />
+          <Property Name="EnterpriseId" Type="Guid" Nullable="false" />
+          <Property Name="CorpId" Type="Guid" Nullable="false" />
+          <Property Name="EntityId" Type="Guid" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="OrderType" Type="Int32" Nullable="false" />
+          <Property Name="OrderDate" Type="DateTime" />
+          <Property Name="CheckUserId" Type="Guid" />
+          <Property Name="DateKind" Type="Int32" />
+          <Property Name="Remark" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="CreateId" Type="Guid" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Corp_CheckQueue">
+          <Key>
+            <PropertyRef Name="QueueId" />
+          </Key>
+          <Property Name="QueueId" Type="Guid" Nullable="false" />
+          <Property Name="CheckUserId" Type="Guid" />
+          <Property Name="Count" Type="Int32" />
+          <Property Name="TemplateType" Type="Int32" />
+          <Property Name="CreateDate" Type="DateTime" />
+          <Property Name="CreateId" Type="Guid" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="ResetDate" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="Corp_CreditInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="CorpId" Type="Guid" Nullable="false" />
+          <Property Name="Records" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="CreatUserId" Type="Guid" />
+          <Property Name="CreateDate" Type="DateTime" />
+          <Property Name="FilePath" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Pid" Type="Guid" Nullable="false" />
+          <Property Name="Mid" Type="Guid" Nullable="false" />
+          <Property Name="TypeCode" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="TypeName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="ProID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BegDate" Type="DateTime" />
+          <Property Name="EndDate" Type="DateTime" />
+          <Property Name="ValidityTime" Type="Int32" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="HonorType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="TypeID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="FileName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="LastUpdateTime" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="Corp_DetailInfo">
+          <Key>
+            <PropertyRef Name="CorpId" />
+          </Key>
+          <Property Name="CorpId" Type="Guid" Nullable="false" />
+          <Property Name="EnterBH" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TradeCardNum" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+          <Property Name="UnitCardStTime" Type="DateTime" />
+          <Property Name="UnitCardEdTime" Type="DateTime" />
+          <Property Name="UnitTradCode" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="UnitAddr" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="UnitZipCode" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="LocalAddr" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="LocalZipCode" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="QualLevel" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="QualSignNum" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TecManager" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TecPosition" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TecPhone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="BranchLinkMan" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="BranchLinkManPhone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MainDepart" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="NowWorkers" Type="Int32" />
+          <Property Name="Manager" Type="Int32" />
+          <Property Name="HightDuty" Type="Int32" />
+          <Property Name="MiddleDuty" Type="Int32" />
+          <Property Name="LowerDuty" Type="Int32" />
+          <Property Name="MechanicDuty" Type="Int32" />
+          <Property Name="DealMan" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="CheckMan" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MainLader" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ZZJG" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="EnterFLName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="EnterFLCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SaveCode" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="SafeDepManager" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SafeDepManagerPhone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Corp_EnterAptitude">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="PID" Type="Guid" />
+          <Property Name="CorpId" Type="Guid" />
+          <Property Name="CertName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="CertNO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CertTypeCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CertTypeName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="GiveOrg" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="GiveDate" Type="DateTime" />
+          <Property Name="EndDate" Type="DateTime" />
+          <Property Name="FilePath" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="CertCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CertCodeName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Sort" Type="Int32" />
+          <Property Name="IsDel" Type="Int32" />
+          <Property Name="IsYearCheck" Type="Int32" />
+          <Property Name="AgentRanges" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="AgentRangeCodes" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="FileName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="LastUpdateTime" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="Corp_EnterpriseInfo">
+          <Key>
+            <PropertyRef Name="EnterpriseId" />
+          </Key>
+          <Property Name="EnterpriseId" Type="Guid" Nullable="false" />
+          <Property Name="CorpName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="OrganizationalCode" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="ScopeofBusiness" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="RegistrationNumber" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+          <Property Name="RegisterAuthority" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="RegisteredCapital" Type="Double" Nullable="false" />
+          <Property Name="LegalRepresentative" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LawerMobile" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="LawerContact" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="LegalCertType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LegalCertTypeCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LegalCertNO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="AreaCode" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+          <Property Name="AreaName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SetUpTime" Type="DateTime" />
+          <Property Name="PostCode" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="LinkMan" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LinkPhone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LinkManDuty" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LinkMobile" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LinkFax" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LinkEmail" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Website" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="Fax" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreatUserId" Type="Guid" />
+          <Property Name="CreateDate" Type="DateTime" />
+          <Property Name="LegalPosition" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="RegistMoneyType" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="OpenBank" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="BankUserName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="BankAccountNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="BankFilePath" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="PayBankName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PayBankProvince" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PayBankCity" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PayBankId" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PayBankNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Address" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Corp_Equipment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="CorpId" Type="Guid" Nullable="false" />
+          <Property Name="EquName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Model" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="HowMany" Type="Int32" Nullable="false" />
+          <Property Name="MadeFrom" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MadeTime" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Power" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Remark" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="CreatUserId" Type="Guid" />
+          <Property Name="CreateDate" Type="DateTime" />
+          <Property Name="Pid" Type="Guid" Nullable="false" />
+          <Property Name="LastUpdateTime" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="Corp_ExtendInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="CorpId" Type="Guid" Nullable="false" />
+          <Property Name="CustomFieldId" Type="Guid" />
+          <Property Name="CustomFieldValue" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Corp_Financial">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="PID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CorpId" Type="Guid" Nullable="false" />
+          <Property Name="Financial_Year" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Financial_Remark" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Create_Tm" Type="DateTime" />
+          <Property Name="Update_TM" Type="DateTime" />
+          <Property Name="RealPaid" Type="Double" />
+          <Property Name="DebtMoney" Type="Double" />
+          <Property Name="FixedAssets" Type="Double" />
+          <Property Name="MoveAssets" Type="Double" />
+          <Property Name="NetProfits" Type="Double" />
+          <Property Name="BusinessVolume" Type="Double" />
+          <Property Name="LastUpdateTime" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="Corp_HolidaySettings">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="IsLawHoliday" Type="Boolean" Nullable="false" />
+          <Property Name="HolidayName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Holiday" Type="DateTime" Nullable="false" />
+          <Property Name="WorkStatus" Type="Int32" Nullable="false" />
+          <Property Name="DateKind" Type="Int32" />
+          <Property Name="UserId" Type="Guid" />
+          <Property Name="Remark" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="CreateId" Type="Guid" />
+          <Property Name="CreateDate" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="Corp_Manager">
+          <Key>
+            <PropertyRef Name="MID" />
+          </Key>
+          <Property Name="MID" Type="Guid" Nullable="false" />
+          <Property Name="CorpId" Type="Guid" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Sex" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+          <Property Name="Birthday" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="IdCard" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Position" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="OldQualLevel" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="NowQualLevel" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="QualNum" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="SaveNum" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TecPosition" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Degree" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="School" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LeveTime" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Specialty" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DictCodes" Type="String" MaxLength="800" Unicode="true" FixedLength="false" />
+          <Property Name="DictNames" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="Pid" Type="Guid" />
+          <Property Name="PhotoPath" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="FingerPrint1" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="FingerPrint2" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="FingerPrint3" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="CreatUserId" Type="Guid" />
+          <Property Name="CreatDate" Type="DateTime" />
+          <Property Name="LastUpdateTime" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="Corp_ManagerAptitudeCert">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Mid" Type="Guid" Nullable="false" />
+          <Property Name="CertName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CertCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="GradeName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="GradeCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="GiveOrg" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="GiveDate" Type="DateTime" />
+          <Property Name="CertStartDate" Type="DateTime" />
+          <Property Name="CertEndDate" Type="DateTime" />
+          <Property Name="BZ" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="RealName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="SaveName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="FilePath" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="FileDate" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FileSize" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FileType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreatUserId" Type="Guid" />
+          <Property Name="CreateDate" Type="DateTime" />
+          <Property Name="Subject" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TypeCode" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="TypeCodeName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="TradeType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Corp_PausingRecord">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="CorpId" Type="Guid" Nullable="false" />
+          <Property Name="CreatUserId" Type="Guid" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" />
+          <Property Name="TradeType" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Remark" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="StartTime" Type="DateTime" />
+          <Property Name="EndTime" Type="DateTime" />
+          <Property Name="Type" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="IsValid" Type="Int32" Nullable="false" />
+          <Property Name="IsExeced" Type="Int32" Nullable="false" />
+          <Property Name="RestoreRemark" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Corp_PurchaserDetailInfo">
+          <Key>
+            <PropertyRef Name="CorpId" />
+          </Key>
+          <Property Name="CorpId" Type="Guid" Nullable="false" />
+          <Property Name="BudgetNO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DepartClass" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DepartClassCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TopBudgeEnter" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TopBudgeEnterCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FinanceCase" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FinanceCaseCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Summary" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Corp_RecordStatus">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="CorpId" Type="Guid" Nullable="false" />
+          <Property Name="TableName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="EntityId" Type="Guid" />
+          <Property Name="Remark" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="DataStaus" Type="Int32" />
+          <Property Name="Createtime" Type="DateTime" Nullable="false" />
+          <Property Name="CreatUserId" Type="Guid" Nullable="false" />
+          <Property Name="LastUpdateTime" Type="DateTime" Nullable="false" />
+          <Property Name="LastUserId" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Corp_SupplierDetailInfo">
+          <Key>
+            <PropertyRef Name="CorpId" />
+          </Key>
+          <Property Name="CorpId" Type="Guid" Nullable="false" />
+          <Property Name="IsBranchOrg" Type="Int32" Nullable="false" />
+          <Property Name="LastYearTurnOver" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="GoodsItems" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="GoodsItemCodes" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="TradeTye" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TradeCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TradeScale" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TradeScaleCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="IsTwoTax" Type="Int32" Nullable="false" />
+          <Property Name="CentralTaxNO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FarmTaxNO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CentralComputerNO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FarmComputerNO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ImExportEnterNO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ImExportEnterAppNO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Summary" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Remark" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="T_HY_AptitudeCode">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CodeID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CodeType" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CodeName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IndexOf" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Match" />
+          <Property Type="Int32" Name="Flag" />
+          <Property Type="String" Name="Remark" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateTm" />
+          <Property Type="DateTime" Name="UpdateTm" />
+        </EntityType>
+        <EntityType Name="T_HY_EnterpriseSpeciality">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Fid" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Trade_no" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Specialty" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Grading" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Bz" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Zzzsbh" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Yxsj" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Match" />
+          <Property Type="Int32" Name="Flag" />
+          <Property Type="String" Name="Remark" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateTm" />
+          <Property Type="DateTime" Name="UpdateTm" />
+        </EntityType>
+        <EntityType Name="T_HY_EntrpriseInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CodeId" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Fprnumber" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Trade_license_no" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Enter_type" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PM_Enter_type" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Enter_name" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AREA" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Legal_rept" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Legal_repttime" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Tech_principal" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Tech_principaltime" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Enter_kind" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BusiLicense_no" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Contact_people" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Contact_tel" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Contact_fax" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Contact_address" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Postcode" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Trade_license_validtime" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Record_validtime" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Zczj" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Permanent_assets" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Engineer_staff" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Update_date" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Is_safetyconstruction" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Is_safetyconstructiontime" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Ryzsbh1" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Ryzsbh2" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Zdddz" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Zddfzr" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Zddlxr" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Zdd_fax" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Zddlxdh" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Shtg" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Lxdz" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Legal_M1" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Legal_M2" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RyzsbhM1" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RyzsbhM2" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Legal_M1time" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Legal_M2time" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Match" />
+          <Property Type="Int32" Name="Flag" />
+          <Property Type="String" Name="Remark" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateTm" />
+          <Property Type="DateTime" Name="UpdateTm" />
+        </EntityType>
+        <EntityType Name="T_HY_Personnel">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UnionPersonID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Fid" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MemberType" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EnterpriseID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Xm" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Sfz" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SafeCert" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SafeCertValidTime" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Xmjlzsbh" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Sex" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Insert_date" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Shyx" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ChiefEngineer" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ChiefEngineer_sz" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ChiefEngiValidTime" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Aqjlsgz" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Sgzyxq" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Match" />
+          <Property Type="Int32" Name="Flag" />
+          <Property Type="String" Name="Remark" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateTm" />
+          <Property Type="DateTime" Name="UpdateTm" />
+        </EntityType>
+        <EntityType Name="T_HY_PersonnelSpeciality">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Fid" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UnionPersonID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Memberid" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Zczs" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Zczy" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Zcdj" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Bz" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Match" />
+          <Property Type="Int32" Name="Flag" />
+          <Property Type="String" Name="Remark" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateTm" />
+          <Property Type="DateTime" Name="UpdateTm" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PM_QYKModelStoreContainer" CdmEntityContainer="PM_QYKEntities">
+          <EntitySetMapping Name="Corp_AgencyDetailInfo">
+            <EntityTypeMapping TypeName="PM_QYKModel.Corp_AgencyDetailInfo">
+              <MappingFragment StoreEntitySet="Corp_AgencyDetailInfo">
+                <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+                <ScalarProperty Name="EnterShortName" ColumnName="EnterShortName" />
+                <ScalarProperty Name="EnterType" ColumnName="EnterType" />
+                <ScalarProperty Name="Summary" ColumnName="Summary" />
+                <ScalarProperty Name="SaveCode" ColumnName="SaveCode" />
+                <ScalarProperty Name="HigherEnter" ColumnName="HigherEnter" />
+                <ScalarProperty Name="TaxOrg" ColumnName="TaxOrg" />
+                <ScalarProperty Name="EmployNum" ColumnName="EmployNum" />
+                <ScalarProperty Name="TrainNum" ColumnName="TrainNum" />
+                <ScalarProperty Name="AboveSpecialNum" ColumnName="AboveSpecialNum" />
+                <ScalarProperty Name="HighPositionNum" ColumnName="HighPositionNum" />
+                <ScalarProperty Name="TotalSssets" ColumnName="TotalSssets" />
+                <ScalarProperty Name="OwnerInterest" ColumnName="OwnerInterest" />
+                <ScalarProperty Name="TotalDebt" ColumnName="TotalDebt" />
+                <ScalarProperty Name="IsSocialSecurity" ColumnName="IsSocialSecurity" />
+                <ScalarProperty Name="IsPayTax" ColumnName="IsPayTax" />
+                <ScalarProperty Name="IsBreakLaw" ColumnName="IsBreakLaw" />
+                <ScalarProperty Name="AptitudeName" ColumnName="AptitudeName" />
+                <ScalarProperty Name="AptitudeCode" ColumnName="AptitudeCode" />
+                <ScalarProperty Name="AptitudeNO" ColumnName="AptitudeNO" />
+                <ScalarProperty Name="ApprovOrg" ColumnName="ApprovOrg" />
+                <ScalarProperty Name="ApprovDate" ColumnName="ApprovDate" />
+                <ScalarProperty Name="AptitudeEndDate" ColumnName="AptitudeEndDate" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Corp_Attachment">
+            <EntityTypeMapping TypeName="PM_QYKModel.Corp_Attachment">
+              <MappingFragment StoreEntitySet="Corp_Attachment">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="AttachmentType" ColumnName="AttachmentType" />
+                <ScalarProperty Name="EntityId" ColumnName="EntityId" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="FileCode" ColumnName="FileCode" />
+                <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+                <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Corp_BasicInfo">
+            <EntityTypeMapping TypeName="PM_QYKModel.Corp_BasicInfo">
+              <MappingFragment StoreEntitySet="Corp_BasicInfo">
+                <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+                <ScalarProperty Name="EnterpriseId" ColumnName="EnterpriseId" />
+                <ScalarProperty Name="CorpName" ColumnName="CorpName" />
+                <ScalarProperty Name="OrganizationalCode" ColumnName="OrganizationalCode" />
+                <ScalarProperty Name="CorpType" ColumnName="CorpType" />
+                <ScalarProperty Name="ScopeofBusiness" ColumnName="ScopeofBusiness" />
+                <ScalarProperty Name="BusinessScope" ColumnName="BusinessScope" />
+                <ScalarProperty Name="SecondBusinessScope" ColumnName="SecondBusinessScope" />
+                <ScalarProperty Name="RegistrationNumber" ColumnName="RegistrationNumber" />
+                <ScalarProperty Name="RegisterAuthority" ColumnName="RegisterAuthority" />
+                <ScalarProperty Name="RegisteredCapital" ColumnName="RegisteredCapital" />
+                <ScalarProperty Name="LegalRepresentative" ColumnName="LegalRepresentative" />
+                <ScalarProperty Name="LawerMobile" ColumnName="LawerMobile" />
+                <ScalarProperty Name="LawerContact" ColumnName="LawerContact" />
+                <ScalarProperty Name="LegalCertType" ColumnName="LegalCertType" />
+                <ScalarProperty Name="LegalCertTypeCode" ColumnName="LegalCertTypeCode" />
+                <ScalarProperty Name="LegalCertNO" ColumnName="LegalCertNO" />
+                <ScalarProperty Name="AreaCode" ColumnName="AreaCode" />
+                <ScalarProperty Name="AreaName" ColumnName="AreaName" />
+                <ScalarProperty Name="SetUpTime" ColumnName="SetUpTime" />
+                <ScalarProperty Name="OpenBank" ColumnName="OpenBank" />
+                <ScalarProperty Name="BankUserName" ColumnName="BankUserName" />
+                <ScalarProperty Name="BankAccountNo" ColumnName="BankAccountNo" />
+                <ScalarProperty Name="BankFilePath" ColumnName="BankFilePath" />
+                <ScalarProperty Name="PayBankName" ColumnName="PayBankName" />
+                <ScalarProperty Name="PayBankProvince" ColumnName="PayBankProvince" />
+                <ScalarProperty Name="PayBankCity" ColumnName="PayBankCity" />
+                <ScalarProperty Name="PayBankId" ColumnName="PayBankId" />
+                <ScalarProperty Name="PayBankNo" ColumnName="PayBankNo" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+                <ScalarProperty Name="LinkMan" ColumnName="LinkMan" />
+                <ScalarProperty Name="LinkPhone" ColumnName="LinkPhone" />
+                <ScalarProperty Name="LinkManDuty" ColumnName="LinkManDuty" />
+                <ScalarProperty Name="LinkMobile" ColumnName="LinkMobile" />
+                <ScalarProperty Name="LinkFax" ColumnName="LinkFax" />
+                <ScalarProperty Name="LinkEmail" ColumnName="LinkEmail" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="RecordNO" ColumnName="RecordNO" />
+                <ScalarProperty Name="RecordEndDate" ColumnName="RecordEndDate" />
+                <ScalarProperty Name="IsPass" ColumnName="IsPass" />
+                <ScalarProperty Name="IsLocked" ColumnName="IsLocked" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ComeFrom" ColumnName="ComeFrom" />
+                <ScalarProperty Name="InputMan" ColumnName="InputMan" />
+                <ScalarProperty Name="InputDate" ColumnName="InputDate" />
+                <ScalarProperty Name="CreatUserId" ColumnName="CreatUserId" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="submitcontent" ColumnName="submitcontent" />
+                <ScalarProperty Name="LegalPosition" ColumnName="LegalPosition" />
+                <ScalarProperty Name="TradeStatus" ColumnName="TradeStatus" />
+                <ScalarProperty Name="TradeType" ColumnName="TradeType" />
+                <ScalarProperty Name="TradeTypeCode" ColumnName="TradeTypeCode" />
+                <ScalarProperty Name="RegistMoneyType" ColumnName="RegistMoneyType" />
+                <ScalarProperty Name="IsInsuredMember" ColumnName="IsInsuredMember" />
+                <ScalarProperty Name="LastUpdateTime" ColumnName="LastUpdateTime" />
+                <ScalarProperty Name="IsPreEntrepreneur" ColumnName="IsPreEntrepreneur" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Corp_BiddingRecord">
+            <EntityTypeMapping TypeName="PM_QYKModel.Corp_BiddingRecord">
+              <MappingFragment StoreEntitySet="Corp_BiddingRecord">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+                <ScalarProperty Name="RecordName" ColumnName="RecordName" />
+                <ScalarProperty Name="RecordNO" ColumnName="RecordNO" />
+                <ScalarProperty Name="RecordAptitudeCode" ColumnName="RecordAptitudeCode" />
+                <ScalarProperty Name="RecordAptitude" ColumnName="RecordAptitude" />
+                <ScalarProperty Name="GiveOrg" ColumnName="GiveOrg" />
+                <ScalarProperty Name="GiveDate" ColumnName="GiveDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="DataStaus" ColumnName="DataStaus" />
+                <ScalarProperty Name="LastUpdateTime" ColumnName="LastUpdateTime" />
+                <ScalarProperty Name="LastUserId" ColumnName="LastUserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Corp_BiddingRecordRelationShip">
+            <EntityTypeMapping TypeName="PM_QYKModel.Corp_BiddingRecordRelationShip">
+              <MappingFragment StoreEntitySet="Corp_BiddingRecordRelationShip">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="AptitudeType" ColumnName="AptitudeType" />
+                <ScalarProperty Name="BiddingRecordId" ColumnName="BiddingRecordId" />
+                <ScalarProperty Name="EntityId" ColumnName="EntityId" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Corp_BulidingProject">
+            <EntityTypeMapping TypeName="PM_QYKModel.Corp_BulidingProject">
+              <MappingFragment StoreEntitySet="Corp_BulidingProject">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+                <ScalarProperty Name="MID" ColumnName="MID" />
+                <ScalarProperty Name="ProManager" ColumnName="ProManager" />
+                <ScalarProperty Name="ProName" ColumnName="ProName" />
+                <ScalarProperty Name="Scale" ColumnName="Scale" />
+                <ScalarProperty Name="ContractTime" ColumnName="ContractTime" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="ProStatus" ColumnName="ProStatus" />
+                <ScalarProperty Name="ProAddr" ColumnName="ProAddr" />
+                <ScalarProperty Name="SenderName" ColumnName="SenderName" />
+                <ScalarProperty Name="SenderAddr" ColumnName="SenderAddr" />
+                <ScalarProperty Name="SenderLink" ColumnName="SenderLink" />
+                <ScalarProperty Name="ContractPrice" ColumnName="ContractPrice" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="DoWork" ColumnName="DoWork" />
+                <ScalarProperty Name="Quality" ColumnName="Quality" />
+                <ScalarProperty Name="TecManager" ColumnName="TecManager" />
+                <ScalarProperty Name="MainTecPhone" ColumnName="MainTecPhone" />
+                <ScalarProperty Name="ProDetail" ColumnName="ProDetail" />
+                <ScalarProperty Name="Pid" ColumnName="Pid" />
+                <ScalarProperty Name="OrgMan" ColumnName="OrgMan" />
+                <ScalarProperty Name="Structure" ColumnName="Structure" />
+                <ScalarProperty Name="AgentCode" ColumnName="AgentCode" />
+                <ScalarProperty Name="AgentName" ColumnName="AgentName" />
+                <ScalarProperty Name="ProjBidTm" ColumnName="ProjBidTm" />
+                <ScalarProperty Name="ProjmanagerPhone" ColumnName="ProjmanagerPhone" />
+                <ScalarProperty Name="ProjAreaCode" ColumnName="ProjAreaCode" />
+                <ScalarProperty Name="Creator" ColumnName="Creator" />
+                <ScalarProperty Name="CreatDate" ColumnName="CreatDate" />
+                <ScalarProperty Name="LastUpdateTime" ColumnName="LastUpdateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Corp_CapitalFund">
+            <EntityTypeMapping TypeName="PM_QYKModel.Corp_CapitalFund">
+              <MappingFragment StoreEntitySet="Corp_CapitalFund">
+                <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+                <ScalarProperty Name="FixedAssets" ColumnName="FixedAssets" />
+                <ScalarProperty Name="MoveAssets" ColumnName="MoveAssets" />
+                <ScalarProperty Name="RealPaid" ColumnName="RealPaid" />
+                <ScalarProperty Name="DebtMoney" ColumnName="DebtMoney" />
+                <ScalarProperty Name="FirYear" ColumnName="FirYear" />
+                <ScalarProperty Name="FirYearEarn" ColumnName="FirYearEarn" />
+                <ScalarProperty Name="SecYear" ColumnName="SecYear" />
+                <ScalarProperty Name="SecYearEarn" ColumnName="SecYearEarn" />
+                <ScalarProperty Name="ThirdYear" ColumnName="ThirdYear" />
+                <ScalarProperty Name="ThidYearEarn" ColumnName="ThidYearEarn" />
+                <ScalarProperty Name="FirYearJEarn" ColumnName="FirYearJEarn" />
+                <ScalarProperty Name="SecFixedAssets" ColumnName="SecFixedAssets" />
+                <ScalarProperty Name="SecMoveAssets" ColumnName="SecMoveAssets" />
+                <ScalarProperty Name="SecRealPaid" ColumnName="SecRealPaid" />
+                <ScalarProperty Name="SecDebtMoney" ColumnName="SecDebtMoney" />
+                <ScalarProperty Name="SecJEarn" ColumnName="SecJEarn" />
+                <ScalarProperty Name="ThidFixedAssets" ColumnName="ThidFixedAssets" />
+                <ScalarProperty Name="ThidMoveAssets" ColumnName="ThidMoveAssets" />
+                <ScalarProperty Name="ThidRealPaid" ColumnName="ThidRealPaid" />
+                <ScalarProperty Name="ThidDebtMoney" ColumnName="ThidDebtMoney" />
+                <ScalarProperty Name="ThidThidJEarn" ColumnName="ThidThidJEarn" />
+                <ScalarProperty Name="FstOutputVal" ColumnName="FstOutputVal" />
+                <ScalarProperty Name="SedOutputVal" ColumnName="SedOutputVal" />
+                <ScalarProperty Name="ThrdOutputVal" ColumnName="ThrdOutputVal" />
+                <ScalarProperty Name="FstTax" ColumnName="FstTax" />
+                <ScalarProperty Name="SedTax" ColumnName="SedTax" />
+                <ScalarProperty Name="ThrdTax" ColumnName="ThrdTax" />
+                <ScalarProperty Name="FstContract" ColumnName="FstContract" />
+                <ScalarProperty Name="SedContract" ColumnName="SedContract" />
+                <ScalarProperty Name="ThrdContract" ColumnName="ThrdContract" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Corp_CapitalfundDetails">
+            <EntityTypeMapping TypeName="PM_QYKModel.Corp_CapitalfundDetails">
+              <MappingFragment StoreEntitySet="Corp_CapitalfundDetails">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="StatisYear" ColumnName="StatisYear" />
+                <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+                <ScalarProperty Name="FixedAssets" ColumnName="FixedAssets" />
+                <ScalarProperty Name="MoveAssets" ColumnName="MoveAssets" />
+                <ScalarProperty Name="RealPaid" ColumnName="RealPaid" />
+                <ScalarProperty Name="DebtMoney" ColumnName="DebtMoney" />
+                <ScalarProperty Name="Turnover" ColumnName="Turnover" />
+                <ScalarProperty Name="NetProfits" ColumnName="NetProfits" />
+                <ScalarProperty Name="OutputValue" ColumnName="OutputValue" />
+                <ScalarProperty Name="Tax" ColumnName="Tax" />
+                <ScalarProperty Name="Contract" ColumnName="Contract" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Corp_CARegist">
+            <EntityTypeMapping TypeName="PM_QYKModel.Corp_CARegist">
+              <MappingFragment StoreEntitySet="Corp_CARegist">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="PID" ColumnName="PID" />
+                <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+                <ScalarProperty Name="RegType" ColumnName="RegType" />
+                <ScalarProperty Name="KeyNO" ColumnName="KeyNO" />
+                <ScalarProperty Name="KeyName" ColumnName="KeyName" />
+                <ScalarProperty Name="CertNum" ColumnName="CertNum" />
+                <ScalarProperty Name="InitZTBTime" ColumnName="InitZTBTime" />
+                <ScalarProperty Name="ZTBUseTime" ColumnName="ZTBUseTime" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="TradingLicense" ColumnName="TradingLicense" />
+                <ScalarProperty Name="IsSale" ColumnName="IsSale" />
+                <ScalarProperty Name="SalesTime" ColumnName="SalesTime" />
+                <ScalarProperty Name="SalesPrice" ColumnName="SalesPrice" />
+                <ScalarProperty Name="AreaCode" ColumnName="AreaCode" />
+                <ScalarProperty Name="KeyStatus" ColumnName="KeyStatus" />
+                <ScalarProperty Name="RealNO" ColumnName="RealNO" />
+                <ScalarProperty Name="IsMainKey" ColumnName="IsMainKey" />
+                <ScalarProperty Name="CreatUserId" ColumnName="CreatUserId" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Corp_CARegistFail">
+            <EntityTypeMapping TypeName="PM_QYKModel.Corp_CARegistFail">
+              <MappingFragment StoreEntitySet="Corp_CARegistFail">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PId" ColumnName="PId" />
+                <ScalarProperty Name="RegType" ColumnName="RegType" />
+                <ScalarProperty Name="KeyNO" ColumnName="KeyNO" />
+                <ScalarProperty Name="KeyName" ColumnName="KeyName" />
+                <ScalarProperty Name="CertNum" ColumnName="CertNum" />
+                <ScalarProperty Name="InitZTBTime" ColumnName="InitZTBTime" />
+                <ScalarProperty Name="ZTBUseTime" ColumnName="ZTBUseTime" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="TradingLicense" ColumnName="TradingLicense" />
+                <ScalarProperty Name="IsSale" ColumnName="IsSale" />
+                <ScalarProperty Name="SalesTime" ColumnName="SalesTime" />
+                <ScalarProperty Name="SalesPrice" ColumnName="SalesPrice" />
+                <ScalarProperty Name="AreaCode" ColumnName="AreaCode" />
+                <ScalarProperty Name="KeyStatus" ColumnName="KeyStatus" />
+                <ScalarProperty Name="IsSuccess" ColumnName="IsSuccess" />
+                <ScalarProperty Name="FailReason" ColumnName="FailReason" />
+                <ScalarProperty Name="CreatUserId" ColumnName="CreatUserId" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+                <ScalarProperty Name="RealNO" ColumnName="RealNO" />
+                <ScalarProperty Name="IsMainKey" ColumnName="IsMainKey" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Corp_Certificate">
+            <EntityTypeMapping TypeName="PM_QYKModel.Corp_Certificate">
+              <MappingFragment StoreEntitySet="Corp_Certificate">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="PID" ColumnName="PID" />
+                <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+                <ScalarProperty Name="CertType" ColumnName="CertType" />
+                <ScalarProperty Name="CertTypeName" ColumnName="CertTypeName" />
+                <ScalarProperty Name="CertName" ColumnName="CertName" />
+                <ScalarProperty Name="CertCode" ColumnName="CertCode" />
+                <ScalarProperty Name="CertStartDate" ColumnName="CertStartDate" />
+                <ScalarProperty Name="CertEndDate" ColumnName="CertEndDate" />
+                <ScalarProperty Name="GiveOrg" ColumnName="GiveOrg" />
+                <ScalarProperty Name="CertGiveDate" ColumnName="CertGiveDate" />
+                <ScalarProperty Name="BZ" ColumnName="BZ" />
+                <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+                <ScalarProperty Name="CreatUserId" ColumnName="CreatUserId" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="GradeName" ColumnName="GradeName" />
+                <ScalarProperty Name="GradeCode" ColumnName="GradeCode" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="LastUpdateTime" ColumnName="LastUpdateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Corp_ChangeDataBak">
+            <EntityTypeMapping TypeName="PM_QYKModel.Corp_ChangeDataBak">
+              <MappingFragment StoreEntitySet="Corp_ChangeDataBak">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="EntityId" ColumnName="EntityId" />
+                <ScalarProperty Name="CorpInfoTabType" ColumnName="CorpInfoTabType" />
+                <ScalarProperty Name="ChangeTableName" ColumnName="ChangeTableName" />
+                <ScalarProperty Name="ChangeType" ColumnName="ChangeType" />
+                <ScalarProperty Name="JsonValue" ColumnName="JsonValue" />
+                <ScalarProperty Name="ExtendValue" ColumnName="ExtendValue" />
+                <ScalarProperty Name="Creator" ColumnName="Creator" />
+                <ScalarProperty Name="CreatDate" ColumnName="CreatDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Corp_ChangeRecord">
+            <EntityTypeMapping TypeName="PM_QYKModel.Corp_ChangeRecord">
+              <MappingFragment StoreEntitySet="Corp_ChangeRecord">
+                <ScalarProperty Name="ChangeRecordId" ColumnName="ChangeRecordId" />
+                <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="submitcontent" ColumnName="submitcontent" />
+                <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+                <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="HasAttachFile" ColumnName="HasAttachFile" />
+                <ScalarProperty Name="RefEntityRecordId" ColumnName="RefEntityRecordId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Corp_ChangeRecordItem">
+            <EntityTypeMapping TypeName="PM_QYKModel.Corp_ChangeRecordItem">
+              <MappingFragment StoreEntitySet="Corp_ChangeRecordItem">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="EntityId" ColumnName="EntityId" />
+                <ScalarProperty Name="CorpInfoTabType" ColumnName="CorpInfoTabType" />
+                <ScalarProperty Name="ChangeRecordId" ColumnName="ChangeRecordId" />
+                <ScalarProperty Name="ChangeTableName" ColumnName="ChangeTableName" />
+                <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+                <ScalarProperty Name="CurrentValue" ColumnName="CurrentValue" />
+                <ScalarProperty Name="NewValue" ColumnName="NewValue" />
+                <ScalarProperty Name="CustomField1" ColumnName="CustomField1" />
+                <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="ChangeType" ColumnName="ChangeType" />
+                <ScalarProperty Name="IsHiden" ColumnName="IsHiden" />
+                <ScalarProperty Name="CurrentDisplayValue" ColumnName="CurrentDisplayValue" />
+                <ScalarProperty Name="NewDisplayValue" ColumnName="NewDisplayValue" />
+                <ScalarProperty Name="IsAttachment" ColumnName="IsAttachment" />
+                <ScalarProperty Name="AttachmentRelationId" ColumnName="AttachmentRelationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Corp_CheckInfos">
+            <EntityTypeMapping TypeName="PM_QYKModel.Corp_CheckInfos">
+              <MappingFragment StoreEntitySet="Corp_CheckInfos">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+                <ScalarProperty Name="CorpType" ColumnName="CorpType" />
+                <ScalarProperty Name="TabType" ColumnName="TabType" />
+                <ScalarProperty Name="Result" ColumnName="Result" />
+                <ScalarProperty Name="Createtime" ColumnName="Createtime" />
+                <ScalarProperty Name="SubmitContent" ColumnName="SubmitContent" />
+                <ScalarProperty Name="Creator" ColumnName="Creator" />
+                <ScalarProperty Name="AuditingType" ColumnName="AuditingType" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="FlowInstanceId" ColumnName="FlowInstanceId" />
+                <ScalarProperty Name="TaskId" ColumnName="TaskId" />
+                <ScalarProperty Name="ReceviceTime" ColumnName="ReceviceTime" />
+                <ScalarProperty Name="IsCurrent" ColumnName="IsCurrent" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Corp_CheckOrderRecord">
+            <EntityTypeMapping TypeName="PM_QYKModel.Corp_CheckOrderRecord">
+              <MappingFragment StoreEntitySet="Corp_CheckOrderRecord">
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+                <ScalarProperty Name="EnterpriseId" ColumnName="EnterpriseId" />
+                <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+                <ScalarProperty Name="EntityId" ColumnName="EntityId" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="OrderType" ColumnName="OrderType" />
+                <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+                <ScalarProperty Name="CheckUserId" ColumnName="CheckUserId" />
+                <ScalarProperty Name="DateKind" ColumnName="DateKind" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="CreateId" ColumnName="CreateId" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Corp_CheckQueue">
+            <EntityTypeMapping TypeName="PM_QYKModel.Corp_CheckQueue">
+              <MappingFragment StoreEntitySet="Corp_CheckQueue">
+                <ScalarProperty Name="QueueId" ColumnName="QueueId" />
+                <ScalarProperty Name="CheckUserId" ColumnName="CheckUserId" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="TemplateType" ColumnName="TemplateType" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateId" ColumnName="CreateId" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ResetDate" ColumnName="ResetDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Corp_CreditInfo">
+            <EntityTypeMapping TypeName="PM_QYKModel.Corp_CreditInfo">
+              <MappingFragment StoreEntitySet="Corp_CreditInfo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+                <ScalarProperty Name="Records" ColumnName="Records" />
+                <ScalarProperty Name="CreatUserId" ColumnName="CreatUserId" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+                <ScalarProperty Name="Pid" ColumnName="Pid" />
+                <ScalarProperty Name="Mid" ColumnName="Mid" />
+                <ScalarProperty Name="TypeCode" ColumnName="TypeCode" />
+                <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+                <ScalarProperty Name="ProID" ColumnName="ProID" />
+                <ScalarProperty Name="BegDate" ColumnName="BegDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="ValidityTime" ColumnName="ValidityTime" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="HonorType" ColumnName="HonorType" />
+                <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="LastUpdateTime" ColumnName="LastUpdateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Corp_DetailInfo">
+            <EntityTypeMapping TypeName="PM_QYKModel.Corp_DetailInfo">
+              <MappingFragment StoreEntitySet="Corp_DetailInfo">
+                <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+                <ScalarProperty Name="EnterBH" ColumnName="EnterBH" />
+                <ScalarProperty Name="TradeCardNum" ColumnName="TradeCardNum" />
+                <ScalarProperty Name="UnitCardStTime" ColumnName="UnitCardStTime" />
+                <ScalarProperty Name="UnitCardEdTime" ColumnName="UnitCardEdTime" />
+                <ScalarProperty Name="UnitTradCode" ColumnName="UnitTradCode" />
+                <ScalarProperty Name="UnitAddr" ColumnName="UnitAddr" />
+                <ScalarProperty Name="UnitZipCode" ColumnName="UnitZipCode" />
+                <ScalarProperty Name="LocalAddr" ColumnName="LocalAddr" />
+                <ScalarProperty Name="LocalZipCode" ColumnName="LocalZipCode" />
+                <ScalarProperty Name="QualLevel" ColumnName="QualLevel" />
+                <ScalarProperty Name="QualSignNum" ColumnName="QualSignNum" />
+                <ScalarProperty Name="TecManager" ColumnName="TecManager" />
+                <ScalarProperty Name="TecPosition" ColumnName="TecPosition" />
+                <ScalarProperty Name="TecPhone" ColumnName="TecPhone" />
+                <ScalarProperty Name="BranchLinkMan" ColumnName="BranchLinkMan" />
+                <ScalarProperty Name="BranchLinkManPhone" ColumnName="BranchLinkManPhone" />
+                <ScalarProperty Name="MainDepart" ColumnName="MainDepart" />
+                <ScalarProperty Name="NowWorkers" ColumnName="NowWorkers" />
+                <ScalarProperty Name="Manager" ColumnName="Manager" />
+                <ScalarProperty Name="HightDuty" ColumnName="HightDuty" />
+                <ScalarProperty Name="MiddleDuty" ColumnName="MiddleDuty" />
+                <ScalarProperty Name="LowerDuty" ColumnName="LowerDuty" />
+                <ScalarProperty Name="MechanicDuty" ColumnName="MechanicDuty" />
+                <ScalarProperty Name="DealMan" ColumnName="DealMan" />
+                <ScalarProperty Name="CheckMan" ColumnName="CheckMan" />
+                <ScalarProperty Name="MainLader" ColumnName="MainLader" />
+                <ScalarProperty Name="ZZJG" ColumnName="ZZJG" />
+                <ScalarProperty Name="EnterFLName" ColumnName="EnterFLName" />
+                <ScalarProperty Name="EnterFLCode" ColumnName="EnterFLCode" />
+                <ScalarProperty Name="SaveCode" ColumnName="SaveCode" />
+                <ScalarProperty Name="SafeDepManager" ColumnName="SafeDepManager" />
+                <ScalarProperty Name="SafeDepManagerPhone" ColumnName="SafeDepManagerPhone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Corp_EnterAptitude">
+            <EntityTypeMapping TypeName="PM_QYKModel.Corp_EnterAptitude">
+              <MappingFragment StoreEntitySet="Corp_EnterAptitude">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="PID" ColumnName="PID" />
+                <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+                <ScalarProperty Name="CertName" ColumnName="CertName" />
+                <ScalarProperty Name="CertNO" ColumnName="CertNO" />
+                <ScalarProperty Name="CertTypeCode" ColumnName="CertTypeCode" />
+                <ScalarProperty Name="CertTypeName" ColumnName="CertTypeName" />
+                <ScalarProperty Name="GiveOrg" ColumnName="GiveOrg" />
+                <ScalarProperty Name="GiveDate" ColumnName="GiveDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+                <ScalarProperty Name="CertCode" ColumnName="CertCode" />
+                <ScalarProperty Name="CertCodeName" ColumnName="CertCodeName" />
+                <ScalarProperty Name="Sort" ColumnName="Sort" />
+                <ScalarProperty Name="IsDel" ColumnName="IsDel" />
+                <ScalarProperty Name="IsYearCheck" ColumnName="IsYearCheck" />
+                <ScalarProperty Name="AgentRanges" ColumnName="AgentRanges" />
+                <ScalarProperty Name="AgentRangeCodes" ColumnName="AgentRangeCodes" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="LastUpdateTime" ColumnName="LastUpdateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Corp_EnterpriseInfo">
+            <EntityTypeMapping TypeName="PM_QYKModel.Corp_EnterpriseInfo">
+              <MappingFragment StoreEntitySet="Corp_EnterpriseInfo">
+                <ScalarProperty Name="EnterpriseId" ColumnName="EnterpriseId" />
+                <ScalarProperty Name="CorpName" ColumnName="CorpName" />
+                <ScalarProperty Name="OrganizationalCode" ColumnName="OrganizationalCode" />
+                <ScalarProperty Name="ScopeofBusiness" ColumnName="ScopeofBusiness" />
+                <ScalarProperty Name="RegistrationNumber" ColumnName="RegistrationNumber" />
+                <ScalarProperty Name="RegisterAuthority" ColumnName="RegisterAuthority" />
+                <ScalarProperty Name="RegisteredCapital" ColumnName="RegisteredCapital" />
+                <ScalarProperty Name="LegalRepresentative" ColumnName="LegalRepresentative" />
+                <ScalarProperty Name="LawerMobile" ColumnName="LawerMobile" />
+                <ScalarProperty Name="LawerContact" ColumnName="LawerContact" />
+                <ScalarProperty Name="LegalCertType" ColumnName="LegalCertType" />
+                <ScalarProperty Name="LegalCertTypeCode" ColumnName="LegalCertTypeCode" />
+                <ScalarProperty Name="LegalCertNO" ColumnName="LegalCertNO" />
+                <ScalarProperty Name="AreaCode" ColumnName="AreaCode" />
+                <ScalarProperty Name="AreaName" ColumnName="AreaName" />
+                <ScalarProperty Name="SetUpTime" ColumnName="SetUpTime" />
+                <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+                <ScalarProperty Name="LinkMan" ColumnName="LinkMan" />
+                <ScalarProperty Name="LinkPhone" ColumnName="LinkPhone" />
+                <ScalarProperty Name="LinkManDuty" ColumnName="LinkManDuty" />
+                <ScalarProperty Name="LinkMobile" ColumnName="LinkMobile" />
+                <ScalarProperty Name="LinkFax" ColumnName="LinkFax" />
+                <ScalarProperty Name="LinkEmail" ColumnName="LinkEmail" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="CreatUserId" ColumnName="CreatUserId" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="LegalPosition" ColumnName="LegalPosition" />
+                <ScalarProperty Name="RegistMoneyType" ColumnName="RegistMoneyType" />
+                <ScalarProperty Name="OpenBank" ColumnName="OpenBank" />
+                <ScalarProperty Name="BankUserName" ColumnName="BankUserName" />
+                <ScalarProperty Name="BankAccountNo" ColumnName="BankAccountNo" />
+                <ScalarProperty Name="BankFilePath" ColumnName="BankFilePath" />
+                <ScalarProperty Name="PayBankName" ColumnName="PayBankName" />
+                <ScalarProperty Name="PayBankProvince" ColumnName="PayBankProvince" />
+                <ScalarProperty Name="PayBankCity" ColumnName="PayBankCity" />
+                <ScalarProperty Name="PayBankId" ColumnName="PayBankId" />
+                <ScalarProperty Name="PayBankNo" ColumnName="PayBankNo" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Corp_Equipment">
+            <EntityTypeMapping TypeName="PM_QYKModel.Corp_Equipment">
+              <MappingFragment StoreEntitySet="Corp_Equipment">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+                <ScalarProperty Name="EquName" ColumnName="EquName" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="HowMany" ColumnName="HowMany" />
+                <ScalarProperty Name="MadeFrom" ColumnName="MadeFrom" />
+                <ScalarProperty Name="MadeTime" ColumnName="MadeTime" />
+                <ScalarProperty Name="Power" ColumnName="Power" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="CreatUserId" ColumnName="CreatUserId" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Pid" ColumnName="Pid" />
+                <ScalarProperty Name="LastUpdateTime" ColumnName="LastUpdateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Corp_ExtendInfo">
+            <EntityTypeMapping TypeName="PM_QYKModel.Corp_ExtendInfo">
+              <MappingFragment StoreEntitySet="Corp_ExtendInfo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+                <ScalarProperty Name="CustomFieldId" ColumnName="CustomFieldId" />
+                <ScalarProperty Name="CustomFieldValue" ColumnName="CustomFieldValue" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Corp_Financial">
+            <EntityTypeMapping TypeName="PM_QYKModel.Corp_Financial">
+              <MappingFragment StoreEntitySet="Corp_Financial">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="PID" ColumnName="PID" />
+                <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+                <ScalarProperty Name="Financial_Year" ColumnName="Financial_Year" />
+                <ScalarProperty Name="Financial_Remark" ColumnName="Financial_Remark" />
+                <ScalarProperty Name="Create_Tm" ColumnName="Create_Tm" />
+                <ScalarProperty Name="Update_TM" ColumnName="Update_TM" />
+                <ScalarProperty Name="RealPaid" ColumnName="RealPaid" />
+                <ScalarProperty Name="DebtMoney" ColumnName="DebtMoney" />
+                <ScalarProperty Name="FixedAssets" ColumnName="FixedAssets" />
+                <ScalarProperty Name="MoveAssets" ColumnName="MoveAssets" />
+                <ScalarProperty Name="NetProfits" ColumnName="NetProfits" />
+                <ScalarProperty Name="BusinessVolume" ColumnName="BusinessVolume" />
+                <ScalarProperty Name="LastUpdateTime" ColumnName="LastUpdateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Corp_HolidaySettings">
+            <EntityTypeMapping TypeName="PM_QYKModel.Corp_HolidaySettings">
+              <MappingFragment StoreEntitySet="Corp_HolidaySettings">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IsLawHoliday" ColumnName="IsLawHoliday" />
+                <ScalarProperty Name="HolidayName" ColumnName="HolidayName" />
+                <ScalarProperty Name="Holiday" ColumnName="Holiday" />
+                <ScalarProperty Name="WorkStatus" ColumnName="WorkStatus" />
+                <ScalarProperty Name="DateKind" ColumnName="DateKind" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="CreateId" ColumnName="CreateId" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Corp_Manager">
+            <EntityTypeMapping TypeName="PM_QYKModel.Corp_Manager">
+              <MappingFragment StoreEntitySet="Corp_Manager">
+                <ScalarProperty Name="MID" ColumnName="MID" />
+                <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="IdCard" ColumnName="IdCard" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="OldQualLevel" ColumnName="OldQualLevel" />
+                <ScalarProperty Name="NowQualLevel" ColumnName="NowQualLevel" />
+                <ScalarProperty Name="QualNum" ColumnName="QualNum" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="SaveNum" ColumnName="SaveNum" />
+                <ScalarProperty Name="TecPosition" ColumnName="TecPosition" />
+                <ScalarProperty Name="Degree" ColumnName="Degree" />
+                <ScalarProperty Name="School" ColumnName="School" />
+                <ScalarProperty Name="LeveTime" ColumnName="LeveTime" />
+                <ScalarProperty Name="Specialty" ColumnName="Specialty" />
+                <ScalarProperty Name="DictCodes" ColumnName="DictCodes" />
+                <ScalarProperty Name="DictNames" ColumnName="DictNames" />
+                <ScalarProperty Name="Pid" ColumnName="Pid" />
+                <ScalarProperty Name="PhotoPath" ColumnName="PhotoPath" />
+                <ScalarProperty Name="FingerPrint1" ColumnName="FingerPrint1" />
+                <ScalarProperty Name="FingerPrint2" ColumnName="FingerPrint2" />
+                <ScalarProperty Name="FingerPrint3" ColumnName="FingerPrint3" />
+                <ScalarProperty Name="CreatUserId" ColumnName="CreatUserId" />
+                <ScalarProperty Name="CreatDate" ColumnName="CreatDate" />
+                <ScalarProperty Name="LastUpdateTime" ColumnName="LastUpdateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Corp_ManagerAptitudeCert">
+            <EntityTypeMapping TypeName="PM_QYKModel.Corp_ManagerAptitudeCert">
+              <MappingFragment StoreEntitySet="Corp_ManagerAptitudeCert">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Mid" ColumnName="Mid" />
+                <ScalarProperty Name="CertName" ColumnName="CertName" />
+                <ScalarProperty Name="CertCode" ColumnName="CertCode" />
+                <ScalarProperty Name="GradeName" ColumnName="GradeName" />
+                <ScalarProperty Name="GradeCode" ColumnName="GradeCode" />
+                <ScalarProperty Name="GiveOrg" ColumnName="GiveOrg" />
+                <ScalarProperty Name="GiveDate" ColumnName="GiveDate" />
+                <ScalarProperty Name="CertStartDate" ColumnName="CertStartDate" />
+                <ScalarProperty Name="CertEndDate" ColumnName="CertEndDate" />
+                <ScalarProperty Name="BZ" ColumnName="BZ" />
+                <ScalarProperty Name="RealName" ColumnName="RealName" />
+                <ScalarProperty Name="SaveName" ColumnName="SaveName" />
+                <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+                <ScalarProperty Name="FileDate" ColumnName="FileDate" />
+                <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+                <ScalarProperty Name="FileType" ColumnName="FileType" />
+                <ScalarProperty Name="CreatUserId" ColumnName="CreatUserId" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="TypeCode" ColumnName="TypeCode" />
+                <ScalarProperty Name="TypeCodeName" ColumnName="TypeCodeName" />
+                <ScalarProperty Name="TradeType" ColumnName="TradeType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Corp_PausingRecord">
+            <EntityTypeMapping TypeName="PM_QYKModel.Corp_PausingRecord">
+              <MappingFragment StoreEntitySet="Corp_PausingRecord">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+                <ScalarProperty Name="CreatUserId" ColumnName="CreatUserId" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="TradeType" ColumnName="TradeType" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+                <ScalarProperty Name="IsExeced" ColumnName="IsExeced" />
+                <ScalarProperty Name="RestoreRemark" ColumnName="RestoreRemark" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Corp_PurchaserDetailInfo">
+            <EntityTypeMapping TypeName="PM_QYKModel.Corp_PurchaserDetailInfo">
+              <MappingFragment StoreEntitySet="Corp_PurchaserDetailInfo">
+                <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+                <ScalarProperty Name="BudgetNO" ColumnName="BudgetNO" />
+                <ScalarProperty Name="DepartClass" ColumnName="DepartClass" />
+                <ScalarProperty Name="DepartClassCode" ColumnName="DepartClassCode" />
+                <ScalarProperty Name="TopBudgeEnter" ColumnName="TopBudgeEnter" />
+                <ScalarProperty Name="TopBudgeEnterCode" ColumnName="TopBudgeEnterCode" />
+                <ScalarProperty Name="FinanceCase" ColumnName="FinanceCase" />
+                <ScalarProperty Name="FinanceCaseCode" ColumnName="FinanceCaseCode" />
+                <ScalarProperty Name="Summary" ColumnName="Summary" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Corp_RecordStatus">
+            <EntityTypeMapping TypeName="PM_QYKModel.Corp_RecordStatus">
+              <MappingFragment StoreEntitySet="Corp_RecordStatus">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+                <ScalarProperty Name="TableName" ColumnName="TableName" />
+                <ScalarProperty Name="EntityId" ColumnName="EntityId" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="DataStaus" ColumnName="DataStaus" />
+                <ScalarProperty Name="Createtime" ColumnName="Createtime" />
+                <ScalarProperty Name="CreatUserId" ColumnName="CreatUserId" />
+                <ScalarProperty Name="LastUpdateTime" ColumnName="LastUpdateTime" />
+                <ScalarProperty Name="LastUserId" ColumnName="LastUserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Corp_SupplierDetailInfo">
+            <EntityTypeMapping TypeName="PM_QYKModel.Corp_SupplierDetailInfo">
+              <MappingFragment StoreEntitySet="Corp_SupplierDetailInfo">
+                <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+                <ScalarProperty Name="IsBranchOrg" ColumnName="IsBranchOrg" />
+                <ScalarProperty Name="LastYearTurnOver" ColumnName="LastYearTurnOver" />
+                <ScalarProperty Name="GoodsItems" ColumnName="GoodsItems" />
+                <ScalarProperty Name="GoodsItemCodes" ColumnName="GoodsItemCodes" />
+                <ScalarProperty Name="TradeTye" ColumnName="TradeTye" />
+                <ScalarProperty Name="TradeCode" ColumnName="TradeCode" />
+                <ScalarProperty Name="TradeScale" ColumnName="TradeScale" />
+                <ScalarProperty Name="TradeScaleCode" ColumnName="TradeScaleCode" />
+                <ScalarProperty Name="IsTwoTax" ColumnName="IsTwoTax" />
+                <ScalarProperty Name="CentralTaxNO" ColumnName="CentralTaxNO" />
+                <ScalarProperty Name="FarmTaxNO" ColumnName="FarmTaxNO" />
+                <ScalarProperty Name="CentralComputerNO" ColumnName="CentralComputerNO" />
+                <ScalarProperty Name="FarmComputerNO" ColumnName="FarmComputerNO" />
+                <ScalarProperty Name="ImExportEnterNO" ColumnName="ImExportEnterNO" />
+                <ScalarProperty Name="ImExportEnterAppNO" ColumnName="ImExportEnterAppNO" />
+                <ScalarProperty Name="Summary" ColumnName="Summary" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_HY_AptitudeCode">
+            <EntityTypeMapping TypeName="PM_QYKModel.T_HY_AptitudeCode">
+              <MappingFragment StoreEntitySet="T_HY_AptitudeCode">
+                <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+                <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="Match" ColumnName="Match" />
+                <ScalarProperty Name="IndexOf" ColumnName="IndexOf" />
+                <ScalarProperty Name="InCode" ColumnName="InCode" />
+                <ScalarProperty Name="CodeName" ColumnName="CodeName" />
+                <ScalarProperty Name="CodeType" ColumnName="CodeType" />
+                <ScalarProperty Name="CodeID" ColumnName="CodeID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_HY_EnterpriseSpeciality">
+            <EntityTypeMapping TypeName="PM_QYKModel.T_HY_EnterpriseSpeciality">
+              <MappingFragment StoreEntitySet="T_HY_EnterpriseSpeciality">
+                <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+                <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="Match" ColumnName="Match" />
+                <ScalarProperty Name="Yxsj" ColumnName="Yxsj" />
+                <ScalarProperty Name="Zzzsbh" ColumnName="Zzzsbh" />
+                <ScalarProperty Name="Bz" ColumnName="Bz" />
+                <ScalarProperty Name="Grading" ColumnName="Grading" />
+                <ScalarProperty Name="Specialty" ColumnName="Specialty" />
+                <ScalarProperty Name="Trade_no" ColumnName="Trade_no" />
+                <ScalarProperty Name="Fid" ColumnName="Fid" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_HY_EntrpriseInfo">
+            <EntityTypeMapping TypeName="PM_QYKModel.T_HY_EntrpriseInfo">
+              <MappingFragment StoreEntitySet="T_HY_EntrpriseInfo">
+                <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+                <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="Match" ColumnName="Match" />
+                <ScalarProperty Name="Legal_M2time" ColumnName="Legal_M2time" />
+                <ScalarProperty Name="Legal_M1time" ColumnName="Legal_M1time" />
+                <ScalarProperty Name="RyzsbhM2" ColumnName="RyzsbhM2" />
+                <ScalarProperty Name="RyzsbhM1" ColumnName="RyzsbhM1" />
+                <ScalarProperty Name="Legal_M2" ColumnName="Legal_M2" />
+                <ScalarProperty Name="Legal_M1" ColumnName="Legal_M1" />
+                <ScalarProperty Name="Lxdz" ColumnName="Lxdz" />
+                <ScalarProperty Name="Shtg" ColumnName="Shtg" />
+                <ScalarProperty Name="Zddlxdh" ColumnName="Zddlxdh" />
+                <ScalarProperty Name="Zdd_fax" ColumnName="Zdd_fax" />
+                <ScalarProperty Name="Zddlxr" ColumnName="Zddlxr" />
+                <ScalarProperty Name="Zddfzr" ColumnName="Zddfzr" />
+                <ScalarProperty Name="Zdddz" ColumnName="Zdddz" />
+                <ScalarProperty Name="Ryzsbh2" ColumnName="Ryzsbh2" />
+                <ScalarProperty Name="Ryzsbh1" ColumnName="Ryzsbh1" />
+                <ScalarProperty Name="Is_safetyconstructiontime" ColumnName="Is_safetyconstructiontime" />
+                <ScalarProperty Name="Is_safetyconstruction" ColumnName="Is_safetyconstruction" />
+                <ScalarProperty Name="Update_date" ColumnName="Update_date" />
+                <ScalarProperty Name="Engineer_staff" ColumnName="Engineer_staff" />
+                <ScalarProperty Name="Permanent_assets" ColumnName="Permanent_assets" />
+                <ScalarProperty Name="Zczj" ColumnName="Zczj" />
+                <ScalarProperty Name="Record_validtime" ColumnName="Record_validtime" />
+                <ScalarProperty Name="Trade_license_validtime" ColumnName="Trade_license_validtime" />
+                <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Contact_address" ColumnName="Contact_address" />
+                <ScalarProperty Name="Contact_fax" ColumnName="Contact_fax" />
+                <ScalarProperty Name="Contact_tel" ColumnName="Contact_tel" />
+                <ScalarProperty Name="Contact_people" ColumnName="Contact_people" />
+                <ScalarProperty Name="BusiLicense_no" ColumnName="BusiLicense_no" />
+                <ScalarProperty Name="Enter_kind" ColumnName="Enter_kind" />
+                <ScalarProperty Name="Tech_principaltime" ColumnName="Tech_principaltime" />
+                <ScalarProperty Name="Tech_principal" ColumnName="Tech_principal" />
+                <ScalarProperty Name="Legal_repttime" ColumnName="Legal_repttime" />
+                <ScalarProperty Name="Legal_rept" ColumnName="Legal_rept" />
+                <ScalarProperty Name="AREA" ColumnName="AREA" />
+                <ScalarProperty Name="Enter_name" ColumnName="Enter_name" />
+                <ScalarProperty Name="PM_Enter_type" ColumnName="PM_Enter_type" />
+                <ScalarProperty Name="Enter_type" ColumnName="Enter_type" />
+                <ScalarProperty Name="Trade_license_no" ColumnName="Trade_license_no" />
+                <ScalarProperty Name="Fprnumber" ColumnName="Fprnumber" />
+                <ScalarProperty Name="CodeId" ColumnName="CodeId" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_HY_Personnel">
+            <EntityTypeMapping TypeName="PM_QYKModel.T_HY_Personnel">
+              <MappingFragment StoreEntitySet="T_HY_Personnel">
+                <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+                <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="Match" ColumnName="Match" />
+                <ScalarProperty Name="Sgzyxq" ColumnName="Sgzyxq" />
+                <ScalarProperty Name="Aqjlsgz" ColumnName="Aqjlsgz" />
+                <ScalarProperty Name="ChiefEngiValidTime" ColumnName="ChiefEngiValidTime" />
+                <ScalarProperty Name="ChiefEngineer_sz" ColumnName="ChiefEngineer_sz" />
+                <ScalarProperty Name="ChiefEngineer" ColumnName="ChiefEngineer" />
+                <ScalarProperty Name="Shyx" ColumnName="Shyx" />
+                <ScalarProperty Name="Insert_date" ColumnName="Insert_date" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Xmjlzsbh" ColumnName="Xmjlzsbh" />
+                <ScalarProperty Name="SafeCertValidTime" ColumnName="SafeCertValidTime" />
+                <ScalarProperty Name="SafeCert" ColumnName="SafeCert" />
+                <ScalarProperty Name="Sfz" ColumnName="Sfz" />
+                <ScalarProperty Name="Xm" ColumnName="Xm" />
+                <ScalarProperty Name="EnterpriseID" ColumnName="EnterpriseID" />
+                <ScalarProperty Name="MemberType" ColumnName="MemberType" />
+                <ScalarProperty Name="Fid" ColumnName="Fid" />
+                <ScalarProperty Name="UnionPersonID" ColumnName="UnionPersonID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_HY_PersonnelSpeciality">
+            <EntityTypeMapping TypeName="PM_QYKModel.T_HY_PersonnelSpeciality">
+              <MappingFragment StoreEntitySet="T_HY_PersonnelSpeciality">
+                <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+                <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="Match" ColumnName="Match" />
+                <ScalarProperty Name="Bz" ColumnName="Bz" />
+                <ScalarProperty Name="Zcdj" ColumnName="Zcdj" />
+                <ScalarProperty Name="Zczy" ColumnName="Zczy" />
+                <ScalarProperty Name="Zczs" ColumnName="Zczs" />
+                <ScalarProperty Name="Memberid" ColumnName="Memberid" />
+                <ScalarProperty Name="UnionPersonID" ColumnName="UnionPersonID" />
+                <ScalarProperty Name="Fid" ColumnName="Fid" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="QYK">
+        <EntityTypeShape EntityType="PM_QYKModel.Corp_AgencyDetailInfo" Width="1.5" PointX="0.75" PointY="0.75" Height="5.59940673828125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_QYKModel.Corp_Attachment" Width="1.5" PointX="2.75" PointY="0.75" Height="2.5430916341145826" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_QYKModel.Corp_BasicInfo" Width="1.5" PointX="4.75" PointY="0.75" Height="12.094076334635417" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_QYKModel.Corp_BiddingRecord" Width="1.5" PointX="6.75" PointY="0.75" Height="3.4981901041666656" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_QYKModel.Corp_BiddingRecordRelationShip" Width="1.5" PointX="6.75" PointY="5.75" Height="1.9700325520833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_QYKModel.Corp_BulidingProject" Width="1.5" PointX="0.75" PointY="7.75" Height="7.1275642903645817" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_QYKModel.Corp_CapitalFund" Width="1.5" PointX="8.75" PointY="0.75" Height="6.9365445963541674" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_QYKModel.Corp_CapitalfundDetails" Width="1.5" PointX="6.75" PointY="8.75" Height="3.3071704101562496" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_QYKModel.Corp_CARegist" Width="1.5" PointX="8.75" PointY="8.75" Height="5.0263476562500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_QYKModel.Corp_CARegistFail" Width="1.5" PointX="10.75" PointY="0.75" Height="5.4083870442708317" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_QYKModel.Corp_Certificate" Width="1.5" PointX="10.75" PointY="7.75" Height="4.8353279622395817" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_QYKModel.Corp_ChangeDataBak" Width="1.5" PointX="12.75" PointY="0.75" Height="2.9251310221354174" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_QYKModel.Corp_ChangeRecord" Width="1.5" PointX="12.75" PointY="4.75" Height="2.7341113281250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_QYKModel.Corp_ChangeRecordItem" Width="1.5" PointX="12.75" PointY="8.75" Height="4.6443082682291674" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_QYKModel.Corp_CheckInfos" Width="1.5" PointX="2.75" PointY="13.75" Height="3.6892097981770888" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_QYKModel.Corp_CheckOrderRecord" Width="1.5" PointX="4.75" PointY="13.75" Height="3.3071704101562531" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_QYKModel.Corp_CheckQueue" Width="1.5" PointX="14.75" PointY="0.75" Height="2.5430916341145888" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_QYKModel.Corp_CreditInfo" Width="1.5" PointX="14.75" PointY="4.75" Height="4.6443082682291674" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_QYKModel.Corp_DetailInfo" Width="1.5" PointX="6.75" PointY="14.75" Height="7.3185839843750031" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_QYKModel.Corp_EnterAptitude" Width="1.5" PointX="8.75" PointY="14.75" Height="4.8353279622395817" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_QYKModel.Corp_EnterpriseInfo" Width="1.5" PointX="14.75" PointY="10.75" Height="8.4647021484375067" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_QYKModel.Corp_Equipment" Width="1.5" PointX="10.75" PointY="14.75" Height="3.4981901041666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_QYKModel.Corp_ExtendInfo" Width="1.5" PointX="16.75" PointY="0.75" Height="1.7790128580729174" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_QYKModel.Corp_Financial" Width="1.5" PointX="16.75" PointY="3.75" Height="3.6892097981770746" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_QYKModel.Corp_HolidaySettings" Width="1.5" PointX="16.75" PointY="8.75" Height="2.9251310221354174" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_QYKModel.Corp_Manager" Width="1.5" PointX="16.75" PointY="12.75" Height="6.17246582031251" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_QYKModel.Corp_ManagerAptitudeCert" Width="1.5" PointX="18.75" PointY="0.75" Height="5.4083870442708246" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_QYKModel.Corp_PausingRecord" Width="1.5" PointX="0.75" PointY="18.75" Height="3.3071704101562602" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_QYKModel.Corp_PurchaserDetailInfo" Width="1.5" PointX="2.75" PointY="18.75" Height="2.7341113281250102" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_QYKModel.Corp_RecordStatus" Width="1.5" PointX="18.75" PointY="7.75" Height="2.9251310221354174" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_QYKModel.Corp_SupplierDetailInfo" Width="1.5" PointX="18.75" PointY="11.75" Height="4.45328857421876" IsExpanded="true" />
+        <EntityTypeShape EntityType="PM_QYKModel.T_HY_AptitudeCode" Width="1.5" PointX="11.375" PointY="19.75" Height="3.1161507161458246" />
+        <EntityTypeShape EntityType="PM_QYKModel.T_HY_EnterpriseSpeciality" Width="1.5" PointX="19.375" PointY="17.75" Height="3.4981901041666674" />
+        <EntityTypeShape EntityType="PM_QYKModel.T_HY_EntrpriseInfo" Width="1.5" PointX="13.375" PointY="20.75" Height="10.18387939453126" />
+        <EntityTypeShape EntityType="PM_QYKModel.T_HY_Personnel" Width="1.5" PointX="15.375" PointY="20.75" Height="5.4083870442708246" />
+        <EntityTypeShape EntityType="PM_QYKModel.T_HY_PersonnelSpeciality" Width="1.5" PointX="21.375" PointY="0.75" Height="3.4981901041666674" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

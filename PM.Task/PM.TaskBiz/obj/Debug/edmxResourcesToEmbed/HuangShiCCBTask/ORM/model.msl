@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GovPmBidOnline_BusinessModelStoreContainer" CdmEntityContainer="GovPmBidOnline_BusinessEntities">
+    <EntitySetMapping Name="T_BASE_Banks">
+      <EntityTypeMapping TypeName="GovPmBidOnline_BusinessModel.T_BASE_Banks">
+        <MappingFragment StoreEntitySet="T_BASE_Banks">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="BankNum" ColumnName="BankNum" />
+          <ScalarProperty Name="GongYao" ColumnName="GongYao" />
+          <ScalarProperty Name="MerchantId" ColumnName="MerchantId" />
+          <ScalarProperty Name="PosId" ColumnName="PosId" />
+          <ScalarProperty Name="BranchId" ColumnName="BranchId" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_ZTB_BidMoneyPayReturn">
+      <EntityTypeMapping TypeName="GovPmBidOnline_BusinessModel.T_ZTB_BidMoneyPayReturn">
+        <MappingFragment StoreEntitySet="T_ZTB_BidMoneyPayReturn">
+          <ScalarProperty Name="OrderNum" ColumnName="OrderNum" />
+          <ScalarProperty Name="LinkPersonMobilTel" ColumnName="LinkPersonMobilTel" />
+          <ScalarProperty Name="LinkPersonPhone" ColumnName="LinkPersonPhone" />
+          <ScalarProperty Name="LinkPerson" ColumnName="LinkPerson" />
+          <ScalarProperty Name="BidMoneyType" ColumnName="BidMoneyType" />
+          <ScalarProperty Name="ProID" ColumnName="ProID" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="AutoId" ColumnName="AutoId" />
+          <ScalarProperty Name="CaseCode" ColumnName="CaseCode" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="BankCardNum" ColumnName="BankCardNum" />
+          <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+          <ScalarProperty Name="IsReturn" ColumnName="IsReturn" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="ReturnWindow" ColumnName="ReturnWindow" />
+          <ScalarProperty Name="ReturnTime" ColumnName="ReturnTime" />
+          <ScalarProperty Name="ReturnManId" ColumnName="ReturnManId" />
+          <ScalarProperty Name="IsCheck" ColumnName="IsCheck" />
+          <ScalarProperty Name="CardNum" ColumnName="CardNum" />
+          <ScalarProperty Name="PayType" ColumnName="PayType" />
+          <ScalarProperty Name="PayMoney" ColumnName="PayMoney" />
+          <ScalarProperty Name="PayTime" ColumnName="PayTime" />
+          <ScalarProperty Name="BidderId" ColumnName="BidderId" />
+          <ScalarProperty Name="CaseId" ColumnName="CaseId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_ZTB_DepositCCB">
+      <EntityTypeMapping TypeName="GovPmBidOnline_BusinessModel.T_ZTB_DepositCCB">
+        <MappingFragment StoreEntitySet="T_ZTB_DepositCCB">
+          <ScalarProperty Name="CREATETIME" ColumnName="CREATETIME" />
+          <ScalarProperty Name="ISMATCH" ColumnName="ISMATCH" />
+          <ScalarProperty Name="RETURN_MSG" ColumnName="RETURN_MSG" />
+          <ScalarProperty Name="RETURN_CODE" ColumnName="RETURN_CODE" />
+          <ScalarProperty Name="ORDERS" ColumnName="ORDERS" />
+          <ScalarProperty Name="OTHER_ACCOUNT_NAME" ColumnName="OTHER_ACCOUNT_NAME" />
+          <ScalarProperty Name="OTHER_ACCOUNT" ColumnName="OTHER_ACCOUNT" />
+          <ScalarProperty Name="MONEY" ColumnName="MONEY" />
+          <ScalarProperty Name="ACCOUNT_NAME" ColumnName="ACCOUNT_NAME" />
+          <ScalarProperty Name="ACCOUNT" ColumnName="ACCOUNT" />
+          <ScalarProperty Name="TRAN_SQ" ColumnName="TRAN_SQ" />
+          <ScalarProperty Name="TRAN_TIME" ColumnName="TRAN_TIME" />
+          <ScalarProperty Name="TRAN_DATE" ColumnName="TRAN_DATE" />
+          <ScalarProperty Name="TX_CODE" ColumnName="TX_CODE" />
+          <ScalarProperty Name="CUST_ID" ColumnName="CUST_ID" />
+          <ScalarProperty Name="REQUEST_SN" ColumnName="REQUEST_SN" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

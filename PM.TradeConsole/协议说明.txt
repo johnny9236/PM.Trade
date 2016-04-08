@@ -1,0 +1,4 @@
+
+1、添加对应协议的model在PM.PaymentProtocolModel（请求对象需要继承CommunicationBase）
+2、在PM.PayProtocolsBiz中实现具体的协议，按支付与非支付 实现接口
+3、PM.PaymentManger工厂文件夹下   实例化对应接口

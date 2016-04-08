@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HMStoreContainer" CdmEntityContainer="GovPublic_jinhuaEntities">
+    <EntitySetMapping Name="T_HMPostal">
+      <EntityTypeMapping TypeName="HM.T_HMPostal">
+        <MappingFragment StoreEntitySet="T_HMPostal">
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="Match" ColumnName="Match" />
+          <ScalarProperty Name="DepartmentAccName" ColumnName="DepartmentAccName" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="TradeNo" ColumnName="TradeNo" />
+          <ScalarProperty Name="TradeWay" ColumnName="TradeWay" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CounterpartAccountName" ColumnName="CounterpartAccountName" />
+          <ScalarProperty Name="CounterpartAccountNo" ColumnName="CounterpartAccountNo" />
+          <ScalarProperty Name="Authorizer" ColumnName="Authorizer" />
+          <ScalarProperty Name="Checker" ColumnName="Checker" />
+          <ScalarProperty Name="Oprationer" ColumnName="Oprationer" />
+          <ScalarProperty Name="RemainAmount" ColumnName="RemainAmount" />
+          <ScalarProperty Name="LoanMark" ColumnName="LoanMark" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="ProofNum" ColumnName="ProofNum" />
+          <ScalarProperty Name="ProofKind" ColumnName="ProofKind" />
+          <ScalarProperty Name="TradeSerialNumber" ColumnName="TradeSerialNumber" />
+          <ScalarProperty Name="TradeDate" ColumnName="TradeDate" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

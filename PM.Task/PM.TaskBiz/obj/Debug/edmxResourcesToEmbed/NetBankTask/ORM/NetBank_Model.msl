@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NetBank_IntegratedModelStoreContainer" CdmEntityContainer="Netbank_IntegratedEntities">
+    <EntitySetMapping Name="T_ZTB_MoneyPayment">
+      <EntityTypeMapping TypeName="NetBank_IntegratedModel.T_ZTB_MoneyPayment">
+        <MappingFragment StoreEntitySet="T_ZTB_MoneyPayment">
+          <ScalarProperty Name="InvoiceTitle" ColumnName="InvoiceTitle" />
+          <ScalarProperty Name="Contentv" ColumnName="Contentv" />
+          <ScalarProperty Name="JiaoFeiBiLv" ColumnName="JiaoFeiBiLv" />
+          <ScalarProperty Name="TouBiaoEndTime" ColumnName="TouBiaoEndTime" />
+          <ScalarProperty Name="IsWinBid" ColumnName="IsWinBid" />
+          <ScalarProperty Name="PayLinkPersonMobileTel" ColumnName="PayLinkPersonMobileTel" />
+          <ScalarProperty Name="PayLinkPersonTel" ColumnName="PayLinkPersonTel" />
+          <ScalarProperty Name="PayLinkPerson" ColumnName="PayLinkPerson" />
+          <ScalarProperty Name="QueRenRuZhangPerson" ColumnName="QueRenRuZhangPerson" />
+          <ScalarProperty Name="QueRenRuZhangTime" ColumnName="QueRenRuZhangTime" />
+          <ScalarProperty Name="Out_trade_no" ColumnName="Out_trade_no" />
+          <ScalarProperty Name="PayID" ColumnName="PayID" />
+          <ScalarProperty Name="FromSystem" ColumnName="FromSystem" />
+          <ScalarProperty Name="PayPageText" ColumnName="PayPageText" />
+          <ScalarProperty Name="PayPage" ColumnName="PayPage" />
+          <ScalarProperty Name="ProCode" ColumnName="ProCode" />
+          <ScalarProperty Name="ProName" ColumnName="ProName" />
+          <ScalarProperty Name="CaseID" ColumnName="CaseID" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="BankCardNum" ColumnName="BankCardNum" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+          <ScalarProperty Name="IsReturn" ColumnName="IsReturn" />
+          <ScalarProperty Name="ReturnBaoHanNum" ColumnName="ReturnBaoHanNum" />
+          <ScalarProperty Name="ReturnBaoHanBank" ColumnName="ReturnBaoHanBank" />
+          <ScalarProperty Name="ReturnBaoHanYouXiaoQi" ColumnName="ReturnBaoHanYouXiaoQi" />
+          <ScalarProperty Name="ReturnShiJiMon" ColumnName="ReturnShiJiMon" />
+          <ScalarProperty Name="ReturnYingGaiMon" ColumnName="ReturnYingGaiMon" />
+          <ScalarProperty Name="ReturnPhone" ColumnName="ReturnPhone" />
+          <ScalarProperty Name="ReturnWindow" ColumnName="ReturnWindow" />
+          <ScalarProperty Name="ReturnTime" ColumnName="ReturnTime" />
+          <ScalarProperty Name="ReTurnUserName" ColumnName="ReTurnUserName" />
+          <ScalarProperty Name="ReturnUserId" ColumnName="ReturnUserId" />
+          <ScalarProperty Name="IsCheck" ColumnName="IsCheck" />
+          <ScalarProperty Name="CardNum" ColumnName="CardNum" />
+          <ScalarProperty Name="PayType" ColumnName="PayType" />
+          <ScalarProperty Name="PayMoney" ColumnName="PayMoney" />
+          <ScalarProperty Name="PayTime" ColumnName="PayTime" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ProSectionCode" ColumnName="ProSectionCode" />
+          <ScalarProperty Name="ProSectionName" ColumnName="ProSectionName" />
+          <ScalarProperty Name="ProSectionID" ColumnName="ProSectionID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_NetBankAccountQuery">
+      <EntityTypeMapping TypeName="NetBank_IntegratedModel.T_NetBankAccountQuery">
+        <MappingFragment StoreEntitySet="T_NetBankAccountQuery">
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="IsMatch" ColumnName="IsMatch" />
+          <ScalarProperty Name="SettlementFlag" ColumnName="SettlementFlag" />
+          <ScalarProperty Name="BankNotificationTime" ColumnName="BankNotificationTime" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="InstitutionFee" ColumnName="InstitutionFee" />
+          <ScalarProperty Name="PaymentAmount" ColumnName="PaymentAmount" />
+          <ScalarProperty Name="InstitutionAmount" ColumnName="InstitutionAmount" />
+          <ScalarProperty Name="TxAmount" ColumnName="TxAmount" />
+          <ScalarProperty Name="TxSn" ColumnName="TxSn" />
+          <ScalarProperty Name="TxType" ColumnName="TxType" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

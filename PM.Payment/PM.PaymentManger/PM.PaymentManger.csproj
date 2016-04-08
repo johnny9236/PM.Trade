@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1DC19734-F00F-429F-A6AD-09EE559D5DFA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PM.PaymentManger</RootNamespace>
+    <AssemblyName>PM.PaymentManger</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\PM.PaymentManger.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CFCA.Payment">
+      <HintPath>..\PM.PayProtocols\PM.PayProtocolsBiz\PM.NetBankPtlBiz\Dll\NetBank\lib\CFCA.Payment.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommPaymentConfig.cs" />
+    <Compile Include="CustomCommManager.cs" />
+    <Compile Include="Factory\CommProtocolsFactory.cs" />
+    <Compile Include="Factory\PaymentProtocolsFactory.cs" />
+    <Compile Include="Factory\ProtocolsFactory.cs" />
+    <Compile Include="IPayInit.cs" />
+    <Compile Include="Manager.cs" />
+    <Compile Include="PaymentConfig.cs" />
+    <Compile Include="PaymentManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\PM.PaymentService\PM.PaymentModel\PM.PaymentModel.csproj">
+      <Project>{3103B58F-909F-4A7C-9B56-B38249DB7B72}</Project>
+      <Name>PM.PaymentModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PM.Utils\PM.Utils.csproj">
+      <Project>{7FE9F232-DB50-495F-B4FD-F1A6C459DADD}</Project>
+      <Name>PM.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PM.PaymentProtocolModel\PM.PaymentProtocolModel.csproj">
+      <Project>{4A25A656-F4FE-4734-9C67-1C14794ED278}</Project>
+      <Name>PM.PaymentProtocolModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PM.PayProtocols\PM.PayProtocolsBiz\PM.AHQYPtlBiz\PM.AHQYPtlBiz.csproj">
+      <Project>{13258B91-E87F-465D-8859-F4467D64AD6B}</Project>
+      <Name>PM.AHQYPtlBiz</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PM.PayProtocols\PM.PayProtocolsBiz\PM.ALiPtlBiz\PM.ALiPtlBiz.csproj">
+      <Project>{FE7108D3-0577-41F1-BD84-F9DFBEFCCFE8}</Project>
+      <Name>PM.ALiPtlBiz</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PM.PayProtocols\PM.PayProtocolsBiz\PM.BOCPtlBiz\PM.BOCPtlBiz.csproj">
+      <Project>{92C94144-D5E2-4A85-B48A-380D193EC90D}</Project>
+      <Name>PM.BOCPtlBiz</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PM.PayProtocols\PM.PayProtocolsBiz\PM.HuangMeiPostalPtlBiz\PM.HuangMeiPostalPtlBiz.csproj">
+      <Project>{D8816703-038F-4197-9760-EFCC29B2778F}</Project>
+      <Name>PM.HuangMeiPostalPtlBiz</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PM.PayProtocols\PM.PayProtocolsBiz\PM.HuangshiCCBPtlBiz\PM.HuangshiCCBPtlBiz.csproj">
+      <Project>{EB46F21A-3D69-428F-9302-A5E4A5222F26}</Project>
+      <Name>PM.HuangshiCCBPtlBiz</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PM.PayProtocols\PM.PayProtocolsBiz\PM.JHBOFPtlBiz\PM.JHBOFPtlBiz.csproj">
+      <Project>{134F65B4-BD39-4DFF-B401-CF99EFDA36BE}</Project>
+      <Name>PM.JHBOFPtlBiz</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PM.PayProtocols\PM.PayProtocolsBiz\PM.JSABOC\PM.JSABOC.csproj">
+      <Project>{0F6F0B8E-A1C3-4C91-AA92-323A18500507}</Project>
+      <Name>PM.JSABOC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PM.PayProtocols\PM.PayProtocolsBiz\PM.LPSCCBPtlBiz\PM.LPSCCBPtlBiz.csproj">
+      <Project>{23A31283-BD2B-47F8-95B8-0A7CFF0908EA}</Project>
+      <Name>PM.LPSCCBPtlBiz</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PM.PayProtocols\PM.PayProtocolsBiz\PM.NetBankPtlBiz\PM.NetBankPtlBiz.csproj">
+      <Project>{9B34020D-ABAF-4F39-9FF4-4210F15DAEDA}</Project>
+      <Name>PM.NetBankPtlBiz</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PM.PayProtocols\PM.ProtocolsInterface\PM.ProtocolsInterface.csproj">
+      <Project>{121965EA-BAAE-4436-B19E-45F33345AA59}</Project>
+      <Name>PM.ProtocolsInterface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

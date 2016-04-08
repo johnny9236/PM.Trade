@@ -1,0 +1,524 @@
+﻿
+GO
+/****** Object:  Table [dbo].[T_Pay_Order]    Script Date: 12/11/2013 10:36:01 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING OFF
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[T_Pay_Order]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[T_Pay_Order](
+	[OrderID] [uniqueidentifier] NOT NULL,
+	[CaseID] [varchar](50) NULL,
+	[PrimaryID] [varchar](50) NULL,
+	[PrimaryCode] [varchar](100) NULL,
+	[PrimaryName] [varchar](200) NULL,
+	[SlaveID] [varchar](100) NULL,
+	[SlaveCode] [varchar](100) NULL,
+	[SlaveName] [varchar](200) NULL,
+	[BusinessNo] [varchar](50) NULL,
+	[OrderNo] [varchar](100) NULL,
+	[OrderName] [nvarchar](500) NULL,
+	[PayerID] [varchar](50) NULL,
+	[PayerName] [nvarchar](100) NULL,
+	[CostType] [nvarchar](100) NULL,
+	[FeeAmount] [money] NULL,
+	[Amount] [money] NULL,
+	[Remark] [text] NULL,
+	[InvoiceTitle] [nvarchar](500) NULL,
+	[PayAccountNo] [varchar](100) NULL,
+	[PayBankAccountType] [varchar](50) NULL,
+	[PayAccountName] [nvarchar](500) NULL,
+	[PayBankName] [nvarchar](500) NULL,
+	[PayBankNo] [varchar](50) NULL,
+	[PayBankID] [varchar](50) NULL,
+	[PayProvince] [varchar](50) NULL,
+	[PayCity] [varchar](50) NULL,
+	[PaySettingAccNo] [varchar](50) NULL,
+	[PayCur] [varchar](50) NULL,
+	[ReceiptBankAccountType] [varchar](50) NULL,
+	[ReceiptAccountNo] [varchar](100) NULL,
+	[ReceiptAccountName] [nvarchar](500) NULL,
+	[ReceiptBankName] [nvarchar](500) NULL,
+	[ReceiptBankNo] [varchar](50) NULL,
+	[ReceiptBankID] [varchar](50) NULL,
+	[ReceiptProvince] [varchar](50) NULL,
+	[ReceiptCity] [varchar](50) NULL,
+	[ReceiptCur] [varchar](50) NULL,
+	[ReceiptSettingAccNo] [varchar](50) NULL,
+	[OrderResult] [int] NULL,
+	[OrderTime] [datetime] NULL,
+	[OrderOpWay] [nvarchar](50) NULL,
+	[OprationType] [int] NULL,
+	[OrderCombination] [varchar](50) NULL,
+	[OrderSerialNumber] [varchar](100) NULL,
+	[PayRealAccountName] [nvarchar](500) NULL,
+	[PayRealAccountNo] [nvarchar](500) NULL,
+	[PayRealBankName] [nvarchar](500) NULL,
+	[PayRealCity] [varchar](50) NULL,
+	[PayRealProvince] [varchar](50) NULL,
+	[PayRealBankNo] [varchar](50) NULL,
+	[PayRealBankID] [varchar](50) NULL,
+	[PayRealSettingAccNo] [varchar](50) NULL,
+	[PayInstitutionID] [varchar](100) NULL,
+	[ReceiptInstitutionID] [varchar](100) NULL,
+	[NotificationURL] [varchar](500) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+SET ANSI_PADDING ON
+ALTER TABLE [dbo].[T_Pay_Order] ADD [MainOrderNo] [varchar](50) NULL
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'MainOrderNo'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'主订单号(子订单情况下)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'MainOrderNo'
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[T_Pay_Order]') AND name = N'PK_T_Pay_Order')
+ALTER TABLE [dbo].[T_Pay_Order] ADD  CONSTRAINT [PK_T_Pay_Order] PRIMARY KEY CLUSTERED 
+(
+	[OrderID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+END
+GO
+SET ANSI_PADDING OFF
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'CaseID'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'项目id' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'CaseID'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'PrimaryID'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'主业务id' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'PrimaryID'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'PrimaryCode'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'主业务编码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'PrimaryCode'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'PrimaryName'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'主业务名称' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'PrimaryName'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'SlaveID'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'辅业务id' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'SlaveID'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'SlaveCode'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'辅业务编码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'SlaveCode'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'SlaveName'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'辅业务名称' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'SlaveName'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'BusinessNo'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'业务功能号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'BusinessNo'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'OrderNo'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'订单号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'OrderNo'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'OrderName'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'订单名称' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'OrderName'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'PayerID'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付者ID' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'PayerID'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'PayerName'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付者姓名' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'PayerName'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'CostType'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付类型(那种费用)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'CostType'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'FeeAmount'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'手续费' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'FeeAmount'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'Amount'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付金额' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'Amount'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'Remark'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'描述' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'Remark'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'InvoiceTitle'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'发票抬头' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'InvoiceTitle'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'PayAccountNo'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付行账号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'PayAccountNo'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'PayBankAccountType'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付行账户类型（0个人  1企业）' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'PayBankAccountType'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'PayAccountName'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付方户名' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'PayAccountName'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'PayBankName'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付行名称' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'PayBankName'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'PayBankNo'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付行行号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'PayBankNo'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'PayBankID'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付银行代码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'PayBankID'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'PayProvince'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付省代码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'PayProvince'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'PayCity'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付市代码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'PayCity'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'PaySettingAccNo'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'结算账号（标识）' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'PaySettingAccNo'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'PayCur'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付币种' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'PayCur'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'ReceiptBankAccountType'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'收款行账户类型（0个人  1企业）' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'ReceiptBankAccountType'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'ReceiptAccountNo'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'收款行账号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'ReceiptAccountNo'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'ReceiptAccountName'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'收款方户名' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'ReceiptAccountName'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'ReceiptBankName'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'收款行名称' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'ReceiptBankName'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'ReceiptBankNo'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'收款行行号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'ReceiptBankNo'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'ReceiptBankID'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'收款银行代码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'ReceiptBankID'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'ReceiptProvince'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'收款省代码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'ReceiptProvince'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'ReceiptCity'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'收款市' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'ReceiptCity'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'ReceiptCur'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'收款币种' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'ReceiptCur'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'ReceiptSettingAccNo'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'收款结算账号（标识）' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'ReceiptSettingAccNo'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'OrderResult'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付结果(0未完成 ，1成功 ，2 失败,3第一步成功 4第一步失败)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'OrderResult'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'OrderOpWay'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'订单操作类型（网银支付还是什么等）' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'OrderOpWay'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'OprationType'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'操作方式（支付0、转账1、查询2）' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'OprationType'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'OrderCombination'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'是否组合1为组合' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'OrderCombination'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'OrderSerialNumber'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'流水号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'OrderSerialNumber'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'PayRealAccountName'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付真正的户名' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'PayRealAccountName'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'PayRealAccountNo'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付真正的账号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'PayRealAccountNo'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'PayRealBankName'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付真正的银行名称' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'PayRealBankName'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'PayRealCity'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付真正的市' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'PayRealCity'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'PayRealProvince'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付真正的省' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'PayRealProvince'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'PayRealBankNo'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付真正的银行编号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'PayRealBankNo'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'PayRealBankID'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付真正的银行id' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'PayRealBankID'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'PayRealSettingAccNo'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'真正结算账号（标识）' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'PayRealSettingAccNo'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'PayInstitutionID'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'付款机构代码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'PayInstitutionID'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'ReceiptInstitutionID'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'收款机构代码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'ReceiptInstitutionID'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'NotificationURL'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'银联通知地址（前台）' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'NotificationURL'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Order', N'COLUMN',N'MainOrderNo'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'主订单号(子订单情况下)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Order', @level2type=N'COLUMN',@level2name=N'MainOrderNo'
+GO
+/****** Object:  Table [dbo].[T_Pay_Log]    Script Date: 12/11/2013 10:36:01 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[T_Pay_Log]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[T_Pay_Log](
+	[ID] [uniqueidentifier] NOT NULL,
+	[CaseID] [varchar](50) NULL,
+	[ProSectionID] [varchar](50) NULL,
+	[OrderNo] [varchar](100) NULL,
+	[OrderName] [nvarchar](500) NULL,
+	[PayerID] [varchar](50) NULL,
+	[PayerName] [nvarchar](100) NULL,
+	[CostType] [nvarchar](100) NULL,
+	[FeeAmount] [money] NULL,
+	[Amount] [money] NULL,
+	[Remark] [text] NULL,
+	[InvoiceTitle] [nvarchar](500) NULL,
+	[PayAccountNo] [varchar](100) NULL,
+	[PayBankAccountType] [varchar](50) NULL,
+	[PayAccountName] [nvarchar](500) NULL,
+	[PayBankName] [nvarchar](500) NULL,
+	[PayBankNo] [varchar](50) NULL,
+	[PayBankID] [varchar](50) NULL,
+	[PayProvince] [varchar](50) NULL,
+	[PayCity] [varchar](50) NULL,
+	[PayCur] [varchar](50) NULL,
+	[ReceiptBankAccountType] [varchar](50) NULL,
+	[ReceiptAccountNo] [varchar](100) NULL,
+	[ReceiptAccountName] [nvarchar](500) NULL,
+	[ReceiptBankName] [nvarchar](500) NULL,
+	[ReceiptBankNo] [varchar](50) NULL,
+	[ReceiptBankID] [varchar](50) NULL,
+	[ReceiptProvince] [varchar](50) NULL,
+	[ReceiptCity] [varchar](50) NULL,
+	[ReceiptCur] [varchar](50) NULL,
+	[OrderResult] [int] NULL,
+	[OrderTime] [datetime] NULL,
+	[OrderOpWay] [nvarchar](50) NULL,
+	[OprationType] [int] NULL,
+ CONSTRAINT [PK_T_Pay_Log] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+END
+GO
+SET ANSI_PADDING OFF
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Log', N'COLUMN',N'OrderNo'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'订单号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Log', @level2type=N'COLUMN',@level2name=N'OrderNo'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Log', N'COLUMN',N'OrderName'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'订单名称' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Log', @level2type=N'COLUMN',@level2name=N'OrderName'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Log', N'COLUMN',N'PayerID'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付者ID' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Log', @level2type=N'COLUMN',@level2name=N'PayerID'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Log', N'COLUMN',N'PayerName'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付者姓名' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Log', @level2type=N'COLUMN',@level2name=N'PayerName'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Log', N'COLUMN',N'CostType'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付类型(那种费用)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Log', @level2type=N'COLUMN',@level2name=N'CostType'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Log', N'COLUMN',N'FeeAmount'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'手续费' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Log', @level2type=N'COLUMN',@level2name=N'FeeAmount'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Log', N'COLUMN',N'Amount'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付金额' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Log', @level2type=N'COLUMN',@level2name=N'Amount'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Log', N'COLUMN',N'Remark'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'描述' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Log', @level2type=N'COLUMN',@level2name=N'Remark'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Log', N'COLUMN',N'InvoiceTitle'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'发票抬头' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Log', @level2type=N'COLUMN',@level2name=N'InvoiceTitle'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Log', N'COLUMN',N'PayAccountNo'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付行账号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Log', @level2type=N'COLUMN',@level2name=N'PayAccountNo'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Log', N'COLUMN',N'PayBankAccountType'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付行账户类型（0个人  1企业）' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Log', @level2type=N'COLUMN',@level2name=N'PayBankAccountType'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Log', N'COLUMN',N'PayAccountName'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付方户名' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Log', @level2type=N'COLUMN',@level2name=N'PayAccountName'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Log', N'COLUMN',N'PayBankName'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付行名称' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Log', @level2type=N'COLUMN',@level2name=N'PayBankName'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Log', N'COLUMN',N'PayBankNo'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付行行号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Log', @level2type=N'COLUMN',@level2name=N'PayBankNo'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Log', N'COLUMN',N'PayBankID'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付银行代码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Log', @level2type=N'COLUMN',@level2name=N'PayBankID'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Log', N'COLUMN',N'PayProvince'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付省代码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Log', @level2type=N'COLUMN',@level2name=N'PayProvince'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Log', N'COLUMN',N'PayCity'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付市代码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Log', @level2type=N'COLUMN',@level2name=N'PayCity'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Log', N'COLUMN',N'PayCur'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付币种' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Log', @level2type=N'COLUMN',@level2name=N'PayCur'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Log', N'COLUMN',N'ReceiptBankAccountType'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'收款行账户类型（0个人  1企业）' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Log', @level2type=N'COLUMN',@level2name=N'ReceiptBankAccountType'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Log', N'COLUMN',N'ReceiptAccountNo'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'收款行账号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Log', @level2type=N'COLUMN',@level2name=N'ReceiptAccountNo'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Log', N'COLUMN',N'ReceiptAccountName'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'收款方户名' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Log', @level2type=N'COLUMN',@level2name=N'ReceiptAccountName'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Log', N'COLUMN',N'ReceiptBankName'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'收款行名称' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Log', @level2type=N'COLUMN',@level2name=N'ReceiptBankName'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Log', N'COLUMN',N'ReceiptBankNo'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'收款行行号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Log', @level2type=N'COLUMN',@level2name=N'ReceiptBankNo'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Log', N'COLUMN',N'ReceiptBankID'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'收款银行代码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Log', @level2type=N'COLUMN',@level2name=N'ReceiptBankID'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Log', N'COLUMN',N'ReceiptProvince'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'收款省代码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Log', @level2type=N'COLUMN',@level2name=N'ReceiptProvince'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Log', N'COLUMN',N'ReceiptCity'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'收款市' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Log', @level2type=N'COLUMN',@level2name=N'ReceiptCity'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Log', N'COLUMN',N'ReceiptCur'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'收款币种' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Log', @level2type=N'COLUMN',@level2name=N'ReceiptCur'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Log', N'COLUMN',N'OrderResult'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付结果(0未完成 ，1成功 ，2 失败,3第一步成功 4第一步失败)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Log', @level2type=N'COLUMN',@level2name=N'OrderResult'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Log', N'COLUMN',N'OrderOpWay'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'订单操作类型（网银支付还是什么等）' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Log', @level2type=N'COLUMN',@level2name=N'OrderOpWay'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_Log', N'COLUMN',N'OprationType'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'操作方式（支付0、转账1、查询2）' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_Log', @level2type=N'COLUMN',@level2name=N'OprationType'
+GO
+/****** Object:  Table [dbo].[T_Pay_OrderRequest]    Script Date: 12/11/2013 10:36:01 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[T_Pay_OrderRequest]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[T_Pay_OrderRequest](
+	[ID] [uniqueidentifier] NOT NULL,
+	[PacketMessage] [text] NULL,
+	[Signature] [text] NULL,
+	[OrderNo] [varchar](50) NULL,
+	[RequestTime] [datetime] NULL,
+	[RequestUrl] [text] NULL,
+	[SerialNumber] [varchar](100) NULL,
+ CONSTRAINT [PK_T_Pay_OrderRequest] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+END
+GO
+SET ANSI_PADDING OFF
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_OrderRequest', N'COLUMN',N'PacketMessage'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'报文' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_OrderRequest', @level2type=N'COLUMN',@level2name=N'PacketMessage'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_OrderRequest', N'COLUMN',N'Signature'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'签名' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_OrderRequest', @level2type=N'COLUMN',@level2name=N'Signature'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_OrderRequest', N'COLUMN',N'OrderNo'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'订单号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_OrderRequest', @level2type=N'COLUMN',@level2name=N'OrderNo'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_OrderRequest', N'COLUMN',N'RequestTime'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'请求地址' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_OrderRequest', @level2type=N'COLUMN',@level2name=N'RequestTime'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_OrderRequest', N'COLUMN',N'RequestUrl'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'请求url' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_OrderRequest', @level2type=N'COLUMN',@level2name=N'RequestUrl'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_OrderRequest', N'COLUMN',N'SerialNumber'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'流水号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_OrderRequest', @level2type=N'COLUMN',@level2name=N'SerialNumber'
+GO
+/****** Object:  Table [dbo].[T_Pay_OrderResponse]    Script Date: 12/11/2013 10:36:01 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[T_Pay_OrderResponse]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[T_Pay_OrderResponse](
+	[ID] [uniqueidentifier] NOT NULL,
+	[PacketMessage] [text] NULL,
+	[Signature] [text] NULL,
+	[OrderNo] [varchar](50) NULL,
+	[RequestTime] [datetime] NULL,
+	[NoticePacketMessage] [text] NULL,
+	[NoticeSignature] [text] NULL,
+	[SerialNumber] [varchar](100) NULL,
+ CONSTRAINT [PK_T_Pay_OrderResponse] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+END
+GO
+SET ANSI_PADDING OFF
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_OrderResponse', N'COLUMN',N'NoticePacketMessage'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'变更后的报文（）' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_OrderResponse', @level2type=N'COLUMN',@level2name=N'NoticePacketMessage'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_OrderResponse', N'COLUMN',N'NoticeSignature'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'变更后的签名信息' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_OrderResponse', @level2type=N'COLUMN',@level2name=N'NoticeSignature'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_OrderResponse', N'COLUMN',N'SerialNumber'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'流水号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_OrderResponse', @level2type=N'COLUMN',@level2name=N'SerialNumber'
+GO
+/****** Object:  Table [dbo].[T_Pay_OrderBusiness]    Script Date: 12/11/2013 10:36:01 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[T_Pay_OrderBusiness]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[T_Pay_OrderBusiness](
+	[ID] [varchar](50) NOT NULL,
+	[Business_ID] [varchar](50) NOT NULL,
+	[OrderNo] [varchar](50) NULL,
+	[OrderStatus] [varchar](50) NULL,
+	[MainOrderNo] [varchar](50) NULL,
+	[PayMent_Tm] [datetime] NULL,
+	[AccontType] [varchar](20) NULL,
+	[InvoiceTitle] [varchar](100) NULL,
+	[FeeType] [nvarchar](500) NULL,
+	[ReMark] [nvarchar](500) NULL,
+	[Create_Tm] [datetime] NULL,
+	[Up_Tm] [datetime] NULL,
+ CONSTRAINT [PK_T_Pay_OrderBusiness] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+END
+GO
+SET ANSI_PADDING OFF
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_OrderBusiness', N'COLUMN',N'Business_ID'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'业务关联号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_OrderBusiness', @level2type=N'COLUMN',@level2name=N'Business_ID'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_OrderBusiness', N'COLUMN',N'OrderNo'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'订单号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_OrderBusiness', @level2type=N'COLUMN',@level2name=N'OrderNo'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_OrderBusiness', N'COLUMN',N'OrderStatus'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'状态(0未提交1已提交2成功3失败)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_OrderBusiness', @level2type=N'COLUMN',@level2name=N'OrderStatus'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_OrderBusiness', N'COLUMN',N'MainOrderNo'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'结算等业务需用到转账对应的订单号（表示该结算信息是某个转账中的其中一个订单）' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_OrderBusiness', @level2type=N'COLUMN',@level2name=N'MainOrderNo'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_OrderBusiness', N'COLUMN',N'PayMent_Tm'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付或退款时间' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_OrderBusiness', @level2type=N'COLUMN',@level2name=N'PayMent_Tm'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_OrderBusiness', N'COLUMN',N'AccontType'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'基本户类型,1基本户,2一般账户,3未备案账户' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_OrderBusiness', @level2type=N'COLUMN',@level2name=N'AccontType'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_OrderBusiness', N'COLUMN',N'InvoiceTitle'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'发票抬头' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_OrderBusiness', @level2type=N'COLUMN',@level2name=N'InvoiceTitle'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_OrderBusiness', N'COLUMN',N'FeeType'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'费用类型 ,1支付 2退款' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_OrderBusiness', @level2type=N'COLUMN',@level2name=N'FeeType'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'TABLE',N'T_Pay_OrderBusiness', N'COLUMN',N'ReMark'))
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'备注' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Pay_OrderBusiness', @level2type=N'COLUMN',@level2name=N'ReMark'
+GO

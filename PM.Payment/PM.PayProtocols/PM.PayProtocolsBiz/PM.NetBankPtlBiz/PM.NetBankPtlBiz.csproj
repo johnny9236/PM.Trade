@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9B34020D-ABAF-4F39-9FF4-4210F15DAEDA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PM.NetBankPtlBiz</RootNamespace>
+    <AssemblyName>PM.NetBankPtlBiz</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\PM.NetBankPtlBiz.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CFCA.Payment, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\NetBank\lib\CFCA.Payment.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\NetBankBusinessKind.cs" />
+    <Compile Include="Model\NetBankModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Protocols\NetBankCommonProtocols.cs" />
+    <Compile Include="Protocols\NetBankPayProtocols.cs" />
+    <Compile Include="Protocols\NetBankProtocols.cs" />
+    <Compile Include="Protocols\NetBankQueryProtocols .cs" />
+    <Compile Include="Protocols\NetBankSettlementProtocols.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dll\NetBank\config\.svn\all-wcprops" />
+    <None Include="Dll\NetBank\config\.svn\entries" />
+    <None Include="Dll\NetBank\config\.svn\prop-base\test.pfx.svn-base" />
+    <None Include="Dll\NetBank\config\.svn\text-base\payment.xml.svn-base" />
+    <None Include="Dll\NetBank\config\.svn\text-base\paytest.cer.svn-base" />
+    <None Include="Dll\NetBank\config\.svn\text-base\test.pfx.svn-base" />
+    <None Include="Dll\NetBank\config\paytest.cer" />
+    <None Include="Dll\NetBank\config\test.pfx" />
+    <None Include="Dll\NetBank\lib\.svn\all-wcprops" />
+    <None Include="Dll\NetBank\lib\.svn\entries" />
+    <None Include="Dll\NetBank\lib\.svn\prop-base\CFCA.Payment.dll.svn-base" />
+    <None Include="Dll\NetBank\lib\.svn\text-base\CFCA.Payment.dll.svn-base" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dll\NetBank\config\payment.xml" />
+    <Content Include="Dll\NetBank\lib\CFCA.Payment.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dll\NetBank\config\.svn\props\" />
+    <Folder Include="Dll\NetBank\config\.svn\tmp\prop-base\" />
+    <Folder Include="Dll\NetBank\config\.svn\tmp\props\" />
+    <Folder Include="Dll\NetBank\config\.svn\tmp\text-base\" />
+    <Folder Include="Dll\NetBank\lib\.svn\props\" />
+    <Folder Include="Dll\NetBank\lib\.svn\tmp\prop-base\" />
+    <Folder Include="Dll\NetBank\lib\.svn\tmp\props\" />
+    <Folder Include="Dll\NetBank\lib\.svn\tmp\text-base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\PM.Utils\PM.Utils.csproj">
+      <Project>{7FE9F232-DB50-495F-B4FD-F1A6C459DADD}</Project>
+      <Name>PM.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\PM.PaymentProtocolModel\PM.PaymentProtocolModel.csproj">
+      <Project>{4A25A656-F4FE-4734-9C67-1C14794ED278}</Project>
+      <Name>PM.PaymentProtocolModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PM.ProtocolsInterface\PM.ProtocolsInterface.csproj">
+      <Project>{121965EA-BAAE-4436-B19E-45F33345AA59}</Project>
+      <Name>PM.ProtocolsInterface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

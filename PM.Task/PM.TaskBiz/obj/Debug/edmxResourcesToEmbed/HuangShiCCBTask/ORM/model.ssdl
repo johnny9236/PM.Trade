@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GovPmBidOnline_BusinessModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="GovPmBidOnline_BusinessModelStoreContainer">
+    <EntitySet Name="T_BASE_Banks" EntityType="GovPmBidOnline_BusinessModel.Store.T_BASE_Banks" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_ZTB_BidMoneyPayReturn" EntityType="GovPmBidOnline_BusinessModel.Store.T_ZTB_BidMoneyPayReturn" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_ZTB_DepositCCB" EntityType="GovPmBidOnline_BusinessModel.Store.T_ZTB_DepositCCB" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="T_BASE_Banks">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="200" />
+    <Property Name="UnitId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UnitName" Type="nvarchar" MaxLength="200" />
+    <Property Name="BankName" Type="nvarchar" MaxLength="200" />
+    <Property Name="BankNum" Type="nvarchar" MaxLength="200" />
+    <Property Name="GongYao" Type="nvarchar(max)" />
+    <Property Name="MerchantId" Type="nvarchar" MaxLength="200" />
+    <Property Name="PosId" Type="nvarchar" MaxLength="200" />
+    <Property Name="BranchId" Type="nvarchar" MaxLength="200" />
+    <Property Name="AccountName" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="T_ZTB_BidMoneyPayReturn">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CaseId" Type="uniqueidentifier" />
+    <Property Name="BidderId" Type="uniqueidentifier" />
+    <Property Name="PayTime" Type="datetime" />
+    <Property Name="PayMoney" Type="decimal" Scale="8" />
+    <Property Name="PayType" Type="nvarchar" MaxLength="10" />
+    <Property Name="CardNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsCheck" Type="int" />
+    <Property Name="ReturnManId" Type="uniqueidentifier" />
+    <Property Name="ReturnTime" Type="datetime" />
+    <Property Name="ReturnWindow" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+    <Property Name="IsReturn" Type="int" />
+    <Property Name="UnitId" Type="uniqueidentifier" />
+    <Property Name="BankCardNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="BankName" Type="nvarchar" MaxLength="100" />
+    <Property Name="UnitCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="CaseCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="AutoId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UnitName" Type="nvarchar" MaxLength="200" />
+    <Property Name="ProID" Type="nvarchar" MaxLength="50" />
+    <Property Name="BidMoneyType" Type="nvarchar" MaxLength="10" />
+    <Property Name="LinkPerson" Type="nvarchar" MaxLength="50" />
+    <Property Name="LinkPersonPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="LinkPersonMobilTel" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderNum" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="T_ZTB_DepositCCB">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="REQUEST_SN" Type="nvarchar" MaxLength="50" />
+    <Property Name="CUST_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="TX_CODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="RETURN_CODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="RETURN_MSG" Type="nvarchar" MaxLength="50" />
+    <Property Name="TRAN_DATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="TRAN_TIME" Type="nvarchar" MaxLength="50" />
+    <Property Name="TRAN_SQ" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACCOUNT" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACCOUNT_NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="MONEY" Type="decimal" Precision="16" Scale="2" />
+    <Property Name="OTHER_ACCOUNT" Type="nvarchar" MaxLength="50" />
+    <Property Name="OTHER_ACCOUNT_NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="ORDERS" Type="nvarchar" MaxLength="50" />
+    <Property Name="ISMATCH" Type="int" />
+    <Property Name="CREATETIME" Type="datetime" />
+  </EntityType>
+</Schema>

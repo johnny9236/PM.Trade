@@ -1,0 +1,106 @@
+﻿ 
+/****** Object:  Table [dbo].[T_HMPostal]    Script Date: 08/08/2013 17:50:43 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[T_HMPostal](
+	[ID] [varchar](50) NOT NULL,
+	[AccountNo] [varchar](50) NULL,
+	[TradeDate] [varchar](50) NULL,
+	[TradeSerialNumber] [varchar](50) NULL,
+	[ProofKind] [varchar](50) NULL,
+	[ProofNum] [varchar](50) NULL,
+	[Amount] [decimal](18, 2) NULL,
+	[LoanMark] [varchar](50) NULL,
+	[RemainAmount] [decimal](18, 2) NULL,
+	[Oprationer] [nvarchar](100) NULL,
+	[Checker] [nvarchar](100) NULL,
+	[Authorizer] [nvarchar](100) NULL,
+	[CounterpartAccountNo] [varchar](50) NULL,
+	[CounterpartAccountName] [nvarchar](200) NULL,
+	[Remark] [nvarchar](200) NULL,
+	[TradeWay] [nvarchar](100) NULL,
+	[TradeNo] [varchar](50) NULL,
+	[TimeStamp] [varchar](50) NULL,
+	[DepartmentAccName] [nvarchar](200) NULL,
+	[Match] [int] NULL,
+	[Flag] [int] NULL,
+	[CreateTm] [datetime] NULL,
+ CONSTRAINT [PK_T_HMPostal] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'账号(中心账号)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HMPostal', @level2type=N'COLUMN',@level2name=N'AccountNo'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'交易日期' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HMPostal', @level2type=N'COLUMN',@level2name=N'TradeDate'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'前台交易流水' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HMPostal', @level2type=N'COLUMN',@level2name=N'TradeSerialNumber'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'凭证种类' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HMPostal', @level2type=N'COLUMN',@level2name=N'ProofKind'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'凭证号码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HMPostal', @level2type=N'COLUMN',@level2name=N'ProofNum'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'发生额' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HMPostal', @level2type=N'COLUMN',@level2name=N'Amount'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'借贷标志 0借 （出账） 1贷（入账）' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HMPostal', @level2type=N'COLUMN',@level2name=N'LoanMark'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'账户余额' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HMPostal', @level2type=N'COLUMN',@level2name=N'RemainAmount'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'操作员' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HMPostal', @level2type=N'COLUMN',@level2name=N'Oprationer'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'复核员' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HMPostal', @level2type=N'COLUMN',@level2name=N'Checker'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'授权员' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HMPostal', @level2type=N'COLUMN',@level2name=N'Authorizer'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'对方账号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HMPostal', @level2type=N'COLUMN',@level2name=N'CounterpartAccountNo'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'对方户名' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HMPostal', @level2type=N'COLUMN',@level2name=N'CounterpartAccountName'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'备注' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HMPostal', @level2type=N'COLUMN',@level2name=N'Remark'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'交易渠道' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HMPostal', @level2type=N'COLUMN',@level2name=N'TradeWay'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'交易码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HMPostal', @level2type=N'COLUMN',@level2name=N'TradeNo'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'时间戳' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HMPostal', @level2type=N'COLUMN',@level2name=N'TimeStamp'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'开户机构开户名称' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HMPostal', @level2type=N'COLUMN',@level2name=N'DepartmentAccName'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'匹配0 未匹配   1匹配' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HMPostal', @level2type=N'COLUMN',@level2name=N'Match'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'是否处理（预留）【0未处理  1处理】' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HMPostal', @level2type=N'COLUMN',@level2name=N'Flag'
+GO
+
+

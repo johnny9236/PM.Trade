@@ -1,0 +1,36 @@
+﻿<Mangers>
+  <Manger>
+    <Name>test1</Name>
+    <CardID>33067894646</CardID>
+    <Units>
+      <Unit>
+        <UnitName>单位名称</UnitName>
+        <UnitCode>123456789-9</UnitCode>
+        <Projects>
+          <Project>
+            <ProJectName>项目名称1</ProJectName>
+            <ProJectCode>项目编号1</ProJectCode>
+          </Project>
+          <Project>
+            <ProJectName>项目名称2</ProJectName>
+            <ProJectCode>项目编号2</ProJectCode>
+          </Project>
+          </Projects>
+</Unit>
+      <Unit>
+        <UnitName>单位名称2</UnitName>
+        <UnitCode>123456789-5</UnitCode>
+        <Projects>
+          <Project>
+            <ProJectName>项目名称3</ProJectName>
+            <ProJectCode>项目编号3</ProJectCode>
+          </Project>
+          <Project>
+            <ProJectName>项目名称4</ProJectName>
+            <ProJectCode>项目编号4</ProJectCode>
+          </Project>
+          </Projects>
+</Unit>
+    </Units>
+  </Manger>
+</Mangers>

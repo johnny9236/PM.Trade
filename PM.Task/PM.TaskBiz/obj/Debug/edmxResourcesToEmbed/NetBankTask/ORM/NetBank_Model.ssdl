@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NetBank_IntegratedModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="NetBank_IntegratedModelStoreContainer">
+    <EntitySet Name="T_NetBankAccountQuery" EntityType="NetBank_IntegratedModel.Store.T_NetBankAccountQuery" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_ZTB_MoneyPayment" EntityType="NetBank_IntegratedModel.Store.T_ZTB_MoneyPayment" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="T_NetBankAccountQuery">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="TxType" Type="varchar" MaxLength="50" />
+    <Property Name="TxSn" Type="varchar" MaxLength="50" />
+    <Property Name="TxAmount" Type="varchar" MaxLength="50" />
+    <Property Name="InstitutionAmount" Type="varchar" MaxLength="50" />
+    <Property Name="PaymentAmount" Type="varchar" MaxLength="50" />
+    <Property Name="InstitutionFee" Type="varchar" MaxLength="50" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="500" />
+    <Property Name="BankNotificationTime" Type="varchar" MaxLength="50" />
+    <Property Name="SettlementFlag" Type="varchar" MaxLength="50" />
+    <Property Name="IsMatch" Type="int" />
+    <Property Name="Flag" Type="int" />
+    <Property Name="CreateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_ZTB_MoneyPayment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ProSectionID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProSectionName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ProSectionCode" Type="nvarchar" MaxLength="100" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="PayTime" Type="datetime" />
+    <Property Name="PayMoney" Type="money" />
+    <Property Name="PayType" Type="nvarchar" MaxLength="10" />
+    <Property Name="CardNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsCheck" Type="int" />
+    <Property Name="ReturnUserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReTurnUserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReturnTime" Type="datetime" />
+    <Property Name="ReturnWindow" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReturnPhone" Type="nvarchar" MaxLength="20" />
+    <Property Name="ReturnYingGaiMon" Type="money" />
+    <Property Name="ReturnShiJiMon" Type="money" />
+    <Property Name="ReturnBaoHanYouXiaoQi" Type="datetime" />
+    <Property Name="ReturnBaoHanBank" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReturnBaoHanNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsReturn" Type="int" />
+    <Property Name="UnitId" Type="nvarchar" MaxLength="50" />
+    <Property Name="UnitName" Type="nvarchar" MaxLength="200" />
+    <Property Name="UnitCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="BankCardNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="BankName" Type="nvarchar" MaxLength="100" />
+    <Property Name="CaseID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ProCode" Type="nvarchar" MaxLength="100" />
+    <Property Name="PayPage" Type="int" />
+    <Property Name="PayPageText" Type="nvarchar" MaxLength="50" />
+    <Property Name="FromSystem" Type="nvarchar" MaxLength="50" />
+    <Property Name="PayID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Out_trade_no" Type="nvarchar" MaxLength="50" />
+    <Property Name="QueRenRuZhangTime" Type="datetime" />
+    <Property Name="QueRenRuZhangPerson" Type="nvarchar" MaxLength="50" />
+    <Property Name="PayLinkPerson" Type="nvarchar" MaxLength="50" />
+    <Property Name="PayLinkPersonTel" Type="nvarchar" MaxLength="50" />
+    <Property Name="PayLinkPersonMobileTel" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsWinBid" Type="int" />
+    <Property Name="TouBiaoEndTime" Type="datetime" />
+    <Property Name="JiaoFeiBiLv" Type="nvarchar" MaxLength="20" />
+    <Property Name="Contentv" Type="text" />
+    <Property Name="InvoiceTitle" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+</Schema>

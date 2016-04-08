@@ -1,0 +1,2 @@
+﻿备注存放 标段号 
+businessid  业务主键ID

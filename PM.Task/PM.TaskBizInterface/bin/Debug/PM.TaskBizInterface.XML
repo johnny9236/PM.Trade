@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PM.TaskBizInterface</name>
+    </assembly>
+    <members>
+        <member name="T:PM.TaskBizInterface.ITimerTaskCallBack">
+            <summary>
+            回调处理 业务信息
+            </summary>
+        </member>
+        <member name="M:PM.TaskBizInterface.ITimerTaskCallBack.CallBack(System.Object)">
+            <summary>
+            回调后业务处理
+            </summary>
+            <param name="dyObj"></param>
+        </member>
+        <member name="T:PM.TaskBizInterface.ITimerTaskCallBiz">
+            <summary>
+            业务发起接口
+            </summary>
+        </member>
+        <member name="M:PM.TaskBizInterface.ITimerTaskCallBiz.TimerCall">
+            <summary>
+            定时任务调用
+            </summary>
+        </member>
+        <member name="M:PM.TaskBizInterface.ITimerTaskCallBiz.GetCallbackInterface">
+            <summary>
+            获取回调接口
+            </summary>
+        </member>
+    </members>
+</doc>

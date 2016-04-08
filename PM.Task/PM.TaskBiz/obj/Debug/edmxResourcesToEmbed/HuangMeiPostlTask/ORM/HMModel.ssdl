@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HM.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="HMStoreContainer">
+    <EntitySet Name="T_HMPostal" EntityType="HM.Store.T_HMPostal" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="T_HMPostal">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="AccountNo" Type="varchar" MaxLength="50" />
+    <Property Name="TradeDate" Type="varchar" MaxLength="50" />
+    <Property Name="TradeSerialNumber" Type="varchar" MaxLength="50" />
+    <Property Name="ProofKind" Type="varchar" MaxLength="50" />
+    <Property Name="ProofNum" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="decimal" Scale="2" />
+    <Property Name="LoanMark" Type="varchar" MaxLength="50" />
+    <Property Name="RemainAmount" Type="decimal" Scale="2" />
+    <Property Name="Oprationer" Type="nvarchar" MaxLength="100" />
+    <Property Name="Checker" Type="nvarchar" MaxLength="100" />
+    <Property Name="Authorizer" Type="nvarchar" MaxLength="100" />
+    <Property Name="CounterpartAccountNo" Type="varchar" MaxLength="50" />
+    <Property Name="CounterpartAccountName" Type="nvarchar" MaxLength="200" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="200" />
+    <Property Name="TradeWay" Type="nvarchar" MaxLength="100" />
+    <Property Name="TradeNo" Type="varchar" MaxLength="50" />
+    <Property Name="TimeStamp" Type="varchar" MaxLength="50" />
+    <Property Name="DepartmentAccName" Type="nvarchar" MaxLength="200" />
+    <Property Name="Match" Type="int" />
+    <Property Name="Flag" Type="int" />
+    <Property Name="CreateTm" Type="datetime" />
+  </EntityType>
+</Schema>

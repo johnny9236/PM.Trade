@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SysConfigModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CfgName>分发地址配置</CfgName>
+  <CfgInfoList>
+    <CfgInfo>
+      <ID>3b21667c-8ceb-2db0-f150-3fc611efdc20</ID>
+      <BusinessNo>1111</BusinessNo>
+      <ProtocolsWay>NetBank</ProtocolsWay>
+      <ProtocolsWayDes>银联</ProtocolsWayDes>
+      <OprationType>Pay</OprationType>
+      <OprationTypeDes>支付</OprationTypeDes>
+      <ActionType>Request</ActionType>
+      <ActionTypeDes>请求</ActionTypeDes>
+      <BusinessKind>Pay</BusinessKind>
+      <BusinessKindDes>支付请求</BusinessKindDes>
+      <NotificationURL>http://localhost:4154/PM.PaymentWeb/callback/NetBank/FrontCallBack.aspx</NotificationURL>
+      <IP>12</IP>
+      <Port>12</Port>
+      <RootFilePath>12</RootFilePath>
+      <FtpUserName>12</FtpUserName>
+      <FtpUserPwd>12</FtpUserPwd>
+      <FileType>File</FileType>
+      <FileTypeDes>本地文件</FileTypeDes>
+    </CfgInfo>
+    <CfgInfo>
+      <ID>ef7ce880-4806-85bd-9f16-70c4eb7e9c45</ID>
+      <BusinessNo>1121</BusinessNo>
+      <ProtocolsWay>NetBank</ProtocolsWay>
+      <ProtocolsWayDes>银联</ProtocolsWayDes>
+      <OprationType>Search</OprationType>
+      <OprationTypeDes>查询</OprationTypeDes>
+      <ActionType>Request</ActionType>
+      <ActionTypeDes>请求</ActionTypeDes>
+      <BusinessKind>PayerInfoQuery</BusinessKind>
+      <BusinessKindDes>付款信息查询</BusinessKindDes>
+      <NotificationURL />
+      <IP />
+      <Port />
+      <RootFilePath />
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo>
+    <CfgInfo>
+      <ID>94003eae-45bc-584d-686c-d447534caffa</ID>
+      <BusinessNo>ZTB3</BusinessNo>
+      <ProtocolsWay>JSABOC</ProtocolsWay>
+      <ProtocolsWayDes>嘉善农行</ProtocolsWayDes>
+      <OprationType>Pay</OprationType>
+      <OprationTypeDes>支付</OprationTypeDes>
+      <ActionType>Response</ActionType>
+      <ActionTypeDes>响应</ActionTypeDes>
+      <BusinessKind>TransferResponse</BusinessKind>
+      <BusinessKindDes>转账响应</BusinessKindDes>
+      <NotificationURL />
+      <IP />
+      <Port />
+      <RootFilePath />
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo>
+    <CfgInfo>
+      <ID>a6f90d98-92a2-23d2-51a0-fa4e5af61285</ID>
+      <BusinessNo>ZTB2</BusinessNo>
+      <ProtocolsWay>JSABOC</ProtocolsWay>
+      <ProtocolsWayDes>嘉善农行</ProtocolsWayDes>
+      <OprationType>Pay</OprationType>
+      <OprationTypeDes>支付</OprationTypeDes>
+      <ActionType>Request</ActionType>
+      <ActionTypeDes>请求</ActionTypeDes>
+      <BusinessKind>Transfer</BusinessKind>
+      <BusinessKindDes>转账请求</BusinessKindDes>
+      <NotificationURL />
+      <IP />
+      <Port />
+      <RootFilePath />
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo>
+    <CfgInfo>
+      <ID>f94b4058-0648-1879-f65e-b491edd9a888</ID>
+      <BusinessNo>1118</BusinessNo>
+      <ProtocolsWay>NetBank</ProtocolsWay>
+      <ProtocolsWayDes>银联</ProtocolsWayDes>
+      <OprationType>Pay</OprationType>
+      <OprationTypeDes>支付</OprationTypeDes>
+      <ActionType>Response</ActionType>
+      <ActionTypeDes>响应</ActionTypeDes>
+      <BusinessKind>PayResponse</BusinessKind>
+      <BusinessKindDes>支付响应</BusinessKindDes>
+      <NotificationURL />
+      <RequestURL></RequestURL>
+      <IP>192.168.0.10</IP>
+      <Port>1049</Port>
+      <RootFilePath />
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo>
+    <CfgInfo>
+      <ID>adf740ae-db6c-6c54-ab60-8b8e7bb87a6d</ID>
+      <BusinessNo>AliPay</BusinessNo>
+      <ProtocolsWay>ALI</ProtocolsWay>
+      <ProtocolsWayDes>阿里</ProtocolsWayDes>
+      <OprationType>Pay</OprationType>
+      <OprationTypeDes>支付</OprationTypeDes>
+      <ActionType>Request</ActionType>
+      <ActionTypeDes>请求</ActionTypeDes>
+      <BusinessKind>Pay</BusinessKind>
+      <BusinessKindDes>支付请求</BusinessKindDes>
+      <RequestURL>https://mapi.alipay.com/gateway.do?</RequestURL>
+      <NotificationURL>http://192.168.0.1</NotificationURL>
+      <NotificationBgURL>http://192.168.0.1</NotificationBgURL>
+      <IP />
+      <Port />
+      <RootFilePath />
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo>
+    <CfgInfo>
+      <ID>560d55d7-8213-a425-ddd8-2301b9ff70ba</ID>
+      <BusinessNo>AliPayRtn</BusinessNo>
+      <ProtocolsWay>ALI</ProtocolsWay>
+      <ProtocolsWayDes>阿里</ProtocolsWayDes>
+      <OprationType>Pay</OprationType>
+      <OprationTypeDes>支付</OprationTypeDes>
+      <ActionType>Response</ActionType>
+      <ActionTypeDes>响应</ActionTypeDes>
+      <BusinessKind>PayResponse</BusinessKind>
+      <BusinessKindDes>支付响应</BusinessKindDes>
+      <RequestURL>https://mapi.alipay.com/gateway.do?service=notify_verify</RequestURL>
+      <NotificationURL />
+      <NotificationBgURL />
+      <IP />
+      <Port />
+      <RootFilePath />
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo>
+    <CfgInfo>
+      <ID>919f75b8-edc6-8b33-cce9-7150de7beb54</ID>
+      <BusinessNo>HuangMeiMatch</BusinessNo>
+      <ProtocolsWay>HuangMei</ProtocolsWay>
+      <ProtocolsWayDes>黄梅</ProtocolsWayDes>
+      <OprationType>Search</OprationType>
+      <OprationTypeDes>查询</OprationTypeDes>
+      <ActionType>Request</ActionType>
+      <ActionTypeDes>请求</ActionTypeDes>
+      <BusinessKind>PayerInfoQuery</BusinessKind>
+      <BusinessKindDes>付款信息查询</BusinessKindDes>
+      <NotificationURL />
+      <NotificationBgURL />
+      <RequestURL>https://pbank.psbc.com/payment/main</RequestURL>
+      <IP />
+      <Port />
+      <RootFilePath />
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo>
+    <CfgInfo>
+      <ID>6c2019c8-68d9-600e-e8a8-1f972e882896</ID>
+      <BusinessNo>ZTB1</BusinessNo>
+      <ProtocolsWay>JSABOC</ProtocolsWay>
+      <ProtocolsWayDes>嘉善农行</ProtocolsWayDes>
+      <OprationType>Search</OprationType>
+      <OprationTypeDes>查询</OprationTypeDes>
+      <ActionType>Request</ActionType>
+      <ActionTypeDes>请求</ActionTypeDes>
+      <BusinessKind>PayerInfoQuery</BusinessKind>
+      <BusinessKindDes>付款信息查询</BusinessKindDes>
+      <RequestURL />
+      <NotificationURL />
+      <NotificationBgURL />
+      <IP>192.168.0.10</IP>
+      <Port>1049</Port>
+      <RootFilePath />
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo>
+    <CfgInfo>
+      <ID>2eea2436-5733-62f6-0195-b3f5a4d2f80f</ID>
+      <BusinessNo>HuangShiMatch</BusinessNo>
+      <ProtocolsWay>HuangShi</ProtocolsWay>
+      <ProtocolsWayDes>黄石</ProtocolsWayDes>
+      <OprationType>Search</OprationType>
+      <OprationTypeDes>查询</OprationTypeDes>
+      <ActionType>Request</ActionType>
+      <ActionTypeDes>请求</ActionTypeDes>
+      <BusinessKind>PayerInfoQuery</BusinessKind>
+      <BusinessKindDes>付款信息查询</BusinessKindDes>
+      <RequestURL />
+      <NotificationURL />
+      <NotificationBgURL />
+      <IP>192.168.0.10</IP>
+      <Port>1024</Port>
+      <RootFilePath />
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo>
+    <CfgInfo>
+      <ID>5697f871-af12-e988-a0c0-e9aea04f3379</ID>
+      <BusinessNo>LPSBBCB2CResponse</BusinessNo>
+      <ProtocolsWay>LPSBBC</ProtocolsWay>
+      <ProtocolsWayDes>六盘水</ProtocolsWayDes>
+      <OprationType>Pay</OprationType>
+      <OprationTypeDes>支付</OprationTypeDes>
+      <ActionType>Response</ActionType>
+      <ActionTypeDes>响应</ActionTypeDes>
+      <BusinessKind>PayB2CResponse</BusinessKind>
+      <BusinessKindDes>支付响应(B2C)</BusinessKindDes>
+      <RequestURL />
+      <NotificationURL />
+      <NotificationBgURL />
+      <IP />
+      <Port />
+      <RootFilePath />
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo>
+    <CfgInfo>
+      <ID>c47ef229-5e47-a5e1-b7fc-c696050e9009</ID>
+      <BusinessNo>LPSBBCB2CPay</BusinessNo>
+      <ProtocolsWay>LPSBBC</ProtocolsWay>
+      <ProtocolsWayDes>六盘水</ProtocolsWayDes>
+      <OprationType>Pay</OprationType>
+      <OprationTypeDes>支付</OprationTypeDes>
+      <ActionType>Request</ActionType>
+      <ActionTypeDes>请求</ActionTypeDes>
+      <BusinessKind>PayB2C</BusinessKind>
+      <BusinessKindDes>支付请求(B2C)</BusinessKindDes>
+      <RequestURL>https://ibsbjstar.ccb.com.cn/app/ccbMain</RequestURL>
+      <NotificationURL>https://ibsbjstar.ccb.com.cn/app/ccbMain</NotificationURL>
+      <NotificationBgURL />
+      <IP />
+      <Port />
+      <RootFilePath />
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo>
+    <CfgInfo>
+      <ID>c111c55c-0566-322a-76db-be95bbabfc2b</ID>
+      <BusinessNo>LPSBBCB2BPay</BusinessNo>
+      <ProtocolsWay>LPSBBC</ProtocolsWay>
+      <ProtocolsWayDes>六盘水</ProtocolsWayDes>
+      <OprationType>Pay</OprationType>
+      <OprationTypeDes>支付</OprationTypeDes>
+      <ActionType>Request</ActionType>
+      <ActionTypeDes>请求</ActionTypeDes>
+      <BusinessKind>Pay</BusinessKind>
+      <BusinessKindDes>支付请求(B2B)</BusinessKindDes>
+      <RequestURL>https://ibsbjstar.ccb.com.cn/app/ccbMain</RequestURL>
+      <NotificationURL>https://ibsbjstar.ccb.com.cn/app/ccbMain</NotificationURL>
+      <NotificationBgURL />
+      <IP />
+      <Port />
+      <RootFilePath />
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo>
+    <CfgInfo>
+      <ID>003c0311-6e49-e02b-f61a-f2802a50d943</ID>
+      <BusinessNo>LPSBBCB2BResponse</BusinessNo>
+      <ProtocolsWay>LPSBBC</ProtocolsWay>
+      <ProtocolsWayDes>六盘水</ProtocolsWayDes>
+      <OprationType>Pay</OprationType>
+      <OprationTypeDes>支付</OprationTypeDes>
+      <ActionType>Response</ActionType>
+      <ActionTypeDes>响应</ActionTypeDes>
+      <BusinessKind>PayResponse</BusinessKind>
+      <BusinessKindDes>支付响应(B2B)</BusinessKindDes>
+      <RequestURL />
+      <NotificationURL />
+      <NotificationBgURL />
+      <IP />
+      <Port />
+      <RootFilePath />
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo>
+    <CfgInfo>
+      <ID>3885042b-26e8-eeaa-f76e-9cae690daa51</ID>
+      <BusinessNo>LPSBBCDSearch</BusinessNo>
+      <ProtocolsWay>LPSBBC</ProtocolsWay>
+      <ProtocolsWayDes>六盘水</ProtocolsWayDes>
+      <OprationType>Search</OprationType>
+      <OprationTypeDes>查询</OprationTypeDes>
+      <ActionType>Request</ActionType>
+      <ActionTypeDes>请求</ActionTypeDes>
+      <BusinessKind>PayerInfoQuery</BusinessKind>
+      <BusinessKindDes>付款信息查询</BusinessKindDes>
+      <RequestURL>https://ibsbjstar.ccb.com.cn/app/ccbMain</RequestURL>
+      <NotificationURL />
+      <NotificationBgURL />
+      <IP />
+      <Port />
+      <RootFilePath />
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo>
+    <CfgInfo>
+      <ID>8a30dae1-a142-4bb6-c148-4acc20aba847</ID>
+      <BusinessNo>JHBOF</BusinessNo>
+      <ProtocolsWay>JHBOF</ProtocolsWay>
+      <ProtocolsWayDes>金华交行</ProtocolsWayDes>
+      <OprationType>Search</OprationType>
+      <OprationTypeDes>查询</OprationTypeDes>
+      <ActionType>Request</ActionType>
+      <ActionTypeDes>请求</ActionTypeDes>
+      <BusinessKind>PayerInfoQuery</BusinessKind>
+      <BusinessKindDes>付款信息查询</BusinessKindDes>
+      <RequestURL />
+      <NotificationURL />
+      <NotificationBgURL />
+      <IP>192.168.1.6</IP>
+      <Port>30108</Port>
+      <RootFilePath>E:\项目文件\保证金匹配\交易文件\</RootFilePath>
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo>
+    <CfgInfo>
+      <ID>7bd447cb-b57e-24d8-d618-ecef89a2bad6</ID>
+      <BusinessNo>1810</BusinessNo>
+      <ProtocolsWay>NetBank</ProtocolsWay>
+      <ProtocolsWayDes>银联</ProtocolsWayDes>
+      <OprationType>Search</OprationType>
+      <OprationTypeDes>查询</OprationTypeDes>
+      <ActionType>Request</ActionType>
+      <ActionTypeDes>请求</ActionTypeDes>
+      <BusinessKind>BankStatement</BusinessKind>
+      <BusinessKindDes>下载对账查询</BusinessKindDes>
+      <RequestURL />
+      <NotificationURL />
+      <NotificationBgURL />
+      <IP />
+      <Port />
+      <RootFilePath />
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo>
+    <CfgInfo>
+      <ID>a0ad8dac-f855-1b9c-1880-0bd7223bdbec</ID>
+      <BusinessNo>QYVirtualAccount</BusinessNo>
+      <ProtocolsWay>QYBBC</ProtocolsWay>
+      <ProtocolsWayDes>安徽青阳建行</ProtocolsWayDes>
+      <OprationType>Other</OprationType>
+      <OprationTypeDes>其他</OprationTypeDes>
+      <ActionType>Request</ActionType>
+      <ActionTypeDes>请求</ActionTypeDes>
+      <BusinessKind>Create</BusinessKind>
+      <BusinessKindDes>创建</BusinessKindDes>
+      <RequestURL />
+      <NotificationURL />
+      <NotificationBgURL />
+     <IP>15.38.14.18</IP>
+      <Port>11326</Port>
+      <RootFilePath />
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo>
+    <CfgInfo>
+      <ID>04130be2-779c-4da8-ad8f-4661a3d7284f</ID>
+      <BusinessNo>QYBzjDtl</BusinessNo>
+      <ProtocolsWay>QYBBC</ProtocolsWay>
+      <ProtocolsWayDes>安徽青阳建行</ProtocolsWayDes>
+      <OprationType>Search</OprationType>
+      <OprationTypeDes>查询</OprationTypeDes>
+      <ActionType>Request</ActionType>
+      <ActionTypeDes>请求</ActionTypeDes>
+      <BusinessKind>BankStatement</BusinessKind>
+      <BusinessKindDes>下载对账查询</BusinessKindDes>
+      <RequestURL />
+      <NotificationURL />
+      <NotificationBgURL />
+      <IP>15.38.14.18</IP>
+      <Port>11326</Port>
+      <RootFilePath />
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo>
+    <CfgInfo>
+      <ID>b81d713a-536c-5471-d8b7-72355eaed00c</ID>
+      <BusinessNo>QYManualRefund</BusinessNo>
+      <ProtocolsWay>QYBBC</ProtocolsWay>
+      <ProtocolsWayDes>安徽青阳建行</ProtocolsWayDes>
+      <OprationType>Pay</OprationType>
+      <OprationTypeDes>支付</OprationTypeDes>
+      <ActionType>Request</ActionType>
+      <ActionTypeDes>请求</ActionTypeDes>
+      <BusinessKind>Transfer</BusinessKind>
+      <BusinessKindDes> 退还保证金</BusinessKindDes>
+      <RequestURL />
+      <NotificationURL />
+      <NotificationBgURL />
+     <IP>15.38.14.18</IP>
+      <Port>11326</Port>
+      <RootFilePath />
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo>
+    <CfgInfo>
+      <ID>601cd079-ef7d-590b-3de9-439a90d7cd58</ID>
+      <BusinessNo>QYBzjReFund</BusinessNo>
+      <ProtocolsWay>QYBBC</ProtocolsWay>
+      <ProtocolsWayDes>安徽青阳建行</ProtocolsWayDes>
+      <OprationType>Pay</OprationType>
+      <OprationTypeDes>支付</OprationTypeDes>
+      <ActionType>Request</ActionType>
+      <ActionTypeDes>请求</ActionTypeDes>
+      <BusinessKind>TransferNotice</BusinessKind>
+      <BusinessKindDes>转账(退还保证金结算）</BusinessKindDes>
+      <RequestURL />
+      <NotificationURL />
+      <NotificationBgURL />
+      <IP>15.38.14.18</IP>
+      <Port>11326</Port>
+      <RootFilePath />
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo>
+    <CfgInfo>
+      <ID>6b6d91f9-3f4e-7163-3194-b112fc877a9a</ID>
+      <BusinessNo>QYBzjEndTm</BusinessNo>
+      <ProtocolsWay>QYBBC</ProtocolsWay>
+      <ProtocolsWayDes>安徽青阳建行</ProtocolsWayDes>
+      <OprationType>Other</OprationType>
+      <OprationTypeDes>其他</OprationTypeDes>
+      <ActionType>Request</ActionType>
+      <ActionTypeDes>请求</ActionTypeDes>
+      <BusinessKind>Other</BusinessKind>
+      <BusinessKindDes>其他</BusinessKindDes>
+      <RequestURL />
+      <NotificationURL />
+      <NotificationBgURL />
+     <IP>15.38.14.18</IP>
+      <Port>11326</Port>
+      <RootFilePath />
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo>
+    <CfgInfo>
+      <ID>b132ee9b-3469-23df-1082-700e6dfc4085</ID>
+      <BusinessNo>QYBidTm</BusinessNo>
+      <ProtocolsWay>QYBBC</ProtocolsWay>
+      <ProtocolsWayDes>安徽青阳建行</ProtocolsWayDes>
+      <OprationType>Other</OprationType>
+      <OprationTypeDes>其他</OprationTypeDes>
+      <ActionType>Request</ActionType>
+      <ActionTypeDes>请求</ActionTypeDes>
+      <BusinessKind>Update</BusinessKind>
+      <BusinessKindDes>更新</BusinessKindDes>
+      <RequestURL />
+      <NotificationURL />
+      <NotificationBgURL />
+      <IP>15.38.14.18</IP>
+      <Port>11326</Port>
+      <RootFilePath />
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo>
+    <CfgInfo>
+      <ID>12d1d71e-da64-81f6-3354-8b2e5787585b</ID>
+      <BusinessNo>QYBZJRTNDtl</BusinessNo>
+      <ProtocolsWay>QYBBC</ProtocolsWay>
+      <ProtocolsWayDes>安徽青阳建行</ProtocolsWayDes>
+      <OprationType>Search</OprationType>
+      <OprationTypeDes>查询</OprationTypeDes>
+      <ActionType>Request</ActionType>
+      <ActionTypeDes>请求</ActionTypeDes>
+      <BusinessKind>MarketPayQuery</BusinessKind>
+      <BusinessKindDes> 市场订单支付查询</BusinessKindDes>
+      <RequestURL />
+      <NotificationURL />
+      <NotificationBgURL />
+    <IP>15.38.14.18</IP>
+      <Port>11326</Port>
+      <RootFilePath />
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo>
+    <CfgInfo>
+      <ID>52954500-ae30-2df5-a55b-876bb7a93ea3</ID>
+      <BusinessNo>QYFinish</BusinessNo>
+      <ProtocolsWay>QYBBC</ProtocolsWay>
+      <ProtocolsWayDes>安徽青阳建行</ProtocolsWayDes>
+      <OprationType>Other</OprationType>
+      <OprationTypeDes>其他</OprationTypeDes>
+      <ActionType>Request</ActionType>
+      <ActionTypeDes>请求</ActionTypeDes>
+      <BusinessKind>Finish</BusinessKind>
+      <BusinessKindDes>其他</BusinessKindDes>
+      <RequestURL />
+      <NotificationURL />
+      <NotificationBgURL />
+      <IP>15.38.14.18</IP>
+      <Port>11326</Port>
+      <RootFilePath />
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo>
+    <CfgInfo>
+      <ID>2a0cbcda-2f2d-8d9d-4037-37308adb2a15</ID>
+      <BusinessNo>HSICBCVirtualAccount</BusinessNo>
+      <ProtocolsWay>HSICBC</ProtocolsWay>
+      <ProtocolsWayDes>黄山工行</ProtocolsWayDes>
+      <OprationType>Other</OprationType>
+      <OprationTypeDes>其他</OprationTypeDes>
+      <ActionType>Request</ActionType>
+      <ActionTypeDes>请求</ActionTypeDes>
+      <BusinessKind>Create</BusinessKind>
+      <BusinessKindDes>创建</BusinessKindDes>
+      <RequestURL />
+      <NotificationURL />
+      <NotificationBgURL />
+      <IP>192.168.0.5</IP>
+      <Port>100</Port>
+      <RootFilePath />
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo>
+    <CfgInfo>
+      <ID>08f1ee9d-30d9-f4bb-ad08-468debef6185</ID>
+      <BusinessNo>HSICBCBidTm</BusinessNo>
+      <ProtocolsWay>HSICBC</ProtocolsWay>
+      <ProtocolsWayDes>黄山工行</ProtocolsWayDes>
+      <OprationType>Other</OprationType>
+      <OprationTypeDes>其他</OprationTypeDes>
+      <ActionType>Request</ActionType>
+      <ActionTypeDes>请求</ActionTypeDes>
+      <BusinessKind>Update</BusinessKind>
+      <BusinessKindDes>更新</BusinessKindDes>
+      <RequestURL />
+      <NotificationURL />
+      <NotificationBgURL />
+      <IP>192.168.0.5</IP>
+      <Port>50</Port>
+      <RootFilePath />
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo>
+    <CfgInfo>
+      <ID>77c1bef4-7ed2-6471-4b8f-12a72c62ea99</ID>
+      <BusinessNo>HSICBCBzjEndTm</BusinessNo>
+      <ProtocolsWay>HSICBC</ProtocolsWay>
+      <ProtocolsWayDes>黄山工行</ProtocolsWayDes>
+      <OprationType>Other</OprationType>
+      <OprationTypeDes>其他</OprationTypeDes>
+      <ActionType>Request</ActionType>
+      <ActionTypeDes>请求</ActionTypeDes>
+      <BusinessKind>Update</BusinessKind>
+      <BusinessKindDes>更新</BusinessKindDes>
+      <RequestURL />
+      <NotificationURL />
+      <NotificationBgURL />
+      <IP>192.168.0.5</IP>
+      <Port>10</Port>
+      <RootFilePath />
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo>
+    <CfgInfo>
+      <ID>8dde72d7-017b-355d-7589-e0c39b2a8d9a</ID>
+      <BusinessNo>HSICBCBzjDtl</BusinessNo>
+      <ProtocolsWay>HSICBC</ProtocolsWay>
+      <ProtocolsWayDes>黄山工行</ProtocolsWayDes>
+      <OprationType>Search</OprationType>
+      <OprationTypeDes>查询</OprationTypeDes>
+      <ActionType>Request</ActionType>
+      <ActionTypeDes>请求</ActionTypeDes>
+      <BusinessKind>BankStatement</BusinessKind>
+      <BusinessKindDes>下载对账查询</BusinessKindDes>
+      <RequestURL />
+      <NotificationURL />
+      <NotificationBgURL />
+      <IP>192.168.0.1</IP>
+      <Port>10</Port>
+      <RootFilePath />
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo>
+    <CfgInfo>
+      <ID>54de4721-eab8-65e7-cf6e-72af60837a08</ID>
+      <BusinessNo>HSICBCBzjReFund</BusinessNo>
+      <ProtocolsWay>HSICBC</ProtocolsWay>
+      <ProtocolsWayDes>黄山工行</ProtocolsWayDes>
+      <OprationType>Pay</OprationType>
+      <OprationTypeDes>支付</OprationTypeDes>
+      <ActionType>Request</ActionType>
+      <ActionTypeDes>请求</ActionTypeDes>
+      <BusinessKind>TransferNotice</BusinessKind>
+      <BusinessKindDes>转账(退还保证金结算）</BusinessKindDes>
+      <RequestURL />
+      <NotificationURL />
+      <NotificationBgURL />
+      <IP>192.168.0.1</IP>
+      <Port>11</Port>
+      <RootFilePath />
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo>
+    <CfgInfo>
+      <ID>96e7d3de-ee67-6598-8d77-52df849b69d1</ID>
+      <BusinessNo>HSICBCBZJRTNDtl</BusinessNo>
+      <ProtocolsWay>HSICBC</ProtocolsWay>
+      <ProtocolsWayDes>黄山工行</ProtocolsWayDes>
+      <OprationType>Search</OprationType>
+      <OprationTypeDes>查询</OprationTypeDes>
+      <ActionType>Request</ActionType>
+      <ActionTypeDes>请求</ActionTypeDes>
+      <BusinessKind>MarketPayQuery</BusinessKind>
+      <BusinessKindDes> 市场订单支付查询</BusinessKindDes>
+      <RequestURL />
+      <NotificationURL />
+      <NotificationBgURL />
+      <IP>192.168.0.1</IP>
+      <Port>11</Port>
+      <RootFilePath />
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo> 
+     <CfgInfo>
+      <ID>a4d9a5b8-73f8-39f9-b88f-12a2cbaec2a2</ID>
+      <BusinessNo>DDQBzjDtl</BusinessNo>
+      <ProtocolsWay>DDQABOC</ProtocolsWay>
+      <ProtocolsWayDes>掇刀区农行</ProtocolsWayDes>
+      <OprationType>Search</OprationType>
+      <OprationTypeDes>查询</OprationTypeDes>
+      <ActionType>Request</ActionType>
+      <ActionTypeDes>请求</ActionTypeDes>
+      <BusinessKind>BankStatement</BusinessKind>
+      <BusinessKindDes>下载对账查询</BusinessKindDes>
+      <RequestURL />
+      <NotificationURL />
+      <NotificationBgURL />
+      <IP>192.168.0.1</IP>
+      <Port>100</Port>
+      <RootFilePath>c:\\test</RootFilePath>
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType>File</FileType>
+      <FileTypeDes>File</FileTypeDes>
+    </CfgInfo>
+    <CfgInfo>
+      <ID>74b217a7-06c2-ce38-bc80-14f0c530ab6b</ID>
+      <BusinessNo>BOCBzjReFund</BusinessNo>
+      <ProtocolsWay>BOC</ProtocolsWay>
+      <ProtocolsWayDes>中国银行</ProtocolsWayDes>
+      <OprationType>Pay</OprationType>
+      <OprationTypeDes>支付</OprationTypeDes>
+      <ActionType>Request</ActionType>
+      <ActionTypeDes>请求</ActionTypeDes>
+      <BusinessKind>TransferNotice</BusinessKind>
+      <BusinessKindDes>转账(退还保证金结算）</BusinessKindDes>
+      <RequestURL>12</RequestURL>
+      <NotificationURL>23</NotificationURL>
+      <NotificationBgURL>34</NotificationBgURL>
+      <IP>4</IP>
+      <Port />
+      <RootFilePath />
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo>
+    <CfgInfo>
+      <ID>9dfc5415-7078-688d-e844-1a9fc03fbf74</ID>
+      <BusinessNo>BOCBzjDtl</BusinessNo>
+      <ProtocolsWay>BOC</ProtocolsWay>
+      <ProtocolsWayDes>中国银行</ProtocolsWayDes>
+      <OprationType>Search</OprationType>
+      <OprationTypeDes>查询</OprationTypeDes>
+      <ActionType>Request</ActionType>
+      <ActionTypeDes>请求</ActionTypeDes>
+      <BusinessKind>BankStatement</BusinessKind>
+      <BusinessKindDes>下载对账查询</BusinessKindDes>
+      <RequestURL>12</RequestURL>
+      <NotificationURL>23</NotificationURL>
+      <NotificationBgURL>34</NotificationBgURL>
+      <IP>2</IP>
+      <Port />
+      <RootFilePath />
+      <FtpUserName />
+      <FtpUserPwd />
+      <FileType />
+      <FileTypeDes />
+    </CfgInfo>
+  </CfgInfoList>
+</SysConfigModel>

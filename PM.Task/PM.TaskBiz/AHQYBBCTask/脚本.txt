@@ -1,0 +1,99 @@
+﻿
+
+/****** Object:  Table [dbo].[T_Margin]    Script Date: 02/18/2014 13:39:48 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[T_Margin](
+	[ID] [varchar](50) NOT NULL,
+	[InDate] [varchar](50) NULL,
+	[InTime] [varchar](50) NULL,
+	[InAmount] [varchar](50) NULL,
+	[InName] [varchar](50) NULL,
+	[InAcct] [varchar](50) NULL,
+	[InMemo] [varchar](50) NULL,
+	[HstSeqNum] [varchar](50) NULL,
+	[PunInst] [varchar](50) NULL,
+	[Gernal] [varchar](50) NULL,
+	[BackResult] [varchar](50) NULL,
+	[AddWord] [nvarchar](500) NULL,
+	[BusniessType] [char](2) NULL,
+	[CreateTm] [datetime] NULL,
+	[Match] [int] NULL,
+	[Flag] [int] NULL,
+	[AuthCode] [varchar](50) NULL,
+	[SectionCode] [varchar](50) NULL,
+	[Remark] [nvarchar](500) NULL,
+	[BankType] [varchar](50) NULL,
+ CONSTRAINT [PK_T_AHQY] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'到账日期' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Margin', @level2type=N'COLUMN',@level2name=N'InDate'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'到账时间' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Margin', @level2type=N'COLUMN',@level2name=N'InTime'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'到账金额' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Margin', @level2type=N'COLUMN',@level2name=N'InAmount'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'付款人户名' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Margin', @level2type=N'COLUMN',@level2name=N'InName'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'付款人账号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Margin', @level2type=N'COLUMN',@level2name=N'InAcct'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'收款账号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Margin', @level2type=N'COLUMN',@level2name=N'InMemo'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'交易流水号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Margin', @level2type=N'COLUMN',@level2name=N'HstSeqNum'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'当前利息' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Margin', @level2type=N'COLUMN',@level2name=N'PunInst'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'是否基本户  0否；1是' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Margin', @level2type=N'COLUMN',@level2name=N'Gernal'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'是否退款 0否  1是' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Margin', @level2type=N'COLUMN',@level2name=N'BackResult'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'退款说明' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Margin', @level2type=N'COLUMN',@level2name=N'AddWord'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'业务类型 0保证金入账明细  1退款明细' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Margin', @level2type=N'COLUMN',@level2name=N'BusniessType'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'匹配0 未匹配   1匹配' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Margin', @level2type=N'COLUMN',@level2name=N'Match'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'是否处理（预留）【0未处理  1处理】' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Margin', @level2type=N'COLUMN',@level2name=N'Flag'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'授权号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Margin', @level2type=N'COLUMN',@level2name=N'AuthCode'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'标段编号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Margin', @level2type=N'COLUMN',@level2name=N'SectionCode'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'备注' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Margin', @level2type=N'COLUMN',@level2name=N'Remark'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'银行类型' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_Margin', @level2type=N'COLUMN',@level2name=N'BankType'
+GO
+
+

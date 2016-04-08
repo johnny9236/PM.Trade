@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="e2c847cd-b55e-42fd-80af-0e3c6dadadae" name="Administrator@SUDA-20120614CL 2013-12-13 09:29:21" runUser="SUDA-20120614CL\Administrator" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="本地" id="574d4f53-3c52-4cff-b754-37d162d04a7d">
+    <Description>这些设置为本地测试运行的默认测试设置。</Description>
+    <Deployment enabled="false" runDeploymentRoot="Administrator_SUDA-20120614CL 2013-12-13 09_29_21" />
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-12-13T09:29:21.8460081+08:00" queuing="2013-12-13T09:29:32.4306135+08:00" start="2013-12-13T09:29:34.6467403+08:00" finish="2013-12-13T09:30:04.3784408+08:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="1" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="SUDA-20120614CL" outcome="Error" timestamp="2013-12-13T09:30:04.3754407+08:00">
+        <Text>测试宿主进程意外退出。</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TestMethod1" storage="e:\工作\支付接口\支付接口方案代码\pm.trade\pm.tradetest\bin\release\pm.tradetest.dll" id="3d346515-d73b-504c-70a8-b58cd4b62677">
+      <Execution id="27e6a4da-6730-44e4-8a5a-24ee56343037" />
+      <TestMethod codeBase="E:/工作/支付接口/支付接口方案代码/PM.Trade/PM.TradeTest/bin/Release/PM.TradeTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="PM.TradeTest.UnitTest1, PM.TradeTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMethod1" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="列表中未列出的结果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="所有已加载的结果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="3d346515-d73b-504c-70a8-b58cd4b62677" executionId="27e6a4da-6730-44e4-8a5a-24ee56343037" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="27e6a4da-6730-44e4-8a5a-24ee56343037" testId="3d346515-d73b-504c-70a8-b58cd4b62677" testName="TestMethod1" computerName="SUDA-20120614CL" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="27e6a4da-6730-44e4-8a5a-24ee56343037">
+    </UnitTestResult>
+  </Results>
+</TestRun>

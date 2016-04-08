@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4A25A656-F4FE-4734-9C67-1C14794ED278}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PM.PaymentProtocolModel</RootNamespace>
+    <AssemblyName>PM.PaymentProtocolModel</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\PM.PaymentProtocolModel.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BankCfg.cs" />
+    <Compile Include="BankCommModel\AHQY\QYBBCQueryOrRtnQueryAccountDtl.cs" />
+    <Compile Include="BankCommModel\AHQY\QYBBCQueryResultModel.cs" />
+    <Compile Include="BankCommModel\AHQY\QYBBCQueryRtnResultModel.cs" />
+    <Compile Include="BankCommModel\AHQY\QYBBCRefundRequset.cs" />
+    <Compile Include="BankCommModel\AHQY\QYBBCRefundResponse.cs" />
+    <Compile Include="BankCommModel\ALiPay\ALiPayModel.cs" />
+    <Compile Include="BankCommModel\BBCManage\BBCQueryOrRtnQueryAccountDtl.cs" />
+    <Compile Include="BankCommModel\BBCManage\BBCQueryResultModel.cs" />
+    <Compile Include="BankCommModel\BBCManage\BBCQueryRtnResultModel.cs" />
+    <Compile Include="BankCommModel\BBCManage\BBCRefundRequset.cs" />
+    <Compile Include="BankCommModel\BBCManage\BBCRefundResponse.cs" />
+    <Compile Include="BankCommModel\BOC\BOCBase.cs" />
+    <Compile Include="BankCommModel\BOC\BOCQueryAccountDtl.cs" />
+    <Compile Include="BankCommModel\BOC\BOCQueryAccountDtlResult.cs" />
+    <Compile Include="BankCommModel\BOC\BOCRefundRequset.cs.cs" />
+    <Compile Include="BankCommModel\BOC\BOCRefundResponse.cs" />
+    <Compile Include="BankCommModel\BOC\BOCSignIn.cs" />
+    <Compile Include="BankCommModel\BOC\BOCSignOUt.cs" />
+    <Compile Include="BankCommModel\DDQABOC\DDQAccount.cs" />
+    <Compile Include="BankCommModel\DDQABOC\DDQAccountQuery.cs" />
+    <Compile Include="BankCommModel\HSanTRCB\HSanTRCBQueryOrRtnQueryAccountDtl.cs" />
+    <Compile Include="BankCommModel\HSanTRCB\HSanTRCBQueryRtnResultModel.cs" />
+    <Compile Include="BankCommModel\HSanTRCB\HSanTRCBQueyResultModel.cs" />
+    <Compile Include="BankCommModel\HSanTRCB\HSanTRCBRefundRequset.cs" />
+    <Compile Include="BankCommModel\HSanTRCB\HSanTRCBRefundResponse.cs" />
+    <Compile Include="BankCommModel\HSICBC\HSICBCQueryAccountDtl.cs" />
+    <Compile Include="BankCommModel\HSICBC\HSICBCQueryResultModel.cs" />
+    <Compile Include="BankCommModel\HSICBC\HSICBCQueryRtnResultModel.cs" />
+    <Compile Include="BankCommModel\HSICBC\HSICBCRefundRequset.cs" />
+    <Compile Include="BankCommModel\HSICBC\HSICBCRefundResponse.cs" />
+    <Compile Include="BankCommModel\HSICBC\HSICBCRtnQueryAccountDtl.cs" />
+    <Compile Include="BankCommModel\HuangMeiPostal\HuangMeiQuery.cs" />
+    <Compile Include="BankCommModel\HuangMeiPostal\HuangMeiQueryResult.cs" />
+    <Compile Include="BankCommModel\HuangShi\HuangShiDepositQueryListModel.cs" />
+    <Compile Include="BankCommModel\ICBCManage\ICBCQueryOrRtnQueryAccountDtl.cs" />
+    <Compile Include="BankCommModel\ICBCManage\ICBCQueryResultModel.cs" />
+    <Compile Include="BankCommModel\ICBCManage\ICBCQueryRtnResultModel.cs" />
+    <Compile Include="BankCommModel\ICBCManage\ICBCRefundRequset.cs" />
+    <Compile Include="BankCommModel\ICBCManage\ICBCRefundResponse.cs" />
+    <Compile Include="BankCommModel\JHBOF\JHBOFQueryPayListModel.cs" />
+    <Compile Include="BankCommModel\JSABOC\JSABOCModel.cs" />
+    <Compile Include="BankCommModel\JSABOC\JSABOCRtnModel.cs" />
+    <Compile Include="BankCommModel\JSABOC\JSABOCQueryAccountDtl.cs" />
+    <Compile Include="BankCommModel\JSABOC\JSABOCRefoundModel.cs" />
+    <Compile Include="BankCommModel\LPSBBC\BBCB2BPay.cs.cs" />
+    <Compile Include="BankCommModel\LPSBBC\BBCB2CPay.cs" />
+    <Compile Include="BankCommModel\LPSBBC\BBCBase.cs" />
+    <Compile Include="BankCommModel\LPSBBC\BBCQuery.cs" />
+    <Compile Include="BankCommModel\LPSBBC\BBCQueryAccountRtnModel.cs" />
+    <Compile Include="BankCommModel\Netbank\NetbankBankBatchStayPaysModel.cs" />
+    <Compile Include="BankCommModel\Netbank\NetBankPayModel.cs" />
+    <Compile Include="BankCommModel\Netbank\NetBankQueryMarketSettlementModel.cs" />
+    <Compile Include="BankCommModel\Netbank\NetBankQueryMerchantOrPayModel.cs" />
+    <Compile Include="BankCommModel\Netbank\NetBankQueryStatementListModel.cs" />
+    <Compile Include="BankCommModel\Netbank\NetBankSettlementModel.cs" />
+    <Compile Include="BankCommModel\Netbank\NetBankTransPayModel.cs" />
+    <Compile Include="BankCommModel\PubCallBackModel.cs" />
+    <Compile Include="BankCommModel\QueryOpKindModel.cs" />
+    <Compile Include="BankCommModel\QueryPayerDetailModel.cs" />
+    <Compile Include="BankCommModel\TRCB\TRCBQueryOrRtnQueryAccountDtl.cs" />
+    <Compile Include="BankCommModel\TRCB\TRCBQueryRtnResultModel.cs.cs" />
+    <Compile Include="BankCommModel\TRCB\TRCBQueyResultModel.cs" />
+    <Compile Include="BankCommModel\TRCB\TRCBRefundRequset.cs" />
+    <Compile Include="BankCommModel\TRCB\TRCBRefundResponse.cs" />
+    <Compile Include="Business.cs" />
+    <Compile Include="PayCfg.cs" />
+    <Compile Include="PayEnum.cs" />
+    <Compile Include="PaymentModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PubModel\CommPayReqestModel.cs" />
+    <Compile Include="PubModel\CommunicationBase.cs" />
+    <Compile Include="PubModel\ConfigModel.cs" />
+    <Compile Include="PubModel\PayCommunicationInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\PM.PaymentService\PM.PaymentModel\PM.PaymentModel.csproj">
+      <Project>{3103B58F-909F-4A7C-9B56-B38249DB7B72}</Project>
+      <Name>PM.PaymentModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PM.Utils\PM.Utils.csproj">
+      <Project>{7FE9F232-DB50-495F-B4FD-F1A6C459DADD}</Project>
+      <Name>PM.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BankCommModel\BBCManage\说明.txt" />
+    <Content Include="BankCommModel\BOC\说明.txt" />
+    <Content Include="BankCommModel\HSICBC\说明.txt" />
+    <Content Include="BankCommModel\ICBCManage\说明.txt" />
+    <Content Include="BankCommModel\TRCB\说明.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

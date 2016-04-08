@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PM.PaymentServices</name>
+    </assembly>
+    <members>
+        <member name="M:PM.PaymentServices.CommonService.CommonRemoteCall(System.Object)">
+            <summary>
+            非支付调用
+            </summary>
+            <param name="objModel">调用对象</param>
+            <returns></returns>
+        </member>
+        <member name="T:PM.PaymentServices.PaymentService">
+            <summary>
+            支付相关服务实现
+            </summary>
+        </member>
+        <member name="M:PM.PaymentServices.PaymentService.DoPay(PM.PaymentModel.PayStartModel)">
+            <summary>
+            支付发起接口
+            </summary>
+            <param name="payReceiveModel">支付请求对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PaymentServices.PaymentService.DoRefundPay(PM.PaymentModel.PayRefundModel)">
+            <summary>
+            退款
+            </summary>
+            <param name="payRefundModel">退款对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PaymentServices.PaymentService.PayCallback(PM.PaymentModel.PayResopnseModel)">
+            <summary>
+            回调响应
+            </summary>
+            <param name="resModel">回调对象</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

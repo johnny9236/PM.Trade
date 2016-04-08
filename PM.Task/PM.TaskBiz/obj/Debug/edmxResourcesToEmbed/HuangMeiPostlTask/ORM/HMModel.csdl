@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HM" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="GovPublic_jinhuaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="T_HMPostal" EntityType="HM.T_HMPostal" />
+  </EntityContainer>
+  <EntityType Name="T_HMPostal">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AccountNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TradeDate" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TradeSerialNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ProofKind" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ProofNum" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Amount" Precision="18" Scale="2" />
+    <Property Type="String" Name="LoanMark" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="RemainAmount" Precision="18" Scale="2" />
+    <Property Type="String" Name="Oprationer" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Checker" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Authorizer" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CounterpartAccountNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CounterpartAccountName" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remark" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TradeWay" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TradeNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TimeStamp" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DepartmentAccName" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Match" />
+    <Property Type="Int32" Name="Flag" />
+    <Property Type="DateTime" Name="CreateTm" />
+  </EntityType>
+</Schema>

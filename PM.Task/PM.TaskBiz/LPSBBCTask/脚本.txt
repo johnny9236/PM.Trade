@@ -1,0 +1,78 @@
+﻿
+/****** Object:  Table [dbo].[T_LPSBBC]    Script Date: 09/06/2013 17:41:36 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[T_LPSBBC](
+	[ID] [varchar](50) NOT NULL,
+	[MERCHANTID] [varchar](50) NULL,
+	[BRANCHID] [varchar](50) NULL,
+	[POSID] [varchar](50) NULL,
+	[ORDERID] [varchar](50) NULL,
+	[ORDERDATE] [varchar](50) NULL,
+	[ACCDATE] [varchar](50) NULL,
+	[AMOUNT] [varchar](50) NULL,
+	[STATUSCODE] [varchar](50) NULL,
+	[STATUS] [varchar](50) NULL,
+	[REFUND] [varchar](50) NULL,
+	[SIGN] [text] NULL,
+	[IsMatch] [int] NULL,
+	[Flag] [int] NULL,
+	[CreateTm] [datetime] NULL,
+ CONSTRAINT [PK_T_LPSBBC] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'商户代码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_LPSBBC', @level2type=N'COLUMN',@level2name=N'MERCHANTID'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'商户所在分行' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_LPSBBC', @level2type=N'COLUMN',@level2name=N'BRANCHID'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'商户的POS号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_LPSBBC', @level2type=N'COLUMN',@level2name=N'POSID'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'订单号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_LPSBBC', @level2type=N'COLUMN',@level2name=N'ORDERID'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付/退款交易时间' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_LPSBBC', @level2type=N'COLUMN',@level2name=N'ORDERDATE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'记账日期' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_LPSBBC', @level2type=N'COLUMN',@level2name=N'ACCDATE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'金额' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_LPSBBC', @level2type=N'COLUMN',@level2name=N'AMOUNT'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付/退款状态码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_LPSBBC', @level2type=N'COLUMN',@level2name=N'STATUSCODE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付/退款状态' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_LPSBBC', @level2type=N'COLUMN',@level2name=N'STATUS'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'退款金额' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_LPSBBC', @level2type=N'COLUMN',@level2name=N'REFUND'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'(''签名串'')' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_LPSBBC', @level2type=N'COLUMN',@level2name=N'SIGN'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'是否匹配处理 (用于查询入账明细) 1是 0否' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_LPSBBC', @level2type=N'COLUMN',@level2name=N'IsMatch'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'处理结果  1成功 0或空未返回处理' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_LPSBBC', @level2type=N'COLUMN',@level2name=N'Flag'
+GO
+
+

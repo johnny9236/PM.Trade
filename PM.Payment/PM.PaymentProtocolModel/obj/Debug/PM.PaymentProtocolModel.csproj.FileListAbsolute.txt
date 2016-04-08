@@ -1,0 +1,16 @@
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.Payment\PM.PaymentProtocolModel\bin\Debug\PM.PaymentProtocolModel.XML
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.Payment\PM.PaymentProtocolModel\bin\Debug\PM.PaymentProtocolModel.dll
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.Payment\PM.PaymentProtocolModel\bin\Debug\PM.PaymentProtocolModel.pdb
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.Payment\PM.PaymentProtocolModel\bin\Debug\PM.PaymentModel.dll
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.Payment\PM.PaymentProtocolModel\bin\Debug\PM.Utils.dll
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.Payment\PM.PaymentProtocolModel\bin\Debug\Quartz.dll
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.Payment\PM.PaymentProtocolModel\bin\Debug\zlib.net.dll
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.Payment\PM.PaymentProtocolModel\bin\Debug\C5.dll
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.Payment\PM.PaymentProtocolModel\bin\Debug\Common.Logging.dll
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.Payment\PM.PaymentProtocolModel\bin\Debug\PM.PaymentModel.pdb
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.Payment\PM.PaymentProtocolModel\bin\Debug\PM.PaymentModel.xml
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.Payment\PM.PaymentProtocolModel\bin\Debug\PM.Utils.pdb
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.Payment\PM.PaymentProtocolModel\bin\Debug\PM.Utils.xml
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.Payment\PM.PaymentProtocolModel\obj\Debug\PM.PaymentProtocolModel.dll
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.Payment\PM.PaymentProtocolModel\obj\Debug\PM.PaymentProtocolModel.pdb
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.Payment\PM.PaymentProtocolModel\obj\Debug\PM.PaymentProtocolModel.csprojResolveAssemblyReference.cache

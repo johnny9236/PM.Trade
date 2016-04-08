@@ -1,0 +1,83 @@
+﻿IP    192.168.1.135
+用户  JHBOF  
+密码 JHBOFjh_2008
+
+/****** Object:  Table [dbo].[T_JHBOF]    Script Date: 10/29/2013 15:21:03 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[T_JHBOF](
+	[ID] [varchar](50) NOT NULL,
+	[TradeDate] [varchar](50) NULL,
+	[TradeNo] [varchar](50) NULL,
+	[Amount] [money] NULL,
+	[AcountNo] [varchar](50) NULL,
+	[AcountName] [varchar](100) NULL,
+	[Match] [int] NULL,
+	[Remark] [nchar](10) NULL,
+	[Flag] [int] NULL,
+	[CreateTm] [datetime] NULL,
+	[CustomTradeNo] [varchar](50) NULL,
+ CONSTRAINT [PK_T_JHBOF] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'交易日期' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JHBOF', @level2type=N'COLUMN',@level2name=N'TradeDate'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'交易流水' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JHBOF', @level2type=N'COLUMN',@level2name=N'TradeNo'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'金额' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JHBOF', @level2type=N'COLUMN',@level2name=N'Amount'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'对方账号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JHBOF', @level2type=N'COLUMN',@level2name=N'AcountNo'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'对方户名' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JHBOF', @level2type=N'COLUMN',@level2name=N'AcountName'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'匹配0 未匹配   1匹配' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JHBOF', @level2type=N'COLUMN',@level2name=N'Match'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'是否处理（预留）【0未处理  1处理】' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JHBOF', @level2type=N'COLUMN',@level2name=N'Flag'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N' 创建时间' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JHBOF', @level2type=N'COLUMN',@level2name=N'CreateTm'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'银行伪序列号（序列号重复问题添加，通过交易日期+交易号+伪序列号   确定唯一）' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JHBOF', @level2type=N'COLUMN',@level2name=N'CustomTradeNo'
+GO
+
+
+
+----入账表增加字段
+alter  table T_ZTB_MoneyPayment  add BaseAccountNo varchar(100)  null
+alter  table T_ZTB_MoneyPayment  add BaseAccountName nvarchar(500)  null
+alter  table T_ZTB_MoneyPayment  add NormalAccountNo varchar(100)  null
+alter  table T_ZTB_MoneyPayment  add NormalAccountName nvarchar(500)  null
+
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'基本户账号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_ZTB_MoneyPayment', @level2type=N'COLUMN',@level2name=N'BaseAccountNo'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'基本户账号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_ZTB_MoneyPayment', @level2type=N'COLUMN',@level2name=N'BaseAccountName'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'基本户账号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_ZTB_MoneyPayment', @level2type=N'COLUMN',@level2name=N'NormalAccountNo'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'基本户账号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_ZTB_MoneyPayment', @level2type=N'COLUMN',@level2name=N'NormalAccountName'
+GO

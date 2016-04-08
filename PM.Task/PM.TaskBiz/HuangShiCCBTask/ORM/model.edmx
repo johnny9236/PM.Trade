@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="GovPmBidOnline_BusinessModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="GovPmBidOnline_BusinessModelStoreContainer">
+          <EntitySet Name="T_BASE_Banks" EntityType="GovPmBidOnline_BusinessModel.Store.T_BASE_Banks" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_ZTB_BidMoneyPayReturn" EntityType="GovPmBidOnline_BusinessModel.Store.T_ZTB_BidMoneyPayReturn" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_ZTB_DepositCCB" EntityType="GovPmBidOnline_BusinessModel.Store.T_ZTB_DepositCCB" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="T_BASE_Banks">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="200" />
+          <Property Name="UnitId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UnitName" Type="nvarchar" MaxLength="200" />
+          <Property Name="BankName" Type="nvarchar" MaxLength="200" />
+          <Property Name="BankNum" Type="nvarchar" MaxLength="200" />
+          <Property Name="GongYao" Type="nvarchar(max)" />
+          <Property Name="MerchantId" Type="nvarchar" MaxLength="200" />
+          <Property Name="PosId" Type="nvarchar" MaxLength="200" />
+          <Property Name="BranchId" Type="nvarchar" MaxLength="200" />
+          <Property Name="AccountName" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="T_ZTB_BidMoneyPayReturn">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CaseId" Type="uniqueidentifier" />
+          <Property Name="BidderId" Type="uniqueidentifier" />
+          <Property Name="PayTime" Type="datetime" />
+          <Property Name="PayMoney" Type="decimal" Scale="8" />
+          <Property Name="PayType" Type="nvarchar" MaxLength="10" />
+          <Property Name="CardNum" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsCheck" Type="int" />
+          <Property Name="ReturnManId" Type="uniqueidentifier" />
+          <Property Name="ReturnTime" Type="datetime" />
+          <Property Name="ReturnWindow" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+          <Property Name="IsReturn" Type="int" />
+          <Property Name="UnitId" Type="uniqueidentifier" />
+          <Property Name="BankCardNum" Type="nvarchar" MaxLength="50" />
+          <Property Name="BankName" Type="nvarchar" MaxLength="100" />
+          <Property Name="UnitCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="CaseCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="AutoId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UnitName" Type="nvarchar" MaxLength="200" />
+          <Property Name="ProID" Type="nvarchar" MaxLength="50" />
+          <Property Name="BidMoneyType" Type="nvarchar" MaxLength="10" />
+          <Property Name="LinkPerson" Type="nvarchar" MaxLength="50" />
+          <Property Name="LinkPersonPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="LinkPersonMobilTel" Type="nvarchar" MaxLength="50" />
+          <Property Name="OrderNum" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="T_ZTB_DepositCCB">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="REQUEST_SN" Type="nvarchar" MaxLength="50" />
+          <Property Name="CUST_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="TX_CODE" Type="nvarchar" MaxLength="50" />
+          <Property Name="RETURN_CODE" Type="nvarchar" MaxLength="50" />
+          <Property Name="RETURN_MSG" Type="nvarchar" MaxLength="50" />
+          <Property Name="TRAN_DATE" Type="nvarchar" MaxLength="50" />
+          <Property Name="TRAN_TIME" Type="nvarchar" MaxLength="50" />
+          <Property Name="TRAN_SQ" Type="nvarchar" MaxLength="50" />
+          <Property Name="ACCOUNT" Type="nvarchar" MaxLength="50" />
+          <Property Name="ACCOUNT_NAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="MONEY" Type="decimal" Precision="16" Scale="2" />
+          <Property Name="OTHER_ACCOUNT" Type="nvarchar" MaxLength="50" />
+          <Property Name="OTHER_ACCOUNT_NAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="ORDERS" Type="nvarchar" MaxLength="50" />
+          <Property Name="ISMATCH" Type="int" />
+          <Property Name="CREATETIME" Type="datetime" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GovPmBidOnline_BusinessModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="GovPmBidOnline_BusinessEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="T_BASE_Banks" EntityType="GovPmBidOnline_BusinessModel.T_BASE_Banks" />
+          <EntitySet Name="T_ZTB_BidMoneyPayReturn" EntityType="GovPmBidOnline_BusinessModel.T_ZTB_BidMoneyPayReturn" />
+          <EntitySet Name="T_ZTB_DepositCCB" EntityType="GovPmBidOnline_BusinessModel.T_ZTB_DepositCCB" />
+        </EntityContainer>
+        <EntityType Name="T_BASE_Banks">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="UnitId" Type="Guid" Nullable="false" />
+          <Property Name="UnitName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="BankName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="BankNum" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="GongYao" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="MerchantId" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="PosId" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="BranchId" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="AccountName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="T_ZTB_BidMoneyPayReturn">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="Guid" Name="CaseId" />
+          <Property Type="Guid" Name="BidderId" />
+          <Property Type="DateTime" Name="PayTime" />
+          <Property Type="Decimal" Name="PayMoney" Precision="18" Scale="8" />
+          <Property Type="String" Name="PayType" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CardNum" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="IsCheck" />
+          <Property Type="Guid" Name="ReturnManId" />
+          <Property Type="DateTime" Name="ReturnTime" />
+          <Property Type="String" Name="ReturnWindow" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Phone" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="IsReturn" />
+          <Property Type="Guid" Name="UnitId" />
+          <Property Type="String" Name="BankCardNum" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BankName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UnitCode" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CaseCode" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="AutoId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="UnitName" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BidMoneyType" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LinkPerson" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LinkPersonPhone" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LinkPersonMobilTel" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="OrderNum" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="T_ZTB_DepositCCB">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Guid" Name="ID" Nullable="false" />
+          <Property Type="String" Name="REQUEST_SN" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CUST_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TX_CODE" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TRAN_DATE" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TRAN_TIME" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TRAN_SQ" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ACCOUNT" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ACCOUNT_NAME" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="MONEY" Precision="16" Scale="2" />
+          <Property Type="String" Name="OTHER_ACCOUNT" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="OTHER_ACCOUNT_NAME" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ORDERS" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="RETURN_CODE" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="RETURN_MSG" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ISMATCH" />
+          <Property Type="DateTime" Name="CREATETIME" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GovPmBidOnline_BusinessModelStoreContainer" CdmEntityContainer="GovPmBidOnline_BusinessEntities">
+          <EntitySetMapping Name="T_BASE_Banks"><EntityTypeMapping TypeName="GovPmBidOnline_BusinessModel.T_BASE_Banks"><MappingFragment StoreEntitySet="T_BASE_Banks">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="UserId" ColumnName="UserId" />
+            <ScalarProperty Name="UserName" ColumnName="UserName" />
+            <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+            <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+            <ScalarProperty Name="BankName" ColumnName="BankName" />
+            <ScalarProperty Name="BankNum" ColumnName="BankNum" />
+            <ScalarProperty Name="GongYao" ColumnName="GongYao" />
+            <ScalarProperty Name="MerchantId" ColumnName="MerchantId" />
+            <ScalarProperty Name="PosId" ColumnName="PosId" />
+            <ScalarProperty Name="BranchId" ColumnName="BranchId" />
+            <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_ZTB_BidMoneyPayReturn">
+            <EntityTypeMapping TypeName="GovPmBidOnline_BusinessModel.T_ZTB_BidMoneyPayReturn">
+              <MappingFragment StoreEntitySet="T_ZTB_BidMoneyPayReturn">
+                <ScalarProperty Name="OrderNum" ColumnName="OrderNum" />
+                <ScalarProperty Name="LinkPersonMobilTel" ColumnName="LinkPersonMobilTel" />
+                <ScalarProperty Name="LinkPersonPhone" ColumnName="LinkPersonPhone" />
+                <ScalarProperty Name="LinkPerson" ColumnName="LinkPerson" />
+                <ScalarProperty Name="BidMoneyType" ColumnName="BidMoneyType" />
+                <ScalarProperty Name="ProID" ColumnName="ProID" />
+                <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+                <ScalarProperty Name="AutoId" ColumnName="AutoId" />
+                <ScalarProperty Name="CaseCode" ColumnName="CaseCode" />
+                <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+                <ScalarProperty Name="BankName" ColumnName="BankName" />
+                <ScalarProperty Name="BankCardNum" ColumnName="BankCardNum" />
+                <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+                <ScalarProperty Name="IsReturn" ColumnName="IsReturn" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="ReturnWindow" ColumnName="ReturnWindow" />
+                <ScalarProperty Name="ReturnTime" ColumnName="ReturnTime" />
+                <ScalarProperty Name="ReturnManId" ColumnName="ReturnManId" />
+                <ScalarProperty Name="IsCheck" ColumnName="IsCheck" />
+                <ScalarProperty Name="CardNum" ColumnName="CardNum" />
+                <ScalarProperty Name="PayType" ColumnName="PayType" />
+                <ScalarProperty Name="PayMoney" ColumnName="PayMoney" />
+                <ScalarProperty Name="PayTime" ColumnName="PayTime" />
+                <ScalarProperty Name="BidderId" ColumnName="BidderId" />
+                <ScalarProperty Name="CaseId" ColumnName="CaseId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_ZTB_DepositCCB">
+            <EntityTypeMapping TypeName="GovPmBidOnline_BusinessModel.T_ZTB_DepositCCB">
+              <MappingFragment StoreEntitySet="T_ZTB_DepositCCB">
+                <ScalarProperty Name="CREATETIME" ColumnName="CREATETIME" />
+                <ScalarProperty Name="ISMATCH" ColumnName="ISMATCH" />
+                <ScalarProperty Name="RETURN_MSG" ColumnName="RETURN_MSG" />
+                <ScalarProperty Name="RETURN_CODE" ColumnName="RETURN_CODE" />
+                <ScalarProperty Name="ORDERS" ColumnName="ORDERS" />
+                <ScalarProperty Name="OTHER_ACCOUNT_NAME" ColumnName="OTHER_ACCOUNT_NAME" />
+                <ScalarProperty Name="OTHER_ACCOUNT" ColumnName="OTHER_ACCOUNT" />
+                <ScalarProperty Name="MONEY" ColumnName="MONEY" />
+                <ScalarProperty Name="ACCOUNT_NAME" ColumnName="ACCOUNT_NAME" />
+                <ScalarProperty Name="ACCOUNT" ColumnName="ACCOUNT" />
+                <ScalarProperty Name="TRAN_SQ" ColumnName="TRAN_SQ" />
+                <ScalarProperty Name="TRAN_TIME" ColumnName="TRAN_TIME" />
+                <ScalarProperty Name="TRAN_DATE" ColumnName="TRAN_DATE" />
+                <ScalarProperty Name="TX_CODE" ColumnName="TX_CODE" />
+                <ScalarProperty Name="CUST_ID" ColumnName="CUST_ID" />
+                <ScalarProperty Name="REQUEST_SN" ColumnName="REQUEST_SN" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="model">
+        <EntityTypeShape EntityType="GovPmBidOnline_BusinessModel.T_BASE_Banks" Width="1.5" PointX="0.75" PointY="0.75" Height="3.3071704101562496" IsExpanded="true" />
+        <EntityTypeShape EntityType="GovPmBidOnline_BusinessModel.T_ZTB_BidMoneyPayReturn" Width="1.5" PointX="3.375" PointY="0.75" Height="5.7904264322916656" />
+        <EntityTypeShape EntityType="GovPmBidOnline_BusinessModel.T_ZTB_DepositCCB" Width="1.5" PointX="5.375" PointY="0.75" Height="3.4981901041666656" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

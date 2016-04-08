@@ -1,0 +1,13 @@
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.PaymentWCF\PM.PaymentContracts\bin\Debug\PM.PaymentContracts.dll
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.PaymentWCF\PM.PaymentContracts\bin\Debug\PM.PaymentContracts.pdb
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.PaymentWCF\PM.PaymentContracts\obj\Debug\PM.PaymentContracts.dll
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.PaymentWCF\PM.PaymentContracts\obj\Debug\PM.PaymentContracts.pdb
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.PaymentService\PM.PaymentContracts\bin\Debug\PM.PaymentContracts.dll
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.PaymentService\PM.PaymentContracts\bin\Debug\PM.PaymentContracts.pdb
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.PaymentService\PM.PaymentContracts\bin\Debug\PM.PaymentModel.dll
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.PaymentService\PM.PaymentContracts\bin\Debug\PM.PaymentModel.pdb
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.PaymentService\PM.PaymentContracts\bin\Debug\PM.PaymentModel.xml
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.PaymentService\PM.PaymentContracts\obj\Debug\PM.PaymentContracts.csprojResolveAssemblyReference.cache
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.PaymentService\PM.PaymentContracts\obj\Debug\PM.PaymentContracts.dll
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.PaymentService\PM.PaymentContracts\obj\Debug\PM.PaymentContracts.pdb
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.PaymentService\PM.PaymentContracts\bin\Debug\PM.PaymentContracts.XML

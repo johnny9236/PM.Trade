@@ -1,0 +1,4 @@
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.PaymentService\PM.CommBack\PM.CommProtocalBackBiz\bin\Debug\PM.CommProtocalBackBiz.dll
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.PaymentService\PM.CommBack\PM.CommProtocalBackBiz\bin\Debug\PM.CommProtocalBackBiz.pdb
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.PaymentService\PM.CommBack\PM.CommProtocalBackBiz\obj\Debug\PM.CommProtocalBackBiz.dll
+E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.PaymentService\PM.CommBack\PM.CommProtocalBackBiz\obj\Debug\PM.CommProtocalBackBiz.pdb

@@ -1,0 +1,1081 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PM.NetBankPtlBiz</name>
+    </assembly>
+    <members>
+        <member name="T:PM.NetBankPtlBiz.Model.PayInfo">
+            <summary>
+            1111网银支付信息(作为基类)
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.PayInfo.InstitutionID">
+            <summary>
+            机构号码(嘉善为 000226)
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.PayInfo.PaymentNo">
+            <summary>
+            支付流水号
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.PayInfo.Amount">
+            <summary>
+            订单金额(需要*100)
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.PayInfo.Fee">
+            <summary>
+            支付服务手续费  默认为10元(需要*100)
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.PayInfo.PayerID">
+            <summary>
+            付款者ID
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.PayInfo.PayerName">
+            <summary>
+            付款者名称
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.PayInfo.SettlementFlag">
+            <summary>
+            结算标识
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.PayInfo.Usage">
+            <summary>
+            资金用途
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.PayInfo.Remark">
+            <summary>
+            订单描述
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.PayInfo.NotificationURL">
+            <summary>
+            通知URL
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.PayInfo.BankID">
+            <summary>
+            银行ID
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.PayInfo.AccountType">
+            <summary>
+            账户类型
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.PayInfo.txCode">
+            <summary>
+            业务类型
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.PayInfo.txName">
+            <summary>
+            业务描述
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.PayInfo.PlainText">
+            <summary>
+            报文
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.PayInfo.ActionURL">
+            <summary>
+            提交地址(银行接口地址)
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.PayInfo.Signature">
+            <summary>
+            签名信息
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.PayInfo.Message">
+            <summary>
+            报文
+            </summary>
+        </member>
+        <member name="T:PM.NetBankPtlBiz.Model.Pay1311Info">
+            <summary>
+            1311退还保证金
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Pay1311Info.OrderNo">
+            <summary>
+            订单号
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Pay1311Info.Payees">
+            <summary>
+            收款人
+            </summary>
+        </member>
+        <member name="T:PM.NetBankPtlBiz.Model.Pay1341Info">
+            <summary>
+            保证金结算处理
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Pay1341Info.SerialNumber">
+            <summary>
+            流水号
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Pay1341Info.PaymentAccountName">
+            <summary>
+            支付账号名称
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Pay1341Info.PaymentAccountNumber">
+            <summary>
+            支付账号号码
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Pay1341Info.AccountName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Pay1341Info.BranchName">
+            <summary>
+            分支行名称
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Pay1341Info.Province">
+            <summary>
+            分支行省市
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Pay1341Info.City">
+            <summary>
+            分支行城市
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Pay1341Info.Result">
+            <summary>
+            结果集
+            </summary>
+        </member>
+        <member name="T:PM.NetBankPtlBiz.Model.BatchStayPays">
+            <summary>
+            批量代付
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchStayPays.InstitutionID">
+            <summary>
+            机构号码
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchStayPays.BatchNo">
+            <summary>
+            批次号
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchStayPays.TotalAmount">
+            <summary>
+            订单金额(需要*100)
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchStayPays.Fee">
+            <summary>
+            支付服务手续费  默认为10元(需要*100)
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchStayPays.TotalCount">
+            <summary>
+            总比数
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchStayPays.BatchList">
+            <summary>
+            明细
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchStayPays.Signature">
+            <summary>
+            签名
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchStayPays.Message">
+            <summary>
+            报文
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchStayPays.SuccessTime">
+            <summary>
+            成功时间
+            </summary> 
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchStayPays.TxCode">
+            <summary>
+            业务类型
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchStayPays.TxName">
+            <summary>
+            业务描述
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchStayPays.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchStayPays.PlainText">
+            <summary>
+            响应报文
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchStayPays.Result">
+            <summary>
+            返回结果
+            </summary>
+        </member>
+        <member name="T:PM.NetBankPtlBiz.Model.BatchInfo">
+            <summary>
+            批次明细
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchInfo.ItemNo">
+            <summary>
+            流水号
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchInfo.Amount">
+            <summary>
+            订单金额(需要*100)
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchInfo.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchInfo.AccNo">
+            <summary>
+            账号      （必要信息）
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchInfo.AccDbName">
+            <summary>
+            账户名     
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchInfo.AccDBBank">
+            <summary>
+            账户开户行（必要信息）
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchInfo.AccDBBankNo">
+            <summary>
+            账户开户行行号（必要信息）
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchInfo.BankID">
+            <summary>
+            银行ID（代码）
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchInfo.SettingAccNo">
+            <summary>
+            结算标示(结算到那个账户)
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchInfo.StructCode">
+            <summary>
+            机构代码
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchInfo.AccCur">
+            <summary>
+            币种
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchInfo.AccPro">
+            <summary>
+            省
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchInfo.AccCity">
+            <summary>
+            市
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchInfo.AccType">
+            <summary>
+            账户类型 个人11、企业12
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchInfo.PhoneNumber">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchInfo.Email">
+            <summary>
+            电子邮箱
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchInfo.IdentificationType">
+            <summary>
+            开户证件类型
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.BatchInfo.IdentificationNumber">
+            <summary>
+            证件号码
+            </summary>
+        </member>
+        <member name="T:PM.NetBankPtlBiz.Model.Notice1118Or1318Or1348ResponseInfo">
+            <summary>
+            1111    1311 报文响应
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1118Or1318Or1348ResponseInfo.Amount">
+            <summary>
+            金额
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1118Or1318Or1348ResponseInfo.BankNotificationTime">
+            <summary>
+            通知时间
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1118Or1318Or1348ResponseInfo.InstitutionID">
+            <summary>
+            机构号码
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1118Or1318Or1348ResponseInfo.PaymentNo">
+            <summary>
+            支付订单号
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1118Or1318Or1348ResponseInfo.SerialNumber">
+            <summary>
+            支付流水号
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1118Or1318Or1348ResponseInfo.Status">
+            <summary>
+            状态值
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1118Or1318Or1348ResponseInfo.StatusDes">
+            <summary>
+            状态描述
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1118Or1318Or1348ResponseInfo.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1118Or1318Or1348ResponseInfo.Signature">
+            <summary>
+            签名信息
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1118Or1318Or1348ResponseInfo.Message">
+            <summary>
+            报文
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1118Or1318Or1348ResponseInfo.SuccessTime">
+            <summary>
+            成功时间
+            </summary> 
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1118Or1318Or1348ResponseInfo.TxCode">
+            <summary>
+            业务类型
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1118Or1318Or1348ResponseInfo.TxName">
+            <summary>
+            业务描述
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1118Or1318Or1348ResponseInfo.PlainText">
+            <summary>
+            响应报文
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1118Or1318Or1348ResponseInfo.Result">
+            <summary>
+            返回结果
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1118Or1318Or1348ResponseInfo.MessageResponse">
+            <summary>
+            设置返回信息 供 网银网关程序判断是否推送成功
+            </summary>
+        </member>
+        <member name="T:PM.NetBankPtlBiz.Model.Notice1810ResponseInfo">
+            <summary>
+            查询下载对应 响应（公用部分相对较少故未抽象部分对象）
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1810ResponseInfo.InstitutionID">
+            <summary>
+            机构号
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1810ResponseInfo.Signature">
+            <summary>
+            签名
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1810ResponseInfo.Message">
+            <summary>
+            报文
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1810ResponseInfo.SuccessTime">
+            <summary>
+            成功时间
+            </summary> 
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1810ResponseInfo.TxCode">
+            <summary>
+            业务类型
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1810ResponseInfo.TxName">
+            <summary>
+            业务描述
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1810ResponseInfo.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1810ResponseInfo.PlainText">
+            <summary>
+            响应报文
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1810ResponseInfo.TX">
+            <summary>
+            查询明细1810专用
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1810ResponseInfo.Result">
+            <summary>
+            返回结果
+            </summary>
+        </member>
+        <member name="T:PM.NetBankPtlBiz.Model.Notice1121ResponseInfo">
+            <summary>
+            查询支付人信息
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1121ResponseInfo.InstitutionID">
+            <summary>
+            机构号
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1121ResponseInfo.Signature">
+            <summary>
+            签名
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1121ResponseInfo.Message">
+            <summary>
+            报文
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1121ResponseInfo.SuccessTime">
+            <summary>
+            成功时间
+            </summary> 
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1121ResponseInfo.TxCode">
+            <summary>
+            业务类型
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1121ResponseInfo.TxName">
+            <summary>
+            业务描述
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1121ResponseInfo.PlainText">
+            <summary>
+            响应报文
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1121ResponseInfo.Result">
+            <summary>
+            返回结果
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1121ResponseInfo.PaymentNo">
+            <summary>
+            订单号（流水号）
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1121ResponseInfo.PayerAccountName">
+            <summary>
+            付款人账户名称
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1121ResponseInfo.PayerAccountNumber">
+            <summary>
+            付款人账号
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1121ResponseInfo.PayerBranchName">
+            <summary>
+            分支行
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1121ResponseInfo.PayerProvince">
+            <summary>
+            省份
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1121ResponseInfo.PayerCity">
+            <summary>
+            城市
+            </summary>
+        </member>
+        <member name="T:PM.NetBankPtlBiz.Model.Notice1120Or1320ResponseInfo">
+            <summary>
+            商户订单支付或市场订单支付查询信息(1120 、1320)
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1120Or1320ResponseInfo.InstitutionID">
+            <summary>
+            机构号
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1120Or1320ResponseInfo.Signature">
+            <summary>
+            签名
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1120Or1320ResponseInfo.Message">
+            <summary>
+            报文
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1120Or1320ResponseInfo.SuccessTime">
+            <summary>
+            成功时间
+            </summary> 
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1120Or1320ResponseInfo.TxCode">
+            <summary>
+            业务类型
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1120Or1320ResponseInfo.TxName">
+            <summary>
+            业务描述
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1120Or1320ResponseInfo.PlainText">
+            <summary>
+            响应报文
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1120Or1320ResponseInfo.Result">
+            <summary>
+            返回结果
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1120Or1320ResponseInfo.PaymentNo">
+            <summary>
+            订单号（流水号）
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1120Or1320ResponseInfo.Amonut">
+            <summary>
+            金额
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1120Or1320ResponseInfo.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1120Or1320ResponseInfo.BankNotificationTime">
+            <summary>
+            支付平台收到银行通知时间
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1120Or1320ResponseInfo.Status">
+            <summary>
+            状态值
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1120Or1320ResponseInfo.StatusDes">
+            <summary>
+            状态描述
+            </summary>
+        </member>
+        <member name="T:PM.NetBankPtlBiz.Model.Notice1350ResponseInfo">
+            <summary>
+            市场订单结算查询(1350)
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1350ResponseInfo.Signature">
+            <summary>
+            签名
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1350ResponseInfo.Message">
+            <summary>
+            报文
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1350ResponseInfo.InstitutionID">
+            <summary>
+            机构号
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1350ResponseInfo.SerialNumber">
+            <summary>
+            原结算交易流水号
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1350ResponseInfo.PaymentNo">
+            <summary>
+            订单号（流水号）
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1350ResponseInfo.Amount">
+            <summary>
+            金额
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1350ResponseInfo.TxCode">
+            <summary>
+            业务类型
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1350ResponseInfo.TxName">
+            <summary>
+            业务描述
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1350ResponseInfo.PlainText">
+            <summary>
+            响应报文
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1350ResponseInfo.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1350ResponseInfo.AccountType">
+            <summary>
+            账户类型
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1350ResponseInfo.AccountTypeDes">
+            <summary>
+            账户类型描述
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1350ResponseInfo.SuccessTime">
+            <summary>
+            成功时间
+            </summary> 
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1350ResponseInfo.Result">
+            <summary>
+            返回结果
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1350ResponseInfo.PayerAccountName">
+            <summary>
+            账户名称（支付平台账户）
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1350ResponseInfo.PayerAccountNumber">
+            <summary>
+            账户号码（支付平台账户）
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1350ResponseInfo.BankID">
+            <summary>
+            收款方银行编号
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1350ResponseInfo.AccountName">
+            <summary>
+            收款方账户名称
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1350ResponseInfo.AccountNumber">
+            <summary>
+            收款方账户号码
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1350ResponseInfo.BranchName">
+            <summary>
+            收款方分支行名称
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1350ResponseInfo.Province">
+            <summary>
+            省份
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1350ResponseInfo.City">
+            <summary>
+            城市
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1350ResponseInfo.Status">
+            <summary>
+            状态值
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Notice1350ResponseInfo.StatusDes">
+            <summary>
+            状态描述
+            </summary>
+        </member>
+        <member name="T:PM.NetBankPtlBiz.Model.Tx1810">
+            <summary>
+            查询明细
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Tx1810.TxType">
+            <summary>
+            交易类型
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Tx1810.TxSn">
+            <summary>
+            交易编号
+            </summary>     
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Tx1810.TxAmount">
+            <summary>
+            交易金额
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Tx1810.InstitutionAmount">
+            <summary>
+            机构应收的金额
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Tx1810.PaymentAmoun">
+            <summary>
+            支付平台应收的金额
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Tx1810.PayerFee">
+            <summary>
+            付款人手续费
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Tx1810.InstitutionFee">
+            <summary>
+            机构手续
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Tx1810.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Tx1810.BankNotificationTime">
+            <summary>
+            支付平台收到银行通知时间，格式：YYYYMMDDhhmmss
+            </summary>
+        </member>
+        <member name="P:PM.NetBankPtlBiz.Model.Tx1810.SettlementFlag">
+            <summary>
+            结算标示
+            </summary>
+        </member>
+        <member name="T:PM.NetBankPtlBiz.Model.RtnStatus">
+            <summary>
+            返回状态
+            </summary>
+        </member>
+        <member name="T:PM.NetBankPtlBiz.Protocols.NetBankProtocols">
+             <summary>
+            银联 支付实现
+             </summary>
+            <summary>
+            结算、代付相关
+            </summary>
+            <summary>
+            支付相关
+            </summary>
+        </member>
+        <member name="M:PM.NetBankPtlBiz.Protocols.NetBankProtocols.CallRemotePay(System.Object,PM.PaymentProtocolModel.CfgInfo)">
+            <summary>
+            支付请求
+            </summary>
+            <param name="paymentModel"></param>
+            <param name="cfgInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.NetBankPtlBiz.Protocols.NetBankProtocols.CallBackParse(System.Object,PM.PaymentProtocolModel.CfgInfo)">
+            <summary>
+            响应解析
+            </summary>
+            <param name="paymentModel"></param>
+            <param name="cfgInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.NetBankPtlBiz.Protocols.NetBankProtocols.GetNetBankSettlementRequest(PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankSettlementRequestModel,PM.PaymentProtocolModel.CfgInfo)">
+            <summary>
+            网银结算请求
+            </summary>
+            <param name="sendInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.NetBankPtlBiz.Protocols.NetBankProtocols.TransPay1341ResultNotice(PM.NetBankPtlBiz.Model.Pay1341Info)">
+            <summary>
+            结算
+            </summary>
+            <param name="payInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.NetBankPtlBiz.Protocols.NetBankProtocols.GetNetbankSettlementResponse(PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankPayResponseModel,PM.PaymentProtocolModel.CfgInfo)">
+            <summary>
+            网银结算响应通知
+            </summary>
+            <param name="sendInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.NetBankPtlBiz.Protocols.NetBankProtocols.GetNetbankBankBatchStayPays(PM.PaymentProtocolModel.BankCommModel.Netbank.NetbankBankBatchStayPaysRequestModel,PM.PaymentProtocolModel.CfgInfo)">
+            <summary>
+            批量代付处理
+            </summary>
+            <param name="sendInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.NetBankPtlBiz.Protocols.NetBankProtocols.BatchStayPaysRequest(PM.NetBankPtlBiz.Model.BatchStayPays)">
+            <summary>
+            代付处理
+            </summary>
+            <param name="batchInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.NetBankPtlBiz.Protocols.NetBankProtocols.GetNetBankPayRequest(PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankPayRequestModel,PM.PaymentProtocolModel.CfgInfo)">
+            <summary>
+            网银支付请求
+            </summary>
+            <param name="payInfomation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.NetBankPtlBiz.Protocols.NetBankProtocols.PayRequest(PM.NetBankPtlBiz.Model.PayInfo)">
+            <summary>
+            支付请求
+            </summary>
+            <param name="payInfo">请求信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.NetBankPtlBiz.Protocols.NetBankProtocols.GetNetbankPayOrTransResponse(PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankPayResponseModel,PM.PaymentProtocolModel.CfgInfo)">
+            <summary>
+            网银通知返回(不包含结算)
+            </summary>
+            <param name="sendInfo"></param>
+            <param name="cfgInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.NetBankPtlBiz.Protocols.NetBankProtocols.PayResponse(System.String,System.String)">
+            <summary>
+            支付响应(目前公用)
+            </summary>
+            <param name="message">报文</param>
+            <param name="signature">签名</param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.NetBankPtlBiz.Protocols.NetBankProtocols.GetNetBankTransPayRequest(PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankPayRequestModel,PM.PaymentProtocolModel.CfgInfo)">
+            <summary>
+            网银转账发起
+            </summary>
+            <param name=" cfgInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.NetBankPtlBiz.Protocols.NetBankProtocols.TransPayRequest(PM.NetBankPtlBiz.Model.Pay1311Info)">
+            <summary>
+            转账请求
+            </summary>
+            <param name="payInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PM.NetBankPtlBiz.Model.NetBankBusinessKind">
+            <summary>
+            业务类型对应业务功能号
+            </summary>
+        </member>
+        <member name="F:PM.NetBankPtlBiz.Model.NetBankBusinessKind.NetBankPay">
+            <summary>
+            网银支付请求（商户订单）
+            </summary>
+        </member>
+        <member name="F:PM.NetBankPtlBiz.Model.NetBankBusinessKind.NetBankTransPay">
+            <summary>
+            网银转账请求(市场订单)
+            </summary>
+        </member>
+        <member name="F:PM.NetBankPtlBiz.Model.NetBankBusinessKind.NetbankPayCallBack">
+            <summary>
+            网银通知支付
+            </summary>
+        </member>
+        <member name="F:PM.NetBankPtlBiz.Model.NetBankBusinessKind.NetbankTransCallBack">
+            <summary>
+            网银转账通知
+            </summary>
+        </member>
+        <member name="F:PM.NetBankPtlBiz.Model.NetBankBusinessKind.NetbankTransClear">
+            <summary>
+            网银转账结算请求
+            </summary>
+        </member>
+        <member name="F:PM.NetBankPtlBiz.Model.NetBankBusinessKind.NetbankTransClearCallBack">
+            <summary>
+            网银转账结算通知
+            </summary>
+        </member>
+        <member name="F:PM.NetBankPtlBiz.Model.NetBankBusinessKind.NetbankBatchStayPays">
+            <summary>
+            网银批量代付
+            </summary>
+        </member>
+        <member name="F:PM.NetBankPtlBiz.Model.NetBankBusinessKind.NetbankOpkind">
+            <summary>
+            网银操作类型(用于查询)
+            </summary>
+        </member>
+        <member name="F:PM.NetBankPtlBiz.Model.NetBankBusinessKind.NetbankSearchPayer">
+            <summary>
+            查询支付人信息
+            </summary>
+        </member>
+        <member name="F:PM.NetBankPtlBiz.Model.NetBankBusinessKind.NetbankMerchantQuery">
+            <summary>
+            商户订单支付查询(1120)
+            </summary>
+        </member>
+        <member name="F:PM.NetBankPtlBiz.Model.NetBankBusinessKind.NetbankMarketPayQuery">
+            <summary>
+            市场订单支付查询（1320）
+            </summary>
+        </member>
+        <member name="F:PM.NetBankPtlBiz.Model.NetBankBusinessKind.NetbankMarketTransClearQuery">
+            <summary>
+            市场订单结算查询(1350)
+            </summary>
+        </member>
+        <member name="F:PM.NetBankPtlBiz.Model.NetBankBusinessKind.NetbankBankStatement">
+            <summary>
+            对账单(1810) 时间格式YYYY-MM-DD
+            </summary>
+        </member>
+        <member name="F:PM.NetBankPtlBiz.Model.NetBankBusinessKind.QueryList">
+            <summary>
+            查询列表
+            </summary>
+        </member>
+        <member name="T:PM.NetBankPtlBiz.Protocols.NetBankCommonProtocols">
+            <summary>
+            查询相关
+            </summary>
+            <summary>
+            银联非支付实现
+            </summary>
+        </member>
+        <member name="M:PM.NetBankPtlBiz.Protocols.NetBankCommonProtocols.GetNetbankOpKind(PM.PaymentProtocolModel.BankCommModel.QueryOpKindModel,PM.PaymentProtocolModel.CfgInfo)">
+            <summary>
+            查询网银相关操作的类型(响应时候用)
+            </summary>
+            <param name="sendInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.NetBankPtlBiz.Protocols.NetBankCommonProtocols.NetBankOpKind(System.String,System.String)">
+            <summary>
+            获取网银操作类型
+            </summary>
+            <param name="message"></param>
+            <param name="signature"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.NetBankPtlBiz.Protocols.NetBankCommonProtocols.GetNetbankSearchPayer(PM.PaymentProtocolModel.BankCommModel.QueryPayerDetailModel,PM.PaymentProtocolModel.CfgInfo)">
+            <summary>
+            支付人信息获取(查询)
+            </summary>
+            <param name="sendInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.NetBankPtlBiz.Protocols.NetBankCommonProtocols.NetBankSearchPayer(System.String,System.String)">
+            <summary>
+            网银支付查询获取支付人信息
+            </summary>
+            <param name="institutionID"></param>
+            <param name="paymentNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.NetBankPtlBiz.Protocols.NetBankCommonProtocols.GetNetbankMerchantOrPayQuery(PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankQueryMerchantOrPayModel,PM.PaymentProtocolModel.CfgInfo)">
+            <summary>
+            商户订单支付查询(1120)
+            </summary>
+            <param name="sendInfo"></param>
+            <param name="businessType">动作类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.NetBankPtlBiz.Protocols.NetBankCommonProtocols.NetBankMerchantOrPayQuery(System.String,System.String,System.String)">
+            <summary>
+            商户订单支付查询或市场支付查询(1120)
+            </summary>
+            <param name="institutionID"></param>
+            <param name="paymentNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.NetBankPtlBiz.Protocols.NetBankCommonProtocols.GetNetbankMarketSettlementQuery(PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankQueryMarketSettlementModel,PM.PaymentProtocolModel.CfgInfo)">
+            <summary>
+            市场订单结算查询(1350)
+            </summary>
+            <param name="sendInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.NetBankPtlBiz.Protocols.NetBankCommonProtocols.NetBankMarketSettlementQuery(System.String,System.String)">
+            <summary>
+            市场订单结算1350
+            </summary>
+            <param name="institutionID"></param>
+            <param name="serialNumber">原结算流水号</param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.NetBankPtlBiz.Protocols.NetBankCommonProtocols.GetNetbankBankStatementList(PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankQueryStatementListModel,PM.PaymentProtocolModel.CfgInfo)">
+            <summary>
+            对账单(未编写  目前用不到)
+            </summary>
+            <param name="sendInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.NetBankPtlBiz.Protocols.NetBankCommonProtocols.NetBankBankStatement(System.String,System.String)">
+            <summary>
+            对账
+            </summary>
+            <param name="institutionID"></param>
+            <param name="searchData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.NetBankPtlBiz.Protocols.NetBankCommonProtocols.RemoteCall(System.Object,PM.PaymentProtocolModel.CfgInfo)">
+            <summary>
+            调用 返回
+            </summary>
+            <param name="objModel"></param>
+            <param name="cfgInfo"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

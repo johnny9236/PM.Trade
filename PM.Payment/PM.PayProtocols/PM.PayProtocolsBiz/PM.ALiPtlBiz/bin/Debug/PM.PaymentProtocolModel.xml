@@ -1,0 +1,2196 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PM.PaymentProtocolModel</name>
+    </assembly>
+    <members>
+        <member name="T:PM.PaymentProtocolModel.PayFlag">
+            <summary>
+            支付结果 
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.PayFlag.None">
+            <summary>
+            默认
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.PayFlag.Submit">
+            <summary>
+            已提交
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.PayFlag.PaySucess">
+            <summary>
+            支付成功
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.PayFlag.PayFail">
+            <summary>
+            支付失败
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.PayFlag.IncomeSucess">
+            <summary>
+            入账成功
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.PayFlag.IncomeFail">
+            <summary>
+            入账失败
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.PayReturnFlag">
+            <summary>
+            退还保证金标记 
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.PayReturnFlag.None">
+            <summary>
+            默认
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.PayReturnFlag.Submit">
+            <summary>
+            已提交
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.PayReturnFlag.OprationSucess">
+            <summary>
+            操作成功
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.PayReturnFlag.OprationFaile">
+            <summary>
+            操作失败
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.PayReturnFlag.Sucess">
+            <summary>
+            退还保证金成功
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.PayReturnFlag.Fail">
+            <summary>
+            退还保证金失败
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.OrderFlag">
+            <summary>
+            订单状态 
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.OrderFlag.None">
+            <summary>
+            默认
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.OrderFlag.Submit">
+            <summary>
+            已提交
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.OrderFlag.Sucess">
+            <summary>
+            成功
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.OrderFlag.Faile">
+            <summary>
+            失败
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.ResultType">
+            <summary>
+            处理结果返回 （用于银行服务器端返回）
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.ResultType.None">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.ResultType.Success">
+            <summary>
+            成功
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.ResultType.Faile">
+            <summary>
+            失败
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.ResultType.UnKnow">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.PubModel.CommPayReqestModel">
+            <summary>
+            支付、转账 结算 响应(通用)
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.CommunicationBase">
+            <summary>
+            通信对象基类
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.CommunicationBase.BusinessFunNo">
+            <summary>
+            业务号，系统用于指定实例化协议用
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.CommunicationBase.OrderNo">
+            <summary>
+            设定订单号(必要信息)
+            规则：
+            1、不重复
+            2、用于第三方或银行等通讯的标识，本系统中用于查询交易具体信息 
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.CommunicationBase.SerialNumber">
+            <summary>
+            设定商户交易流水号
+            规则：
+            1、流水号系统中不能重复
+            2、在发生退款业务时，需要初始化本字段，用于表示当前退款业务的唯一编号(前面订单号用于发生退款的那笔业务的编号)
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.CommunicationBase.OprationerID">
+            <summary>
+            操作人ID
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.CommunicationBase.OprationerName">
+            <summary>
+            操作人姓名
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.CommunicationBase.TradeDate">
+            <summary>
+            交易时间
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.CommunicationBase.InstitutionID">
+            <summary>
+            机构代码
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.PubModel.CommPayReqestModel.Signature">
+            <summary>
+            签名信息
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.PubModel.CommPayReqestModel.MessagePaket">
+            <summary>
+            报文 供form提交
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.PubModel.CommPayReqestModel.PubKey">
+            <summary>
+            公匙
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankCommModel.Netbank.NetbankBankBatchStayPaysRequestModel">
+            <summary>
+            代付请求
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetbankBankBatchStayPaysRequestModel.Amount">
+            <summary>
+            设定交易金额(必要信息)  总金额
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetbankBankBatchStayPaysRequestModel.Remarks">
+            <summary>
+            备注信息
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetbankBankBatchStayPaysRequestModel.AccTradeList">
+            <summary>
+            多个收款信息（代付结算等支付到多个账号使用） 一个情况说明是支付
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.ProtocolsWay">
+            <summary>
+            协议实现类型
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.ProtocolsWay.NULL">
+            <summary>
+            无
+            </summary> 
+        </member>
+        <member name="F:PM.PaymentProtocolModel.ProtocolsWay.JSABOC">
+            <summary>
+            嘉善农行
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.ProtocolsWay.JHBOF">
+            <summary>
+            金华交行
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.ProtocolsWay.NetBank">
+            <summary>
+            银联
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.ProtocolsWay.HuangMei">
+            <summary>
+            黄梅
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.ProtocolsWay.HuangShi">
+            <summary>
+            黄石
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.ProtocolsWay.LPSBBC">
+            <summary>
+            六盘水
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BusinessType">
+            <summary>
+            业务类型
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BusinessType.None">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BusinessType.Pay">
+            <summary>
+            支付(一般包含全部的)
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BusinessType.PayB2C">
+            <summary>
+            b2c支付  需要区分的情况下 
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BusinessType.PayResponse">
+            <summary>
+            支付响应(默认包含全部)
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BusinessType.PayB2CResponse">
+            <summary>
+            b2c支付响应
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BusinessType.Transfer">
+            <summary>
+             退还保证金
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BusinessType.TransferResponse">
+            <summary>
+            退还保证金响应
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BusinessType.TransferNotice">
+            <summary>
+            转账(退还保证金结算）
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BusinessType.TransferClearNotice">
+            <summary>
+            转账结算通知(退还保证金结算）
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BusinessType.PayerInfoQuery">
+            <summary>
+            付款信息查询
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BusinessType.MerchantQuery">
+            <summary>
+            商户订单支付查询
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BusinessType.MarketPayQuery">
+            <summary>
+            市场订单支付查询（1320）
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BusinessType.MarketTransClearQuery">
+            <summary>
+            市场订单结算查询(1350)
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BusinessType.BankStatement">
+            <summary>
+            下载查询
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BusinessType.BankBatchStayPays">
+            <summary>
+            批量代付
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BusinessType.OPKind">
+            <summary>
+            获取操作类型
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.OprationType">
+            <summary>
+            操作类型
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.OprationType.NULL">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.OprationType.Pay">
+            <summary>
+            支付
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.OprationType.Search">
+            <summary>
+            查询
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.OprationType.Other">
+            <summary>
+            其他
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.ActionType">
+            <summary>
+            动作类型  请求  、响应
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.ActionType.NULL">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.ActionType.Request">
+            <summary>
+            请求
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.ActionType.Response">
+            <summary>
+            响应
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankCommModel.QueryPayerDetailModel">
+            <summary>
+            查询支付人信息(Notice1121QueryInfo)
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.QueryPayerDetailModel.Signature">
+            <summary>
+            签名
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.QueryPayerDetailModel.Message">
+            <summary>
+            报文
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.QueryPayerDetailModel.SuccessTime">
+            <summary>
+            成功时间
+            </summary> 
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.QueryPayerDetailModel.TxCode">
+            <summary>
+            业务类型
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.QueryPayerDetailModel.TxName">
+            <summary>
+            业务描述
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.QueryPayerDetailModel.PlainText">
+            <summary>
+            响应报文
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.QueryPayerDetailModel.Result">
+            <summary>
+            返回结果
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.QueryPayerDetailModel.PaymentNo">
+            <summary>
+            订单号（流水号）
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.QueryPayerDetailModel.TradeAccount">
+            <summary>
+            账户信息
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.QueryPayerDetailModel.ErrInfo">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankSettlementRequestModel">
+            <summary>
+            结算请求
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankSettlementRequestModel.Amount">
+            <summary>
+            金额
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankSettlementRequestModel.PayAccName">
+            <summary>
+            付款账户名
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankSettlementRequestModel.PayAccNo">
+            <summary>
+            付款账号
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankSettlementRequestModel.RecAccNo">
+            <summary>
+            收款账号      （必要信息）
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankSettlementRequestModel.RecAccName">
+             <summary>
+            收款 账户名     
+             </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankSettlementRequestModel.RecAccDBBank">
+             <summary>
+            收款 账户开户行（必要信息）
+             </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankSettlementRequestModel.RecAccDBBankNo">
+            <summary>
+            收款账户开户行行号（必要信息）
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankSettlementRequestModel.RecBankID">
+            <summary>
+            收款银行ID（代码）
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankSettlementRequestModel.RecAccPro">
+            <summary>
+            收款省
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankSettlementRequestModel.RecAccCity">
+             <summary>
+            收款 市
+             </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankSettlementRequestModel.AccType">
+            <summary>
+            账户类型 个人11、企业12
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankSettlementRequestModel.Remarks">
+            <summary>
+            备注信息
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQueryAccountRtnModel">
+            <summary>
+            账户入账明细
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQueryAccountRtnModel.MERCHANTID">
+            <summary>
+            商户代码
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQueryAccountRtnModel.BRANCHID">
+            <summary>
+            商户所在分行
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQueryAccountRtnModel.POSID">
+            <summary>
+            商户的POS号
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQueryAccountRtnModel.ORDERID">
+            <summary>
+            订单号
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQueryAccountRtnModel.ORDERDATE">
+            <summary>
+            支付/退款交易时间
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQueryAccountRtnModel.ACCDATE">
+            <summary>
+            记账日期
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQueryAccountRtnModel.AMOUNT">
+             <summary>
+            金额
+             </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQueryAccountRtnModel.STATUSCODE">
+            <summary>
+            支付/退款状态码
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQueryAccountRtnModel.STATUS">
+            <summary>
+            支付/退款状态
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQueryAccountRtnModel.REFUND">
+            <summary>
+            退款金额
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQueryAccountRtnModel.SIGN">
+            <summary>
+            串
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQueryRtn">
+            <summary>
+            入账信息
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQueryRtn.RETURN_CODE">
+            <summary>
+            交易返回码，成功时总为000000
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQueryRtn.RETURN_MSG">
+            <summary>
+            交易返回提示信息，成功时为空
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQueryRtn.CURPAGE">
+            <summary>
+            当前页
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQueryRtn.PAGECOUNT">
+            <summary>
+            总页数
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQueryRtn.BBCQueryAccountList">
+            <summary>
+            明细记录
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCB2BPay">
+            <summary>
+            b2b
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCBase">
+            <summary>
+            bbc 基类
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCBase.MERCHANTID">
+            <summary>
+            商户代码
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCBase.POSID">
+            <summary>
+            商户柜台代码
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCBase.BRANCHID">
+            <summary>
+            分行代码
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCBase.PAYMENT">
+            <summary>
+            付款金额
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCBase.CURCODE">
+            <summary>
+            币种
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCBase.TXCODE">
+            <summary>
+            交易码
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCBase.MAC">
+            <summary>
+            MAC校验域
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCBase.TYPE">
+            <summary>
+            接口类型
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCBase.PUB">
+            <summary>
+            公钥后30位
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCBase.REGINFO">
+            <summary>
+            客户注册信息
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCBase.PROINFO">
+            <summary>
+            商品信息
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCBase.REFERER">
+            <summary>
+            商户URL 为空
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCBase.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCBase.Remark2">
+            <summary>
+            备注2
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCB2BPay.PROJECTNO">
+            <summary>
+            项目号
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCB2BPay.PAYACCNO">
+            <summary>
+            指定支付账号
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCB2BPay.ACCTYPE">
+            <summary>
+            验证基本户
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCB2BPay.ENDTIME">
+            <summary>
+            订单截止时间(yyyyMMddHHMISS)
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCBizModel">
+            <summary>
+            返回结果对象供业务及通知返回
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCBizModel.RtnToProtol">
+            <summary>
+            返回给服务端输出(退还保证金响应给银行等)
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCBizModel.RtnModels">
+            <summary>
+            交易明细或退还保证金明细()
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankCommModel.ALiPay.ALiPayModel">
+            <summary>
+            阿里支付请求对象
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.ALiPay.ALiPayModel.Partner">
+            <summary>
+            合作身份者ID
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.ALiPay.ALiPayModel.Account">
+            <summary>
+            签约支付宝账号或卖家支付宝帐户
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.ALiPay.ALiPayModel.ShowUrl">
+            <summary>
+            网站商品的展示地址
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.ALiPay.ALiPayModel.Subject">
+            <summary>
+            订单名称，显示在支付宝收银台里的“商品名称”里，显示在支付宝的交易管理的“商品名称”的列表里
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.ALiPay.ALiPayModel.Body">
+            <summary>
+            订单描述、订单详细、订单备注，显示在支付宝收银台里的“商品描述”里
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.ALiPay.ALiPayModel.Amount">
+            <summary>
+            订单总金额，显示在支付宝收银台里的“应付总额”里
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.ALiPay.ALiPayModel.Paymethod">
+            <summary>
+            默认支付方式，四个值可选：bankPay(网银); cartoon(卡通); directPay(余额); CASH(网点支付)
+            默认directPay(余额)
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.ALiPay.ALiPayModel.DefaultBank">
+            <summary>
+            默认网银代号
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.ALiPay.ALiPayModel.AntiPhishingKey">
+            <summary>
+            防钓鱼时间戳
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.ALiPay.ALiPayModel.ExterInvokeIp">
+            <summary>
+            买家本地电脑的IP地址
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.ALiPay.ALiPayModel.ExtraCommonParam">
+            <summary>
+            自定义参数，可存放任何内容（除等特殊字符外），不会显示在页面上
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.ALiPay.ALiPayModel.DefaultBuyAccount">
+            <summary>
+            默认买家支付宝账号
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.ALiPay.ALiPayModel.RoyaltyType">
+            <summary>
+            提成类型，该值为固定值：10，不需要修改
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.ALiPay.ALiPayModel.RoyaltyParameters">
+            <summary>
+            提成信息集，与需要结合商户网站自身情况动态获取每笔交易的各分润收款账号、各分润金额、各分润说明
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.ALiPay.ALiPayModel.Key">
+             <summary>
+            安全检验码
+             </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.ALiPay.ALiPayModel.InputCharset">
+            <summary>
+            字符编码格式 目前支持 gbk 或 utf-8
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.ALiPay.ALiPayModel.SignType">
+            <summary>
+            签名方式 不需修改
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.ALiPay.ALiPayModel.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.ALiPay.ALiPayModel.Result">
+            <summary>
+            结果值(用于输出)
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRefoundModel">
+            <summary>
+            退款对象
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRefoundModel.SectionNo">
+            <summary>
+            标段编号
+            </summary>
+        </member>
+        <!-- 对于成员“P:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRefoundModel.ReceiveAccNo”忽略有格式错误的 XML 注释 -->
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRefoundModel.ReceiveAccDbName">
+             <summary>
+            收款  账户名     
+             </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRefoundModel.ReceiveAccDBBank">
+             <summary>
+            收款  账户开户行 
+             </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRefoundModel.Amount">
+            <summary>
+            缴款金额
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRefoundModel.RealAmount">
+            <summary>
+            退款金额
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRefoundModel.ABOCRemark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCQueryAccountDtl">
+            <summary>
+            查询入账明细
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCQueryAccountDtl.DetailDataTime">
+            <summary>
+            明细日期
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankQueryMarketSettlementModel">
+            <summary>
+            市场订单结算查询(1350)[理解为市场支付的扩展]
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankQueryMerchantOrPayModel">
+            <summary>
+            商户订单或者市场订单支付查询 状态查询
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankQueryMerchantOrPayModel.Amonut">
+            <summary>
+            金额
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankQueryMerchantOrPayModel.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankQueryMerchantOrPayModel.StatusDes">
+            <summary>
+            状态描述
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankQueryMerchantOrPayModel.ErrMsg">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankQueryMerchantOrPayModel.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankQueryMerchantOrPayModel.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankQueryMarketSettlementModel.TradeAccount">
+            <summary>
+            收款账户信息
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankQueryMarketSettlementModel.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankQueryMarketSettlementModel.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankPayRequestModel">
+            <summary>
+            支付请求
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankPayRequestModel.AccType">
+            <summary>
+            账户类型 个人11、企业12
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankPayRequestModel.Amount">
+            <summary>
+            金额
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankPayRequestModel.Free">
+            <summary>
+            手续费
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankPayRequestModel.BankID">
+            <summary>
+            付款银行ID（代码）
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankPayRequestModel.Usage">
+            <summary>
+            用途
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankPayRequestModel.SettingAccNo">
+            <summary>
+            结算标示
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankPayRequestModel.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankPayResponseModel">
+            <summary>
+            支付、转账 结算 响应
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankPayResponseModel.Signature">
+            <summary>
+            签名信息
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankPayResponseModel.MessagePaket">
+            <summary>
+            报文 供form提交
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankQueryStatementListModel">
+            <summary>
+            1810对账单（查询）
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankQueryStatementListModel.StructCode">
+            <summary>
+            机构号
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankQueryStatementListModel.QueryDate">
+            <summary>
+            查询时间
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankQueryStatementListModel.QueryResult">
+            <summary>
+            明细
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankQueryStatementListModel.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankQueryStatementListModel.Msg">
+            <summary>
+            返回信息
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankCommModel.Netbank.Statement">
+            <summary>
+            查询明细
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.Statement.TxType">
+            <summary>
+            交易类型
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.Statement.TxSn">
+            <summary>
+            交易编号
+            </summary>     
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.Statement.TxAmount">
+            <summary>
+            交易金额
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.Statement.InstitutionAmount">
+            <summary>
+            机构应收的金额
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.Statement.PaymentAmoun">
+            <summary>
+            支付平台应收的金额
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.Statement.PayerFee">
+            <summary>
+            付款人手续费
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.Statement.InstitutionFee">
+            <summary>
+            机构手续
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.Statement.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.Statement.BankNotificationTime">
+            <summary>
+            支付平台收到银行通知时间，格式：YYYYMMDDhhmmss
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.Netbank.Statement.SettlementFlag">
+            <summary>
+            结算标示
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.SysConfigModel">
+            <summary>
+            公共配置对象(配置文件获取)
+            </summary>
+        </member>
+        <member name="M:PM.PaymentProtocolModel.SysConfigModel.xmlSeria(System.String)">
+            <summary>
+            序列
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PaymentProtocolModel.SysConfigModel.xmlDeserialize(System.String)">
+            <summary>
+            反序列
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.SysConfigModel.CfgName">
+            <summary>
+            配置名称
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.SysConfigModel.CfgInfoList">
+            <summary>
+            配置明细
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.CfgInfo">
+            <summary>
+            配置文件对象
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.CfgInfo.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.CfgInfo.BusinessNo">
+            <summary>
+            业务号
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.CfgInfo.ProtocolsWay">
+            <summary>
+            协议类型
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.CfgInfo.ProtocolsWayDes">
+            <summary>
+            协议类型描述
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.CfgInfo.OprationType">
+            <summary>
+            操作类型  支付还是查询
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.CfgInfo.OprationTypeDes">
+            <summary>
+            操作类型描述  支付还是查询
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.CfgInfo.ActionType">
+            <summary>
+            动作类型  请求、响应
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.CfgInfo.ActionTypeDes">
+            <summary>
+            动作类型  请求、响应
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.CfgInfo.BusinessKind">
+            <summary>
+            业务功能类型
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.CfgInfo.BusinessKindDes">
+            <summary>
+            业务功能类型描述
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.CfgInfo.SysCode">
+            <summary>
+            系统编号
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.CfgInfo.CfgFilePath">
+            <summary>
+            证书路径
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.CfgInfo.RequestURL">
+            <summary>
+            请求URL
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.CfgInfo.NotificationURL">
+            <summary>
+            通知给第三方的URL
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.CfgInfo.NotificationBgURL">
+            <summary>
+            后台通知地址
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.CfgInfo.IP">
+            <summary>
+            ip
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.CfgInfo.Port">
+            <summary>
+            端口
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.CfgInfo.RootFilePath">
+            <summary>
+            文件根目录(或者ftp地址)
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.CfgInfo.FtpUserName">
+            <summary>
+            ftp用户名
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.CfgInfo.FtpUserPwd">
+            <summary>
+            ftp密码
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.CfgInfo.FileType">
+            <summary>
+            文件类型
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.CfgInfo.FileTypeDes">
+            <summary>
+            文件类型描述
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.JsonCfgInfo">
+            <summary>
+            页面传递对象(需要小写)
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.JsonCfgInfo.total">
+            <summary>
+            记录总数
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.JsonCfgInfo.rows">
+            <summary>
+            有用的行
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankCommModel.PubCallBackModel">
+            <summary>
+            响应对象公用
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.PubCallBackModel.Signature">
+            <summary>
+            签名信息
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.PubCallBackModel.MessagePaket">
+            <summary>
+            信息
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQuery">
+            <summary>
+            查询条件对象
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQuery.MERCHANTID">
+            <summary>
+            商户代码
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQuery.POSID">
+            <summary>
+            商户柜台代码
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQuery.BRANCHID">
+            <summary>
+            分行代码
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQuery.ORDERDATE">
+            <summary>
+            定单日期 YYYYMMDD
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQuery.BEGORDERTIME">
+            <summary>
+            定单开始时间
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQuery.ENDORDERTIME">
+            <summary>
+            定单结束时间
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQuery.TYPE">
+            <summary>
+            9.	流水类型TYPE
+            0支付流水
+            1退款流水       
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQuery.TXCODE">
+            <summary>
+            10.	交易码TXCODE=410408
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQuery.KIND">
+            <summary>
+            11.	流水状态KIND
+            必输项（当日只有未结算流水可供查询）
+            0 未结算流水  1 已结算流水
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQuery.STATUS">
+            <summary>
+            交易状态STATUS必输项
+            0失败
+            1成功
+            2不确定
+            3全部（已结算流水查询不支持全部）
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQuery.ORDERID">
+            <summary>
+            订单id
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQuery.QUPWD">
+            <summary>
+            8.	查询密码
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQuery.SEL_TYPE">
+            <summary>
+            13.	查询方式SEL_TYPE 必输项
+            1页面形式   
+            2文件返回形式 (提供TXT和XML格式文件的下载) 
+            3 XML页面形式
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQuery.PAGE">
+            <summary>
+            14.	页码PAGE 
+            输入将要查询的页码
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQuery.OPERATOR">
+            <summary>
+            15.	操作员 
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQuery.CHANNEL">
+            <summary>
+            16.	预留字段
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositQueryModel">
+            <summary>
+            黄石保证金交易查询接口
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositQueryModel.PASSWORD">
+            <summary>
+            操作员密码
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositQueryModel.TX_CODE">
+            <summary>
+            交易请求码
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositQueryModel.LANGUAGE">
+            <summary>
+            语言 CN
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositQueryModel.CUST_ON">
+            <summary>
+            商户的企业网银签约客户号
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositQueryModel.ACCOUNT">
+            <summary>
+            商户保证金结算账户号
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositQueryModel.OTHER_ACCOUNT">
+            <summary>
+            对方来账户账号
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositQueryModel.START">
+            <summary>
+            起始日期 YYYYMMDD
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositQueryModel.END">
+            <summary>
+            截止日期 YYYYMMDD
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositQueryModel.PAGE">
+            <summary>
+            当前页次
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositQueryModel.MONEY">
+            <summary>
+            金额
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositQueryModel.INDEX_STRING">
+            <summary>
+            定位串 从返回报文里获取，如果不分页，可传空。第一次查询为空。
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositResponseModel">
+            <summary>
+            黄石保证金交易查询接口 返回响应报文实体
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositResponseModel.ResponseListModel">
+            <summary>
+            交易记录明细实体集合
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositResponseModel.REQUEST_SN">
+            <summary>
+            请求序列号 同请求报文中的序列号	
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositResponseModel.CUST_ID">
+            <summary>
+            商户号 同请求报文中的商户号
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositResponseModel.TX_CODE">
+            <summary>
+            交易码 同请求报文中的交易码
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositResponseModel.RETURN_CODE">
+            <summary>
+            响应码 交易响应码
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositResponseModel.RETURN_MSG">
+            <summary>
+            响应信息 交易响应信息
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositResponseModel.LANGUAGE">
+            <summary>
+            语言 CN，同请求报文
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositResponseModel.TPAGE">
+            <summary>
+            总页次
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositResponseModel.CUR_PAG">
+            <summary>
+            当前页次
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositResponseModel.INDEX_STRING">
+            <summary>
+            定位串
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositResponseModel.NOTICE">
+            <summary>
+            提示
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositResponseListModel">
+            <summary>
+            黄石保证金交易查询接口 返回响应报文实体 交易记录明细实体
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositResponseListModel.TRAN_DATE">
+            <summary>
+            记账日期 YYYY/MM/DD	
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositResponseListModel.TRAN_TIME">
+            <summary>
+            记账时间 HH:MM:SS
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositResponseListModel.TRAN_SQ">
+            <summary>
+            交易流水号
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositResponseListModel.ACCOUNT">
+            <summary>
+            商户保证金结算账户号
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositResponseListModel.ACCOUNT_NAME">
+            <summary>
+            商户保证金结算户名
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositResponseListModel.MONEY">
+            <summary>
+            转账金额
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositResponseListModel.OTHER_ACCOUNT">
+            <summary>
+            对方账户账号
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositResponseListModel.OTHER_ACCOUNT_NAME">
+            <summary>
+            对方账户名称
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositResponseListModel.ORDER">
+            <summary>
+            摘要
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankPayEnterTp">
+            <summary>
+            支付银行类型  企业个人
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BankPayEnterTp.Person">
+             <summary>
+            企业
+             </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BankPayEnterTp.Enter">
+            <summary>
+            个人
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.IdentificationType">
+            <summary>
+            开户证件类型
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankName">
+            <summary>
+            银行类型 通用类型 
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankCommModel.HuangMeiPostal.HuangMeiQuery">
+            <summary>
+            黄梅入账明细查询对象
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangMeiPostal.HuangMeiQuery.MercCode">
+            <summary>
+            商户号
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangMeiPostal.HuangMeiQuery.BeginDate">
+            <summary>
+            开始时间(yyyyMMdd)
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangMeiPostal.HuangMeiQuery.EndDate">
+            <summary>
+            结束时间(yyyyMMdd)
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangMeiPostal.HuangMeiQuery.AcctNo">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankCommModel.HuangMeiPostal.HuangMeiQueryResult">
+            <summary>
+            黄梅查询返回信息
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangMeiPostal.HuangMeiQueryResult.AccountNo">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangMeiPostal.HuangMeiQueryResult.TradeDate">
+            <summary>
+            交易日期(yyyyMMdd)
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangMeiPostal.HuangMeiQueryResult.TradeSerialNumber">
+            <summary>
+            前台交易流水
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangMeiPostal.HuangMeiQueryResult.ProofKind">
+            <summary>
+            凭证种类
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangMeiPostal.HuangMeiQueryResult.ProofNum">
+            <summary>
+            凭证号码
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangMeiPostal.HuangMeiQueryResult.Amount">
+            <summary>
+            发生额
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangMeiPostal.HuangMeiQueryResult.LoanMark">
+            <summary>
+            借贷标志
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangMeiPostal.HuangMeiQueryResult.RemainAmount">
+            <summary>
+            账户余额
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangMeiPostal.HuangMeiQueryResult.Oprationer">
+            <summary>
+            操作员
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangMeiPostal.HuangMeiQueryResult.Checker">
+            <summary>
+            复核员
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangMeiPostal.HuangMeiQueryResult.Authorizer">
+            <summary>
+            授权员
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangMeiPostal.HuangMeiQueryResult.CounterpartAccountNo">
+            <summary>
+            对方账号
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangMeiPostal.HuangMeiQueryResult.CounterpartAccountName">
+            <summary>
+            对方户名
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangMeiPostal.HuangMeiQueryResult.Remark">
+            <summary>
+            附言
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangMeiPostal.HuangMeiQueryResult.TradeWay">
+            <summary>
+            交易渠道
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangMeiPostal.HuangMeiQueryResult.TradeNo">
+            <summary>
+            交易码
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangMeiPostal.HuangMeiQueryResult.TimeStamp">
+            <summary>
+            时间戳
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.HuangMeiPostal.HuangMeiQueryResult.DepartmentAccName">
+            <summary>
+            开户机构开户名称
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankCommModel.JHBOF.JHBOFQueryPayListModel">
+            <summary>
+            金华交易清单
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JHBOF.JHBOFQueryPayListModel.AccNo">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JHBOF.JHBOFQueryPayListModel.Use">
+            <summary>
+            用途
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JHBOF.JHBOFQueryPayListModel.StartDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JHBOF.JHBOFQueryPayListModel.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankCommModel.JHBOF.JHBofQueryResult">
+            <summary>
+            交易明细信息
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JHBOF.JHBofQueryResult.TradeDate">
+            <summary>
+            交易日期
+            </summary> 
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JHBOF.JHBofQueryResult.TradeNo">
+            <summary>
+            交易流水
+            </summary> 
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JHBOF.JHBofQueryResult.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JHBOF.JHBofQueryResult.Amount">
+            <summary>
+            金额    15位	 没有小数点"."，精确到分，最后两位为小数位，不足前补0。
+            </summary> 
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JHBOF.JHBofQueryResult.AcountNo">
+            <summary>
+            对方账号
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JHBOF.JHBofQueryResult.AcountName">
+            <summary>
+            对方户名
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.FunctionCode">
+            <summary>
+            功能号
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.FunctionCode.ProtocolsWay">
+            <summary>
+            协议类型
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.FunctionCode.OprationType">
+            <summary>
+            操作类型
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.FunctionCode.BusinessKind">
+            <summary>
+            业务类型
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankCommModel.QueryOpKindModel">
+            <summary>
+            查询对应操作类型
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.QueryOpKindModel.MessagePaket">
+            <summary>
+            报文
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.QueryOpKindModel.Signature">
+            <summary>
+            签名
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.QueryOpKindModel.Message">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.QueryOpKindModel.NoticeMsg">
+            <summary>
+            通知信息
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.QueryOpKindModel.ErrInfo">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRtnModel">
+            <summary>
+            返回或者明细对象等结果对象(具体的报文格式)
+            </summary>
+        </member>
+        <member name="M:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRtnModel.GetSendStr">
+            <summary>
+            获取报文格式
+            </summary>
+            <returns>返回处理后的报文字符串</returns>
+        </member>
+        <member name="M:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRtnModel.GetModel(System.String)">
+            <summary>
+            根据返回报文获取对象
+            </summary>
+            <param name="packetString">报文</param>
+            <returns>报文对象</returns>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRtnModel.TradeCode">
+            <summary>
+            交易码
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRtnModel.TradeStructNum">
+            <summary>
+            招投标中心代码
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRtnModel.ReturneCode">
+            <summary>
+            返回码
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRtnModel.ReturneMsg">
+            <summary>
+            返回信息
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRtnModel.DetailDataTime">
+            <summary>
+            明细日期
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRtnModel.Count">
+            <summary>
+            笔数
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRtnModel.SectionNo">
+            <summary>
+            标段编号
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRtnModel.ReceiveAccNo">
+            <summary>
+            收款 账号  
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRtnModel.ReceiveAccDbName">
+             <summary>
+            收款  账户名     
+             </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRtnModel.ReceiveAccDBBank">
+             <summary>
+            收款  账户开户行 
+             </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRtnModel.Use">
+            <summary>
+            用途
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRtnModel.PayAccNo">
+            <summary>
+            付款 账号  
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRtnModel.PayAccDbName">
+             <summary>
+            付款 账户名     
+             </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRtnModel.PayAccDBBank">
+             <summary>
+            付款 账户开户行 
+             </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRtnModel.Amount">
+            <summary>
+            缴纳金额(支付金额)
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRtnModel.RealAmount">
+            <summary>
+            退款金额（退保证金用）
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRtnModel.Summary">
+            <summary>
+            摘要
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRtnModel.ABOCRemark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRtnModel.SerialNumber">
+             <summary>
+            银行流水号
+             </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRtnModel.OrderNo">
+            <summary>
+            订单号
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRtnModel.IsAboc">
+            <summary>
+            是否农行（1是  0 否)
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.TradeAccount">
+            <summary>
+            交易账号信息
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.TradeAccount.AccNo">
+            <summary>
+            账号      （必要信息）
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.TradeAccount.AccDbName">
+            <summary>
+            账户名     
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.TradeAccount.AccDBBank">
+            <summary>
+            账户开户行（必要信息）
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.TradeAccount.AccDBBankNo">
+            <summary>
+            账户开户行行号（必要信息）
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.TradeAccount.BankID">
+            <summary>
+            银行ID（代码）
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.TradeAccount.AccPro">
+            <summary>
+            省
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.TradeAccount.AccCity">
+            <summary>
+            市
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.TradeAccount.AccCur">
+            <summary>
+            币种
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.TradeAccount.AccType">
+            <summary>
+            账户类型 个人11、企业12
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.TradeAccount.Remarks">
+            <summary>
+            备注信息
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.TradeAccount.UserID">
+            <summary>
+            人员ID
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.TradeAccount.UserName">
+            <summary>
+            人员名称
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.TradeAccountDetail">
+            <summary>
+            对应交易账户明细
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.TradeAccountDetail.Amount">
+            <summary>
+            金额(单笔等 目前用于结算等)
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.TradeAccountDetail.Free">
+            <summary>
+            手续费(单笔等 目前用于结算等)
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.TradeAccountDetail.ItemNo">
+            <summary>
+            流水号
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.TradeAccountDetail.PhoneNumber">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.TradeAccountDetail.Email">
+            <summary>
+            电子邮箱
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.TradeAccountDetail.IdentificationType">
+            <summary>
+            开户证件类型
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.TradeAccountDetail.IdentificationNumber">
+            <summary>
+            证件号码
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.TradeAccountDetail.TradeTm">
+            <summary>
+            交易明细时间
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.ResultInfo">
+            <summary>
+            返回结果信息
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.ResultInfo.NotificationURL">
+            <summary>
+            第三方需要通知业务系统URL
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.ResultInfo.ActionURLToBank">
+            <summary>
+            提交地址(银行接口地址)
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.ResultInfo.Signature">
+            <summary>
+            签名信息  供form提交
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.ResultInfo.MessagePaket">
+            <summary>
+            报文  供form提交
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.ResultInfo.PlanText">
+            <summary>
+            报文(辅助)  供form提交
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.ResultInfo.MSG">
+            <summary>
+            返回信息(成功或错误信息)
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.ResultInfo.Result">
+            <summary>
+            成功状态
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.ResultInfo.SuccessTime">
+            <summary>
+            成功时间
+            </summary> 
+        </member>
+        <member name="P:PM.PaymentProtocolModel.ResultInfo.Status">
+            <summary>
+            状态值
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.ResultInfo.StatusDes">
+            <summary>
+            状态描述
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.ResultInfo.NoticeMsg">
+            <summary>
+            供网银等第三方通知结果
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.ResultInfo.Attach">
+            <summary>
+            附加信息
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.ResultInfo.TxCode">
+            <summary>
+            业务编码
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.ResultInfo.TxName">
+            <summary>
+            业务描述
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.ResultInfo.TradeAccount">
+            <summary>
+            付款信息
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankTransPayRequestModel">
+            <summary>
+            转账请求
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCB2CPay">
+            <summary>
+            b2c 支付
+            </summary>
+        </member>
+        <member name="M:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCB2CPay.SendPost">
+            <summary>
+            支付报文对象并提交
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCB2CPay.GATEWAY">
+            <summary>
+            网关类型
+            </summary>
+        </member>
+        <member name="P:PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCB2CPay.CLIENTIP">
+            <summary>
+            客户端IP
+            </summary>
+        </member>
+        <member name="T:PM.PaymentProtocolModel.BankCommModel.LPSBBC.GateWayType">
+            <summary>
+            网关类型
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BankCommModel.LPSBBC.GateWayType.W0Z1">
+            <summary>
+            仅显示帐号支付标签
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BankCommModel.LPSBBC.GateWayType.W0Z2">
+            <summary>
+            仅显示帐号支付标签
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BankCommModel.LPSBBC.GateWayType.W1Z0">
+            <summary>
+            仅显示网银客户支付标签
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BankCommModel.LPSBBC.GateWayType.W2Z0">
+            <summary>
+            仅显示网银客户支付标签
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BankCommModel.LPSBBC.GateWayType.W1">
+            <summary>
+            仅显示网银客户支付页签
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BankCommModel.LPSBBC.GateWayType.Z1">
+            <summary>
+            仅显示帐号支付页签
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BankCommModel.LPSBBC.GateWayType.S1">
+            <summary>
+            仅显示手机银行客户支付页签
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BankCommModel.LPSBBC.GateWayType.W2Z1">
+            <summary>
+            显示网银客户支付和帐号支付，选中网银客户支付页签
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BankCommModel.LPSBBC.GateWayType.W1Z2">
+            <summary>
+            显示网银客户支付和帐号支付，选中帐号支付页签
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BankCommModel.LPSBBC.GateWayType.W1Z1">
+            <summary>
+            显示网银客户支付和帐号支付，选中客户上次使用的支付页签
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BankCommModel.LPSBBC.GateWayType.W2S1">
+            <summary>
+            显示网银客户支付和手机银行客户支付页签，选中网银客户支付页签
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BankCommModel.LPSBBC.GateWayType.W1S2">
+            <summary>
+            显示网银客户支付和手机银行客户支付页签，选中手机银行客户支付页签
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BankCommModel.LPSBBC.GateWayType.W1S1">
+            <summary>
+            示网银客户支付和手机银行客户支付页签，选中客户上次使用的支付页签
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BankCommModel.LPSBBC.GateWayType.Z2S1">
+            <summary>
+            显示帐号支付和手机银行客户支付页签，选中帐号支付页签
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BankCommModel.LPSBBC.GateWayType.Z1S2">
+            <summary>
+            显示帐号支付和手机银行客户支付页签，选中手机银行客户支付页签
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BankCommModel.LPSBBC.GateWayType.Z1S1">
+            <summary>
+            显示帐号支付和手机银行客户支付页签，选中客户上次使用的支付页签
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BankCommModel.LPSBBC.GateWayType.W2Z1S1">
+            <summary>
+            三个页签均显示，选中网银客户支付页签
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BankCommModel.LPSBBC.GateWayType.W1Z2S1">
+            <summary>
+            三个页签均显示，选中帐号支付页签
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BankCommModel.LPSBBC.GateWayType.W1Z1S2">
+            <summary>
+            三个页签均显示，选中手机银行客户支付页签
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BankCommModel.LPSBBC.GateWayType.W1Z1S1">
+            <summary>
+            三个页签均显示，选中客户上次使用的支付页签
+            </summary>
+        </member>
+        <member name="F:PM.PaymentProtocolModel.BankCommModel.LPSBBC.GateWayType.Other">
+            <summary>
+            显示网银客户支付和帐号支付，选中客户上次使用的支付页签
+            </summary>
+        </member>
+    </members>
+</doc>

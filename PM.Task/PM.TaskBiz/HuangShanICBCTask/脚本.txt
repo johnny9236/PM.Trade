@@ -1,0 +1,172 @@
+﻿
+/****** Object:  Table [dbo].[T_HuangShan_ICBCRtn]    Script Date: 02/18/2014 14:39:30 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[T_HuangShan_ICBCRtn](
+	[ID] [varchar](50) NOT NULL,
+	[SectionCode] [varchar](100) NULL,
+	[AuthCode] [varchar](50) NULL,
+	[BusniessType] [varchar](50) NULL,
+	[RetDate] [varchar](50) NULL,
+	[RetTime] [varchar](50) NULL,
+	[RetAmount] [varchar](50) NULL,
+	[RetPunInst] [varchar](50) NULL,
+	[RetTotal] [varchar](50) NULL,
+	[RetName] [nvarchar](max) NULL,
+	[RetAcct] [nvarchar](max) NULL,
+	[HstSeqNum] [varchar](50) NULL,
+	[AcctNo] [varchar](50) NULL,
+	[Serial_No] [varchar](50) NULL,
+	[Match] [int] NULL,
+	[Flag] [int] NULL,
+	[Remark] [nvarchar](max) NULL,
+	[CreateTm] [datetime] NULL,
+	[UpdateTm] [datetime] NULL,
+	[BankType] [varchar](50) NULL,
+ CONSTRAINT [PK_dbo.T_HuangShan_AcctRtnDtl] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'标段编号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HuangShan_ICBCRtn', @level2type=N'COLUMN',@level2name=N'SectionCode'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'授权号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HuangShan_ICBCRtn', @level2type=N'COLUMN',@level2name=N'AuthCode'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'类型 业务类型 0保证金入账明细  1退款明细' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HuangShan_ICBCRtn', @level2type=N'COLUMN',@level2name=N'BusniessType'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'退还本金' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HuangShan_ICBCRtn', @level2type=N'COLUMN',@level2name=N'RetAmount'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'退还利息' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HuangShan_ICBCRtn', @level2type=N'COLUMN',@level2name=N'RetPunInst'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'退还本利和' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HuangShan_ICBCRtn', @level2type=N'COLUMN',@level2name=N'RetTotal'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'收款人户名' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HuangShan_ICBCRtn', @level2type=N'COLUMN',@level2name=N'RetName'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'收款人账号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HuangShan_ICBCRtn', @level2type=N'COLUMN',@level2name=N'RetAcct'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'收款人账号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HuangShan_ICBCRtn', @level2type=N'COLUMN',@level2name=N'HstSeqNum'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'母账号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HuangShan_ICBCRtn', @level2type=N'COLUMN',@level2name=N'AcctNo'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'现金管理平台流水' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HuangShan_ICBCRtn', @level2type=N'COLUMN',@level2name=N'Serial_No'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'1匹配' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HuangShan_ICBCRtn', @level2type=N'COLUMN',@level2name=N'Match'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'是否处理1  处理 ' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HuangShan_ICBCRtn', @level2type=N'COLUMN',@level2name=N'Flag'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'银行类型' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HuangShan_ICBCRtn', @level2type=N'COLUMN',@level2name=N'BankType'
+GO
+
+
+
+
+
+
+
+
+
+
+/****** Object:  Table [dbo].[T_HuangShan_AcctDtl]    Script Date: 12/23/2013 14:26:16 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[T_HuangShan_AcctDtl](
+	[ID] [varchar](50) NOT NULL,
+	[SectionCode] [varchar](100) NULL,
+	[AuthCode] [varchar](50) NULL,
+	[QYType] [varchar](50) NULL,
+	[InDate] [varchar](50) NULL,
+	[InTime] [varchar](50) NULL,
+	[InAmount] [varchar](50) NULL,
+	[InName] [nvarchar](max) NULL,
+	[InAcct] [varchar](50) NULL,
+	[InMemo] [nvarchar](max) NULL,
+	[HstSeqNum] [varchar](50) NULL,
+	[PunInst] [varchar](50) NULL,
+	[Gernal] [varchar](50) NULL,
+	[Match] [int] NULL,
+	[Flag] [int] NULL,
+	[Remark] [nvarchar](max) NULL,
+	[CreateTm] [datetime] NULL,
+	[UpdateTm] [datetime] NULL,
+ CONSTRAINT [PK_dbo.T_HuangShan_AcctDtl] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'标段编号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HuangShan_AcctDtl', @level2type=N'COLUMN',@level2name=N'SectionCode'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'授权号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HuangShan_AcctDtl', @level2type=N'COLUMN',@level2name=N'AuthCode'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'类型 业务类型 0保证金入账明细  1退款明细' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HuangShan_AcctDtl', @level2type=N'COLUMN',@level2name=N'QYType'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'到账金额' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HuangShan_AcctDtl', @level2type=N'COLUMN',@level2name=N'InAmount'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'付款人户名' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HuangShan_AcctDtl', @level2type=N'COLUMN',@level2name=N'InName'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'付款人账号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HuangShan_AcctDtl', @level2type=N'COLUMN',@level2name=N'InAcct'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'收款账号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HuangShan_AcctDtl', @level2type=N'COLUMN',@level2name=N'InMemo'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'交易流水号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HuangShan_AcctDtl', @level2type=N'COLUMN',@level2name=N'HstSeqNum'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'当前利息' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HuangShan_AcctDtl', @level2type=N'COLUMN',@level2name=N'PunInst'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'是否基本户  0否；1是' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HuangShan_AcctDtl', @level2type=N'COLUMN',@level2name=N'Gernal'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'1匹配' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HuangShan_AcctDtl', @level2type=N'COLUMN',@level2name=N'Match'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'是否处理1  处理 ' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HuangShan_AcctDtl', @level2type=N'COLUMN',@level2name=N'Flag'
+GO
+
+
+ 

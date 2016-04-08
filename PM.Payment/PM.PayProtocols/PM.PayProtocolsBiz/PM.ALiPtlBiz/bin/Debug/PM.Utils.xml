@@ -1,0 +1,2111 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PM.Utils</name>
+    </assembly>
+    <members>
+        <member name="T:PM.Utils.FileHelp.CustomConfig.ConfigBase`1">
+            <summary>
+            自定义配置基类
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:PM.Utils.FileHelp.CustomConfig.ConfigBase`1.LoadSection``1(System.Configuration.SectionInformation)">
+            <summary>
+            加载配置节
+            </summary>
+            <typeparam name="TReturn">返回值</typeparam>
+            <param name="information">配置节信息</param>
+            <returns></returns>
+        </member>
+        <member name="T:PM.Utils.WebUtils.WebServiceHelper">
+             <summary>
+            WebServiceHelper 的摘要说明
+             </summary>
+        </member>
+        <member name="M:PM.Utils.WebUtils.WebServiceHelper.GetCALogin(System.String,System.String,System.String,System.String,System.String,System.Object[])">
+            <summary> 
+            动态调用WebService 需要Soap验证的
+            </summary> 
+            <param name="url">WebService地址</param> 
+            <param name="classname">类名</param> 
+            <param name="methodname">方法名(模块名)</param> 
+            <param name="args">参数列表</param> 
+            <returns>object</returns> 
+        </member>
+        <member name="M:PM.Utils.WebUtils.WebServiceHelper.InvokeWebService(System.String,System.String,System.Object[])">
+            <summary> 
+            动态调用WebService 
+            </summary> 
+            <param name="url">WebService地址</param> 
+            <param name="methodname">方法名(模块名)</param> 
+            <param name="args">参数列表</param> 
+            <returns>object</returns> 
+        </member>
+        <member name="M:PM.Utils.WebUtils.WebServiceHelper.InvokeWebService(System.String,System.String,System.String,System.String,System.Object[])">
+            <summary> 
+            动态调用WebService 需要soap验证的
+            </summary> 
+            <param name="url">WebService地址</param> 
+            <param name="methodname">方法名(模块名)</param> 
+            <param name="args">参数列表</param> 
+            <returns>object</returns> 
+        </member>
+        <member name="M:PM.Utils.WebUtils.WebServiceHelper.InvokeWebService(System.String,System.String,System.String,System.Object[])">
+            <summary> 
+            动态调用WebService 
+            </summary> 
+            <param name="url">WebService地址</param> 
+            <param name="classname">类名</param> 
+            <param name="methodname">方法名(模块名)</param> 
+            <param name="args">参数列表</param> 
+            <returns>object</returns> 
+        </member>
+        <member name="M:PM.Utils.WebUtils.WebServiceHelper.InvokeWebService(System.String,System.String,System.String,System.String,System.String,System.Object[])">
+            <summary> 
+            动态调用WebService 需要Soap验证的
+            </summary> 
+            <param name="url">WebService地址</param> 
+            <param name="classname">类名</param> 
+            <param name="methodname">方法名(模块名)</param> 
+            <param name="args">参数列表</param> 
+            <returns>object</returns> 
+        </member>
+        <member name="M:PM.Utils.StringHelper.IsNum(System.String)">
+            <summary>
+            判断输入的字符是不是全为数字
+            </summary>
+            <param name="Str">要判断的字符串</param>
+            <returns>是否为字符：True或False</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.IsChar(System.String)">
+            <summary>
+            判断输入的字符串全是字符不包括数字，不是返回false，否则返回true
+            </summary>
+            <param name="Str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.ReplaceStr(System.String)">
+            <summary>
+            替换内容中特殊字符为全角
+            </summary>
+            <param name="str">要替换的字符</param>
+            <returns>替换后的结果字符串</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.FormatBytesStr(System.Int32)">
+            <summary>
+            格式化字节数字符串
+            </summary>
+            <param name="bytes">字节数</param>
+            <returns>格式化的结果</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.ToSChinese(System.String)">
+            <summary>
+            转换为简体中文
+            </summary>
+            <param name="str">要转换的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.ToTChinese(System.String)">
+            <summary>
+            转换为繁体中文
+            </summary>
+            <param name="str">要转换的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.ToColor(System.String)">
+            <summary>
+            将字符串转换为Color
+            </summary>
+            <param name="colorName">字符串颜色：#000000</param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.IsStringDate(System.String)">
+            <summary>
+            检查一个字符串是否可以转化为日期，一般用于验证用户输入日期的合法性。
+            </summary>
+            <param name="_value">需验证的字符串。</param>
+            <returns>是否可以转化为日期的bool值。</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.RemoveUnsafeHtml(System.String)">
+            <summary>
+            过滤HTML中的不安全标签
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.Split(System.String,System.String)">
+            <summary>
+            分割字符串
+            <param name="strContent">要分割的字符串</param>
+            <param name="strSplit">分隔符</param>
+            </summary>
+        </member>
+        <member name="M:PM.Utils.StringHelper.DelLastComma(System.String)">
+            <summary>
+            删除最后结尾的一个逗号
+            </summary>
+            <param name="str">要删除逗号的字符串</param>
+            <returns>删除逗号后的字符串</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.DelLastChar(System.String,System.String)">
+            <summary>
+            删除最后结尾的指定字符后的字符
+            </summary>
+            <param name="str">未删除的字符串</param>
+            <param name="strchar">要删除之后的字符串</param>
+            <returns>删除后的字符串</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.ClipboardData(System.Web.UI.Page,System.String)">
+            <summary>
+            将指定字符串复制到剪贴板'
+            </summary>
+            <param name="page">当前页面指针，一般为this</param>
+            <param name="ClipblardStr">要复制到剪贴板的字符串内容</param>
+        </member>
+        <member name="M:PM.Utils.StringHelper.DoubleToRound(System.Double,System.Int32)">
+            <summary>
+            将Double类型的数据四舍五入
+            </summary>
+            <param name="Doubles">要四舍五入的Double类型数据</param>
+            <param name="Point">保留小数点位数</param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.GetStringLength(System.String)">
+            <summary>
+            返回字符串真实长度, 1个汉字长度为2
+            </summary>
+            <param name="Str">字符串</param>
+            <returns>字符长度</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.GB2312ToUTF8(System.String)">
+            <summary>
+            将GB2312编码字符串转为UTF8
+            </summary>
+            <param name="Gb2312Str">GB2312编码字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.Base64StringEncode(System.String)">
+            <summary>
+            对字符串进行base64编码
+            </summary>
+            <param name="input">字符串</param>
+            <returns>base64编码串</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.Base64StringDecode(System.String)">
+            <summary>
+            对字符串进行反编码
+            </summary>
+            <param name="input">base64编码串</param>
+            <returns>字符串</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.CaseInsensitiveReplace(System.String,System.String,System.String)">
+            <summary>
+            替换字符串(忽略大小写)
+            </summary>
+            <param name="input">要进行替换的内容</param>
+            <param name="oldValue">旧字符串</param>
+            <param name="newValue">新字符串</param>
+            <returns>替换后的字符串</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.ReplaceFirst(System.String,System.String,System.String)">
+            <summary>
+            替换首次出现的字符串
+            </summary>
+            <param name="input">要进行替换的内容</param>
+            <param name="oldValue">旧字符串</param>
+            <param name="newValue">新字符串</param>
+            <returns>替换后的字符串</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.ReplaceLast(System.String,System.String,System.String)">
+            <summary>
+            替换最后一次出现的字符串
+            </summary>
+            <param name="input">要进行替换的内容</param>
+            <param name="oldValue">旧字符串</param>
+            <param name="newValue">新字符串</param>
+            <returns>替换后的字符串</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.FilterWords(System.String,System.String[])">
+            <summary>
+            根据词组过虑字符串(忽略大小写)
+            </summary>
+            <param name="input">要进行过虑的内容</param>
+            <param name="filterWords">要过虑的词组</param>
+            <returns>过虑后的字符串</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.FilterWords(System.String,System.Char,System.String[])">
+            <summary>
+            根据词组过虑字符串(忽略大小写)
+            </summary>
+            <param name="input">要进行过虑的内容</param>
+            <param name="mask">字符掩码</param>
+            <param name="filterWords">要过虑的词组</param>
+            <returns>过虑后的字符串</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.HtmlSpecialEntitiesEncode(System.String)">
+            <summary>
+            Html编码
+            </summary>
+            <param name="input">要进行编辑的字符串</param>
+            <returns>Html编码后的字符串</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.HtmlSpecialEntitiesDecode(System.String)">
+            <summary>
+            Html解码
+            </summary>
+            <param name="input">要进行解码的字符串</param>
+            <returns>解码后的字符串</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.MD5String(System.String)">
+            <summary>
+            MD5加密
+            </summary>
+            <param name="input">要进行加密的字符串</param>
+            <returns>加密后的字符串</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.MD5VerifyString(System.String,System.String)">
+            <summary>
+            对字符串进行MD5较验
+            </summary>
+            <param name="input">要进行较验的字符串</param>
+            <param name="hash">散列串</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.RemoveNewLines(System.String)">
+            <summary>
+            去除新行
+            </summary>
+            <param name="input">要去除新行的字符串</param>
+            <returns>已经去除新行的字符串</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.RemoveNewLines(System.String,System.Boolean)">
+            <summary>
+            去除新行
+            </summary>
+            <param name="input">要去除新行的字符串</param>
+            <param name="addSpace">是否添加空格</param>
+            <returns>已经去除新行的字符串</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.Reverse(System.String)">
+            <summary>
+            字符串反转
+            </summary>
+            <param name="input">要进行反转的字符串</param>
+            <returns>反转后的字符串</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.SentenceCase(System.String)">
+            <summary>
+            转成首字母大字形式
+            </summary>
+            <param name="input">要进行转换的字符串</param>
+            <returns>转换后的字符串</returns>
+        </member>
+        <!-- 对于成员“M:PM.Utils.StringHelper.SpaceToNbsp(System.String)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:PM.Utils.StringHelper.StripTags(System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="M:PM.Utils.StringHelper.TrimIntraWords(System.String)">
+            <summary>
+            去除字符串内的空白字符
+            </summary>
+            <param name="input">要进行处理的字符串</param>
+            <returns>处理后的字符串</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.NewLineToBreak(System.String)">
+            <summary>
+            换行符转换成Html标签的换行符<br />
+            </summary>
+            <param name="input">要进行处理的字符串</param>
+            <returns>处理后的字符串</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.WordWrap(System.String,System.Int32)">
+            <summary>
+            插入换行符(不中断单词)
+            </summary>
+            <param name="input">要进行处理的字符串</param>
+            <param name="charCount">每行字符数</param>
+            <returns>处理后的字符串</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.WordWrap(System.String,System.Int32,System.Boolean)">
+            <summary>
+            插入换行符
+            </summary>
+            <param name="input">要进行处理的字符串</param>
+            <param name="charCount">每行字符数</param>
+            <param name="cutOff">如果为真，将在单词的中部断开</param>
+            <returns>处理后的字符串</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.WordWrap(System.String,System.Int32,System.Boolean,System.String)">
+            <summary>
+            插入换行符
+            </summary>
+            <param name="input">要进行处理的字符串</param>
+            <param name="charCount">每行字符数</param>
+            <param name="cutOff">如果为真，将在单词的中部断开</param>
+            <param name="breakText">插入的换行符号</param>
+            <returns>处理后的字符串</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.JsIsNull(System.String,System.String,System.String)">
+            <summary>   
+            出错时弹出提示对话框   
+            </summary>   
+            <param name="str_Control_Name">检验控件id值</param>   
+            <param name="str_Form_Name">表单id值</param>   
+            <param name="str_Prompt">提示信息</param>   
+            <returns>string</returns>   
+        </member>
+        <member name="M:PM.Utils.StringHelper.JsAlert(System.String)">
+            <summary>   
+            出错时弹出提示对话框   
+            </summary>   
+            <param name="str_Prompt">提示信息</param>   
+            <returns>string</returns>   
+        </member>
+        <member name="M:PM.Utils.StringHelper.CloseParent(System.String)">
+            <summary>   
+            关闭对话框   
+            </summary>   
+            <param name="str_Prompt">提示信息</param>   
+            <returns>string</returns>   
+        </member>
+        <member name="M:PM.Utils.StringHelper.JsIsNull(System.String,System.Boolean)">
+            <summary>   
+            出错时弹出提示对话框--关闭窗口   
+            </summary>   
+            <param name="str_Prompt">提示信息</param>   
+            <param name="isReLoad">true为上个窗口自动刷新</param>   
+            <returns>string</returns>   
+        </member>
+        <member name="M:PM.Utils.StringHelper.JsIsClose(System.String,System.Boolean)">
+             <summary>   
+            是否关闭窗口   
+             </summary>   
+             <param name="str_Prompt">提示信息</param>   
+             <param name="isClose">true为关闭</param>   
+             <returns>string</returns>   
+        </member>
+        <member name="M:PM.Utils.StringHelper.JsIsReLoad(System.String,System.String)">
+            <summary>   
+            弹出信息并重装窗口   
+            </summary>   
+            <param name="str_Prompt">提示信息</param>   
+            <param name="reLoadPath">重装路径</param>   
+            <returns>string</returns>   
+        </member>
+        <member name="M:PM.Utils.StringHelper.JsIsReLoad(System.String)">
+            <summary>   
+            重装窗口   
+            </summary>   
+            <param name="reLoadPath">提示信息</param>   
+            <returns>string</returns>   
+        </member>
+        <member name="M:PM.Utils.StringHelper.GetDataRandom">
+            <summary>   
+            获得一个16位时间随机数   
+            </summary>   
+            <returns>返回随机数</returns>   
+        </member>
+        <member name="M:PM.Utils.StringHelper.GetStrCount(System.String,System.String)">
+            <summary>   
+             获得某个字符串在另个字符串中出现的次数   
+            </summary>   
+            <param name="strOriginal">要处理的字符</param>   
+            <param name="strSymbol">符号</param>   
+            <returns>返回值</returns>   
+        </member>
+        <member name="M:PM.Utils.StringHelper.GetFirstStr(System.String,System.String)">
+            <summary>   
+            获得某个字符串在另个字符串第一次出现时前面所有字符   
+            </summary>   
+            <param name="strOriginal">要处理的字符</param>   
+            <param name="strSymbol">符号</param>   
+            <returns>返回值</returns>   
+        </member>
+        <member name="M:PM.Utils.StringHelper.GetLastStr(System.String,System.String)">
+            <summary>   
+            获得某个字符串在另个字符串最后一次出现时后面所有字符   
+            </summary>   
+            <param name="strOriginal">要处理的字符</param>   
+            <param name="strSymbol">符号</param>   
+            <returns>返回值</returns>   
+        </member>
+        <member name="M:PM.Utils.StringHelper.GetTwoMiddleFirstStr(System.String,System.String,System.String)">
+            <summary>   
+            获得两个字符之间第一次出现时前面所有字符   
+            </summary>   
+            <param name="strOriginal">要处理的字符</param>   
+            <param name="strFirst">最前哪个字符</param>   
+            <param name="strLast">最后哪个字符</param>   
+            <returns>返回值</returns>   
+        </member>
+        <member name="M:PM.Utils.StringHelper.GetTwoMiddleLastStr(System.String,System.String,System.String)">
+            <summary>   
+             获得两个字符之间最后一次出现时的所有字符   
+            </summary>   
+            <param name="strOriginal">要处理的字符</param>   
+            <param name="strFirst">最前哪个字符</param>   
+            <param name="strLast">最后哪个字符</param>   
+            <returns>返回值</returns>   
+        </member>
+        <member name="M:PM.Utils.StringHelper.GetHtmlFormat(System.String)">
+            <summary>   
+            从数据库表读记录时,能正常显示   
+            </summary>   
+            <param name="strContent">要处理的字符</param>   
+            <returns>返回正常值</returns>   
+        </member>
+        <member name="M:PM.Utils.StringHelper.GetCheckStr(System.String,System.String,System.String)">
+            <summary>   
+            检查相等之后，获得字符串   
+            </summary>   
+            <param name="str">字符串1</param>   
+            <param name="checkStr">字符串2</param>   
+            <param name="reStr">相等之后要返回的字符串</param>   
+            <returns>返回字符串</returns>   
+        </member>
+        <member name="M:PM.Utils.StringHelper.GetCheckStr(System.Int32,System.Int32,System.String)">
+            <summary>   
+            检查相等之后，获得字符串   
+            </summary>   
+            <param name="str">数值1</param>   
+            <param name="checkStr">数值2</param>   
+            <param name="reStr">相等之后要返回的字符串</param>   
+            <returns>返回字符串</returns>   
+        </member>
+        <member name="M:PM.Utils.StringHelper.GetCheckStr(System.Boolean,System.Boolean,System.String)">
+            <summary>   
+            检查相等之后，获得字符串   
+            </summary>   
+            <param name="str"></param>   
+            <param name="checkStr"></param>   
+            <param name="reStr"></param>   
+            <returns></returns>   
+        </member>
+        <member name="M:PM.Utils.StringHelper.GetCheckStr(System.Object,System.Object,System.String)">
+            <summary>   
+            检查相等之后，获得字符串   
+            </summary>   
+            <param name="str"></param>   
+            <param name="checkStr"></param>   
+            <param name="reStr"></param>   
+            <returns></returns>   
+        </member>
+        <member name="M:PM.Utils.StringHelper.GetLeftStr(System.String,System.Int32,System.String)">
+            <summary>   
+            截取左边规定字数字符串,超过字数用endStr结束   
+            </summary>   
+            <param name="str">需截取字符串</param>   
+            <param name="length">截取字数</param>   
+            <param name="endStr">超过字数，结束字符串，如"..."</param>   
+            <returns>返回截取字符串</returns>   
+        </member>
+        <member name="M:PM.Utils.StringHelper.GetLeftStr(System.String,System.Int32)">
+            <summary>   
+            截取左边规定字数字符串,超过字数用...结束   
+            </summary>   
+            <param name="str">需截取字符串</param>   
+            <param name="length">截取字数</param>   
+            <returns>返回截取字符串</returns>   
+        </member>
+        <member name="M:PM.Utils.StringHelper.GetLeftStr(System.String,System.Int32,System.Int32)">
+            <summary>   
+            截取左边规定字数字符串,超过字数用...结束   
+            </summary>   
+            <param name="str">需截取字符串</param>   
+            <param name="length">截取字数</param>   
+            <param name="subcount">若超过字数右边减少的字符长度</param>   
+            <returns>返回截取字符串</returns>   
+        </member>
+        <member name="M:PM.Utils.StringHelper.GetStrLength(System.String)">
+            <summary>   
+            获得双字节字符串的字节数   
+            </summary>   
+            <param name="str">要检测的字符串</param>   
+            <returns>返回字节数</returns>   
+        </member>
+        <member name="M:PM.Utils.StringHelper.RegStripHtml(System.String)">
+            <summary>   
+            剥去HTML标签   
+            </summary>   
+            <param name="text">带有HTML格式的字符串</param>   
+            <returns>string</returns>   
+        </member>
+        <member name="M:PM.Utils.StringHelper.ReplaceHtml(System.String)">
+            <summary>   
+            使Html失效,以文本显示   
+            </summary>   
+            <param name="str">原字符串</param>   
+            <returns>失效后字符串</returns>   
+        </member>
+        <member name="M:PM.Utils.StringHelper.GetRandomNext(System.Int32)">
+            <summary>   
+            获得随机数字   
+            </summary>   
+            <param name="Length">随机数字的长度</param>   
+            <returns>返回长度为 Length 的　<see cref="T:System.Int32"/> 类型的随机数</returns>   
+            <example>   
+            Length 不能大于9,以下为示例演示了如何调用 GetRandomNext：<br/>   
+            <code>   
+             int le = GetRandomNext(8);   
+            </code>   
+            </example>   
+        </member>
+        <member name="M:PM.Utils.StringHelper.isNumber(System.Object)">
+            <summary>   
+            返回一个 bool 值，指明提供的值是不是整数   
+            </summary>   
+            <param name="obj">要判断的值</param>   
+            <returns>true[是整数]false[不是整数]</returns>   
+            <remarks>   
+             isNumber　只能判断正(负)整数，如果 obj 为小数则返回 false;   
+            </remarks>   
+            <example>   
+            下面的示例演示了判断 obj 是不是整数：<br />   
+            <code>   
+             bool flag;   
+             flag = isNumber("200");   
+            </code>   
+            </example>   
+        </member>
+        <member name="M:PM.Utils.StringHelper.OutHighlightText(System.String,System.String,System.String)">
+            <summary>   
+            高亮显示   
+            </summary>   
+            <param name="str">原字符串</param>   
+            <param name="findstr">查找字符串</param>   
+            <param name="cssclass">Style</param>   
+            <returns>string</returns>   
+        </member>
+        <member name="M:PM.Utils.StringHelper.RemoveStartOrEndStr(System.String,System.String,System.String)">
+            <summary>   
+            移除字符串首尾某些字符   
+            </summary>   
+            <param name="strOriginal">要操作的字符串</param>   
+            <param name="startStr">要在字符串首部移除的字符串</param>   
+            <param name="endStr">要在字符串尾部移除的字符串</param>   
+            <returns>string</returns>   
+        </member>
+        <member name="M:PM.Utils.StringHelper.RemoveStr(System.String,System.Int32,System.Int32)">
+            <summary>   
+            删除指定位置指定长度字符串   
+            </summary>   
+            <param name="strOriginal">要操作的字符串</param>   
+            <param name="startIndex">开始删除字符的位置</param>   
+            <param name="count">要删除的字符数</param>   
+            <returns>string</returns>   
+        </member>
+        <member name="M:PM.Utils.StringHelper.LeftPadStr(System.String,System.Int32,System.Char)">
+            <summary>   
+            从左边填充字符串   
+            </summary>   
+            <param name="strOriginal">要操作的字符串</param>   
+            <param name="totalWidth">结果字符串中的字符数</param>   
+            <param name="paddingChar">填充的字符</param>   
+            <returns>string</returns>   
+        </member>
+        <member name="M:PM.Utils.StringHelper.RightPadStr(System.String,System.Int32,System.Char)">
+            <summary>   
+            从右边填充字符串   
+            </summary>   
+            <param name="strOriginal">要操作的字符串</param>   
+            <param name="totalWidth">结果字符串中的字符数</param>   
+            <param name="paddingChar">填充的字符</param>   
+            <returns>string</returns>   
+        </member>
+        <member name="M:PM.Utils.StringHelper.Text_Length(System.String)">
+            <summary>
+            获取字符长度 中文2个字节
+            </summary>
+            <param name="Text">输入字符</param>
+            <returns>字符长度</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.Get_SubstringChineseStr(System.String,System.Int32,System.Int32)">
+            <summary>
+            获取子字符串(中文规则)
+            </summary>
+            <param name="text">字符串（可带中文）</param>
+            <param name="start">起始位置</param>
+            <param name="strLeng">长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.Base64ToString(System.String)">
+            <summary>
+            base64 转string
+            </summary>
+            <param name="base64str">base64字符串</param>
+            <returns>base64字符串转string</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.ConvertString(System.String,System.Type)">
+            <summary>
+            字符转 通用的类型
+            </summary>
+            <param name="str"></param>
+            <param name="conversionType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.GetMd5String(System.String)">
+            <summary>
+            字符转md5
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.GetSha1String(System.String)">
+            <summary>
+            字符转sha1加密
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.GetStdDateFormatString(System.String)">
+            <summary>
+            字符转时间格式yyyy-MM-dd
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.GetStdDateTimeFormatString(System.String)">
+            <summary>
+            字符转时间格式yyyy-MM-dd HH:mm:ss
+            </summary>
+            <param name="time"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.HexToBin(System.String)">
+            <summary>
+            16进制转 byte[]
+            </summary>
+            <param name="hex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.ObjectIsTrue(System.Object)">
+            <summary>
+            对象是否可以转成bool
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.SafeBase64ToString(System.String)">
+            <summary>
+            base64转 string
+            </summary>
+            <param name="base64str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.SafeConvertString``1(System.String)">
+            <summary>
+            string 转特定类型
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.SplitByComma(System.String)">
+            <summary>
+            以逗号分割
+            </summary>
+            <param name="line"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.SplitByEnter(System.String)">
+            <summary>
+            按回车换行分割
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.SplitBySemicolon(System.String)">
+            <summary>
+            以逗号分割
+            </summary>
+            <param name="line"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.SplitString(System.String,System.Char,System.Char)">
+            <summary>
+            分割字符
+            </summary>
+            <param name="line"></param>
+            <param name="separator1"></param>
+            <param name="separator2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.StringIsBool_MyFunc(System.String)">
+            <summary>
+            string转 bool方法判断
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.StringIsGuid(System.String)">
+            <summary>
+            string 是否是guid格式
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.StringToBase64(System.String)">
+            <summary>
+            string 转base64
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:PM.Utils.StringHelper.StringToIntList(System.String,System.Char)”忽略有格式错误的 XML 注释 -->
+        <member name="M:PM.Utils.StringHelper.TryToDateTime(System.String)">
+            <summary>
+            字符转时间
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.TryToDateTime(System.String,System.DateTime)">
+            <summary>
+             字符转时间
+            </summary>
+            <param name="str"></param>
+            <param name="defaultVal"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.TryToDecimal(System.String)">
+            <summary>
+             字符转decimal
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.TryToDecimal(System.String,System.Decimal)">
+            <summary>
+            字符转decimal
+            </summary>
+            <param name="str"></param>
+            <param name="defaultVal"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.TryToInt(System.String)">
+            <summary>
+            字符转int
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.TryToInt(System.String,System.Int32)">
+            <summary>
+            字符转int
+            </summary>
+            <param name="str"></param>
+            <param name="defaultVal"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.ToSBC(System.String)">
+            <summary>
+            转全角的函数(SBC case)
+            全角空格为12288，半角空格为32
+            其他字符半角(33-126)与全角(65281-65374)的对应关系是：均相差65248
+            </summary>
+            <param name="input">任意字符串</param>
+            <returns>全角字符串</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.ToDBC(System.String)">
+            <summary>
+            转半角的函数(DBC case) 
+            其他字符半角(33-126)与全角(65281-65374)的对应关系是：均相差65248
+            </summary>
+            <param name="input">任意字符串</param>
+            <returns>半角字符串</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.GetNumberString(System.String)">
+            <summary>
+            获取字符串中的数字
+            </summary>
+            <param name="str">字符串</param>
+            <returns>数字</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.GetNumberDecimal(System.String)">
+            <summary>
+            获取字符串中的数字
+            </summary>
+            <param name="str">字符串</param>
+            <returns>数字</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.GetNumberInt(System.String)">
+            <summary>
+            获取字符串中的数字
+            </summary>
+            <param name="str">字符串</param>
+            <returns>数字</returns>
+        </member>
+        <member name="M:PM.Utils.StringHelper.GetRequestParams(System.String)">
+            <summary>
+            响应获取键值对
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:PM.Utils.StringHelper.Create_linkstring(System.Collections.Generic.Dictionary{System.String,System.String})”忽略有格式错误的 XML 注释 -->
+        <member name="M:PM.Utils.StringHelper.Para_filter(System.Collections.Generic.SortedDictionary{System.String,System.String},System.String[])">
+            <summary>
+            除去数组中的空值和签名参数并以字母a到z的顺序排序
+            </summary>
+            <param name="dicArrayPre">过滤前的参数组</param> 
+            <param name="key">过滤的关键字</param>
+            <returns>过滤后的参数组</returns>
+        </member>
+        <member name="T:PM.Utils.ReflectionHelp.TypeList">
+            <summary>
+            类型定义
+            </summary>
+        </member>
+        <!-- 对于成员“T:PM.Utils.AssemblyHelper”忽略有格式错误的 XML 注释 -->
+        <member name="M:PM.Utils.AssemblyHelper.GetAssemblyTitle">
+            <summary>
+            获取应用程序集的标题
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.AssemblyHelper.GetAssemblyProduct">
+            <summary>
+            获取应用程序产品名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.AssemblyHelper.GetAssemblyVersion">
+            <summary>
+            获取应用程序版本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.AssemblyHelper.GetAssemblyDescription">
+            <summary>
+            获取应用程序说明
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.AssemblyHelper.GetAssemblyCopyright">
+            <summary>
+            获取应用程序版权信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.AssemblyHelper.GetAssemblyCompany">
+            <summary>
+            获取应用程序公司名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.AssemblyHelper.GetAssemblyAppFullName">
+            <summary>
+            获取应用程序显示名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PM.Utils.SocektUtils.SynSocketServer">
+            <summary>
+            同步socket 
+            如果接受后有业务处理  继承并重写CallBackBiz
+            </summary>
+        </member>
+        <member name="M:PM.Utils.SocektUtils.SynSocketServer.#ctor(System.Int32,System.Text.Encoding,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="port">监听端口</param>
+            <param name="encoding">编码</param>
+            <param name="blockCount"> 挂起连接队列的最大长度 一般初始化值给50</param>
+        </member>
+        <member name="M:PM.Utils.SocektUtils.SynSocketServer.Start">
+            <summary>
+            启动
+            </summary>
+            <param name="port"></param>
+        </member>
+        <member name="M:PM.Utils.SocektUtils.SynSocketServer.ReceiveWorkThread(System.Object)">
+            <summary>
+            接受数据
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:PM.Utils.SocektUtils.SynSocketServer.CallBackBiz(System.String)">
+            <summary>
+            接受到数据业务数据处理后返回给客户端（自定义业务时需要重写）
+            </summary>
+            <param name="bizString"></param>
+            <returns></returns>
+        </member>
+        <member name="P:PM.Utils.SocektUtils.SynSocketServer.Port">
+            <summary>
+            端口
+            </summary>
+        </member>
+        <member name="P:PM.Utils.SocektUtils.SynSocketServer.BlockCount">
+            <summary>
+              挂起连接队列的最大长度(一般50就可以)
+            </summary>
+        </member>
+        <member name="P:PM.Utils.SocektUtils.SynSocketServer.CustomEncoding">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:PM.Utils.SocektUtils.SynSocketServer.LocalEndPoint">
+            <summary>
+            获取网络标示
+            </summary>
+        </member>
+        <member name="T:PM.Utils.MyStringDictionary">
+            <summary>
+               一个字符串字典类，KEY和Value全要求字符串。KEY不区分大小写。主要用于保存“查询字符串”参数
+            </summary>
+        </member>
+        <member name="T:PM.Utils.WebUtils.HttpTransfer">
+            <summary>
+            请求与发送
+            </summary>
+        </member>
+        <member name="M:PM.Utils.WebUtils.HttpTransfer.PostBackToBusinesss(System.String,System.String,System.Text.Encoding,System.String,System.Int32)">
+            <summary>
+            回调信息
+            </summary>
+            <param name="contentStr">发送内容
+            其中中文处理：
+            HttpUtility.UrlEncode(order.PayRealBankName, System.Text.Encoding.GetEncoding(enCoding))
+            </param>
+            <param name="urlStr">请求地址</param>
+            <param name="enCoding">编码</param>
+            <param name="rtnCheckStr">返回对比输出（被请求页面去掉没用的html标记）</param>
+            <param name="roundCount">失败回调次数</param>
+        </member>
+        <member name="M:PM.Utils.WebUtils.HttpTransfer.RequestPost(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            post 数据
+            </summary>
+            <param name="Url"></param>
+            <param name="Context"></param>
+            <param name="eCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.WebUtils.HttpTransfer.RequestPost(System.String,System.String,System.String,System.Text.Encoding)">
+            <summary>
+            post 数据
+            </summary>
+            <param name="Url"></param>
+            <param name="ContentType">默认"application/x-www-form-urlencoded"</param>
+            <param name="Context"></param>
+            <param name="eCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.WebUtils.HttpTransfer.HttpRequest(System.String,System.String,System.String,System.String,System.Text.Encoding)">
+            <summary>
+            http提交 数据
+            </summary>
+            <param name="Url"></param>
+            <param name="httpMethod">get  or  post</param>
+            <param name="ContentType">默认"application/x-www-form-urlencoded"</param>
+            <param name="Context"></param>
+            <param name="eCode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PM.Utils.SplitWorld">
+            <summary>
+            字符串获取
+            </summary>
+        </member>
+        <member name="M:PM.Utils.SplitWorld.Length(System.String)">
+            <summary>
+            获取中英文混排字符串的实际长度(字节数)
+            </summary>
+            <param name="str">要获取长度的字符串</param>
+            <returns>字符串的实际长度值（字节数）</returns>
+        </member>
+        <member name="M:PM.Utils.SplitWorld.SubString(System.String,System.Int32)">
+             <summary>截取指定字节长度的字符串</summary> 
+             <param name="str">原字符串</param>
+            <param name="len">截取字节长度</param> 
+             <returns>string</returns>
+        </member>
+        <member name="M:PM.Utils.SplitWorld.SubString(System.String,System.Int32,System.Int32)">
+             <summary>截取指定字节长度的字符串</summary> 
+             <param name="str">原字符串</param>
+             <param name="start">开始位置</param>
+            <param name="len">截取字节长度</param> 
+             <returns>string</returns>
+        </member>
+        <member name="T:PM.Utils.EnumUtil.EnumHelp">
+            <summary>
+            枚举辅助类
+            </summary>
+        </member>
+        <member name="M:PM.Utils.EnumUtil.EnumHelp.GetEnumDescription(System.Enum)">
+            <summary>
+            获取枚举类子项描述信息
+            </summary>
+            <param name="enumSubitem">枚举类子项</param>        
+        </member>
+        <member name="T:PM.Utils.FileTp">
+            <summary>
+            文件读取类型
+            </summary>
+        </member>
+        <member name="F:PM.Utils.FileTp.File">
+            <summary>
+            本地文件
+            </summary>
+        </member>
+        <member name="F:PM.Utils.FileTp.Ftp">
+            <summary>
+            ftp地址
+            </summary>
+        </member>
+        <member name="T:PM.Utils.WCF.WCFCustomSever">
+            <summary>
+            自定义WCF服务
+            </summary>
+        </member>
+        <member name="M:PM.Utils.WCF.WCFCustomSever.ApplyConfiguration">
+            <summary>
+            从自定义配置文件加载服务说明信息
+            </summary>
+        </member>
+        <member name="T:PM.Utils.SerializerHelper">
+            <summary>
+            序列化对象类
+            </summary>
+        </member>
+        <member name="M:PM.Utils.SerializerHelper.BinDeserialize``1(System.Byte[])">
+            <summary>
+            二进制反序列化对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.SerializerHelper.BinDeserializeFromFile``1(System.String)">
+            <summary>
+            文件中反序列化成对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.SerializerHelper.BinSerialize(System.Object)">
+            <summary>
+            object 转二进制对象
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.SerializerHelper.BinSerializeToFile(System.Object,System.String)">
+            <summary>
+            object保存到文件
+            </summary>
+            <param name="o"></param>
+            <param name="path"></param>
+        </member>
+        <member name="M:PM.Utils.SerializerHelper.GetDataTableFromXmlString(System.String)">
+            <summary>
+            xml转DataTable
+            </summary>
+            <param name="xmlString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.SerializerHelper.GetXmlStringFromDataTable(System.Data.DataTable)">
+            <summary>
+            DataTable转xml
+            </summary>
+            <param name="table"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.SerializerHelper.XmlDeserialize``1(System.Byte[])">
+            <summary>
+            二进制反序列化成对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.SerializerHelper.XmlDeserialize``1(System.String,System.Text.Encoding)">
+            <summary>
+            字符反序列化对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="s"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.SerializerHelper.XmlDeserializeFromFile``1(System.String,System.Text.Encoding)">
+            <summary>
+            xml文件反序列化长对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="path"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.SerializerHelper.XmlSerialize(System.Object)">
+            <summary>
+            对象序列化长二进制
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.SerializerHelper.XmlSerialize(System.Object,System.Text.Encoding)">
+            <summary>
+            对象序列化长二进制
+            </summary>
+            <param name="o"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.SerializerHelper.XmlSerializeInternal(System.Object,System.Text.Encoding)">
+            <summary>
+            xml序列化成二进制
+            </summary>
+            <param name="o"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.SerializerHelper.XmlSerializeObject(System.Object,System.Text.Encoding)">
+            <summary>
+            object对象序列化字符
+            </summary>
+            <param name="o"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.SerializerHelper.XmlSerializeToFile(System.Object,System.String,System.Text.Encoding)">
+            <summary>
+            对象写入文件
+            </summary>
+            <param name="o"></param>
+            <param name="path"></param>
+            <param name="encoding"></param>
+        </member>
+        <member name="M:PM.Utils.SerializerHelper.XmlSerialize``1(``0)">
+            <summary>
+            对象序列化成 XML String(uft8)
+            </summary>
+        </member>
+        <member name="M:PM.Utils.SerializerHelper.XmlDeserialize``1(System.String)">
+            <summary>
+            XML String 反序列化成对象(uft8)
+            </summary>
+        </member>
+        <member name="M:PM.Utils.SerializerHelper.SerializeToBytes``1(``0)">
+            <summary>
+            序列化对象成Json字节        
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="Sender"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.SerializerHelper.JsonBytesToBase64(System.Byte[])">
+            <summary>
+            字节数组压缩转base64后字符
+            </summary>
+            <param name="sourceStr">原字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.SerializerHelper.base64tojsontext(System.String)">
+            <summary>
+            base64解压转字符串
+            </summary>
+            <param name="base64Str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.SerializerHelper.Base64ToText(System.String)">
+            <summary>
+            base64解压转字符串
+            </summary>
+            <param name="base64Str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.SerializerHelper.Deserialize``1(System.String)">
+            <summary>
+            json反序列化
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PM.Utils.Quartz.QuartzJobBase">
+            <summary>
+            Quartz job基类(需要被继承)
+            </summary>
+        </member>
+        <member name="M:PM.Utils.Quartz.QuartzJobBase.Execute(Quartz.IJobExecutionContext)">
+            <summary>
+            执行
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:PM.Utils.Quartz.QuartzJobBase.InternalExecute(Quartz.IJobExecutionContext)">
+            <summary>
+            继承类执行
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:PM.Utils.ErrorInfo">
+            <summary>
+            定义错误信息
+            </summary>
+        </member>
+        <member name="T:PM.Utils.AppSettingReader">
+            <summary>
+            获取AppSetting信息
+            </summary>
+        </member>
+        <member name="T:PM.Utils.WebUtils.WebHelp">
+            <summary>
+            web相关辅助类
+            </summary>
+        </member>
+        <member name="M:PM.Utils.WebUtils.WebHelp.GetRequestPost">
+            <summary>
+            获取过来通知消息，并以“参数名=参数值”的形式组成数组
+            </summary>
+            <returns>request回来的信息组成的数组</returns>
+        </member>
+        <member name="M:PM.Utils.Log.LogTxt.WriteEntry(System.String,System.String)">
+            <summary>
+            写入文本日志
+            </summary>
+            <param name="Description">日志</param>
+        </member>
+        <member name="T:PM.Utils.ConfigHelper">
+            <summary>
+            <para>　</para>
+            类名：常用工具类——Web.Config操作类 
+            </summary>
+        </member>
+        <member name="M:PM.Utils.ConfigHelper.GetConfigString(System.String)">
+            <summary>
+            得到AppSettings中的配置字符串信息
+            </summary>
+            <param name="key">AppSetting中关键字KEY</param>
+            <returns>AppSettings中的配置字符串信息</returns>
+        </member>
+        <member name="M:PM.Utils.ConfigHelper.GetConnectionString(System.String)">
+            <summary>
+            得到Connection中配置字符串信息
+            </summary>
+            <param name="key">Connection中name的值</param>
+            <returns>Connection中name的值</returns>
+        </member>
+        <member name="M:PM.Utils.ConfigHelper.GetConfigBool(System.String)">
+            <summary>
+            得到AppSettings中的配置Bool信息
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.ConfigHelper.GetConfigDecimal(System.String)">
+            <summary>
+            得到AppSettings中的配置Decimal信息
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.ConfigHelper.GetConfigInt(System.String)">
+            <summary>
+            得到AppSettings中的配置int信息
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.ConfigHelper.GetCustomCfg(System.String,System.String)">
+            <summary>
+            获取自定义配置内容
+            路径通过config文件   <add key="CustomCfgPath" value=""/>
+            </summary>
+            <param name="setctionKey">配置节名</param>
+            <param name="conditionAttributeValue">key名</param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.ConfigHelper.GetCustomCfg(System.String,System.String,System.String)">
+            <summary>
+            获取自定义配置文件内容
+            </summary>
+            <param name="filePath"></param>
+            <param name="setctionKey"></param>
+            <param name="conditionAttributeValue"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:PM.Utils.ConfigHelper.GetCustomCfg(System.String,System.String,System.String,System.String,System.String,System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="T:PM.Utils.WCF.WCFServiceHostGroup">
+            <summary>
+            多服务统一管理
+            </summary>
+        </member>
+        <member name="M:PM.Utils.WCF.WCFServiceHostGroup.OpenHost(System.Type)">
+            <summary>
+            宿主 打开服务
+            </summary>
+            <param name="t"></param>
+        </member>
+        <member name="M:PM.Utils.WCF.WCFServiceHostGroup.StartAllConfiguredServices">
+            <summary>
+            启动所有服务
+            </summary>
+        </member>
+        <member name="M:PM.Utils.WCF.WCFServiceHostGroup.CloseAllServices">
+            <summary>
+            关闭所有服务
+            </summary>
+        </member>
+        <member name="M:PM.Utils.SocektUtils.AsySocket.CServerSocket.#ctor(System.Int32)">
+            <summary>
+            Default Constructor
+            </summary>
+            <param name="port">Port to wait for call</param>
+        </member>
+        <member name="M:PM.Utils.SocektUtils.AsySocket.CServerSocket.Active">
+            <summary>
+            Active waiting for the call
+            </summary>
+        </member>
+        <member name="M:PM.Utils.SocektUtils.AsySocket.CServerSocket.SendText(System.String,System.Int32)">
+            <summary>
+            Send a text messageby connecting selected
+            </summary>
+            <param name="mens">Message</param>
+            <param name="SocketIndex">Index of connection</param>
+        </member>
+        <member name="M:PM.Utils.SocektUtils.AsySocket.CServerSocket.SendFile(System.String,System.Int32)">
+            <summary>
+            Send file by connecting selected
+            </summary>
+            <param name="FileName">Path File</param>
+            <param name="SocketIndex">Index of connection</param>
+        </member>
+        <member name="M:PM.Utils.SocektUtils.AsySocket.CServerSocket.SendFile(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Send file by connecting selected
+            </summary>
+            <param name="FileName">Path File</param>
+            <param name="PreString">Message sent before the file</param>
+            <param name="PosString">Message sent after the File</param>
+            <param name="SocketIndex">Index of connection</param>
+        </member>
+        <member name="M:PM.Utils.SocektUtils.AsySocket.CServerSocket.Deactive">
+            <summary>
+            Deactivates the ServerSocket closing all connections
+            </summary>
+        </member>
+        <member name="M:PM.Utils.SocektUtils.AsySocket.CServerSocket.CloseConnection(System.Int32)">
+            <summary>
+            Disables a specific connection
+            </summary>
+            <param name="SocketIndex">Index of connection</param>
+        </member>
+        <member name="M:PM.Utils.SocektUtils.AsySocket.CServerSocket.Connected(System.Int32)">
+            <summary>
+            Returns true if the specific socket is connected
+            </summary>
+            <param name="SocketIndex">Index of connection</param>
+        </member>
+        <member name="M:PM.Utils.SocektUtils.AsySocket.CServerSocket.RemoteAddress(System.Int32)">
+            <summary>
+            Returns the client's IP connected to the specific socket
+            </summary>
+            <param name="SocketIndex">Index of connection</param>
+        </member>
+        <member name="M:PM.Utils.SocektUtils.AsySocket.CServerSocket.RemoteHost(System.Int32)">
+            <summary>
+            Returns the client's Host connected to the specific socket
+            </summary>
+            <param name="SocketIndex">Index of connection</param>
+        </member>
+        <member name="M:PM.Utils.SocektUtils.AsySocket.CServerSocket.IndexOf(System.Net.Sockets.Socket)">
+            <summary>
+            Returns the index of the specific socket
+            </summary>
+            <param name="soc">Socket</param>
+        </member>
+        <member name="P:PM.Utils.SocektUtils.AsySocket.CServerSocket.Port">
+            <summary>
+            Port to connect with clients
+            </summary>
+        </member>
+        <member name="P:PM.Utils.SocektUtils.AsySocket.CServerSocket.ReceivedBytes">
+            <summary>
+            Bytes received by the Socket
+            </summary>
+        </member>
+        <member name="P:PM.Utils.SocektUtils.AsySocket.CServerSocket.ReceivedText">
+            <summary>
+            Message received by the Socket
+            </summary>
+        </member>
+        <member name="P:PM.Utils.SocektUtils.AsySocket.CServerSocket.WriteText">
+            <summary>
+            Message send by the Socket
+            </summary>
+        </member>
+        <member name="P:PM.Utils.SocektUtils.AsySocket.CServerSocket.ActiveConnections">
+            <summary>
+            Number of active connections
+            </summary>
+        </member>
+        <member name="T:PM.Utils.WCF.ServicePathProvider">
+            <summary>
+            wcf动态生成服务(目前只支持basichttp  其他还未实现)
+            //使用  在web  golab Application_Start启动
+            HostingEnvironment.RegisterVirtualPathProvider(new ServicePathProvider());
+            配置文件中 加对应服务dll
+            设置WcfDLL
+            命名空间WcfDLLNameSpace
+            </summary>
+        </member>
+        <member name="T:PM.Utils.WCF.ServiceFile">
+            <summary>
+            文件
+            </summary>
+        </member>
+        <member name="T:PM.Utils.WCF.DynamicHostFactory">
+            <summary>
+            动态产生
+            </summary>
+        </member>
+        <!-- 对于成员“T:PM.Utils.WCF.WcfChannelFactory”忽略有格式错误的 XML 注释 -->
+        <member name="M:PM.Utils.WCF.WcfChannelFactory.ExecuteMetod``1(System.String,System.String,System.Object[])">
+            <summary>
+            执行方法   WSHttpBinding
+            </summary>
+            <typeparam name="T">服务接口</typeparam>
+            <param name="uri">wcf地址</param>
+            <param name="methodName">方法名</param>
+            <param name="args">参数列表</param>
+        </member>
+        <member name="M:PM.Utils.WCF.WcfChannelFactory.ExecuteMethod``1(System.String,System.String,System.Object[])">
+            <summary>
+             nettcpbinding 绑定方式
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="pUrl"></param>
+            <param name="pMethodName"></param>
+            <param name="pParams"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PM.Utils.FileHelp.CustomConfigFile">
+            <summary>
+            自定义配置文件
+            </summary>
+        </member>
+        <member name="M:PM.Utils.SocektUtils.AsySocket.CClientSocket.#ctor(System.String,System.Int32)">
+            <summary>
+            Default Constructor
+            </summary>
+            <param name="port">Port to connection
+            </param>
+        </member>
+        <member name="M:PM.Utils.SocektUtils.AsySocket.CClientSocket.Connect">
+            <summary>
+            Establishes connection with the IP and Port Server
+            </summary>
+        </member>
+        <member name="M:PM.Utils.SocektUtils.AsySocket.CClientSocket.SendText(System.String)">
+            <summary>
+            Send a text message
+            </summary>
+            <param name="mens">Message</param>
+        </member>
+        <member name="M:PM.Utils.SocektUtils.AsySocket.CClientSocket.SendFile(System.String)">
+            <summary>
+            Send file
+            </summary>
+            <param name="FileName">Path File</param>
+        </member>
+        <member name="M:PM.Utils.SocektUtils.AsySocket.CClientSocket.SendFile(System.String,System.String,System.String)">
+            <summary>
+            Send file
+            </summary>
+            <param name="FileName">Path File</param>
+            <param name="PreString">Message sent before the file</param>
+            <param name="PosString">Message sent after the File</param>
+        </member>
+        <member name="M:PM.Utils.SocektUtils.AsySocket.CClientSocket.Disconnect">
+            <summary>
+            Close connection to the server
+            </summary>
+        </member>
+        <member name="P:PM.Utils.SocektUtils.AsySocket.CClientSocket.Port">
+            <summary>
+            Port to connect to server
+            </summary>
+        </member>
+        <member name="P:PM.Utils.SocektUtils.AsySocket.CClientSocket.ReceivedBytes">
+            <summary>
+            Bytes received by the Socket
+            </summary>
+        </member>
+        <member name="P:PM.Utils.SocektUtils.AsySocket.CClientSocket.ReceivedText">
+            <summary>
+            Message received by the Socket
+            </summary>
+        </member>
+        <member name="P:PM.Utils.SocektUtils.AsySocket.CClientSocket.WriteText">
+            <summary>
+            Message send by the Socket
+            </summary>
+        </member>
+        <member name="P:PM.Utils.SocektUtils.AsySocket.CClientSocket.RemoteAddress">
+            <summary>
+            IP Server
+            </summary>
+        </member>
+        <member name="P:PM.Utils.SocektUtils.AsySocket.CClientSocket.RemoteHost">
+            <summary>
+            Host Server
+            </summary>
+        </member>
+        <member name="P:PM.Utils.SocektUtils.AsySocket.CClientSocket.Connected">
+            <summary>
+            Return true if the ClientSocket is connected to the Server
+            </summary>
+        </member>
+        <member name="T:PM.Utils.FileHelp.IniFile">
+            <summary>
+            ini文件操作
+            </summary>
+        </member>
+        <member name="T:PM.Utils.FileHelp.CustomConfig.FileHelper">
+            <summary>
+            文件操作类
+            </summary>
+        </member>
+        <member name="T:PM.Utils.WCF.WCFInvoke">
+            <summary>
+            客户端动态调用wcf服务
+            </summary>
+        </member>
+        <member name="M:PM.Utils.WCF.WCFInvoke.CreateWCFServiceByURL``1(System.String)">
+            <summary>
+            默认调用是wsHttpBinding
+            </summary>
+            <typeparam name="T">协议接口</typeparam>
+            <param name="url">url地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.WCF.WCFInvoke.CreateWCFServiceByURL``1(System.String,PM.Utils.WCF.WCFBindingType)">
+            <summary>
+            wcf调用
+            </summary>
+            <typeparam name="T">协议接口</typeparam>
+            <param name="url">url地址</param>
+            <param name="bing">绑定类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.Utils.WCF.WCFInvoke.CreateBinding(PM.Utils.WCF.WCFBindingType)">
+            <summary>
+            创建传输协议
+            </summary>
+            <param name="binding">绑定类型</param>
+            <returns></returns>
+        </member>
+        <member name="T:PM.Utils.WCF.WCFBindingType">
+            <summary>
+            wcf绑定类型
+            </summary>
+        </member>
+        <member name="F:PM.Utils.WCF.WCFBindingType.BasicHttpBindin">
+            <summary>
+            基础http绑定
+            </summary>
+        </member>
+        <member name="F:PM.Utils.WCF.WCFBindingType.NetNamedPipeBinding">
+            <summary>
+            net命名管道绑定
+            </summary>
+        </member>
+        <member name="F:PM.Utils.WCF.WCFBindingType.NetPeerTcpBinding">
+            <summary>
+            对等网通绑定
+            </summary>
+        </member>
+        <member name="F:PM.Utils.WCF.WCFBindingType.NetTcpBinding">
+            <summary>
+            tcp绑定
+            </summary>
+        </member>
+        <member name="F:PM.Utils.WCF.WCFBindingType.WSDualHttpBinding">
+            <summary>
+            双工绑定
+            </summary>
+        </member>
+        <member name="F:PM.Utils.WCF.WCFBindingType.WSFederationHttpBinding">
+            <summary>
+            联合安全绑定
+            </summary>
+        </member>
+        <member name="F:PM.Utils.WCF.WCFBindingType.WSHttpBinding">
+            <summary>
+            分布式绑定
+            </summary>
+        </member>
+        <member name="F:PM.Utils.SocektUtils.SocketClient.result">
+            <summary>
+            缓冲区
+            </summary>
+        </member>
+        <member name="M:PM.Utils.SocektUtils.SocketClient.SendToServ(System.String,System.Int32,System.String,System.Text.Encoding)">
+            <summary>
+            发送信息
+            </summary>
+            <param name="iP"></param>
+            <param name="port"></param>
+            <param name="sendMessage"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“T:System.Net.Ftp.FileStruct”忽略有格式错误的 XML 注释 -->
+        <member name="F:System.Net.Ftp.clsFTP.Request">
+            <summary>
+            FTP请求对象
+            </summary>
+        </member>
+        <member name="F:System.Net.Ftp.clsFTP.Response">
+            <summary>
+            FTP响应对象
+            </summary>
+        </member>
+        <member name="F:System.Net.Ftp.clsFTP._Uri">
+            <summary>
+            FTP服务器地址
+            </summary>
+        </member>
+        <member name="F:System.Net.Ftp.clsFTP._DirectoryPath">
+            <summary>
+            当前工作目录
+            </summary>
+        </member>
+        <member name="F:System.Net.Ftp.clsFTP._UserName">
+            <summary>
+            FTP登录用户
+            </summary>
+        </member>
+        <member name="F:System.Net.Ftp.clsFTP._ErrorMsg">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="F:System.Net.Ftp.clsFTP._Password">
+            <summary>
+            FTP登录密码
+            </summary>
+        </member>
+        <member name="F:System.Net.Ftp.clsFTP._Proxy">
+            <summary>
+            连接FTP服务器的代理服务
+            </summary>
+        </member>
+        <member name="F:System.Net.Ftp.clsFTP._isDeleteTempFile">
+            <summary>
+            是否需要删除临时文件
+            </summary>
+        </member>
+        <member name="F:System.Net.Ftp.clsFTP._UploadTempFile">
+            <summary>
+            异步上传所临时生成的文件
+            </summary>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.#ctor(System.Uri,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="FtpUri">FTP地址</param>
+            <param name="strUserName">登录用户名</param>
+            <param name="strPassword">登录密码</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.#ctor(System.Uri,System.String,System.String,System.Net.WebProxy)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="FtpUri">FTP地址</param>
+            <param name="strUserName">登录用户名</param>
+            <param name="strPassword">登录密码</param>
+            <param name="objProxy">连接代理</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.Open(System.Uri,System.String)">
+            <summary>
+            建立FTP链接,返回响应对象
+            </summary>
+            <param name="uri">FTP地址</param>
+            <param name="FtpMathod">操作命令</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.OpenRequest(System.Uri,System.String)">
+            <summary>
+            建立FTP链接,返回请求对象
+            </summary>
+            <param name="uri">FTP地址</param>
+            <param name="FtpMathod">操作命令</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.DownloadFile(System.String,System.String)">
+            <summary>
+            从FTP服务器下载文件，使用与远程文件同名的文件名来保存文件
+            </summary>
+            <param name="RemoteFileName">远程文件名</param>
+            <param name="LocalPath">本地路径</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.DownloadFile(System.String,System.String,System.String)">
+            <summary>
+            从FTP服务器下载文件，指定本地路径和本地文件名
+            </summary>
+            <param name="RemoteFileName">远程文件名</param>
+            <param name="LocalPath">本地路径</param>
+            <param name="LocalFilePath">保存文件的本地路径,后面带有"\"</param>
+            <param name="LocalFileName">保存本地的文件名</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.DownloadFile(System.String)">
+            <summary>
+            从FTP服务器下载文件，返回文件二进制数据
+            </summary>
+            <param name="RemoteFileName">远程文件名</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.DownloadFileAsync(System.String,System.String,System.String)">
+            <summary>
+            从FTP服务器异步下载文件，指定本地路径和本地文件名
+            </summary>
+            <param name="RemoteFileName">远程文件名</param>        
+            <param name="LocalPath">保存文件的本地路径,后面带有"\"</param>
+            <param name="LocalFileName">保存本地的文件名</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.DownloadFileAsync(System.String,System.String)">
+            <summary>
+            从FTP服务器异步下载文件，指定本地完整路径文件名
+            </summary>
+            <param name="RemoteFileName">远程文件名</param>
+            <param name="LocalFullPath">本地完整路径文件名</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.client_DownloadFileCompleted(System.Object,System.ComponentModel.AsyncCompletedEventArgs)">
+            <summary>
+            异步下载文件完成之后触发的事件
+            </summary>
+            <param name="sender">下载对象</param>
+            <param name="e">数据信息对象</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.client_DownloadProgressChanged(System.Object,System.Net.DownloadProgressChangedEventArgs)">
+            <summary>
+            异步下载进度发生改变触发的事件
+            </summary>
+            <param name="sender">下载对象</param>
+            <param name="e">进度信息对象</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.UploadFile(System.String)">
+            <summary>
+            上传文件到FTP服务器
+            </summary>
+            <param name="LocalFullPath">本地带有完整路径的文件名</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.UploadFile(System.String,System.Boolean)">
+            <summary>
+            上传文件到FTP服务器
+            </summary>
+            <param name="LocalFullPath">本地带有完整路径的文件</param>
+            <param name="OverWriteRemoteFile">是否覆盖远程服务器上面同名的文件</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.UploadFile(System.String,System.String)">
+            <summary>
+            上传文件到FTP服务器
+            </summary>
+            <param name="LocalFullPath">本地带有完整路径的文件</param>
+            <param name="RemoteFileName">要在FTP服务器上面保存文件名</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.UploadFile(System.String,System.String,System.Boolean)">
+            <summary>
+            上传文件到FTP服务器
+            </summary>
+            <param name="LocalFullPath">本地带有完整路径的文件名</param>
+            <param name="RemoteFileName">要在FTP服务器上面保存文件名</param>
+            <param name="OverWriteRemoteFile">是否覆盖远程服务器上面同名的文件</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.UploadFile(System.Byte[],System.String)">
+            <summary>
+            上传文件到FTP服务器
+            </summary>
+            <param name="FileBytes">上传的二进制数据</param>
+            <param name="RemoteFileName">要在FTP服务器上面保存文件名</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.UploadFile(System.Byte[],System.String,System.Boolean)">
+            <summary>
+            上传文件到FTP服务器
+            </summary>
+            <param name="FileBytes">文件二进制内容</param>
+            <param name="RemoteFileName">要在FTP服务器上面保存文件名</param>
+            <param name="OverWriteRemoteFile">是否覆盖远程服务器上面同名的文件</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.UploadFileAsync(System.String)">
+            <summary>
+            异步上传文件到FTP服务器
+            </summary>
+            <param name="LocalFullPath">本地带有完整路径的文件名</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.UploadFileAsync(System.String,System.Boolean)">
+            <summary>
+            异步上传文件到FTP服务器
+            </summary>
+            <param name="LocalFullPath">本地带有完整路径的文件</param>
+            <param name="OverWriteRemoteFile">是否覆盖远程服务器上面同名的文件</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.UploadFileAsync(System.String,System.String)">
+            <summary>
+            异步上传文件到FTP服务器
+            </summary>
+            <param name="LocalFullPath">本地带有完整路径的文件</param>
+            <param name="RemoteFileName">要在FTP服务器上面保存文件名</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.UploadFileAsync(System.String,System.String,System.Boolean)">
+            <summary>
+            异步上传文件到FTP服务器
+            </summary>
+            <param name="LocalFullPath">本地带有完整路径的文件名</param>
+            <param name="RemoteFileName">要在FTP服务器上面保存文件名</param>
+            <param name="OverWriteRemoteFile">是否覆盖远程服务器上面同名的文件</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.UploadFileAsync(System.Byte[],System.String)">
+            <summary>
+            异步上传文件到FTP服务器
+            </summary>
+            <param name="FileBytes">上传的二进制数据</param>
+            <param name="RemoteFileName">要在FTP服务器上面保存文件名</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.UploadFileAsync(System.Byte[],System.String,System.Boolean)">
+            <summary>
+            异步上传文件到FTP服务器
+            </summary>
+            <param name="FileBytes">文件二进制内容</param>
+            <param name="RemoteFileName">要在FTP服务器上面保存文件名</param>
+            <param name="OverWriteRemoteFile">是否覆盖远程服务器上面同名的文件</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.client_UploadFileCompleted(System.Object,System.Net.UploadFileCompletedEventArgs)">
+            <summary>
+            异步上传文件完成之后触发的事件
+            </summary>
+            <param name="sender">下载对象</param>
+            <param name="e">数据信息对象</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.client_UploadProgressChanged(System.Object,System.Net.UploadProgressChangedEventArgs)">
+            <summary>
+            异步上传进度发生改变触发的事件
+            </summary>
+            <param name="sender">下载对象</param>
+            <param name="e">进度信息对象</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.ListFilesAndDirectories">
+            <summary>
+            列出FTP服务器上面当前目录的所有文件和目录
+            </summary>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.ListFiles">
+            <summary>
+            列出FTP服务器上面当前目录的所有文件
+            </summary>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.ListDirectories">
+            <summary>
+            列出FTP服务器上面当前目录的所有的目录
+            </summary>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.GetList(System.String)">
+            <summary>
+            获得文件和目录列表
+            </summary>
+            <param name="datastring">FTP返回的列表字符信息</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.ParseFileStructFromWindowsStyleRecord(System.String)">
+            <summary>
+            从Windows格式中返回文件信息
+            </summary>
+            <param name="Record">文件信息</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.GuessFileListStyle(System.String[])">
+            <summary>
+            判断文件列表的方式Window方式还是Unix方式
+            </summary>
+            <param name="recordList">文件信息列表</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.ParseFileStructFromUnixStyleRecord(System.String)">
+            <summary>
+            从Unix格式中返回文件信息
+            </summary>
+            <param name="Record">文件信息</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP._cutSubstringFromStringWithTrim(System.String@,System.Char,System.Int32)">
+            <summary>
+            按照一定的规则进行字符串截取
+            </summary>
+            <param name="s">截取的字符串</param>
+            <param name="c">查找的字符</param>
+            <param name="startIndex">查找的位置</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.DirectoryExist(System.String)">
+            <summary>
+            判断当前目录下指定的子目录是否存在
+            </summary>
+            <param name="RemoteDirectoryName">指定的目录名</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.FileExist(System.String)">
+            <summary>
+            判断一个远程文件是否存在服务器当前目录下面
+            </summary>
+            <param name="RemoteFileName">远程文件名</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.DeleteFile(System.String)">
+            <summary>
+            从FTP服务器上面删除一个文件
+            </summary>
+            <param name="RemoteFileName">远程文件名</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.ReName(System.String,System.String)">
+            <summary>
+            更改一个文件的名称或一个目录的名称
+            </summary>
+            <param name="RemoteFileName">原始文件或目录名称</param>
+            <param name="NewFileName">新的文件或目录的名称</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.CopyFileToAnotherDirectory(System.String,System.String)">
+            <summary>
+            把当前目录下面的一个文件拷贝到服务器上面另外的目录中，注意，拷贝文件之后，当前工作目录还是文件原来所在的目录
+            </summary>
+            <param name="RemoteFile">当前目录下的文件名</param>
+            <param name="DirectoryName">新目录名称。
+            说明：如果新目录是当前目录的子目录，则直接指定子目录。如: SubDirectory1/SubDirectory2 ；
+            如果新目录不是当前目录的子目录，则必须从根目录一级一级的指定。如： ./NewDirectory/SubDirectory1/SubDirectory2
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.MoveFileToAnotherDirectory(System.String,System.String)">
+            <summary>
+            把当前目录下面的一个文件移动到服务器上面另外的目录中，注意，移动文件之后，当前工作目录还是文件原来所在的目录
+            </summary>
+            <param name="RemoteFile">当前目录下的文件名</param>
+            <param name="DirectoryName">新目录名称。
+            说明：如果新目录是当前目录的子目录，则直接指定子目录。如: SubDirectory1/SubDirectory2 ；
+            如果新目录不是当前目录的子目录，则必须从根目录一级一级的指定。如： ./NewDirectory/SubDirectory1/SubDirectory2
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.MakeDirectory(System.String)">
+            <summary>
+            在FTP服务器上当前工作目录建立一个子目录
+            </summary>
+            <param name="DirectoryName">子目录名称</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.RemoveDirectory(System.String)">
+            <summary>
+            从当前工作目录中删除一个子目录
+            </summary>
+            <param name="DirectoryName">子目录名称</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.IsValidPathChars(System.String)">
+            <summary>
+            判断目录名中字符是否合法
+            </summary>
+            <param name="DirectoryName">目录名称</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.IsValidFileChars(System.String)">
+            <summary>
+            判断文件名中字符是否合法
+            </summary>
+            <param name="FileName">文件名称</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.GotoDirectory(System.String)">
+            <summary>
+            进入一个目录
+            </summary>
+            <param name="DirectoryName">
+            新目录的名字。 
+            说明：如果新目录是当前目录的子目录，则直接指定子目录。如: SubDirectory1/SubDirectory2 ； 
+            如果新目录不是当前目录的子目录，则必须从根目录一级一级的指定。如： ./NewDirectory/SubDirectory1/SubDirectory2
+            </param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.EnterOneSubDirectory(System.String)">
+            <summary>
+            从当前工作目录进入一个子目录
+            </summary>
+            <param name="DirectoryName">子目录名称</param>
+        </member>
+        <member name="M:System.Net.Ftp.clsFTP.ComeoutDirectory">
+            <summary>
+            从当前工作目录往上一级目录
+            </summary>
+        </member>
+        <member name="P:System.Net.Ftp.clsFTP.Uri">
+            <summary>
+            FTP服务器地址
+            </summary>
+        </member>
+        <member name="P:System.Net.Ftp.clsFTP.DirectoryPath">
+            <summary>
+            当前工作目录
+            </summary>
+        </member>
+        <member name="P:System.Net.Ftp.clsFTP.UserName">
+            <summary>
+            FTP登录用户
+            </summary>
+        </member>
+        <member name="P:System.Net.Ftp.clsFTP.ErrorMsg">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="P:System.Net.Ftp.clsFTP.Password">
+            <summary>
+            FTP登录密码
+            </summary>
+        </member>
+        <member name="P:System.Net.Ftp.clsFTP.Proxy">
+            <summary>
+            连接FTP服务器的代理服务
+            </summary>
+        </member>
+        <member name="E:System.Net.Ftp.clsFTP.DownloadProgressChanged">
+            <summary>
+            异步下载进度发生改变触发的事件
+            </summary>
+        </member>
+        <member name="E:System.Net.Ftp.clsFTP.DownloadDataCompleted">
+            <summary>
+            异步下载文件完成之后触发的事件
+            </summary>
+        </member>
+        <member name="E:System.Net.Ftp.clsFTP.UploadProgressChanged">
+            <summary>
+            异步上传进度发生改变触发的事件
+            </summary>
+        </member>
+        <member name="E:System.Net.Ftp.clsFTP.UploadFileCompleted">
+            <summary>
+            异步上传文件完成之后触发的事件
+            </summary>
+        </member>
+        <member name="T:PM.Utils.ExecptionHelp.ExecptionHelper">
+            <summary>
+            处理异常消息文本的工具类
+            </summary>
+        </member>
+        <member name="M:PM.Utils.ExecptionHelp.ExecptionHelper.GetExceptionMessage(System.Exception)">
+              <summary>
+              返回异常的可供显示信息
+             </summary>
+             <param name="ex">异常对象</param>
+             <returns>返回异常的可供显示信息</returns>
+        </member>
+        <member name="M:PM.Utils.ExecptionHelp.ExecptionHelper.GetExecptionDetailInfo(System.Exception)">
+              <summary>
+              返回异常的全部信息，包括：Message, Type, InnerException, Source, Method, Stack Trace
+               </summary>
+              <param name="ex">异常对象</param>
+             <returns>返回异常的全部信息，包括：Message, Type, InnerException, Source, Method, Stack Trace</returns>
+        </member>
+    </members>
+</doc>

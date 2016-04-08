@@ -1,0 +1,139 @@
+﻿
+
+CREATE TABLE [dbo].[T_JSABOC](
+	[ID] [varchar](50) NOT NULL,
+	[TradeCode] [varchar](50) NULL,
+	[TradeStructNum] [varchar](50) NULL,
+	[ReturneCode] [varchar](50) NULL,
+	[ReturneMsg] [varchar](100) NULL,
+	[DetailDataTime] [varchar](50) NULL,
+	[Count] [int] NULL,
+	[SectionNo] [varchar](50) NULL,
+	[ReceiveAccNo] [varchar](50) NULL,
+	[ReceiveAccDbName] [nvarchar](500) NULL,
+	[ReceiveAccDBBank] [nvarchar](500) NULL,
+	[Used] [nvarchar](500) NULL,
+	[PayAccNo] [varchar](50) NULL,
+	[PayAccDbName] [nvarchar](500) NULL,
+	[PayAccDBBank] [nvarchar](500) NULL,
+	[Amount] [money] NULL,
+	[RealAmount] [money] NULL,
+	[Summary] [nvarchar](500) NULL,
+	[Remark] [nvarchar](500) NULL,
+	[SerialNumber] [varchar](50) NULL,
+	[OrderNo] [varchar](50) NULL,
+	[IsAboc] [int] NULL,
+	[IsMatch] [int] NULL,
+	[Flag] [int] NULL,
+	[accountType] [varchar](50) NULL,
+	[CreateTm] [datetime] NULL,
+ CONSTRAINT [PK_T_JSABOC] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'账号类型 bzj  还是其他费用' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JSABOC', @level2type=N'COLUMN',@level2name=N'accountType'
+
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'交易码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JSABOC', @level2type=N'COLUMN',@level2name=N'TradeCode'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'招投标中心代码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JSABOC', @level2type=N'COLUMN',@level2name=N'TradeStructNum'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'返回码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JSABOC', @level2type=N'COLUMN',@level2name=N'ReturneCode'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'返回信息' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JSABOC', @level2type=N'COLUMN',@level2name=N'ReturneMsg'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'明细日期' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JSABOC', @level2type=N'COLUMN',@level2name=N'DetailDataTime'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'笔数' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JSABOC', @level2type=N'COLUMN',@level2name=N'Count'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'标段编号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JSABOC', @level2type=N'COLUMN',@level2name=N'SectionNo'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'收款 账号  ' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JSABOC', @level2type=N'COLUMN',@level2name=N'ReceiveAccNo'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'收款  账户名     ' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JSABOC', @level2type=N'COLUMN',@level2name=N'ReceiveAccDbName'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'收款  账户开户行 ' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JSABOC', @level2type=N'COLUMN',@level2name=N'ReceiveAccDBBank'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'用途' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JSABOC', @level2type=N'COLUMN',@level2name=N'Used'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'付款 账号  ' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JSABOC', @level2type=N'COLUMN',@level2name=N'PayAccNo'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'付款  账户名  ' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JSABOC', @level2type=N'COLUMN',@level2name=N'PayAccDbName'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'付款  账户开户行 ' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JSABOC', @level2type=N'COLUMN',@level2name=N'PayAccDBBank'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'缴款金额' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JSABOC', @level2type=N'COLUMN',@level2name=N'Amount'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付金额' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JSABOC', @level2type=N'COLUMN',@level2name=N'RealAmount'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'摘要' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JSABOC', @level2type=N'COLUMN',@level2name=N'Summary'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'备注' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JSABOC', @level2type=N'COLUMN',@level2name=N'Remark'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'银行流水号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JSABOC', @level2type=N'COLUMN',@level2name=N'SerialNumber'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'订单号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JSABOC', @level2type=N'COLUMN',@level2name=N'OrderNo'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'是否农行（1是  0 否)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JSABOC', @level2type=N'COLUMN',@level2name=N'IsAboc'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'是否匹配处理 (用于查询入账明细) 1是 0否' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JSABOC', @level2type=N'COLUMN',@level2name=N'IsMatch'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'处理结果  1成功 0或空未返回处理' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_JSABOC', @level2type=N'COLUMN',@level2name=N'Flag'
+GO
+
+
+
+
+
+ 
+alter table dbo.T_ZTB_BidMoneyPayReturn add  ABOCOrderNo  varchar(50) NULL
+alter table dbo.T_ZTB_BidMoneyPayReturn add  ABOCReturnOrderNo  varchar(50) NULL
+alter table dbo.T_ZTB_BidMoneyPayReturn add  PayAccNo  varchar(50) NULL
+alter table dbo.T_ZTB_BidMoneyPayReturn add  PayAccDbName  varchar(50) NULL
+alter table dbo.T_ZTB_BidMoneyPayReturn add  PayAccDBBank  varchar(50) NULL
+alter table dbo.T_ZTB_BidMoneyPayReturn add  Remark   nvarchar(100) NULL
+	
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'农行回执订单号(保证金支付)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_ZTB_BidMoneyPayReturn', @level2type=N'COLUMN',@level2name=N'ABOCOrderNo'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'农行保证金退还订单号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_ZTB_BidMoneyPayReturn', @level2type=N'COLUMN',@level2name=N'ABOCReturnOrderNo'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'付款 账号  ' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_ZTB_BidMoneyPayReturn', @level2type=N'COLUMN',@level2name=N'PayAccNo'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'付款 账户名   ' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_ZTB_BidMoneyPayReturn', @level2type=N'COLUMN',@level2name=N'PayAccDbName'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'付款 账户开户行' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_ZTB_BidMoneyPayReturn', @level2type=N'COLUMN',@level2name=N'PayAccDBBank'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'备注' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_ZTB_BidMoneyPayReturn', @level2type=N'COLUMN',@level2name=N'Remark'
+GO
+

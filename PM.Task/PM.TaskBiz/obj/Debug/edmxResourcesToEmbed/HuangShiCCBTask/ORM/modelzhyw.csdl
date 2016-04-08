@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Gov_publicHSModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="Gov_publicHSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="T_ZTB_MoneyBankRequestSn" EntityType="Gov_publicHSModel.T_ZTB_MoneyBankRequestSn" />
+    <EntitySet Name="T_ZTB_MoneyBankResponse" EntityType="Gov_publicHSModel.T_ZTB_MoneyBankResponse" />
+    <EntitySet Name="T_ZTB_MoneyBankReturn" EntityType="Gov_publicHSModel.T_ZTB_MoneyBankReturn" />
+    <EntitySet Name="T_ZTB_MoneyPayment" EntityType="Gov_publicHSModel.T_ZTB_MoneyPayment" />
+    <EntitySet Name="T_ZTB_Order" EntityType="Gov_publicHSModel.T_ZTB_Order" />
+    <EntitySet Name="T_ZTB_ReservePlace" EntityType="Gov_publicHSModel.T_ZTB_ReservePlace" />
+    <EntitySet Name="T_ZTB_ValueReturn" EntityType="Gov_publicHSModel.T_ZTB_ValueReturn" />
+  </EntityContainer>
+  <EntityType Name="T_ZTB_MoneyBankRequestSn">
+    <Key>
+      <PropertyRef Name="RequestSn" />
+    </Key>
+    <Property Name="RequestSn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="T_ZTB_MoneyBankResponse">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="OrderId" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="RequestSN" Type="String" Nullable="false" MaxLength="16" Unicode="false" FixedLength="false" />
+    <Property Name="RequestType" Type="Int32" Nullable="false" />
+    <Property Name="ResponseXml" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="IsResponseSuccess" Type="Boolean" />
+    <Property Name="CustomerResult" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="ExceptionMsg" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="ExecStatus" Type="Int32" />
+  </EntityType>
+  <EntityType Name="T_ZTB_MoneyBankReturn">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="MPOSID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ORDER_NUMBER" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CUST_ID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ACC_NO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ACC_NAME" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AMOUNT" Type="Decimal" Precision="16" Scale="2" />
+    <Property Name="STATUS" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="REMARK1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="REMARK2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TRAN_FLAG" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TRAN_TIME" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="BRANCH_NAME" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SIGNSTRING" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="CHECKOK" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="T_ZTB_MoneyPayment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="ProSectionID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ProSectionName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="ProSectionCode" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="UserId" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PayTime" Type="DateTime" />
+    <Property Name="PayMoney" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PayType" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="CardNum" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="IsCheck" Type="Int32" />
+    <Property Name="ReturnUserId" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ReTurnUserName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ReturnTime" Type="DateTime" />
+    <Property Name="ReturnWindow" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ReturnPhone" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="ReturnYingGaiMon" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ReturnShiJiMon" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ReturnBaoHanYouXiaoQi" Type="DateTime" />
+    <Property Name="ReturnBaoHanBank" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ReturnBaoHanNum" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="IsReturn" Type="Int32" />
+    <Property Name="UnitId" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="UnitName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="UnitCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BankCardNum" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BankName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="CaseID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ProName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="ProCode" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="PayPage" Type="Int32" />
+    <Property Name="PayPageText" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="FromSystem" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PayID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Out_trade_no" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="QueRenRuZhangTime" Type="DateTime" />
+    <Property Name="QueRenRuZhangPerson" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PayLinkPerson" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PayLinkPersonTel" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PayLinkPersonMobileTel" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="IsWinBid" Type="Int32" />
+    <Property Name="TouBiaoEndTime" Type="DateTime" />
+    <Property Name="JiaoFeiBiLv" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Contentv" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="T_ZTB_Order">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="ProName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ProCode" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ProCaseid" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="UnitName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="UnitID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PayFee" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MoneyPayID" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="FromSystem" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Out_Trade_No" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="InvoiceTitle" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="ProInfo" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="PayTypeStr" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="OrderRemark" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="ProTitle" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PubKey" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="T_ZTB_ReservePlace">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="CaseId" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ResType" Type="Int32" />
+    <Property Name="Traderers" Type="Int32" />
+    <Property Name="Regulators" Type="Int32" />
+    <Property Name="OtherPeople" Type="Int32" />
+    <Property Name="Applicants" Type="Int32" />
+    <Property Name="SiteSet" Type="Int32" />
+    <Property Name="Logo" Type="Int32" />
+    <Property Name="NoteBook" Type="Int32" />
+    <Property Name="NumMachine" Type="Int32" />
+    <Property Name="Projector" Type="Int32" />
+    <Property Name="OtherRquest" Type="Int32" />
+    <Property Name="SiteName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="UseStartTime" Type="DateTime" />
+    <Property Name="UseEndTime" Type="DateTime" />
+    <Property Name="ManagerId" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AcceptName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Phone" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="TradeOrgId" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ResNum" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ResMemberNum" Type="Int32" />
+    <Property Name="ManagerName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="OtherYq" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="ProName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="ProCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TradeOrg" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="ManagerPhone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Statu" Type="Int32" />
+    <Property Name="Reason" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="ComeFrom" Type="Int32" />
+  </EntityType>
+  <EntityType Name="T_ZTB_ValueReturn">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="Value" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="XmlValue" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+</Schema>

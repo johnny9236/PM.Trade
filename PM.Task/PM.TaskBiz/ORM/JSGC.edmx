@@ -1,0 +1,797 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="pmBidOnline_BusinessModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="pmBidOnline_BusinessModelStoreContainer">
+          <EntitySet Name="T_JSGC_OtherAvoid" EntityType="pmBidOnline_BusinessModel.Store.T_JSGC_OtherAvoid" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_JSGC_ProjectExpertFlow" EntityType="pmBidOnline_BusinessModel.Store.T_JSGC_ProjectExpertFlow" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_JSGC_ProjectExperts" EntityType="pmBidOnline_BusinessModel.Store.T_JSGC_ProjectExperts" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_JSGC_ProjectInfo" EntityType="pmBidOnline_BusinessModel.Store.T_JSGC_ProjectInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_JSGC_TenderBM" EntityType="pmBidOnline_BusinessModel.Store.T_JSGC_TenderBM" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_SyncExpertCondition" EntityType="pmBidOnline_BusinessModel.Store.T_SyncExpertCondition" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_ZFCG_ProjectInfo" EntityType="pmBidOnline_BusinessModel.Store.T_ZFCG_ProjectInfo" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="T_JSGC_OtherAvoid">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="AvoidUnit" Type="nvarchar" MaxLength="150" />
+          <Property Name="OrganizationCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="AvoidReason" Type="nvarchar" Nullable="false" MaxLength="350" />
+          <Property Name="pid" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="T_JSGC_ProjectExpertFlow">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CaseId" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="Statu" Type="int" />
+          <Property Name="IsPass" Type="int" />
+          <Property Name="ProxyName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ProxyUnit" Type="nvarchar" MaxLength="100" />
+          <Property Name="BudgetScale" Type="nvarchar" MaxLength="100" />
+          <Property Name="ApprovalFile" Type="nvarchar" MaxLength="50" />
+          <Property Name="ApprovaFilename" Type="nvarchar" MaxLength="100" />
+          <Property Name="ApprovaFilePath" Type="nvarchar" MaxLength="100" />
+          <Property Name="OpeningTime" Type="datetime" />
+          <Property Name="JudgesAddress" Type="nvarchar" MaxLength="150" />
+          <Property Name="DetermineMethod" Type="int" />
+          <Property Name="CommitteeCount" Type="int" />
+          <Property Name="ExpertCount" Type="int" />
+          <Property Name="TendererName" Type="nvarchar" MaxLength="50" />
+          <Property Name="TendererPhone" Type="int" />
+          <Property Name="LibraryType" Type="int" />
+          <Property Name="OtherTypeName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ExtractionRange" Type="int" />
+          <Property Name="OtherRangeCode" Type="nvarchar" MaxLength="100" />
+          <Property Name="OtherRangeName" Type="nvarchar" MaxLength="50" />
+          <Property Name="SpecialtyPeople" Type="text" />
+          <Property Name="Technology" Type="int" />
+          <Property Name="Business" Type="int" />
+          <Property Name="PurchaseNameAndPhone" Type="text" />
+          <Property Name="AvoidUnit" Type="nvarchar" MaxLength="20" />
+          <Property Name="OtherAvoid" Type="text" />
+          <Property Name="ProjctName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ProjectApproval" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProjectCode" Type="nvarchar" MaxLength="100" />
+          <Property Name="OwnerUnit" Type="nvarchar" MaxLength="100" />
+          <Property Name="OwnerCode" Type="nvarchar" MaxLength="150" />
+          <Property Name="Terminal" Type="nvarchar" MaxLength="100" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="500" />
+          <Property Name="Contact" Type="nvarchar" MaxLength="50" />
+          <Property Name="EvaluationTime" Type="datetime" />
+          <Property Name="SiphonTime" Type="datetime" />
+          <Property Name="RealNum" Type="int" />
+          <Property Name="MustNum" Type="int" />
+          <Property Name="BidStartTime" Type="datetime" />
+          <Property Name="BidEndTime" Type="datetime" />
+          <Property Name="Creator" Type="uniqueidentifier" />
+          <Property Name="AgentOrg" Type="nvarchar" MaxLength="50" />
+          <Property Name="Reason" Type="nvarchar(max)" />
+          <Property Name="PlanReviewFee" Type="float" />
+          <Property Name="PlanSelectTime" Type="datetime" />
+          <Property Name="AutoSelectTime" Type="datetime" />
+          <Property Name="Process" Type="int" />
+          <Property Name="ZbbContact" Type="nvarchar" MaxLength="30" />
+          <Property Name="ZbbMobile" Type="nvarchar" MaxLength="20" />
+          <Property Name="JyzxMobile" Type="nvarchar" MaxLength="20" />
+          <Property Name="XPXS" Type="nvarchar" MaxLength="10" />
+          <Property Name="JyzxContact" Type="nvarchar" MaxLength="30" />
+          <Property Name="ProsectionID" Type="nvarchar" MaxLength="1000" />
+          <Property Name="ProsectionName" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="T_JSGC_ProjectExperts">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EXPERTID" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProjectID" Type="uniqueidentifier" />
+          <Property Name="ProjectName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ExpertName" Type="nvarchar" MaxLength="40" />
+          <Property Name="ExpertPhone" Type="nvarchar" MaxLength="20" />
+          <Property Name="AreaId" Type="uniqueidentifier" />
+          <Property Name="Area" Type="nvarchar" MaxLength="40" />
+          <Property Name="BidMajor" Type="nvarchar" MaxLength="100" />
+          <Property Name="MajorId" Type="uniqueidentifier" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="40" />
+          <Property Name="UserKey" Type="nvarchar" MaxLength="40" />
+          <Property Name="IsLockedOut" Type="int" />
+          <Property Name="IsApproved" Type="int" />
+          <Property Name="PbType" Type="nvarchar" MaxLength="40" />
+          <Property Name="CqDate" Type="datetime" />
+          <Property Name="Expain" Type="nvarchar" MaxLength="200" />
+          <Property Name="IsLead" Type="int" />
+          <Property Name="ExCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsPaid" Type="int" />
+          <Property Name="Issign" Type="int" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="UserPass" Type="nvarchar" MaxLength="40" />
+          <Property Name="IsAssign" Type="int" />
+          <Property Name="ExpertFlowID" Type="uniqueidentifier" />
+          <Property Name="ProSectionID" Type="uniqueidentifier" />
+          <Property Name="ProSectionName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ExpertType" Type="nvarchar" MaxLength="50" />
+          <Property Name="IProjectID" Type="nvarchar" MaxLength="50" />
+          <Property Name="IProSectionID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Captcha" Type="nvarchar" MaxLength="50" />
+          <Property Name="SFZCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sex" Type="nvarchar" MaxLength="10" />
+          <Property Name="ExpertsTitle" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="T_JSGC_ProjectInfo">
+          <Key>
+            <PropertyRef Name="ProjectId" />
+          </Key>
+          <Property Name="ProjectId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProjectName" Type="nvarchar" MaxLength="250" />
+          <Property Name="ProjectNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProOwner" Type="nvarchar" MaxLength="200" />
+          <Property Name="CarryOutAddr" Type="nvarchar(max)" />
+          <Property Name="DealRange" Type="nvarchar" MaxLength="200" />
+          <Property Name="ProScale" Type="nvarchar" MaxLength="200" />
+          <Property Name="GuessPrice" Type="float" />
+          <Property Name="AgentOrg" Type="nvarchar" MaxLength="200" />
+          <Property Name="AreaName" Type="nvarchar" MaxLength="50" />
+          <Property Name="DealForms" Type="nvarchar" MaxLength="50" />
+          <Property Name="OrgForms" Type="nvarchar" MaxLength="50" />
+          <Property Name="ZBForms" Type="nvarchar" MaxLength="50" />
+          <Property Name="Lawer" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="Statu" Type="nvarchar" MaxLength="50" />
+          <Property Name="BidOpeningStart" Type="datetime" />
+          <Property Name="BidOpeningEnd" Type="datetime" />
+          <Property Name="BidEvaluatioStart" Type="datetime" />
+          <Property Name="BidEvaluatioEnd" Type="datetime" />
+          <Property Name="Creator" Type="uniqueidentifier" />
+          <Property Name="UnitId" Type="uniqueidentifier" />
+          <Property Name="ProCorporation" Type="nvarchar" MaxLength="200" />
+          <Property Name="ProCorporationPost" Type="nvarchar" MaxLength="200" />
+          <Property Name="ProCorporationTouch" Type="nvarchar" MaxLength="200" />
+          <Property Name="CompFZRName" Type="nvarchar" MaxLength="100" />
+          <Property Name="CompFZRPost" Type="nvarchar" MaxLength="100" />
+          <Property Name="CompFZRPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProManagerId" Type="uniqueidentifier" />
+          <Property Name="ProManager" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProManagerPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Agent" Type="nvarchar" MaxLength="200" />
+          <Property Name="AgentTouch" Type="nvarchar" MaxLength="200" />
+          <Property Name="AreaID" Type="nvarchar" MaxLength="50" />
+          <Property Name="TradeType" Type="nvarchar(max)" />
+          <Property Name="BaoMingStartTime" Type="datetime" />
+          <Property Name="BaoMingEndTime" Type="datetime" />
+          <Property Name="GetTendFileStartTime" Type="datetime" />
+          <Property Name="GetTendFileEndTime" Type="datetime" />
+          <Property Name="TyEndTime" Type="datetime" />
+          <Property Name="DjtbwjEndTime" Type="datetime" />
+          <Property Name="GetPEFileStartTime" Type="datetime" />
+          <Property Name="GetPEFileEndTime" Type="datetime" />
+          <Property Name="SubmitApplyFileEndTime" Type="datetime" />
+          <Property Name="QuestPEFileEndTime" Type="datetime" />
+          <Property Name="IsDel" Type="int" />
+          <Property Name="BeiAnStatu" Type="bit" />
+          <Property Name="Project_Mark" Type="int" />
+          <Property Name="TenderNotice" Type="nvarchar(max)" />
+          <Property Name="Project_content" Type="nvarchar" MaxLength="1000" />
+          <Property Name="BMType" Type="nvarchar" MaxLength="50" />
+          <Property Name="ZBWJGetType" Type="nvarchar" MaxLength="50" />
+          <Property Name="WorkDays" Type="nvarchar" MaxLength="50" />
+          <Property Name="Quality" Type="nvarchar" MaxLength="100" />
+          <Property Name="sourcefunds" Type="nvarchar" MaxLength="100" />
+          <Property Name="PayBZJStartTime" Type="datetime" />
+          <Property Name="PayBZJEndTime" Type="datetime" />
+          <Property Name="TBBZJYYouXiaoQi" Type="int" />
+          <Property Name="PostEndTime" Type="datetime" />
+          <Property Name="BZJPayFee" Type="int" />
+          <Property Name="Pid" Type="uniqueidentifier" />
+          <Property Name="HasSection" Type="int" />
+          <Property Name="BulidArea" Type="nvarchar" MaxLength="50" />
+          <Property Name="BulidHeight" Type="nvarchar" MaxLength="50" />
+          <Property Name="BulidLayers" Type="nvarchar" MaxLength="50" />
+          <Property Name="BulidSpan" Type="nvarchar" MaxLength="50" />
+          <Property Name="BulidPileType" Type="nvarchar" MaxLength="50" />
+          <Property Name="FBHJType" Type="varchar" MaxLength="50" />
+          <Property Name="FBFWType" Type="varchar" MaxLength="50" />
+          <Property Name="JYFSType" Type="varchar" MaxLength="50" />
+          <Property Name="TKFSType" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="T_JSGC_TenderBM">
+          <Key>
+            <PropertyRef Name="bmId" />
+          </Key>
+          <Property Name="bmId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProjectId" Type="uniqueidentifier" />
+          <Property Name="UnitId" Type="uniqueidentifier" />
+          <Property Name="UnitName" Type="nvarchar" MaxLength="500" />
+          <Property Name="UnitPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="UnitFax" Type="nvarchar" MaxLength="500" />
+          <Property Name="LinkMan" Type="nvarchar" MaxLength="50" />
+          <Property Name="LinkPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Statu" Type="int" />
+          <Property Name="Remark" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="T_SyncExpertCondition">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProjectID" Type="varchar" MaxLength="50" />
+          <Property Name="AvoidFlag" Type="char" MaxLength="2" />
+          <Property Name="GetDtlFlag" Type="char" MaxLength="2" />
+          <Property Name="CreateTM" Type="datetime" />
+          <Property Name="UpdateTM" Type="datetime" />
+        </EntityType>
+        <EntityType Name="T_ZFCG_ProjectInfo">
+          <Key>
+            <PropertyRef Name="ProjectID" />
+          </Key>
+          <Property Name="ProjectID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProjectName" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="ProjectType" Type="int" Nullable="false" />
+          <Property Name="ProjectNo" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="Tenderee" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="ProjectPorperty" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CheckType" Type="int" Nullable="false" />
+          <Property Name="TenderDeadLine" Type="datetime" Nullable="false" />
+          <Property Name="PayDeadLine" Type="datetime" Nullable="false" />
+          <Property Name="KBTime" Type="datetime" />
+          <Property Name="TenderNotice" Type="text" />
+          <Property Name="Creator" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Createtime" Type="datetime" Nullable="false" />
+          <Property Name="ProjectStatus" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatorName" Type="nvarchar" MaxLength="200" />
+          <Property Name="BuyType" Type="nvarchar" MaxLength="50" />
+          <Property Name="SynAction" Type="int" Nullable="false" />
+          <Property Name="SynFlag" Type="bit" />
+          <Property Name="SynMsg" Type="text" />
+          <Property Name="ActionNum" Type="varchar" MaxLength="50" />
+          <Property Name="FileDeadLine" Type="datetime" />
+          <Property Name="State" Type="int" />
+          <Property Name="NoticeState" Type="int" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="pmBidOnline_BusinessModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="JSGC" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="T_JSGC_ProjectExperts" EntityType="pmBidOnline_BusinessModel.T_JSGC_ProjectExperts" />
+          <EntitySet Name="T_JSGC_ProjectInfo" EntityType="pmBidOnline_BusinessModel.T_JSGC_ProjectInfo" />
+          <EntitySet Name="T_JSGC_OtherAvoid" EntityType="pmBidOnline_BusinessModel.T_JSGC_OtherAvoid" />
+          <EntitySet Name="T_JSGC_ProjectExpertFlow" EntityType="pmBidOnline_BusinessModel.T_JSGC_ProjectExpertFlow" />
+          <EntitySet Name="T_JSGC_TenderBM" EntityType="pmBidOnline_BusinessModel.T_JSGC_TenderBM" />
+          <EntitySet Name="T_SyncExpertCondition" EntityType="pmBidOnline_BusinessModel.T_SyncExpertCondition" />
+          <EntitySet Name="T_ZFCG_ProjectInfo" EntityType="pmBidOnline_BusinessModel.T_ZFCG_ProjectInfo" />
+        </EntityContainer>
+        <EntityType Name="T_JSGC_ProjectExperts">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="String" Name="EXPERTID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="ProjectID" />
+          <Property Type="String" Name="ProjectName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ExpertName" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ExpertPhone" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="AreaId" />
+          <Property Type="String" Name="Area" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BidMajor" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="MajorId" />
+          <Property Type="String" Name="UserName" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UserKey" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="IsLockedOut" />
+          <Property Type="Int32" Name="IsApproved" />
+          <Property Type="String" Name="PbType" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CqDate" />
+          <Property Type="String" Name="Expain" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="IsLead" />
+          <Property Type="String" Name="ExCode" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="IsPaid" />
+          <Property Type="Int32" Name="Issign" />
+          <Property Type="DateTime" Name="CreateDate" />
+          <Property Type="String" Name="UserPass" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="IsAssign" />
+          <Property Type="Guid" Name="ExpertFlowID" />
+          <Property Type="Guid" Name="ProSectionID" />
+          <Property Type="String" Name="ProSectionName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ExpertType" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IProjectID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IProSectionID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Captcha" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SFZCode" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Sex" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ExpertsTitle" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="T_JSGC_ProjectInfo">
+          <Key>
+            <PropertyRef Name="ProjectId" />
+          </Key>
+          <Property Type="Guid" Name="ProjectId" Nullable="false" />
+          <Property Type="String" Name="ProjectName" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProjectNo" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProOwner" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CarryOutAddr" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DealRange" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProScale" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="GuessPrice" />
+          <Property Type="String" Name="AgentOrg" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AreaName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DealForms" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="OrgForms" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ZBForms" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Lawer" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateTime" />
+          <Property Type="String" Name="Statu" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="BidOpeningStart" />
+          <Property Type="DateTime" Name="BidOpeningEnd" />
+          <Property Type="DateTime" Name="BidEvaluatioStart" />
+          <Property Type="DateTime" Name="BidEvaluatioEnd" />
+          <Property Type="Guid" Name="Creator" />
+          <Property Type="Guid" Name="UnitId" />
+          <Property Type="String" Name="ProCorporation" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProCorporationPost" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProCorporationTouch" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CompFZRName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CompFZRPost" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CompFZRPhone" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="ProManagerId" />
+          <Property Type="String" Name="ProManager" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProManagerPhone" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Agent" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AgentTouch" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AreaID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TradeType" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="BaoMingStartTime" />
+          <Property Type="DateTime" Name="BaoMingEndTime" />
+          <Property Type="DateTime" Name="GetTendFileStartTime" />
+          <Property Type="DateTime" Name="GetTendFileEndTime" />
+          <Property Type="DateTime" Name="TyEndTime" />
+          <Property Type="DateTime" Name="DjtbwjEndTime" />
+          <Property Type="DateTime" Name="GetPEFileStartTime" />
+          <Property Type="DateTime" Name="GetPEFileEndTime" />
+          <Property Type="DateTime" Name="SubmitApplyFileEndTime" />
+          <Property Type="DateTime" Name="QuestPEFileEndTime" />
+          <Property Type="Int32" Name="IsDel" />
+          <Property Type="Boolean" Name="BeiAnStatu" />
+          <Property Type="Int32" Name="Project_Mark" />
+          <Property Type="String" Name="TenderNotice" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Project_content" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BMType" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ZBWJGetType" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="WorkDays" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Quality" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="sourcefunds" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="PayBZJStartTime" />
+          <Property Type="DateTime" Name="PayBZJEndTime" />
+          <Property Type="Int32" Name="TBBZJYYouXiaoQi" />
+          <Property Type="DateTime" Name="PostEndTime" />
+          <Property Type="Int32" Name="BZJPayFee" />
+          <Property Type="Guid" Name="Pid" />
+          <Property Type="Int32" Name="HasSection" />
+          <Property Type="String" Name="BulidArea" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BulidHeight" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BulidLayers" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BulidSpan" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BulidPileType" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FBHJType" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FBFWType" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="JYFSType" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TKFSType" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="T_JSGC_OtherAvoid">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Guid" Name="id" Nullable="false" />
+          <Property Type="String" Name="AvoidUnit" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="OrganizationCode" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AvoidReason" Nullable="false" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="pid" />
+        </EntityType>
+        <EntityType Name="T_JSGC_ProjectExpertFlow">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="Guid" Name="CaseId" />
+          <Property Type="DateTime" Name="CreateDate" />
+          <Property Type="Int32" Name="Statu" />
+          <Property Type="Int32" Name="IsPass" />
+          <Property Type="String" Name="ProxyName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProxyUnit" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BudgetScale" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ApprovalFile" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ApprovaFilename" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ApprovaFilePath" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="OpeningTime" />
+          <Property Type="String" Name="JudgesAddress" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="DetermineMethod" />
+          <Property Type="Int32" Name="CommitteeCount" />
+          <Property Type="Int32" Name="ExpertCount" />
+          <Property Type="String" Name="TendererName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="TendererPhone" />
+          <Property Type="Int32" Name="LibraryType" />
+          <Property Type="String" Name="OtherTypeName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ExtractionRange" />
+          <Property Type="String" Name="OtherRangeCode" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="OtherRangeName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SpecialtyPeople" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Technology" />
+          <Property Type="Int32" Name="Business" />
+          <Property Type="String" Name="PurchaseNameAndPhone" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AvoidUnit" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="OtherAvoid" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ProjctName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProjectApproval" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProjectCode" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="OwnerUnit" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="OwnerCode" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Terminal" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Remark" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Contact" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="EvaluationTime" />
+          <Property Type="DateTime" Name="SiphonTime" />
+          <Property Type="Int32" Name="RealNum" />
+          <Property Type="Int32" Name="MustNum" />
+          <Property Type="DateTime" Name="BidStartTime" />
+          <Property Type="DateTime" Name="BidEndTime" />
+          <Property Type="Guid" Name="Creator" />
+          <Property Type="String" Name="AgentOrg" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Reason" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="PlanReviewFee" />
+          <Property Type="DateTime" Name="PlanSelectTime" />
+          <Property Type="DateTime" Name="AutoSelectTime" />
+          <Property Type="Int32" Name="Process" />
+          <Property Type="String" Name="ZbbContact" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ZbbMobile" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="JyzxMobile" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="XPXS" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="JyzxContact" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProsectionID" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProsectionName" MaxLength="1000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="T_JSGC_TenderBM">
+          <Key>
+            <PropertyRef Name="bmId" />
+          </Key>
+          <Property Type="Guid" Name="bmId" Nullable="false" />
+          <Property Type="Guid" Name="ProjectId" />
+          <Property Type="Guid" Name="UnitId" />
+          <Property Type="String" Name="UnitName" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UnitPhone" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UnitFax" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LinkMan" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LinkPhone" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Statu" />
+          <Property Type="String" Name="Remark" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="T_SyncExpertCondition">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Guid" Name="ID" Nullable="false" />
+          <Property Type="String" Name="ProjectID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AvoidFlag" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="GetDtlFlag" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Type="DateTime" Name="CreateTM" />
+          <Property Type="DateTime" Name="UpdateTM" />
+        </EntityType>
+        <EntityType Name="T_ZFCG_ProjectInfo">
+          <Key>
+            <PropertyRef Name="ProjectID" />
+          </Key>
+          <Property Type="Guid" Name="ProjectID" Nullable="false" />
+          <Property Type="String" Name="ProjectName" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ProjectType" Nullable="false" />
+          <Property Type="String" Name="ProjectNo" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Tenderee" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProjectPorperty" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CheckType" Nullable="false" />
+          <Property Type="DateTime" Name="TenderDeadLine" Nullable="false" />
+          <Property Type="DateTime" Name="PayDeadLine" Nullable="false" />
+          <Property Type="DateTime" Name="KBTime" />
+          <Property Type="String" Name="TenderNotice" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Creator" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Createtime" Nullable="false" />
+          <Property Type="String" Name="ProjectStatus" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CreatorName" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BuyType" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="SynAction" Nullable="false" />
+          <Property Type="Boolean" Name="SynFlag" />
+          <Property Type="String" Name="SynMsg" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ActionNum" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FileDeadLine" />
+          <Property Type="Int32" Name="State" />
+          <Property Type="Int32" Name="NoticeState" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="pmBidOnline_BusinessModelStoreContainer" CdmEntityContainer="JSGC">
+          <EntitySetMapping Name="T_JSGC_ProjectExperts">
+            <EntityTypeMapping TypeName="pmBidOnline_BusinessModel.T_JSGC_ProjectExperts">
+              <MappingFragment StoreEntitySet="T_JSGC_ProjectExperts">
+                <ScalarProperty Name="ExpertsTitle" ColumnName="ExpertsTitle" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="SFZCode" ColumnName="SFZCode" />
+                <ScalarProperty Name="Captcha" ColumnName="Captcha" />
+                <ScalarProperty Name="IProSectionID" ColumnName="IProSectionID" />
+                <ScalarProperty Name="IProjectID" ColumnName="IProjectID" />
+                <ScalarProperty Name="ExpertType" ColumnName="ExpertType" />
+                <ScalarProperty Name="ProSectionName" ColumnName="ProSectionName" />
+                <ScalarProperty Name="ProSectionID" ColumnName="ProSectionID" />
+                <ScalarProperty Name="ExpertFlowID" ColumnName="ExpertFlowID" />
+                <ScalarProperty Name="IsAssign" ColumnName="IsAssign" />
+                <ScalarProperty Name="UserPass" ColumnName="UserPass" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Issign" ColumnName="Issign" />
+                <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+                <ScalarProperty Name="ExCode" ColumnName="ExCode" />
+                <ScalarProperty Name="IsLead" ColumnName="IsLead" />
+                <ScalarProperty Name="Expain" ColumnName="Expain" />
+                <ScalarProperty Name="CqDate" ColumnName="CqDate" />
+                <ScalarProperty Name="PbType" ColumnName="PbType" />
+                <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+                <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+                <ScalarProperty Name="UserKey" ColumnName="UserKey" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="MajorId" ColumnName="MajorId" />
+                <ScalarProperty Name="BidMajor" ColumnName="BidMajor" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="AreaId" ColumnName="AreaId" />
+                <ScalarProperty Name="ExpertPhone" ColumnName="ExpertPhone" />
+                <ScalarProperty Name="ExpertName" ColumnName="ExpertName" />
+                <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+                <ScalarProperty Name="EXPERTID" ColumnName="EXPERTID" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_JSGC_ProjectInfo">
+            <EntityTypeMapping TypeName="pmBidOnline_BusinessModel.T_JSGC_ProjectInfo">
+              <MappingFragment StoreEntitySet="T_JSGC_ProjectInfo">
+                <ScalarProperty Name="TKFSType" ColumnName="TKFSType" />
+                <ScalarProperty Name="JYFSType" ColumnName="JYFSType" />
+                <ScalarProperty Name="FBFWType" ColumnName="FBFWType" />
+                <ScalarProperty Name="FBHJType" ColumnName="FBHJType" />
+                <ScalarProperty Name="BulidPileType" ColumnName="BulidPileType" />
+                <ScalarProperty Name="BulidSpan" ColumnName="BulidSpan" />
+                <ScalarProperty Name="BulidLayers" ColumnName="BulidLayers" />
+                <ScalarProperty Name="BulidHeight" ColumnName="BulidHeight" />
+                <ScalarProperty Name="BulidArea" ColumnName="BulidArea" />
+                <ScalarProperty Name="HasSection" ColumnName="HasSection" />
+                <ScalarProperty Name="Pid" ColumnName="Pid" />
+                <ScalarProperty Name="BZJPayFee" ColumnName="BZJPayFee" />
+                <ScalarProperty Name="PostEndTime" ColumnName="PostEndTime" />
+                <ScalarProperty Name="TBBZJYYouXiaoQi" ColumnName="TBBZJYYouXiaoQi" />
+                <ScalarProperty Name="PayBZJEndTime" ColumnName="PayBZJEndTime" />
+                <ScalarProperty Name="PayBZJStartTime" ColumnName="PayBZJStartTime" />
+                <ScalarProperty Name="sourcefunds" ColumnName="sourcefunds" />
+                <ScalarProperty Name="Quality" ColumnName="Quality" />
+                <ScalarProperty Name="WorkDays" ColumnName="WorkDays" />
+                <ScalarProperty Name="ZBWJGetType" ColumnName="ZBWJGetType" />
+                <ScalarProperty Name="BMType" ColumnName="BMType" />
+                <ScalarProperty Name="Project_content" ColumnName="Project_content" />
+                <ScalarProperty Name="TenderNotice" ColumnName="TenderNotice" />
+                <ScalarProperty Name="Project_Mark" ColumnName="Project_Mark" />
+                <ScalarProperty Name="BeiAnStatu" ColumnName="BeiAnStatu" />
+                <ScalarProperty Name="IsDel" ColumnName="IsDel" />
+                <ScalarProperty Name="QuestPEFileEndTime" ColumnName="QuestPEFileEndTime" />
+                <ScalarProperty Name="SubmitApplyFileEndTime" ColumnName="SubmitApplyFileEndTime" />
+                <ScalarProperty Name="GetPEFileEndTime" ColumnName="GetPEFileEndTime" />
+                <ScalarProperty Name="GetPEFileStartTime" ColumnName="GetPEFileStartTime" />
+                <ScalarProperty Name="DjtbwjEndTime" ColumnName="DjtbwjEndTime" />
+                <ScalarProperty Name="TyEndTime" ColumnName="TyEndTime" />
+                <ScalarProperty Name="GetTendFileEndTime" ColumnName="GetTendFileEndTime" />
+                <ScalarProperty Name="GetTendFileStartTime" ColumnName="GetTendFileStartTime" />
+                <ScalarProperty Name="BaoMingEndTime" ColumnName="BaoMingEndTime" />
+                <ScalarProperty Name="BaoMingStartTime" ColumnName="BaoMingStartTime" />
+                <ScalarProperty Name="TradeType" ColumnName="TradeType" />
+                <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+                <ScalarProperty Name="AgentTouch" ColumnName="AgentTouch" />
+                <ScalarProperty Name="Agent" ColumnName="Agent" />
+                <ScalarProperty Name="ProManagerPhone" ColumnName="ProManagerPhone" />
+                <ScalarProperty Name="ProManager" ColumnName="ProManager" />
+                <ScalarProperty Name="ProManagerId" ColumnName="ProManagerId" />
+                <ScalarProperty Name="CompFZRPhone" ColumnName="CompFZRPhone" />
+                <ScalarProperty Name="CompFZRPost" ColumnName="CompFZRPost" />
+                <ScalarProperty Name="CompFZRName" ColumnName="CompFZRName" />
+                <ScalarProperty Name="ProCorporationTouch" ColumnName="ProCorporationTouch" />
+                <ScalarProperty Name="ProCorporationPost" ColumnName="ProCorporationPost" />
+                <ScalarProperty Name="ProCorporation" ColumnName="ProCorporation" />
+                <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+                <ScalarProperty Name="Creator" ColumnName="Creator" />
+                <ScalarProperty Name="BidEvaluatioEnd" ColumnName="BidEvaluatioEnd" />
+                <ScalarProperty Name="BidEvaluatioStart" ColumnName="BidEvaluatioStart" />
+                <ScalarProperty Name="BidOpeningEnd" ColumnName="BidOpeningEnd" />
+                <ScalarProperty Name="BidOpeningStart" ColumnName="BidOpeningStart" />
+                <ScalarProperty Name="Statu" ColumnName="Statu" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Lawer" ColumnName="Lawer" />
+                <ScalarProperty Name="ZBForms" ColumnName="ZBForms" />
+                <ScalarProperty Name="OrgForms" ColumnName="OrgForms" />
+                <ScalarProperty Name="DealForms" ColumnName="DealForms" />
+                <ScalarProperty Name="AreaName" ColumnName="AreaName" />
+                <ScalarProperty Name="AgentOrg" ColumnName="AgentOrg" />
+                <ScalarProperty Name="GuessPrice" ColumnName="GuessPrice" />
+                <ScalarProperty Name="ProScale" ColumnName="ProScale" />
+                <ScalarProperty Name="DealRange" ColumnName="DealRange" />
+                <ScalarProperty Name="CarryOutAddr" ColumnName="CarryOutAddr" />
+                <ScalarProperty Name="ProOwner" ColumnName="ProOwner" />
+                <ScalarProperty Name="ProjectNo" ColumnName="ProjectNo" />
+                <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+                <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_JSGC_OtherAvoid">
+            <EntityTypeMapping TypeName="pmBidOnline_BusinessModel.T_JSGC_OtherAvoid">
+              <MappingFragment StoreEntitySet="T_JSGC_OtherAvoid">
+                <ScalarProperty Name="pid" ColumnName="pid" />
+                <ScalarProperty Name="AvoidReason" ColumnName="AvoidReason" />
+                <ScalarProperty Name="OrganizationCode" ColumnName="OrganizationCode" />
+                <ScalarProperty Name="AvoidUnit" ColumnName="AvoidUnit" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_JSGC_ProjectExpertFlow">
+            <EntityTypeMapping TypeName="pmBidOnline_BusinessModel.T_JSGC_ProjectExpertFlow">
+              <MappingFragment StoreEntitySet="T_JSGC_ProjectExpertFlow">
+                <ScalarProperty Name="ProsectionName" ColumnName="ProsectionName" />
+                <ScalarProperty Name="ProsectionID" ColumnName="ProsectionID" />
+                <ScalarProperty Name="JyzxContact" ColumnName="JyzxContact" />
+                <ScalarProperty Name="XPXS" ColumnName="XPXS" />
+                <ScalarProperty Name="JyzxMobile" ColumnName="JyzxMobile" />
+                <ScalarProperty Name="ZbbMobile" ColumnName="ZbbMobile" />
+                <ScalarProperty Name="ZbbContact" ColumnName="ZbbContact" />
+                <ScalarProperty Name="Process" ColumnName="Process" />
+                <ScalarProperty Name="AutoSelectTime" ColumnName="AutoSelectTime" />
+                <ScalarProperty Name="PlanSelectTime" ColumnName="PlanSelectTime" />
+                <ScalarProperty Name="PlanReviewFee" ColumnName="PlanReviewFee" />
+                <ScalarProperty Name="Reason" ColumnName="Reason" />
+                <ScalarProperty Name="AgentOrg" ColumnName="AgentOrg" />
+                <ScalarProperty Name="Creator" ColumnName="Creator" />
+                <ScalarProperty Name="BidEndTime" ColumnName="BidEndTime" />
+                <ScalarProperty Name="BidStartTime" ColumnName="BidStartTime" />
+                <ScalarProperty Name="MustNum" ColumnName="MustNum" />
+                <ScalarProperty Name="RealNum" ColumnName="RealNum" />
+                <ScalarProperty Name="SiphonTime" ColumnName="SiphonTime" />
+                <ScalarProperty Name="EvaluationTime" ColumnName="EvaluationTime" />
+                <ScalarProperty Name="Contact" ColumnName="Contact" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Terminal" ColumnName="Terminal" />
+                <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+                <ScalarProperty Name="OwnerUnit" ColumnName="OwnerUnit" />
+                <ScalarProperty Name="ProjectCode" ColumnName="ProjectCode" />
+                <ScalarProperty Name="ProjectApproval" ColumnName="ProjectApproval" />
+                <ScalarProperty Name="ProjctName" ColumnName="ProjctName" />
+                <ScalarProperty Name="OtherAvoid" ColumnName="OtherAvoid" />
+                <ScalarProperty Name="AvoidUnit" ColumnName="AvoidUnit" />
+                <ScalarProperty Name="PurchaseNameAndPhone" ColumnName="PurchaseNameAndPhone" />
+                <ScalarProperty Name="Business" ColumnName="Business" />
+                <ScalarProperty Name="Technology" ColumnName="Technology" />
+                <ScalarProperty Name="SpecialtyPeople" ColumnName="SpecialtyPeople" />
+                <ScalarProperty Name="OtherRangeName" ColumnName="OtherRangeName" />
+                <ScalarProperty Name="OtherRangeCode" ColumnName="OtherRangeCode" />
+                <ScalarProperty Name="ExtractionRange" ColumnName="ExtractionRange" />
+                <ScalarProperty Name="OtherTypeName" ColumnName="OtherTypeName" />
+                <ScalarProperty Name="LibraryType" ColumnName="LibraryType" />
+                <ScalarProperty Name="TendererPhone" ColumnName="TendererPhone" />
+                <ScalarProperty Name="TendererName" ColumnName="TendererName" />
+                <ScalarProperty Name="ExpertCount" ColumnName="ExpertCount" />
+                <ScalarProperty Name="CommitteeCount" ColumnName="CommitteeCount" />
+                <ScalarProperty Name="DetermineMethod" ColumnName="DetermineMethod" />
+                <ScalarProperty Name="JudgesAddress" ColumnName="JudgesAddress" />
+                <ScalarProperty Name="OpeningTime" ColumnName="OpeningTime" />
+                <ScalarProperty Name="ApprovaFilePath" ColumnName="ApprovaFilePath" />
+                <ScalarProperty Name="ApprovaFilename" ColumnName="ApprovaFilename" />
+                <ScalarProperty Name="ApprovalFile" ColumnName="ApprovalFile" />
+                <ScalarProperty Name="BudgetScale" ColumnName="BudgetScale" />
+                <ScalarProperty Name="ProxyUnit" ColumnName="ProxyUnit" />
+                <ScalarProperty Name="ProxyName" ColumnName="ProxyName" />
+                <ScalarProperty Name="IsPass" ColumnName="IsPass" />
+                <ScalarProperty Name="Statu" ColumnName="Statu" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CaseId" ColumnName="CaseId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_JSGC_TenderBM">
+            <EntityTypeMapping TypeName="pmBidOnline_BusinessModel.T_JSGC_TenderBM">
+              <MappingFragment StoreEntitySet="T_JSGC_TenderBM">
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Statu" ColumnName="Statu" />
+                <ScalarProperty Name="LinkPhone" ColumnName="LinkPhone" />
+                <ScalarProperty Name="LinkMan" ColumnName="LinkMan" />
+                <ScalarProperty Name="UnitFax" ColumnName="UnitFax" />
+                <ScalarProperty Name="UnitPhone" ColumnName="UnitPhone" />
+                <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+                <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+                <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+                <ScalarProperty Name="bmId" ColumnName="bmId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_SyncExpertCondition">
+            <EntityTypeMapping TypeName="pmBidOnline_BusinessModel.T_SyncExpertCondition">
+              <MappingFragment StoreEntitySet="T_SyncExpertCondition">
+                <ScalarProperty Name="UpdateTM" ColumnName="UpdateTM" />
+                <ScalarProperty Name="CreateTM" ColumnName="CreateTM" />
+                <ScalarProperty Name="GetDtlFlag" ColumnName="GetDtlFlag" />
+                <ScalarProperty Name="AvoidFlag" ColumnName="AvoidFlag" />
+                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_ZFCG_ProjectInfo">
+            <EntityTypeMapping TypeName="pmBidOnline_BusinessModel.T_ZFCG_ProjectInfo">
+              <MappingFragment StoreEntitySet="T_ZFCG_ProjectInfo">
+                <ScalarProperty Name="NoticeState" ColumnName="NoticeState" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="FileDeadLine" ColumnName="FileDeadLine" />
+                <ScalarProperty Name="ActionNum" ColumnName="ActionNum" />
+                <ScalarProperty Name="SynMsg" ColumnName="SynMsg" />
+                <ScalarProperty Name="SynFlag" ColumnName="SynFlag" />
+                <ScalarProperty Name="SynAction" ColumnName="SynAction" />
+                <ScalarProperty Name="BuyType" ColumnName="BuyType" />
+                <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+                <ScalarProperty Name="ProjectStatus" ColumnName="ProjectStatus" />
+                <ScalarProperty Name="Createtime" ColumnName="Createtime" />
+                <ScalarProperty Name="Creator" ColumnName="Creator" />
+                <ScalarProperty Name="TenderNotice" ColumnName="TenderNotice" />
+                <ScalarProperty Name="KBTime" ColumnName="KBTime" />
+                <ScalarProperty Name="PayDeadLine" ColumnName="PayDeadLine" />
+                <ScalarProperty Name="TenderDeadLine" ColumnName="TenderDeadLine" />
+                <ScalarProperty Name="CheckType" ColumnName="CheckType" />
+                <ScalarProperty Name="ProjectPorperty" ColumnName="ProjectPorperty" />
+                <ScalarProperty Name="Tenderee" ColumnName="Tenderee" />
+                <ScalarProperty Name="ProjectNo" ColumnName="ProjectNo" />
+                <ScalarProperty Name="ProjectType" ColumnName="ProjectType" />
+                <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="JSGC" ZoomLevel="82">
+        <EntityTypeShape EntityType="pmBidOnline_BusinessModel.T_JSGC_ProjectExperts" Width="1.5" PointX="0.75" PointY="0.75" Height="7.5096036783854174" />
+        <EntityTypeShape EntityType="pmBidOnline_BusinessModel.T_JSGC_ProjectInfo" Width="1.5" PointX="2.75" PointY="0.75" Height="14.577332356770825" />
+        <EntityTypeShape EntityType="pmBidOnline_BusinessModel.T_JSGC_OtherAvoid" Width="1.5" PointX="5.375" PointY="0.75" Height="1.9700325520833326" />
+        <EntityTypeShape EntityType="pmBidOnline_BusinessModel.T_JSGC_ProjectExpertFlow" Width="1.5" PointX="5.375" PointY="3.75" Height="11.903056640625003" />
+        <EntityTypeShape EntityType="pmBidOnline_BusinessModel.T_JSGC_TenderBM" Width="1.5" PointX="7.375" PointY="0.75" Height="2.9251310221354156" />
+        <EntityTypeShape EntityType="pmBidOnline_BusinessModel.T_SyncExpertCondition" Width="1.5" PointX="7.375" PointY="4.75" Height="2.1610522460937496" />
+        <EntityTypeShape EntityType="pmBidOnline_BusinessModel.T_ZFCG_ProjectInfo" Width="1.5" PointX="7.375" PointY="7.75" Height="5.4083870442708317" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,2 @@
+E:\代码\PM.Trade\PM.TradeNUnitTest\bin\Release\PM.TradeNUnitTest.exe.config
+E:\资料\代码\PM.Trade\PM.TradeNUnitTest\bin\Release\PM.TradeNUnitTest.exe.config

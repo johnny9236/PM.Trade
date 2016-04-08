@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PM_IntegratedModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="publicEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="T_Pay_Order" EntityType="PM_IntegratedModel.T_Pay_Order" />
+    <EntitySet Name="T_Pay_Log" EntityType="PM_IntegratedModel.T_Pay_Log" />
+    <EntitySet Name="T_Pay_OrderBusiness" EntityType="PM_IntegratedModel.T_Pay_OrderBusiness" />
+    <EntitySet Name="T_Pay_OrderRequest" EntityType="PM_IntegratedModel.T_Pay_OrderRequest" />
+    <EntitySet Name="T_Pay_OrderResponse" EntityType="PM_IntegratedModel.T_Pay_OrderResponse" />
+  </EntityContainer>
+  <EntityType Name="T_Pay_Order">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="Guid" Nullable="false" />
+    <Property Name="CaseID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PrimaryID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PrimaryCode" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="PrimaryName" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="SlaveID" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="SlaveCode" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="SlaveName" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="BusinessNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="OrderNo" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="OrderName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="PayerID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayerName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="CostType" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="FeeAmount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Remark" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="InvoiceTitle" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="PayAccountNo" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="PayBankAccountType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayAccountName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="PayBankName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="PayBankNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayBankID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayProvince" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayCity" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PaySettingAccNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayCur" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ReceiptBankAccountType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ReceiptAccountNo" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="ReceiptAccountName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="ReceiptBankName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="ReceiptBankNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ReceiptBankID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ReceiptProvince" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ReceiptCity" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ReceiptCur" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ReceiptSettingAccNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="OrderResult" Type="Int32" />
+    <Property Name="OrderTime" Type="DateTime" />
+    <Property Name="OrderOpWay" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="OprationType" Type="Int32" />
+    <Property Name="OrderCombination" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="OrderSerialNumber" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="PayRealAccountName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="PayRealAccountNo" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="PayRealBankName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="PayRealCity" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayRealProvince" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayRealBankNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayRealBankID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayRealSettingAccNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PayInstitutionID" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="ReceiptInstitutionID" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="NotificationURL" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="T_Pay_Log">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="CaseID" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ProSectionID" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OrderNo" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OrderName" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PayerID" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PayerName" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CostType" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="FeeAmount" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Amount" Precision="19" Scale="4" />
+    <Property Type="String" Name="Remark" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="InvoiceTitle" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PayAccountNo" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PayBankAccountType" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PayAccountName" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PayBankName" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PayBankNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PayBankID" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PayProvince" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PayCity" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PayCur" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ReceiptBankAccountType" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ReceiptAccountNo" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ReceiptAccountName" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ReceiptBankName" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ReceiptBankNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ReceiptBankID" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ReceiptProvince" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ReceiptCity" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ReceiptCur" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="OrderResult" />
+    <Property Type="DateTime" Name="OrderTime" />
+    <Property Type="String" Name="OrderOpWay" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="OprationType" />
+  </EntityType>
+  <EntityType Name="T_Pay_OrderBusiness">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Business_ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OrderNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OrderStatus" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MainOrderNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="PayMent_Tm" />
+    <Property Type="String" Name="AccontType" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="InvoiceTitle" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FeeType" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ReMark" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Create_Tm" />
+    <Property Type="DateTime" Name="Up_Tm" />
+  </EntityType>
+  <EntityType Name="T_Pay_OrderRequest">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="PacketMessage" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Signature" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OrderNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="RequestTime" />
+    <Property Type="String" Name="RequestUrl" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SerialNumber" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_Pay_OrderResponse">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="PacketMessage" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Signature" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OrderNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="RequestTime" />
+    <Property Type="String" Name="NoticePacketMessage" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NoticeSignature" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SerialNumber" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

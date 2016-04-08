@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PM.ProtocolsInterface</name>
+    </assembly>
+    <members>
+        <member name="T:PM.ProtocolsInterface.IPaymentProtocol">
+            <summary>
+            支付类型接口
+            </summary>
+        </member>
+        <member name="M:PM.ProtocolsInterface.IPaymentProtocol.CallRemotePay(System.Object,PM.PaymentProtocolModel.CfgInfo)">
+            <summary>
+            支付调用
+            </summary>
+            <param name="paymentModel">请求对象</param>
+            <param name="cfgInfo">对应配置对象</param>
+            <returns>请求操作结果</returns>
+        </member>
+        <member name="M:PM.ProtocolsInterface.IPaymentProtocol.CallBackParse(System.Object,PM.PaymentProtocolModel.CfgInfo)">
+            <summary>
+            响应解析
+            </summary>
+            <param name="paymentModel">响应对象</param>
+            <param name="cfgInfo">对应配置对象</param>
+            <returns>响应操作结果</returns>
+        </member>
+        <member name="T:PM.ProtocolsInterface.IBankCommProtocol">
+            <summary>
+            通用协议 请求后能返回结果 （除掉类似支付）
+            </summary>
+        </member>
+        <member name="M:PM.ProtocolsInterface.IBankCommProtocol.RemoteCall(System.Object,PM.PaymentProtocolModel.CfgInfo)">
+            <summary>
+            请求调用（非支付）
+            </summary>
+            <param name="objModel">请求对象</param>
+            <param name="cfgInfo">配置</param>
+            <returns>调用操作结果</returns>
+        </member>
+    </members>
+</doc>

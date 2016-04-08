@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.TradeNUnitTest\bin\Release\PM.TradeNUnitTest.exe" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-02-24" time="10:51:10">
+  <environment nunit-version="2.5.10.11092" clr-version="4.0.30319.17929" os-version="Microsoft Windows NT 6.1.7600.0" platform="Win32NT" cwd="E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.TradeNUnitTest\bin\Release" machine-name="SUDA-20120614CL" user="Administrator" user-domain="SUDA-20120614CL" />
+  <culture-info current-culture="zh-CN" current-uiculture="zh-CN" />
+  <test-suite type="Assembly" name="E:\工作\支付接口\支付接口方案代码\PM.Trade\PM.TradeNUnitTest\bin\Release\PM.TradeNUnitTest.exe" executed="True" result="Success" success="True" time="61.933" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="PM" executed="True" result="Success" success="True" time="61.927" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="TradeNUnitTest" executed="True" result="Inconclusive" success="False" time="0.010" asserts="0">
+            <results>
+              <test-suite type="TestFixture" name="ALiTest" executed="True" result="Inconclusive" success="False" time="0.005" asserts="0" />
+            </results>
+          </test-suite>
+          <test-suite type="Namespace" name="TradeTest" executed="True" result="Success" success="True" time="61.914" asserts="0">
+            <results>
+              <test-suite type="TestFixture" name="HYTest" executed="True" result="Success" success="True" time="61.901" asserts="0">
+                <results>
+                  <test-case name="PM.TradeTest.HYTest.DoRefound" executed="True" result="Success" success="True" time="61.898" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="LPSTest" executed="True" result="Inconclusive" success="False" time="0.000" asserts="0" />
+              <test-suite type="TestFixture" name="QYTest" executed="True" result="Inconclusive" success="False" time="0.000" asserts="0" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

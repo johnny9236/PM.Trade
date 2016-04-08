@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6748FF39-1A01-4B4D-A8AB-361623AD2ACB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PM.PlaymentPersistence</RootNamespace>
+    <AssemblyName>PM.PlaymentPersistence</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\PM.PlaymentPersistence.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PaymentServiceFactory\CommonFactory.cs" />
+    <Compile Include="PaymentServiceFactory\PayFactory.cs" />
+    <Compile Include="Payment\PersistenceBiz\AHQY\QYPersistence.cs" />
+    <Compile Include="Payment\PersistenceBiz\HuangSan\HuangSanCCBPersistence.cs" />
+    <Compile Include="Payment\PersistenceBiz\HuangSan\HuangSanICBCPersistence.cs" />
+    <Compile Include="Payment\PersistenceBiz\HuangSan\HuangSanTRCBPersistence.cs" />
+    <Compile Include="Payment\PersistenceBiz\HYCOB\HYBOCPersistence.cs" />
+    <Compile Include="Payment\PersistenceBiz\LPSBBC\LPSBBCPersistence.cs" />
+    <Compile Include="PlaymentPersistenceManager.cs" />
+    <Compile Include="ORM\publicEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>publicEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Payment\Persistence\Persistence.cs" />
+    <Compile Include="Payment\Persistence\PayMent.cs" />
+    <Compile Include="Payment\Persistence\TransferAndSettlement.cs" />
+    <Compile Include="Payment\PersistenceBiz\ALi\ALiPersistence.cs" />
+    <Compile Include="Payment\PersistenceBiz\JSABOC\JSABOC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JSABOC.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Payment\PersistenceBiz\JSABOC\JSABOCPersistence.cs" />
+    <Compile Include="Payment\PersistenceBiz\NetBank\NetBankPersistence.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="ORM\publicEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>publicEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Payment\PersistenceBiz\JSABOC\JSABOC.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>JSABOC.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\PM.Payment\PM.PaymentManger\PM.PaymentManger.csproj">
+      <Project>{1DC19734-F00F-429F-A6AD-09EE559D5DFA}</Project>
+      <Name>PM.PaymentManger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PM.Payment\PM.PaymentProtocolModel\PM.PaymentProtocolModel.csproj">
+      <Project>{4A25A656-F4FE-4734-9C67-1C14794ED278}</Project>
+      <Name>PM.PaymentProtocolModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PM.Task\PM.TaskBizInterface\PM.TaskBizInterface.csproj">
+      <Project>{DF1D0B50-AC85-45BD-B8AC-6B2127FF117D}</Project>
+      <Name>PM.TaskBizInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PM.Task\PM.TaskBiz\PM.TaskBiz.csproj">
+      <Project>{760DB862-A665-4223-A3F4-77EAEB9C5B87}</Project>
+      <Name>PM.TaskBiz</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PM.Utils\PM.Utils.csproj">
+      <Project>{7FE9F232-DB50-495F-B4FD-F1A6C459DADD}</Project>
+      <Name>PM.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PM.PaymentModel\PM.PaymentModel.csproj">
+      <Project>{3103B58F-909F-4A7C-9B56-B38249DB7B72}</Project>
+      <Name>PM.PaymentModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ORM\脚本.txt" />
+    <Content Include="Payment\PersistenceBiz\AHQY\TextFile1.txt" />
+    <Content Include="Payment\PersistenceBiz\JSABOC\TextFile1.txt" />
+    <Content Include="Payment\PersistenceBiz\NetBank\脚本.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

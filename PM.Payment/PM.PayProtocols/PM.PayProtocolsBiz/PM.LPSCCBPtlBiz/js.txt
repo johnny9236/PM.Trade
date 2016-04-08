@@ -1,0 +1,72 @@
+﻿5．C#调用JavaScript方法
+ 
+通过WebBrowser类的Document属性中的InvokeScript方法调用当前网页的Javascript方法。如： 
+ 
+// 调用JavaScript的messageBox方法，并传入参数
+object[] objects = new object[1];
+objects[0] = "C#访问JavaScript脚本";
+webBrowser1.Document.InvokeScript("messageBox", objects);
+ 
+ 
+完整代码如下： 
+ 
+ 
+==============================================================================
+ 
+JS脚本代码： 
+<script language=”javascript”>
+function jsAlert(infor)
+{
+alert(‘我要开网店、携购独立网店系统，模板最全，最专业的系统！’);
+return;
+}
+</script>
+　　C#代码调用如下：
+　　using System.Security.Permissions; 
+　　[PermissionSet(SecurityAction.Demand, Name = "FullTrust")]//　　注意： 类定义前需要加上下面两行，否则调用失败！
+　　[System.Runtime.InteropServices.ComVisibleAttribute(true)] 
+ 
+　　调用的函数：
+　　webBrowser1.Document.InvokeScript("jsAlert ", new string[] {‘ssss’}); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+在C＃中，我们也可以通过Com组件来执行一段javascript代码。
+
+下面的代码展示了如何用MSScriptControl 组件执行一段数学表达式：
+
+   MSScriptControl.ScriptControlClass sc = new MSScriptControl.ScriptControlClass();
+   sc.Language = "javascript";
+   object obj = sc.Eval(" 1 + 2 * (3 + 4)");
+   Console.WriteLine(obj);
+
+要使用MSScriptControl需要引用com组件 Microsoft Script Control 1.0。
+
+还有一种方法：
+
+// csc.exe noname1.cs /r:C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\Microsoft.JScript.dll
+//注：需加入Microsoft.JScript与Microsoft.Vsa两个命名空间。
+public class Class1
+{
+    static void Main(string[] args)
+    {
+        System.Console.WriteLine("Hello World");
+        string Expression = "var result:int =0;result==1?\"成功\":\"失败\"";
+        Microsoft.JScript.Vsa.VsaEngine ve = Microsoft.JScript.Vsa.VsaEngine.CreateEngine();
+        Console.WriteLine(Microsoft.JScript.Eval.JScriptEvaluate(Expression, ve));
+    }
+}

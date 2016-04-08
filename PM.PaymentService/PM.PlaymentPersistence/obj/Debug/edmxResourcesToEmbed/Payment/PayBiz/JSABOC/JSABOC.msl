@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ABOCStoreContainer" CdmEntityContainer="JSABOC">
+    <EntitySetMapping Name="T_ZTB_BidMoneyPayReturn">
+      <EntityTypeMapping TypeName="ABOC.T_ZTB_BidMoneyPayReturn">
+        <MappingFragment StoreEntitySet="T_ZTB_BidMoneyPayReturn">
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="PayAccDBBank" ColumnName="PayAccDBBank" />
+          <ScalarProperty Name="PayAccDbName" ColumnName="PayAccDbName" />
+          <ScalarProperty Name="PayAccNo" ColumnName="PayAccNo" />
+          <ScalarProperty Name="ABOCReturnOrderNo" ColumnName="ABOCReturnOrderNo" />
+          <ScalarProperty Name="ABOCPayOrderNo" ColumnName="ABOCPayOrderNo" />
+          <ScalarProperty Name="IsBidAgain" ColumnName="IsBidAgain" />
+          <ScalarProperty Name="ClearFlag" ColumnName="ClearFlag" />
+          <ScalarProperty Name="SearchTime" ColumnName="SearchTime" />
+          <ScalarProperty Name="TransTime" ColumnName="TransTime" />
+          <ScalarProperty Name="RtnRateDate" ColumnName="RtnRateDate" />
+          <ScalarProperty Name="RtnRateMoney" ColumnName="RtnRateMoney" />
+          <ScalarProperty Name="RtnTotalMoney" ColumnName="RtnTotalMoney" />
+          <ScalarProperty Name="PayTotalMoney" ColumnName="PayTotalMoney" />
+          <ScalarProperty Name="OtherOrderNo" ColumnName="OtherOrderNo" />
+          <ScalarProperty Name="SearchOrderNo" ColumnName="SearchOrderNo" />
+          <ScalarProperty Name="TransOrderNo" ColumnName="TransOrderNo" />
+          <ScalarProperty Name="PayOrderNo" ColumnName="PayOrderNo" />
+          <ScalarProperty Name="IsOnline" ColumnName="IsOnline" />
+          <ScalarProperty Name="submittime" ColumnName="submittime" />
+          <ScalarProperty Name="submitername" ColumnName="submitername" />
+          <ScalarProperty Name="submiter" ColumnName="submiter" />
+          <ScalarProperty Name="LinkPersonMobilTel" ColumnName="LinkPersonMobilTel" />
+          <ScalarProperty Name="LinkPersonPhone" ColumnName="LinkPersonPhone" />
+          <ScalarProperty Name="LinkPerson" ColumnName="LinkPerson" />
+          <ScalarProperty Name="BidMoneyType" ColumnName="BidMoneyType" />
+          <ScalarProperty Name="ProSectionId" ColumnName="ProSectionId" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="AutoId" ColumnName="AutoId" />
+          <ScalarProperty Name="CaseCode" ColumnName="CaseCode" />
+          <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="PayBankDes" ColumnName="PayBankDes" />
+          <ScalarProperty Name="PayBank" ColumnName="PayBank" />
+          <ScalarProperty Name="BankCardNum" ColumnName="BankCardNum" />
+          <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+          <ScalarProperty Name="IsReturn" ColumnName="IsReturn" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="ReturnWindow" ColumnName="ReturnWindow" />
+          <ScalarProperty Name="ReturnTime" ColumnName="ReturnTime" />
+          <ScalarProperty Name="ReturnManId" ColumnName="ReturnManId" />
+          <ScalarProperty Name="IsCheck" ColumnName="IsCheck" />
+          <ScalarProperty Name="CardNum" ColumnName="CardNum" />
+          <ScalarProperty Name="PayType" ColumnName="PayType" />
+          <ScalarProperty Name="PayMoney" ColumnName="PayMoney" />
+          <ScalarProperty Name="PayFee" ColumnName="PayFee" />
+          <ScalarProperty Name="PayTime" ColumnName="PayTime" />
+          <ScalarProperty Name="IincurredTime" ColumnName="IincurredTime" />
+          <ScalarProperty Name="BidderId" ColumnName="BidderId" />
+          <ScalarProperty Name="CaseId" ColumnName="CaseId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_JSABOC">
+      <EntityTypeMapping TypeName="ABOC.T_JSABOC">
+        <MappingFragment StoreEntitySet="T_JSABOC">
+          <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="IsMatch" ColumnName="IsMatch" />
+          <ScalarProperty Name="IsAboc" ColumnName="IsAboc" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="RealAmount" ColumnName="RealAmount" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="PayAccDBBank" ColumnName="PayAccDBBank" />
+          <ScalarProperty Name="PayAccDbName" ColumnName="PayAccDbName" />
+          <ScalarProperty Name="PayAccNo" ColumnName="PayAccNo" />
+          <ScalarProperty Name="Used" ColumnName="Used" />
+          <ScalarProperty Name="ReceiveAccDBBank" ColumnName="ReceiveAccDBBank" />
+          <ScalarProperty Name="ReceiveAccDbName" ColumnName="ReceiveAccDbName" />
+          <ScalarProperty Name="ReceiveAccNo" ColumnName="ReceiveAccNo" />
+          <ScalarProperty Name="SectionNo" ColumnName="SectionNo" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="DetailDataTime" ColumnName="DetailDataTime" />
+          <ScalarProperty Name="ReturneMsg" ColumnName="ReturneMsg" />
+          <ScalarProperty Name="ReturneCode" ColumnName="ReturneCode" />
+          <ScalarProperty Name="TradeStructNum" ColumnName="TradeStructNum" />
+          <ScalarProperty Name="TradeCode" ColumnName="TradeCode" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

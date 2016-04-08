@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{760DB862-A665-4223-A3F4-77EAEB9C5B87}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PM.TaskBiz</RootNamespace>
+    <AssemblyName>PM.TaskBiz</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\PM.TaskBiz.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging">
+      <HintPath>..\..\PM.Utils\Dll\Quartz\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz, Version=2.0.0.200, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PM.Utils\Dll\Quartz\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AHQYBBCTask\QYBBCCall.cs" />
+    <Compile Include="AHQYBBCTask\QYBBCCallBack.cs" />
+    <Compile Include="AHQYBBCTask\QYBBCTaskJob.cs" />
+    <Compile Include="DDQABOCTask\DDQABOCCall.cs" />
+    <Compile Include="DDQABOCTask\DDQABOCCallBack.cs" />
+    <Compile Include="DDQABOCTask\DDQABOCTaskJob.cs" />
+    <Compile Include="HSanTRCBTask\HSanTRCBTaskJob.cs" />
+    <Compile Include="HSanTRCBTask\HSanTRCBCall.cs" />
+    <Compile Include="HSanTRCBTask\HSanTRCBCallBack.cs" />
+    <Compile Include="HuangMeiPostlTask\HuangMeiPostlCall.cs" />
+    <Compile Include="HuangMeiPostlTask\HuangMeiPostlCallBack.cs" />
+    <Compile Include="HuangMeiPostlTask\HuangMeiPostlTaskJob.cs" />
+    <Compile Include="HuangMeiPostlTask\ORM\HMModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HMModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="HuangShanICBCTask\HuangShanICBCCall.cs" />
+    <Compile Include="HuangShanICBCTask\HuangShanICBCCallBack.cs" />
+    <Compile Include="HuangShanICBCTask\HuangShanICBCRtnCall.cs" />
+    <Compile Include="HuangShanICBCTask\HuangShanICBCRtnCallBack.cs" />
+    <Compile Include="HuangShanICBCTask\HuangShanICBCRtnTaskJob.cs" />
+    <Compile Include="HuangShanICBCTask\HuangShanICBCTaskJob.cs" />
+    <Compile Include="HuangShiCCBTask\HuangShiCCBCall.cs" />
+    <Compile Include="HuangShiCCBTask\HuangShiCCBCallBack.cs" />
+    <Compile Include="HuangShiCCBTask\HuangShiCCBTaskJob.cs" />
+    <Compile Include="HuangShiCCBTask\ORM\model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="HuangShiCCBTask\ORM\modelzhyw.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>modelzhyw.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="HYBOCTASK\BOCCall.cs" />
+    <Compile Include="HYBOCTASK\BOCCallBack.cs" />
+    <Compile Include="HYBOCTASK\BOCTaskJob.cs" />
+    <None Include="HYBOCTASK\虚拟账号分开 BOCCall.csd" />
+    <None Include="HYBOCTASK\虚拟账号分开 BOCCallBack.csd" />
+    <Compile Include="HYSync\Expert\HYAvoidCall.cs" />
+    <Compile Include="HYSync\Expert\HYAvoidCallBack.cs" />
+    <Compile Include="HYSync\Expert\HYAvoidTaskJob.cs" />
+    <Compile Include="HYSync\Expert\HYExpertCall.cs" />
+    <Compile Include="HYSync\Expert\HYExpertCallBack.cs" />
+    <Compile Include="HYSync\Expert\HYExpertTaskJob.cs" />
+    <Compile Include="HYSync\Expert\Model\HYExpert.cs" />
+    <Compile Include="HYSync\Expert\Model\HYSyncAvoidModel.cs" />
+    <Compile Include="HYSync\Expert\ProjectSync.cs" />
+    <Compile Include="HYSync\QYK\Model\AptitudeCode.cs" />
+    <Compile Include="HYSync\QYK\Model\EntrpriseInfo.cs" />
+    <Compile Include="HYSync\QYK\Model\PersonnelInfo.cs" />
+    <Compile Include="HYSync\QYK\Model\QueueUpdate.cs" />
+    <Compile Include="HYSync\QYK\QykSyncCall.cs" />
+    <Compile Include="HYSync\QYK\QykSyncCallBack.cs" />
+    <Compile Include="HYSync\QYK\QykTaskJob.cs.cs" />
+    <Compile Include="JHBOFTask\JHBOFCall.cs" />
+    <Compile Include="JHBOFTask\JHBOFCallBack.cs" />
+    <Compile Include="JHBOFTask\JHBOFTaskJob.cs" />
+    <Compile Include="JHBOFTask\ORM\JHBof.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JHBof.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="JSABOCTask\JSABOCCall.cs" />
+    <Compile Include="JSABOCTask\JSABOCCallBack.cs" />
+    <Compile Include="JSABOCTask\JSABOCTaskJob.cs" />
+    <Compile Include="JSABOCTask\ORM\mode.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mode.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="LPSBBCTask\LPSBBCCall.cs" />
+    <Compile Include="LPSBBCTask\LPSBBCCallBack.cs" />
+    <Compile Include="LPSBBCTask\LPSBBCTaskJob.cs" />
+    <Compile Include="LPSBBCTask\ORM\PM_Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PM_Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="NetBankTask\NetBankQueryAccountCall.cs" />
+    <Compile Include="NetBankTask\NetBankQueryAccountCallBack.cs" />
+    <Compile Include="NetBankTask\NetBankQueryAccountTaskJob.cs.cs" />
+    <Compile Include="NetBankTask\ORM\NetBank_Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NetBank_Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ORM\JSGC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JSGC.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ORM\PubModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PubModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ORM\QYK.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QYK.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\PM.Payment\PM.PaymentManger\PM.PaymentManger.csproj">
+      <Project>{1DC19734-F00F-429F-A6AD-09EE559D5DFA}</Project>
+      <Name>PM.PaymentManger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PM.Payment\PM.PaymentProtocolModel\PM.PaymentProtocolModel.csproj">
+      <Project>{4A25A656-F4FE-4734-9C67-1C14794ED278}</Project>
+      <Name>PM.PaymentProtocolModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PM.Utils\PM.Utils.csproj">
+      <Project>{7FE9F232-DB50-495F-B4FD-F1A6C459DADD}</Project>
+      <Name>PM.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PM.TaskBizInterface\PM.TaskBizInterface.csproj">
+      <Project>{DF1D0B50-AC85-45BD-B8AC-6B2127FF117D}</Project>
+      <Name>PM.TaskBizInterface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="JSABOCTask\ORM\mode.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>mode.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="JHBOFTask\ORM\JHBof.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>JHBof.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="HuangMeiPostlTask\ORM\HMModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>HMModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="HuangShiCCBTask\ORM\model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="HuangShiCCBTask\ORM\modelzhyw.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>modelzhyw.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="LPSBBCTask\ORM\PM_Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PM_Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="NetBankTask\ORM\NetBank_Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>NetBank_Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="ORM\PubModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PubModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="ORM\QYK.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QYK.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="ORM\JSGC.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>JSGC.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AHQYBBCTask\脚本.txt" />
+    <Content Include="DDQABOCTask\脚本.txt" />
+    <Content Include="HSanTRCBTask\脚本.txt" />
+    <Content Include="HuangMeiPostlTask\脚本.txt" />
+    <Content Include="HuangShanICBCTask\脚本.txt" />
+    <Content Include="HYBOCTASK\脚本.txt" />
+    <Content Include="HYSync\QYK\脚本.txt" />
+    <Content Include="HYSync\QYK\说明.txt" />
+    <Content Include="HYSync\TextFile1.txt" />
+    <Content Include="HYSync\脚本.txt" />
+    <Content Include="JHBOFTask\脚本.txt" />
+    <Content Include="JSABOCTask\脚本.txt" />
+    <Content Include="LPSBBCTask\脚本.txt" />
+    <Content Include="NetBankTask\脚本.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AHQYBBCTask\ORM\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

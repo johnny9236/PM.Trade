@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="JSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="JSModelStoreContainer">
+          <EntitySet Name="T_JSABOC" EntityType="JSModel.Store.T_JSABOC" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_ZTB_BidMoneyPayReturn" EntityType="JSModel.Store.T_ZTB_BidMoneyPayReturn" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="T_JSABOC">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="TradeCode" Type="varchar" MaxLength="50" />
+          <Property Name="TradeStructNum" Type="varchar" MaxLength="50" />
+          <Property Name="ReturneCode" Type="varchar" MaxLength="50" />
+          <Property Name="ReturneMsg" Type="varchar" MaxLength="100" />
+          <Property Name="DetailDataTime" Type="varchar" MaxLength="50" />
+          <Property Name="Count" Type="int" />
+          <Property Name="SectionNo" Type="varchar" MaxLength="50" />
+          <Property Name="ReceiveAccNo" Type="varchar" MaxLength="50" />
+          <Property Name="ReceiveAccDbName" Type="nvarchar" MaxLength="500" />
+          <Property Name="ReceiveAccDBBank" Type="nvarchar" MaxLength="500" />
+          <Property Name="Used" Type="nvarchar" MaxLength="500" />
+          <Property Name="PayAccNo" Type="varchar" MaxLength="50" />
+          <Property Name="PayAccDbName" Type="nvarchar" MaxLength="500" />
+          <Property Name="PayAccDBBank" Type="nvarchar" MaxLength="500" />
+          <Property Name="Amount" Type="money" />
+          <Property Name="RealAmount" Type="money" />
+          <Property Name="Summary" Type="nvarchar" MaxLength="500" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="500" />
+          <Property Name="SerialNumber" Type="varchar" MaxLength="50" />
+          <Property Name="OrderNo" Type="varchar" MaxLength="50" />
+          <Property Name="IsAboc" Type="int" />
+          <Property Name="IsMatch" Type="int" />
+          <Property Name="Flag" Type="int" />
+          <Property Name="accountType" Type="varchar" MaxLength="50" />
+          <Property Name="CreateTm" Type="datetime" />
+        </EntityType>
+        <EntityType Name="T_ZTB_BidMoneyPayReturn">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CaseId" Type="uniqueidentifier" />
+          <Property Name="BidderId" Type="uniqueidentifier" />
+          <Property Name="IincurredTime" Type="datetime" />
+          <Property Name="PayTime" Type="datetime" />
+          <Property Name="PayFee" Type="decimal" Scale="8" />
+          <Property Name="PayMoney" Type="decimal" Scale="8" />
+          <Property Name="PayType" Type="nvarchar" MaxLength="10" />
+          <Property Name="CardNum" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsCheck" Type="int" />
+          <Property Name="ReturnManId" Type="uniqueidentifier" />
+          <Property Name="ReturnTime" Type="datetime" />
+          <Property Name="ReturnWindow" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+          <Property Name="IsReturn" Type="int" />
+          <Property Name="UnitId" Type="uniqueidentifier" />
+          <Property Name="BankCardNum" Type="nvarchar" MaxLength="50" />
+          <Property Name="PayBank" Type="nvarchar" MaxLength="50" />
+          <Property Name="PayBankDes" Type="nvarchar" MaxLength="100" />
+          <Property Name="BankName" Type="nvarchar" MaxLength="100" />
+          <Property Name="UnitCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="CaseCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="AutoId" Type="int" Nullable="false" />
+          <Property Name="UnitName" Type="nvarchar" MaxLength="200" />
+          <Property Name="ProSectionId" Type="nvarchar" MaxLength="50" />
+          <Property Name="BidMoneyType" Type="nvarchar" MaxLength="10" />
+          <Property Name="LinkPerson" Type="nvarchar" MaxLength="50" />
+          <Property Name="LinkPersonPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="LinkPersonMobilTel" Type="nvarchar" MaxLength="50" />
+          <Property Name="submiter" Type="nvarchar" MaxLength="50" />
+          <Property Name="submitername" Type="nvarchar" MaxLength="50" />
+          <Property Name="submittime" Type="datetime" />
+          <Property Name="IsOnline" Type="int" />
+          <Property Name="PayOrderNo" Type="varchar" MaxLength="50" />
+          <Property Name="TransOrderNo" Type="varchar" MaxLength="50" />
+          <Property Name="SearchOrderNo" Type="varchar" MaxLength="50" />
+          <Property Name="OtherOrderNo" Type="varchar" MaxLength="50" />
+          <Property Name="PayTotalMoney" Type="decimal" Scale="8" />
+          <Property Name="RtnTotalMoney" Type="decimal" Scale="8" />
+          <Property Name="RtnRateMoney" Type="decimal" Scale="8" />
+          <Property Name="RtnRateDate" Type="datetime" />
+          <Property Name="TransTime" Type="datetime" />
+          <Property Name="SearchTime" Type="datetime" />
+          <Property Name="ClearFlag" Type="int" />
+          <Property Name="IsBidAgain" Type="int" />
+          <Property Name="ABOCPayOrderNo" Type="varchar" MaxLength="50" />
+          <Property Name="ABOCReturnOrderNo" Type="varchar" MaxLength="50" />
+          <Property Name="PayAccNo" Type="varchar" MaxLength="50" />
+          <Property Name="PayAccDbName" Type="varchar" MaxLength="50" />
+          <Property Name="PayAccDBBank" Type="varchar" MaxLength="50" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="100" />
+          <Property Name="ABOCOrderNo" Type="varchar" MaxLength="50" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="JSModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="GovPmBidOnline_BusinessJSEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="T_ZTB_BidMoneyPayReturn" EntityType="JSModel.T_ZTB_BidMoneyPayReturn" />
+          <EntitySet Name="T_JSABOC" EntityType="JSModel.T_JSABOC" />
+        </EntityContainer>
+        <EntityType Name="T_ZTB_BidMoneyPayReturn">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="Guid" Name="CaseId" />
+          <Property Type="Guid" Name="BidderId" />
+          <Property Type="DateTime" Name="IincurredTime" Precision="3" />
+          <Property Type="DateTime" Name="PayTime" Precision="3" />
+          <Property Type="Decimal" Name="PayFee" Precision="18" Scale="8" />
+          <Property Type="Decimal" Name="PayMoney" Precision="18" Scale="8" />
+          <Property Type="String" Name="PayType" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CardNum" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="IsCheck" />
+          <Property Type="Guid" Name="ReturnManId" />
+          <Property Type="DateTime" Name="ReturnTime" Precision="3" />
+          <Property Type="String" Name="ReturnWindow" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Phone" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="IsReturn" />
+          <Property Type="Guid" Name="UnitId" />
+          <Property Type="String" Name="BankCardNum" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PayBank" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PayBankDes" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BankName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UnitCode" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CaseCode" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="AutoId" Nullable="false" />
+          <Property Type="String" Name="UnitName" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProSectionId" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BidMoneyType" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LinkPerson" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LinkPersonPhone" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LinkPersonMobilTel" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="submiter" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="submitername" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="submittime" Precision="3" />
+          <Property Type="Int32" Name="IsOnline" />
+          <Property Type="String" Name="PayOrderNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TransOrderNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SearchOrderNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OtherOrderNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="PayTotalMoney" Precision="18" Scale="8" />
+          <Property Type="Decimal" Name="RtnTotalMoney" Precision="18" Scale="8" />
+          <Property Type="Decimal" Name="RtnRateMoney" Precision="18" Scale="8" />
+          <Property Type="DateTime" Name="RtnRateDate" Precision="3" />
+          <Property Type="DateTime" Name="TransTime" Precision="3" />
+          <Property Type="DateTime" Name="SearchTime" Precision="3" />
+          <Property Type="Int32" Name="ClearFlag" />
+          <Property Type="Int32" Name="IsBidAgain" />
+          <Property Type="String" Name="ABOCPayOrderNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ABOCReturnOrderNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayAccNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayAccDbName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayAccDBBank" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Remark" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ABOCOrderNo" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="T_JSABOC">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TradeCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TradeStructNum" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReturneCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReturneMsg" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DetailDataTime" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Count" />
+          <Property Type="String" Name="SectionNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReceiveAccNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReceiveAccDbName" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ReceiveAccDBBank" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Used" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PayAccNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayAccDbName" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PayAccDBBank" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Amount" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="RealAmount" Precision="19" Scale="4" />
+          <Property Type="String" Name="Summary" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Remark" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SerialNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OrderNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IsAboc" />
+          <Property Type="Int32" Name="IsMatch" />
+          <Property Type="Int32" Name="Flag" />
+          <Property Type="String" Name="accountType" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateTm" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="JSModelStoreContainer" CdmEntityContainer="GovPmBidOnline_BusinessJSEntities">
+          <EntitySetMapping Name="T_ZTB_BidMoneyPayReturn">
+            <EntityTypeMapping TypeName="JSModel.T_ZTB_BidMoneyPayReturn">
+              <MappingFragment StoreEntitySet="T_ZTB_BidMoneyPayReturn">
+                <ScalarProperty Name="ABOCOrderNo" ColumnName="ABOCOrderNo" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="PayAccDBBank" ColumnName="PayAccDBBank" />
+                <ScalarProperty Name="PayAccDbName" ColumnName="PayAccDbName" />
+                <ScalarProperty Name="PayAccNo" ColumnName="PayAccNo" />
+                <ScalarProperty Name="ABOCReturnOrderNo" ColumnName="ABOCReturnOrderNo" />
+                <ScalarProperty Name="ABOCPayOrderNo" ColumnName="ABOCPayOrderNo" />
+                <ScalarProperty Name="IsBidAgain" ColumnName="IsBidAgain" />
+                <ScalarProperty Name="ClearFlag" ColumnName="ClearFlag" />
+                <ScalarProperty Name="SearchTime" ColumnName="SearchTime" />
+                <ScalarProperty Name="TransTime" ColumnName="TransTime" />
+                <ScalarProperty Name="RtnRateDate" ColumnName="RtnRateDate" />
+                <ScalarProperty Name="RtnRateMoney" ColumnName="RtnRateMoney" />
+                <ScalarProperty Name="RtnTotalMoney" ColumnName="RtnTotalMoney" />
+                <ScalarProperty Name="PayTotalMoney" ColumnName="PayTotalMoney" />
+                <ScalarProperty Name="OtherOrderNo" ColumnName="OtherOrderNo" />
+                <ScalarProperty Name="SearchOrderNo" ColumnName="SearchOrderNo" />
+                <ScalarProperty Name="TransOrderNo" ColumnName="TransOrderNo" />
+                <ScalarProperty Name="PayOrderNo" ColumnName="PayOrderNo" />
+                <ScalarProperty Name="IsOnline" ColumnName="IsOnline" />
+                <ScalarProperty Name="submittime" ColumnName="submittime" />
+                <ScalarProperty Name="submitername" ColumnName="submitername" />
+                <ScalarProperty Name="submiter" ColumnName="submiter" />
+                <ScalarProperty Name="LinkPersonMobilTel" ColumnName="LinkPersonMobilTel" />
+                <ScalarProperty Name="LinkPersonPhone" ColumnName="LinkPersonPhone" />
+                <ScalarProperty Name="LinkPerson" ColumnName="LinkPerson" />
+                <ScalarProperty Name="BidMoneyType" ColumnName="BidMoneyType" />
+                <ScalarProperty Name="ProSectionId" ColumnName="ProSectionId" />
+                <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+                <ScalarProperty Name="AutoId" ColumnName="AutoId" />
+                <ScalarProperty Name="CaseCode" ColumnName="CaseCode" />
+                <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+                <ScalarProperty Name="BankName" ColumnName="BankName" />
+                <ScalarProperty Name="PayBankDes" ColumnName="PayBankDes" />
+                <ScalarProperty Name="PayBank" ColumnName="PayBank" />
+                <ScalarProperty Name="BankCardNum" ColumnName="BankCardNum" />
+                <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+                <ScalarProperty Name="IsReturn" ColumnName="IsReturn" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="ReturnWindow" ColumnName="ReturnWindow" />
+                <ScalarProperty Name="ReturnTime" ColumnName="ReturnTime" />
+                <ScalarProperty Name="ReturnManId" ColumnName="ReturnManId" />
+                <ScalarProperty Name="IsCheck" ColumnName="IsCheck" />
+                <ScalarProperty Name="CardNum" ColumnName="CardNum" />
+                <ScalarProperty Name="PayType" ColumnName="PayType" />
+                <ScalarProperty Name="PayMoney" ColumnName="PayMoney" />
+                <ScalarProperty Name="PayFee" ColumnName="PayFee" />
+                <ScalarProperty Name="PayTime" ColumnName="PayTime" />
+                <ScalarProperty Name="IincurredTime" ColumnName="IincurredTime" />
+                <ScalarProperty Name="BidderId" ColumnName="BidderId" />
+                <ScalarProperty Name="CaseId" ColumnName="CaseId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_JSABOC">
+            <EntityTypeMapping TypeName="JSModel.T_JSABOC">
+              <MappingFragment StoreEntitySet="T_JSABOC">
+                <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+                <ScalarProperty Name="accountType" ColumnName="accountType" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="IsMatch" ColumnName="IsMatch" />
+                <ScalarProperty Name="IsAboc" ColumnName="IsAboc" />
+                <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+                <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Summary" ColumnName="Summary" />
+                <ScalarProperty Name="RealAmount" ColumnName="RealAmount" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="PayAccDBBank" ColumnName="PayAccDBBank" />
+                <ScalarProperty Name="PayAccDbName" ColumnName="PayAccDbName" />
+                <ScalarProperty Name="PayAccNo" ColumnName="PayAccNo" />
+                <ScalarProperty Name="Used" ColumnName="Used" />
+                <ScalarProperty Name="ReceiveAccDBBank" ColumnName="ReceiveAccDBBank" />
+                <ScalarProperty Name="ReceiveAccDbName" ColumnName="ReceiveAccDbName" />
+                <ScalarProperty Name="ReceiveAccNo" ColumnName="ReceiveAccNo" />
+                <ScalarProperty Name="SectionNo" ColumnName="SectionNo" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="DetailDataTime" ColumnName="DetailDataTime" />
+                <ScalarProperty Name="ReturneMsg" ColumnName="ReturneMsg" />
+                <ScalarProperty Name="ReturneCode" ColumnName="ReturneCode" />
+                <ScalarProperty Name="TradeStructNum" ColumnName="TradeStructNum" />
+                <ScalarProperty Name="TradeCode" ColumnName="TradeCode" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="mode" ZoomLevel="16">
+        <EntityTypeShape EntityType="JSModel.T_ZTB_BidMoneyPayReturn" Width="1.5" PointX="4.1403627061007366" PointY="19.425553017959722" />
+        <EntityTypeShape EntityType="JSModel.T_JSABOC" Width="1.5" PointX="0.75" PointY="0.75" Height="5.9814461263020835" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

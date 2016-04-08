@@ -1,0 +1,19 @@
+﻿首先在PM.Payment\PM.PaymentProtocolModel添加地区
+PM.TradeConsole  控制台程序   启动
+PM.Payment第三方报文协议
+PM.PaymentService  对外wcf接口(回调给业务系统地址统一)
+PM.Task定时等任务(回调给业务系统地址单独)
+
+需要配置  注意点
+config/cfg.xml 设置具体的配置
+app.config设置地区
+
+PM.PlaymentPersistence/PaymentServiceFactory工厂配置对于外部请求的工厂
+PM.PaymentManger/Factory   工厂配置具体协议
+
+
+
+
+
+
+

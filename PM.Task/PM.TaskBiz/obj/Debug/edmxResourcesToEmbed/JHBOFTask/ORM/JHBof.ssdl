@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JHBof.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="JHBofStoreContainer">
+    <EntitySet Name="T_JHBOF" EntityType="JHBof.Store.T_JHBOF" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_PayOrder" EntityType="JHBof.Store.T_PayOrder" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_PayOrderBusiness" EntityType="JHBof.Store.T_PayOrderBusiness" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_ZTB_MoneyPayment" EntityType="JHBof.Store.T_ZTB_MoneyPayment" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="T_JHBOF">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="TradeDate" Type="varchar" MaxLength="50" />
+    <Property Name="TradeNo" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="money" />
+    <Property Name="AcountNo" Type="varchar" MaxLength="50" />
+    <Property Name="AcountName" Type="varchar" MaxLength="100" />
+    <Property Name="Match" Type="int" />
+    <Property Name="Remark" Type="nchar" MaxLength="10" />
+    <Property Name="Flag" Type="int" />
+    <Property Name="CreateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_PayOrder">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CaseID" Type="varchar" MaxLength="50" />
+    <Property Name="ProSectionID" Type="varchar" MaxLength="50" />
+    <Property Name="ProSectionNo" Type="varchar" MaxLength="100" />
+    <Property Name="OrderNo" Type="varchar" MaxLength="100" />
+    <Property Name="OrderName" Type="nvarchar" MaxLength="500" />
+    <Property Name="PayerID" Type="varchar" MaxLength="50" />
+    <Property Name="PayerName" Type="nvarchar" MaxLength="100" />
+    <Property Name="CostType" Type="nvarchar" MaxLength="100" />
+    <Property Name="FeeAmount" Type="money" />
+    <Property Name="Amount" Type="money" />
+    <Property Name="Remark" Type="text" />
+    <Property Name="InvoiceTitle" Type="nvarchar" MaxLength="500" />
+    <Property Name="PayAccountNo" Type="varchar" MaxLength="100" />
+    <Property Name="PayBankAccountType" Type="varchar" MaxLength="50" />
+    <Property Name="PayAccountName" Type="nvarchar" MaxLength="500" />
+    <Property Name="PayBankName" Type="nvarchar" MaxLength="500" />
+    <Property Name="PayBankNo" Type="varchar" MaxLength="50" />
+    <Property Name="PayBankID" Type="varchar" MaxLength="50" />
+    <Property Name="PayProvince" Type="varchar" MaxLength="50" />
+    <Property Name="PayCity" Type="varchar" MaxLength="50" />
+    <Property Name="PaySettingAccNo" Type="varchar" MaxLength="50" />
+    <Property Name="PayCur" Type="varchar" MaxLength="50" />
+    <Property Name="ReceiptBankAccountType" Type="varchar" MaxLength="50" />
+    <Property Name="ReceiptAccountNo" Type="varchar" MaxLength="100" />
+    <Property Name="ReceiptAccountName" Type="nvarchar" MaxLength="500" />
+    <Property Name="ReceiptBankName" Type="nvarchar" MaxLength="500" />
+    <Property Name="ReceiptBankNo" Type="varchar" MaxLength="50" />
+    <Property Name="ReceiptBankID" Type="varchar" MaxLength="50" />
+    <Property Name="ReceiptProvince" Type="varchar" MaxLength="50" />
+    <Property Name="ReceiptCity" Type="varchar" MaxLength="50" />
+    <Property Name="ReceiptCur" Type="varchar" MaxLength="50" />
+    <Property Name="ReceiptSettingAccNo" Type="varchar" MaxLength="50" />
+    <Property Name="OrderResult" Type="int" />
+    <Property Name="OrderTime" Type="datetime" />
+    <Property Name="OrderOpWay" Type="nvarchar" MaxLength="50" />
+    <Property Name="OprationType" Type="int" />
+    <Property Name="OrderCombination" Type="varchar" MaxLength="50" />
+    <Property Name="OrderSerialNumber" Type="varchar" MaxLength="100" />
+    <Property Name="PayRealAccountName" Type="nvarchar" MaxLength="500" />
+    <Property Name="PayRealAccountNo" Type="nvarchar" MaxLength="500" />
+    <Property Name="PayRealBankName" Type="nvarchar" MaxLength="500" />
+    <Property Name="PayRealCity" Type="varchar" MaxLength="50" />
+    <Property Name="PayRealProvince" Type="varchar" MaxLength="50" />
+    <Property Name="PayRealBankNo" Type="varchar" MaxLength="50" />
+    <Property Name="PayRealBankID" Type="varchar" MaxLength="50" />
+    <Property Name="PayRealSettingAccNo" Type="varchar" MaxLength="50" />
+    <Property Name="PayInstitutionID" Type="varchar" MaxLength="100" />
+    <Property Name="ReceiptInstitutionID" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="T_PayOrderBusiness">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PayOrderNo" Type="varchar" MaxLength="50" />
+    <Property Name="TransOrderNo" Type="varchar" MaxLength="50" />
+    <Property Name="SearchOrderNo" Type="varchar" MaxLength="50" />
+    <Property Name="OtherOrderNo" Type="varchar" MaxLength="50" />
+    <Property Name="PayOrderStatus" Type="varchar" MaxLength="50" />
+    <Property Name="TransOrderStatus" Type="varchar" MaxLength="50" />
+    <Property Name="SearchOrderStatus" Type="varchar" MaxLength="50" />
+    <Property Name="OtherOrderStatus" Type="varchar" MaxLength="50" />
+    <Property Name="Create_Tm" Type="datetime" />
+    <Property Name="Up_Tm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_ZTB_MoneyPayment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ProSectionID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProSectionName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ProSectionCode" Type="nvarchar" MaxLength="100" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="PayTime" Type="datetime" />
+    <Property Name="PayMoney" Type="money" />
+    <Property Name="PayType" Type="nvarchar" MaxLength="10" />
+    <Property Name="CardNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsCheck" Type="int" />
+    <Property Name="ReturnUserId" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReTurnUserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReturnTime" Type="datetime" />
+    <Property Name="ReturnWindow" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReturnPhone" Type="nvarchar" MaxLength="20" />
+    <Property Name="ReturnYingGaiMon" Type="money" />
+    <Property Name="ReturnShiJiMon" Type="money" />
+    <Property Name="ReturnBaoHanYouXiaoQi" Type="datetime" />
+    <Property Name="ReturnBaoHanBank" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReturnBaoHanNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsReturn" Type="int" />
+    <Property Name="UnitId" Type="nvarchar" MaxLength="50" />
+    <Property Name="UnitName" Type="nvarchar" MaxLength="200" />
+    <Property Name="UnitCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="BankCardNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="BankName" Type="nvarchar" MaxLength="100" />
+    <Property Name="CaseID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ProCode" Type="nvarchar" MaxLength="100" />
+    <Property Name="PayPage" Type="int" />
+    <Property Name="PayPageText" Type="nvarchar" MaxLength="50" />
+    <Property Name="FromSystem" Type="nvarchar" MaxLength="50" />
+    <Property Name="PayID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Out_trade_no" Type="nvarchar" MaxLength="50" />
+    <Property Name="QueRenRuZhangTime" Type="datetime" />
+    <Property Name="QueRenRuZhangPerson" Type="nvarchar" MaxLength="50" />
+    <Property Name="PayLinkPerson" Type="nvarchar" MaxLength="50" />
+    <Property Name="PayLinkPersonTel" Type="nvarchar" MaxLength="50" />
+    <Property Name="PayLinkPersonMobileTel" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsWinBid" Type="int" />
+    <Property Name="TouBiaoEndTime" Type="datetime" />
+    <Property Name="JiaoFeiBiLv" Type="nvarchar" MaxLength="20" />
+    <Property Name="PayOrderNo" Type="varchar" MaxLength="50" />
+    <Property Name="TransOrderNo" Type="varchar" MaxLength="50" />
+    <Property Name="SearchOrderNo" Type="varchar" MaxLength="50" />
+    <Property Name="OtherOrderNo" Type="varchar" MaxLength="50" />
+    <Property Name="PayTotalMoney" Type="decimal" Scale="8" />
+    <Property Name="RtnRateTotalMoney" Type="decimal" Scale="8" />
+    <Property Name="RtnRateMoney" Type="decimal" Scale="8" />
+    <Property Name="RtnRateDate" Type="datetime" />
+    <Property Name="TransTime" Type="datetime" />
+    <Property Name="SearchTime" Type="datetime" />
+    <Property Name="ClearFlag" Type="int" />
+    <Property Name="VBeginTime" Type="datetime" />
+    <Property Name="VEndTime" Type="datetime" />
+    <Property Name="IsOnline" Type="int" />
+    <Property Name="PayFee" Type="money" />
+    <Property Name="ReceiptBankAccountType" Type="varchar" MaxLength="50" />
+    <Property Name="ReceiptAccountNo" Type="varchar" MaxLength="100" />
+    <Property Name="ReceiptAccountName" Type="nvarchar" MaxLength="500" />
+    <Property Name="ReceiptBankName" Type="nvarchar" MaxLength="500" />
+    <Property Name="ReceiptBankNo" Type="varchar" MaxLength="50" />
+    <Property Name="ReceiptBankID" Type="varchar" MaxLength="50" />
+    <Property Name="ReceiptProvince" Type="varchar" MaxLength="50" />
+    <Property Name="ReceiptCity" Type="varchar" MaxLength="50" />
+    <Property Name="ReceiptCur" Type="varchar" MaxLength="50" />
+    <Property Name="ReceiptSettingAccNo" Type="varchar" MaxLength="50" />
+    <Property Name="ReceiptInstitutionID" Type="varchar" MaxLength="100" />
+    <Property Name="Remark" Type="text" />
+    <Property Name="InvoiceTitle" Type="nvarchar" MaxLength="500" />
+    <Property Name="PayRealSettingAccNo" Type="varchar" MaxLength="50" />
+    <Property Name="PayBankID" Type="varchar" MaxLength="50" />
+    <Property Name="ReColumn1" Type="nvarchar" MaxLength="100" />
+    <Property Name="BaseAccountNo" Type="varchar" MaxLength="100" />
+    <Property Name="BaseAccountName" Type="nvarchar" MaxLength="500" />
+    <Property Name="NormalAccountNo" Type="varchar" MaxLength="100" />
+    <Property Name="NormalAccountName" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+</Schema>

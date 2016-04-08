@@ -1,0 +1,19 @@
+PM.PaymentModel  实现具体的类最后产生 内容报文
+把上面内容作为CommServiceProtocolModel的内容来处理,并设置功能号
+        //例如
+        CommServiceProtocolModel comm = null;
+        string url = "http://192.168.0.10:9008/CommonService";
+        #region   青阳
+        //QYVirtualAccountRequset virtualAcc = new QYVirtualAccountRequset();
+        //comm = new CommServiceProtocolModel();
+        //comm.BusinessFunNo = "QYVirtualAccount";
+        //comm.Content = virtualAcc.GetMessagePaket();
+        //var info = WCFInvoke.CreateWCFServiceByURL<PM.PaymentContracts.ICommService>(url);
+        //var rstStr = info.CommonRemoteCall(comm);
+        //if (!string.IsNullOrEmpty(rstStr))
+        //{
+        //    QYVirtualAccountResponse rst = new QYVirtualAccountResponse();
+        //    rst.GetModel(rstStr);
+        //    //rst 对象
+        //}
+  #endregion

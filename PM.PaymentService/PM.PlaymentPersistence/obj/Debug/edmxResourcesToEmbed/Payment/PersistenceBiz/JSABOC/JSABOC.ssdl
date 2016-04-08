@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ABOC.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ABOCStoreContainer">
+    <EntitySet Name="T_JSABOC" EntityType="ABOC.Store.T_JSABOC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_ZTB_BidMoneyPayReturn" EntityType="ABOC.Store.T_ZTB_BidMoneyPayReturn" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="T_JSABOC">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="TradeCode" Type="varchar" MaxLength="50" />
+    <Property Name="TradeStructNum" Type="varchar" MaxLength="50" />
+    <Property Name="ReturneCode" Type="varchar" MaxLength="50" />
+    <Property Name="ReturneMsg" Type="varchar" MaxLength="100" />
+    <Property Name="DetailDataTime" Type="varchar" MaxLength="50" />
+    <Property Name="Count" Type="int" />
+    <Property Name="SectionNo" Type="varchar" MaxLength="50" />
+    <Property Name="ReceiveAccNo" Type="varchar" MaxLength="50" />
+    <Property Name="ReceiveAccDbName" Type="nvarchar" MaxLength="500" />
+    <Property Name="ReceiveAccDBBank" Type="nvarchar" MaxLength="500" />
+    <Property Name="Used" Type="nvarchar" MaxLength="500" />
+    <Property Name="PayAccNo" Type="varchar" MaxLength="50" />
+    <Property Name="PayAccDbName" Type="nvarchar" MaxLength="500" />
+    <Property Name="PayAccDBBank" Type="nvarchar" MaxLength="500" />
+    <Property Name="Amount" Type="money" />
+    <Property Name="RealAmount" Type="money" />
+    <Property Name="Summary" Type="nvarchar" MaxLength="500" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="500" />
+    <Property Name="SerialNumber" Type="varchar" MaxLength="50" />
+    <Property Name="OrderNo" Type="varchar" MaxLength="50" />
+    <Property Name="IsAboc" Type="int" />
+    <Property Name="IsMatch" Type="int" />
+    <Property Name="Flag" Type="int" />
+    <Property Name="CreateTm" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_ZTB_BidMoneyPayReturn">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CaseId" Type="uniqueidentifier" />
+    <Property Name="BidderId" Type="uniqueidentifier" />
+    <Property Name="IincurredTime" Type="datetime" />
+    <Property Name="PayTime" Type="datetime" />
+    <Property Name="PayFee" Type="decimal" Scale="8" />
+    <Property Name="PayMoney" Type="decimal" Scale="8" />
+    <Property Name="PayType" Type="nvarchar" MaxLength="10" />
+    <Property Name="CardNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsCheck" Type="int" />
+    <Property Name="ReturnManId" Type="uniqueidentifier" />
+    <Property Name="ReturnTime" Type="datetime" />
+    <Property Name="ReturnWindow" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+    <Property Name="IsReturn" Type="int" />
+    <Property Name="UnitId" Type="uniqueidentifier" />
+    <Property Name="BankCardNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="PayBank" Type="nvarchar" MaxLength="50" />
+    <Property Name="PayBankDes" Type="nvarchar" MaxLength="100" />
+    <Property Name="BankName" Type="nvarchar" MaxLength="100" />
+    <Property Name="UnitCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="CaseCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="AutoId" Type="int" Nullable="false" />
+    <Property Name="UnitName" Type="nvarchar" MaxLength="200" />
+    <Property Name="ProSectionId" Type="nvarchar" MaxLength="50" />
+    <Property Name="BidMoneyType" Type="nvarchar" MaxLength="10" />
+    <Property Name="LinkPerson" Type="nvarchar" MaxLength="50" />
+    <Property Name="LinkPersonPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="LinkPersonMobilTel" Type="nvarchar" MaxLength="50" />
+    <Property Name="submiter" Type="nvarchar" MaxLength="50" />
+    <Property Name="submitername" Type="nvarchar" MaxLength="50" />
+    <Property Name="submittime" Type="datetime" />
+    <Property Name="IsOnline" Type="int" />
+    <Property Name="PayOrderNo" Type="varchar" MaxLength="50" />
+    <Property Name="TransOrderNo" Type="varchar" MaxLength="50" />
+    <Property Name="SearchOrderNo" Type="varchar" MaxLength="50" />
+    <Property Name="OtherOrderNo" Type="varchar" MaxLength="50" />
+    <Property Name="PayTotalMoney" Type="decimal" Scale="8" />
+    <Property Name="RtnTotalMoney" Type="decimal" Scale="8" />
+    <Property Name="RtnRateMoney" Type="decimal" Scale="8" />
+    <Property Name="RtnRateDate" Type="datetime" />
+    <Property Name="TransTime" Type="datetime" />
+    <Property Name="SearchTime" Type="datetime" />
+    <Property Name="ClearFlag" Type="int" />
+    <Property Name="IsBidAgain" Type="int" />
+    <Property Name="ABOCPayOrderNo" Type="varchar" MaxLength="50" />
+    <Property Name="ABOCReturnOrderNo" Type="varchar" MaxLength="50" />
+    <Property Name="PayAccNo" Type="varchar" MaxLength="50" />
+    <Property Name="PayAccDbName" Type="varchar" MaxLength="50" />
+    <Property Name="PayAccDBBank" Type="varchar" MaxLength="50" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+</Schema>

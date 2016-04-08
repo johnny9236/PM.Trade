@@ -1,0 +1,1 @@
+﻿1、六盘水建行类库中引用了验证的dll，PM.TradeConsole也需要引用下

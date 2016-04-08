@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PM.PaymentManger</name>
+    </assembly>
+    <members>
+        <member name="T:PM.PaymentManger.PaymentManager">
+            <summary>
+            支付相关管理类
+            </summary>
+        </member>
+        <member name="M:PM.PaymentManger.PaymentManager.DoPay(System.Object,PM.PaymentProtocolModel.SysConfigModel)">
+            <summary>
+            支付请求
+            </summary>
+            <param name="payModel"></param>
+            <param name="sysConfigModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PaymentManger.PaymentManager.DoPay(System.Object,PM.PaymentProtocolModel.CfgInfo)">
+            <summary>
+            支付请求
+            </summary>
+            <param name="payModel"></param>
+            <param name="cfg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PaymentManger.PaymentManager.PayCallBack(System.Object,PM.PaymentProtocolModel.SysConfigModel)">
+            <summary>
+            支付响应
+            </summary>
+            <param name="payModel"></param>
+            <param name="sysConfigModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PaymentManger.PaymentManager.PayCallBack(System.Object,PM.PaymentProtocolModel.CfgInfo)">
+            <summary>
+            支付响应
+            </summary>
+            <param name="payModel"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PM.PaymentManger.Factory.PaymentProtocolsFactory">
+            <summary>
+            支付  工厂方法
+            </summary>
+        </member>
+        <member name="M:PM.PaymentManger.Factory.PaymentProtocolsFactory.CreatePay(PM.PaymentProtocolModel.ProtocolsWay)">
+            <summary>
+            支付  工厂方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PM.PaymentManger.CustomCommManager">
+            <summary>
+            非支付相关通用管理
+            </summary>
+        </member>
+        <member name="M:PM.PaymentManger.CustomCommManager.CallProtocol(System.Object,PM.PaymentProtocolModel.SysConfigModel)">
+            <summary>
+            根据配置实例化对应对象
+            </summary>
+            <param name="objModel"></param>
+            <param name="sysConfigModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PaymentManger.CustomCommManager.CallProtocol(System.Object,PM.PaymentProtocolModel.CfgInfo)">
+            <summary>
+            根据配置实例化对应对象
+            </summary>
+            <param name="objModel"></param>
+            <param name="cfg"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PM.PaymentManger.CommPaymentConfig">
+            <summary>
+            非支付通用配置获取
+            </summary>
+        </member>
+        <member name="M:PM.PaymentManger.CommPaymentConfig.GetCommConfig(PM.PaymentProtocolModel.CommunicationBase,PM.PaymentProtocolModel.SysConfigModel)">
+            <summary>
+            获取某个配置对象
+            </summary>
+            <param name="objModel"></param>
+            <param name="sysConfigModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PaymentManger.CommPaymentConfig.GetSysConfig(PM.PaymentProtocolModel.CommunicationBase)">
+             <summary>
+            获取全局配置对象
+             </summary>
+             <param name="objModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:PM.PaymentManger.CommPaymentConfig.GetCommConfig(PM.PaymentProtocolModel.CommunicationBase)">
+             <summary>
+            获取某个配置对象
+             </summary>
+             <param name="objModel"></param>
+             <returns></returns>
+        </member>
+        <member name="T:PM.PaymentManger.PaymentConfig">
+            <summary>
+            获取支付配置信息
+            </summary>
+        </member>
+        <member name="M:PM.PaymentManger.PaymentConfig.GetPaymentConfig(PM.PaymentProtocolModel.CommunicationBase,PM.PaymentProtocolModel.SysConfigModel)">
+            <summary>
+            获取配置信息
+            </summary>
+            <param name="payModel"></param>
+            <param name="sysConfigModel"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PM.PaymentManger.Factory.CommProtocolsFactory">
+            <summary>
+            通用  工厂方法(非支付)
+            </summary>
+        </member>
+        <member name="M:PM.PaymentManger.Factory.CommProtocolsFactory.CreateComm(PM.PaymentProtocolModel.ProtocolsWay)">
+            <summary>
+            非支付通用  工厂方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PM.PaymentManger.Manager">
+            <summary>
+            管理类
+            </summary>
+        </member>
+        <member name="M:PM.PaymentManger.Manager.PaymentManager(System.Object)">
+            <summary>
+               支付相关管理
+            </summary>
+            <param name="objModel">实体对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PaymentManger.Manager.PaymentManager(System.Object,PM.PaymentProtocolModel.SysConfigModel)">
+            <summary>
+            支付相关管理
+            </summary>
+            <param name="objModel"></param>
+            <param name="sysConfigModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PaymentManger.Manager.PaymentManager(System.Object,PM.PaymentProtocolModel.CfgInfo)">
+            <summary>
+            支付相关管理
+            </summary>
+            <param name="objModel"></param>
+            <param name="cfg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PaymentManger.Manager.Init(System.String)">
+            <summary>
+            初始化
+            </summary>
+            <param name="cfgFilePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PaymentManger.Manager.InitCfCa(System.String)">
+            <summary>
+            银联初始化(银联的)
+            </summary>
+            <param name="cfgFilePath"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

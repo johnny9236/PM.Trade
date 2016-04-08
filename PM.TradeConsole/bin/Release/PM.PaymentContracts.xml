@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PM.PaymentContracts</name>
+    </assembly>
+    <members>
+        <member name="T:PM.PaymentContracts.ICommService">
+            <summary>
+             提供给业务系统使用的签约接口
+            </summary>
+        </member>
+        <member name="M:PM.PaymentContracts.ICommService.CommonRemoteCall(PM.PaymentModel.CommServiceProtocolModel)">
+            <summary>
+            其他通用操作
+            1、对象先按各自规则封装
+            2、通过CommServiceProtocolModel传递
+            3、获取后在通过各自对象实例化成对象
+            </summary>
+            <param name="objModel">操作对象</param>
+            <returns></returns>
+        </member>
+        <member name="T:PM.PaymentContracts.IPaymentService">
+            <summary>
+            提供给业务系统使用的签约接口
+            </summary>
+        </member>
+        <member name="M:PM.PaymentContracts.IPaymentService.DoPay(PM.PaymentModel.PayStartModel)">
+            <summary>
+            支付发起接口
+            </summary>
+            <param name="payReceiveModel">支付请求对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PaymentContracts.IPaymentService.DoRefundPay(PM.PaymentModel.PayRefundModel)">
+            <summary>
+            退款发起接口
+            </summary>
+            <param name="payRefundModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PaymentContracts.IPaymentService.PayCallback(PM.PaymentModel.PayResopnseModel)">
+            <summary>
+            支付回发响应（银行或者第三方）
+            </summary>
+            <param name="resModel"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

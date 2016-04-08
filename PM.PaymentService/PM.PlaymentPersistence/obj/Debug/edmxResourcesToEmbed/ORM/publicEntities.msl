@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PM_IntegratedModelStoreContainer" CdmEntityContainer="publicEntities">
+    <EntitySetMapping Name="T_Pay_Order">
+      <EntityTypeMapping TypeName="PM_IntegratedModel.T_Pay_Order">
+        <MappingFragment StoreEntitySet="T_Pay_Order">
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="CaseID" ColumnName="CaseID" />
+          <ScalarProperty Name="PrimaryID" ColumnName="PrimaryID" />
+          <ScalarProperty Name="PrimaryCode" ColumnName="PrimaryCode" />
+          <ScalarProperty Name="PrimaryName" ColumnName="PrimaryName" />
+          <ScalarProperty Name="SlaveID" ColumnName="SlaveID" />
+          <ScalarProperty Name="SlaveCode" ColumnName="SlaveCode" />
+          <ScalarProperty Name="SlaveName" ColumnName="SlaveName" />
+          <ScalarProperty Name="BusinessNo" ColumnName="BusinessNo" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="OrderName" ColumnName="OrderName" />
+          <ScalarProperty Name="PayerID" ColumnName="PayerID" />
+          <ScalarProperty Name="PayerName" ColumnName="PayerName" />
+          <ScalarProperty Name="CostType" ColumnName="CostType" />
+          <ScalarProperty Name="FeeAmount" ColumnName="FeeAmount" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="InvoiceTitle" ColumnName="InvoiceTitle" />
+          <ScalarProperty Name="PayAccountNo" ColumnName="PayAccountNo" />
+          <ScalarProperty Name="PayBankAccountType" ColumnName="PayBankAccountType" />
+          <ScalarProperty Name="PayAccountName" ColumnName="PayAccountName" />
+          <ScalarProperty Name="PayBankName" ColumnName="PayBankName" />
+          <ScalarProperty Name="PayBankNo" ColumnName="PayBankNo" />
+          <ScalarProperty Name="PayBankID" ColumnName="PayBankID" />
+          <ScalarProperty Name="PayProvince" ColumnName="PayProvince" />
+          <ScalarProperty Name="PayCity" ColumnName="PayCity" />
+          <ScalarProperty Name="PaySettingAccNo" ColumnName="PaySettingAccNo" />
+          <ScalarProperty Name="PayCur" ColumnName="PayCur" />
+          <ScalarProperty Name="ReceiptBankAccountType" ColumnName="ReceiptBankAccountType" />
+          <ScalarProperty Name="ReceiptAccountNo" ColumnName="ReceiptAccountNo" />
+          <ScalarProperty Name="ReceiptAccountName" ColumnName="ReceiptAccountName" />
+          <ScalarProperty Name="ReceiptBankName" ColumnName="ReceiptBankName" />
+          <ScalarProperty Name="ReceiptBankNo" ColumnName="ReceiptBankNo" />
+          <ScalarProperty Name="ReceiptBankID" ColumnName="ReceiptBankID" />
+          <ScalarProperty Name="ReceiptProvince" ColumnName="ReceiptProvince" />
+          <ScalarProperty Name="ReceiptCity" ColumnName="ReceiptCity" />
+          <ScalarProperty Name="ReceiptCur" ColumnName="ReceiptCur" />
+          <ScalarProperty Name="ReceiptSettingAccNo" ColumnName="ReceiptSettingAccNo" />
+          <ScalarProperty Name="OrderResult" ColumnName="OrderResult" />
+          <ScalarProperty Name="OrderTime" ColumnName="OrderTime" />
+          <ScalarProperty Name="OrderOpWay" ColumnName="OrderOpWay" />
+          <ScalarProperty Name="OprationType" ColumnName="OprationType" />
+          <ScalarProperty Name="OrderCombination" ColumnName="OrderCombination" />
+          <ScalarProperty Name="OrderSerialNumber" ColumnName="OrderSerialNumber" />
+          <ScalarProperty Name="PayRealAccountName" ColumnName="PayRealAccountName" />
+          <ScalarProperty Name="PayRealAccountNo" ColumnName="PayRealAccountNo" />
+          <ScalarProperty Name="PayRealBankName" ColumnName="PayRealBankName" />
+          <ScalarProperty Name="PayRealCity" ColumnName="PayRealCity" />
+          <ScalarProperty Name="PayRealProvince" ColumnName="PayRealProvince" />
+          <ScalarProperty Name="PayRealBankNo" ColumnName="PayRealBankNo" />
+          <ScalarProperty Name="PayRealBankID" ColumnName="PayRealBankID" />
+          <ScalarProperty Name="PayRealSettingAccNo" ColumnName="PayRealSettingAccNo" />
+          <ScalarProperty Name="PayInstitutionID" ColumnName="PayInstitutionID" />
+          <ScalarProperty Name="ReceiptInstitutionID" ColumnName="ReceiptInstitutionID" />
+          <ScalarProperty Name="NotificationURL" ColumnName="NotificationURL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Pay_Log">
+      <EntityTypeMapping TypeName="PM_IntegratedModel.T_Pay_Log">
+        <MappingFragment StoreEntitySet="T_Pay_Log">
+          <ScalarProperty Name="OprationType" ColumnName="OprationType" />
+          <ScalarProperty Name="OrderOpWay" ColumnName="OrderOpWay" />
+          <ScalarProperty Name="OrderTime" ColumnName="OrderTime" />
+          <ScalarProperty Name="OrderResult" ColumnName="OrderResult" />
+          <ScalarProperty Name="ReceiptCur" ColumnName="ReceiptCur" />
+          <ScalarProperty Name="ReceiptCity" ColumnName="ReceiptCity" />
+          <ScalarProperty Name="ReceiptProvince" ColumnName="ReceiptProvince" />
+          <ScalarProperty Name="ReceiptBankID" ColumnName="ReceiptBankID" />
+          <ScalarProperty Name="ReceiptBankNo" ColumnName="ReceiptBankNo" />
+          <ScalarProperty Name="ReceiptBankName" ColumnName="ReceiptBankName" />
+          <ScalarProperty Name="ReceiptAccountName" ColumnName="ReceiptAccountName" />
+          <ScalarProperty Name="ReceiptAccountNo" ColumnName="ReceiptAccountNo" />
+          <ScalarProperty Name="ReceiptBankAccountType" ColumnName="ReceiptBankAccountType" />
+          <ScalarProperty Name="PayCur" ColumnName="PayCur" />
+          <ScalarProperty Name="PayCity" ColumnName="PayCity" />
+          <ScalarProperty Name="PayProvince" ColumnName="PayProvince" />
+          <ScalarProperty Name="PayBankID" ColumnName="PayBankID" />
+          <ScalarProperty Name="PayBankNo" ColumnName="PayBankNo" />
+          <ScalarProperty Name="PayBankName" ColumnName="PayBankName" />
+          <ScalarProperty Name="PayAccountName" ColumnName="PayAccountName" />
+          <ScalarProperty Name="PayBankAccountType" ColumnName="PayBankAccountType" />
+          <ScalarProperty Name="PayAccountNo" ColumnName="PayAccountNo" />
+          <ScalarProperty Name="InvoiceTitle" ColumnName="InvoiceTitle" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="FeeAmount" ColumnName="FeeAmount" />
+          <ScalarProperty Name="CostType" ColumnName="CostType" />
+          <ScalarProperty Name="PayerName" ColumnName="PayerName" />
+          <ScalarProperty Name="PayerID" ColumnName="PayerID" />
+          <ScalarProperty Name="OrderName" ColumnName="OrderName" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="ProSectionID" ColumnName="ProSectionID" />
+          <ScalarProperty Name="CaseID" ColumnName="CaseID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Pay_OrderBusiness">
+      <EntityTypeMapping TypeName="PM_IntegratedModel.T_Pay_OrderBusiness">
+        <MappingFragment StoreEntitySet="T_Pay_OrderBusiness">
+          <ScalarProperty Name="Up_Tm" ColumnName="Up_Tm" />
+          <ScalarProperty Name="Create_Tm" ColumnName="Create_Tm" />
+          <ScalarProperty Name="ReMark" ColumnName="ReMark" />
+          <ScalarProperty Name="FeeType" ColumnName="FeeType" />
+          <ScalarProperty Name="InvoiceTitle" ColumnName="InvoiceTitle" />
+          <ScalarProperty Name="AccontType" ColumnName="AccontType" />
+          <ScalarProperty Name="PayMent_Tm" ColumnName="PayMent_Tm" />
+          <ScalarProperty Name="MainOrderNo" ColumnName="MainOrderNo" />
+          <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="Business_ID" ColumnName="Business_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Pay_OrderRequest">
+      <EntityTypeMapping TypeName="PM_IntegratedModel.T_Pay_OrderRequest">
+        <MappingFragment StoreEntitySet="T_Pay_OrderRequest">
+          <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+          <ScalarProperty Name="RequestUrl" ColumnName="RequestUrl" />
+          <ScalarProperty Name="RequestTime" ColumnName="RequestTime" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="Signature" ColumnName="Signature" />
+          <ScalarProperty Name="PacketMessage" ColumnName="PacketMessage" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Pay_OrderResponse">
+      <EntityTypeMapping TypeName="PM_IntegratedModel.T_Pay_OrderResponse">
+        <MappingFragment StoreEntitySet="T_Pay_OrderResponse">
+          <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+          <ScalarProperty Name="NoticeSignature" ColumnName="NoticeSignature" />
+          <ScalarProperty Name="NoticePacketMessage" ColumnName="NoticePacketMessage" />
+          <ScalarProperty Name="RequestTime" ColumnName="RequestTime" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="Signature" ColumnName="Signature" />
+          <ScalarProperty Name="PacketMessage" ColumnName="PacketMessage" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

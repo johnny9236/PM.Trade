@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PM.PaymentModel</name>
+    </assembly>
+    <members>
+        <member name="T:PM.PaymentModel.PayRefundModel">
+            <summary>
+            退款请求对象
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayRefundModel.BusinessFunNo">
+            <summary>
+            业务号（用于导向到具体的协议及功能）
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayRefundModel.OrderNo">
+            <summary>
+            订单号
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayRefundModel.TradeInfo">
+            <summary>
+            交易信息用途
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayRefundModel.PayMoney">
+            <summary>
+            总金额 
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayRefundModel.PayFee">
+            <summary>
+            总手续费
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayRefundModel.PayRefundDtl">
+             <summary>
+            退款 明细
+             </summary>
+        </member>
+        <member name="T:PM.PaymentModel.PayResopnseModel">
+            <summary>
+            支付响应接口对象
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayResopnseModel.BusinessFunNo">
+            <summary>
+            业务号（用于导向到具体的协议及功能）
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayResopnseModel.Message">
+            <summary>
+            报文
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayResopnseModel.Signature">
+            <summary>
+            签名
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayResopnseModel.ReceiveText">
+            <summary>
+            报文原文
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayResopnseModel.IsShowBk">
+            <summary>
+            是否后台显示
+            </summary>
+        </member>
+        <member name="T:PM.PaymentModel.PayStartModel">
+            <summary>
+            业务系统发起支付请求信息
+            </summary> 
+        </member>
+        <member name="P:PM.PaymentModel.PayStartModel.InstitutionID">
+             <summary>
+            机构编码
+             </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayStartModel.BusnissID">
+            <summary>
+            业务关联ID 
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayStartModel.OrderNo">
+            <summary>
+            订单号
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayStartModel.TradeInfo">
+            <summary>
+            交易信息用途
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayStartModel.PayMoney">
+            <summary>
+            支付金额(含税)
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayStartModel.PayFee">
+            <summary>
+            手续费
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayStartModel.RateMoney">
+            <summary>
+            税额
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayStartModel.PayerID">
+            <summary>
+            支付人ID
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayStartModel.PayerName">
+            <summary>
+            支付人名称
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayStartModel.PayBankID">
+            <summary>
+            付款银行id
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayStartModel.PayAcountName">
+            <summary>
+            付款账号名称
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayStartModel.PayAcountNo">
+             <summary>
+            付款 账号
+             </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayStartModel.PayAccountDbBank">
+            <summary>
+            付款开户行
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayStartModel.PayBankAccountType">
+            <summary>
+            付款行账号类型   11 为个人 12为企业
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayStartModel.PaySettingAccNo">
+            <summary>
+            付款结算代码
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayStartModel.PayOpenBankNo">
+            <summary>
+            付款行号
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayStartModel.PayProvince">
+            <summary>
+            付款省
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayStartModel.PayCity">
+            <summary>
+            付款 市
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayStartModel.PayCur">
+            <summary>
+            付款币种
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayStartModel.ReceiptBankID">
+             <summary>
+            收款银行id
+             </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayStartModel.ReceiptAcountName">
+            <summary>
+            收款账号名称
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayStartModel.ReceiptAcountNo">
+             <summary>
+            收款 账号
+             </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayStartModel.ReceiptAccountDbBank">
+            <summary>
+            收款开户行
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayStartModel.ReceiptBankAccountType">
+            <summary>
+            收款行账号类型   1 为个人 2为企业
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayStartModel.ReceiptSettingAccNo">
+            <summary>
+            收款结算代码
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayStartModel.ReceiptOpenBankNo">
+            <summary>
+            收款行号
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayStartModel.ReceiptProvince">
+            <summary>
+            收款省
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayStartModel.ReceiptCity">
+            <summary>
+            收款 市
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayStartModel.ReceiptCur">
+            <summary>
+            收款币种
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayStartModel.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:PM.PaymentModel.PayStartModel.BusinessFunNo">
+            <summary>
+            业务功能号(用于导向到具体的协议及功能）
+            </summary>
+        </member>
+    </members>
+</doc>

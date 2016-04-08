@@ -1,0 +1,488 @@
+﻿ 
+/****** Object:  Table [dbo].[T_HY_AptitudeCode]    Script Date: 12/20/2013 10:39:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[T_HY_AptitudeCode](
+	[ID] [varchar](50) NOT NULL,
+	[CodeID] [varchar](50) NULL,
+	[CodeType] [varchar](50) NULL,
+	[CodeName] [varchar](50) NULL,
+	[InCode] [varchar](50) NULL,
+	[IndexOf] [varchar](50) NULL,
+	[Match] [int] NULL,
+	[Flag] [int] NULL,
+	[Remark] [nvarchar](max) NULL,
+	[CreateTm] [datetime] NULL,
+	[UpdateTm] [datetime] NULL,
+ CONSTRAINT [PK_dbo.T_HY_AptitudeCode] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'编码标识' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_AptitudeCode', @level2type=N'COLUMN',@level2name=N'CodeID'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'编码类型' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_AptitudeCode', @level2type=N'COLUMN',@level2name=N'CodeType'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'编码内容' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_AptitudeCode', @level2type=N'COLUMN',@level2name=N'CodeName'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'所属父编码标识' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_AptitudeCode', @level2type=N'COLUMN',@level2name=N'InCode'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'编码排序（部分）' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_AptitudeCode', @level2type=N'COLUMN',@level2name=N'IndexOf'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'1匹配' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_AptitudeCode', @level2type=N'COLUMN',@level2name=N'Match'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'1处理' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_AptitudeCode', @level2type=N'COLUMN',@level2name=N'Flag'
+GO
+
+
+
+/****** Object:  Table [dbo].[T_HY_EntrpriseInfo]    Script Date: 12/20/2013 10:40:14 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[T_HY_EntrpriseInfo](
+	[ID] [varchar](50) NOT NULL,
+	[CodeId] [varchar](50) NULL,
+	[Fprnumber] [varchar](300) NULL,
+	[Trade_license_no] [varchar](300) NULL,
+	[Enter_type] [varchar](300) NULL,
+	[PM_Enter_type] [varchar](300) NULL,
+	[Enter_name] [varchar](300) NULL,
+	[AREA] [varchar](300) NULL,
+	[Legal_rept] [varchar](300) NULL,
+	[Legal_repttime] [varchar](300) NULL,
+	[Tech_principal] [varchar](300) NULL,
+	[Tech_principaltime] [varchar](300) NULL,
+	[Enter_kind] [varchar](300) NULL,
+	[BusiLicense_no] [varchar](300) NULL,
+	[Contact_people] [varchar](300) NULL,
+	[Contact_tel] [varchar](300) NULL,
+	[Contact_fax] [varchar](300) NULL,
+	[Contact_address] [varchar](300) NULL,
+	[Email] [varchar](300) NULL,
+	[Postcode] [varchar](300) NULL,
+	[Trade_license_validtime] [varchar](300) NULL,
+	[Record_validtime] [varchar](300) NULL,
+	[Zczj] [varchar](300) NULL,
+	[Permanent_assets] [varchar](300) NULL,
+	[Engineer_staff] [varchar](300) NULL,
+	[Update_date] [varchar](300) NULL,
+	[Is_safetyconstruction] [varchar](300) NULL,
+	[Is_safetyconstructiontime] [varchar](300) NULL,
+	[Ryzsbh1] [varchar](300) NULL,
+	[Ryzsbh2] [varchar](300) NULL,
+	[Zdddz] [varchar](300) NULL,
+	[Zddfzr] [varchar](300) NULL,
+	[Zddlxr] [varchar](300) NULL,
+	[Zdd_fax] [varchar](300) NULL,
+	[Zddlxdh] [varchar](300) NULL,
+	[Shtg] [varchar](300) NULL,
+	[Lxdz] [varchar](300) NULL,
+	[Legal_M1] [varchar](300) NULL,
+	[Legal_M2] [varchar](300) NULL,
+	[RyzsbhM1] [varchar](300) NULL,
+	[RyzsbhM2] [varchar](300) NULL,
+	[Legal_M1time] [varchar](300) NULL,
+	[Legal_M2time] [varchar](300) NULL,
+	[Match] [int] NULL,
+	[Flag] [int] NULL,
+	[Remark] [nvarchar](max) NULL,
+	[CreateTm] [datetime] NULL,
+	[UpdateTm] [datetime] NULL,
+ CONSTRAINT [PK_dbo.T_HY_EntrpriseInfo] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'企业标识' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'CodeId'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'组织机构代码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Fprnumber'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'交易证编号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Trade_license_no'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'企业类型(建议不要使用)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Enter_type'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'品茗企业类型  ' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'PM_Enter_type'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'企业名称' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Enter_name'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'所属地区' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'AREA'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'法定代表人' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Legal_rept'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'法人A证有效期' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Legal_repttime'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'技术负责人' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Tech_principal'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'技术负责人A证有效期' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Tech_principaltime'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'企业性质' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Enter_kind'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'营业执照' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'BusiLicense_no'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'联系人' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Contact_people'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'联系电话' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Contact_tel'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'传真' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Contact_fax'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'注册地址' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Contact_address'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'电子邮箱' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Email'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'邮编' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Postcode'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'交易证有效期' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Trade_license_validtime'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'备案有效期' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Record_validtime'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'注册资金' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Zczj'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'固定资产' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Permanent_assets'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'驻当地技术负责人' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Engineer_staff'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'更新时间' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Update_date'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'安全生产许可证号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Is_safetyconstruction'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'安全生产许可证有效期' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Is_safetyconstructiontime'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'法人A证编号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Ryzsbh1'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'技术负责人A证编号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Ryzsbh2'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'驻当地地址' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Zdddz'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'驻当地负责人' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Zddfzr'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'驻当地联系人' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Zddlxr'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'驻当地传真' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Zdd_fax'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'驻当地联系电话' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Zddlxdh'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'是否审核通过（1是0否）' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Shtg'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'联系地址' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Lxdz'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'经理' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Legal_M1'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'分管安全副经理' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Legal_M2'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'经理A证编号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'RyzsbhM1'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'分管安全副经理A证编号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'RyzsbhM2'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'经理A证有效期' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Legal_M1time'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'分管安全副经理A证有效期' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Legal_M2time'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'1匹配' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Match'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'1处理' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EntrpriseInfo', @level2type=N'COLUMN',@level2name=N'Flag'
+GO
+
+
+
+
+/****** Object:  Table [dbo].[T_HY_EnterpriseSpeciality]    Script Date: 12/20/2013 10:40:18 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[T_HY_EnterpriseSpeciality](
+	[ID] [varchar](50) NOT NULL,
+	[Fid] [varchar](50) NULL,
+	[Trade_no] [varchar](50) NULL,
+	[Specialty] [varchar](50) NULL,
+	[Grading] [varchar](50) NULL,
+	[Bz] [varchar](50) NULL,
+	[Zzzsbh] [varchar](50) NULL,
+	[Yxsj] [varchar](50) NULL,
+	[Match] [int] NULL,
+	[Flag] [int] NULL,
+	[Remark] [nvarchar](max) NULL,
+	[CreateTm] [datetime] NULL,
+	[UpdateTm] [datetime] NULL,
+ CONSTRAINT [PK_dbo.T_HY_EnterpriseSpeciality] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'企业资质标识' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EnterpriseSpeciality', @level2type=N'COLUMN',@level2name=N'Fid'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'企业标识' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EnterpriseSpeciality', @level2type=N'COLUMN',@level2name=N'Trade_no'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'资质名称' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EnterpriseSpeciality', @level2type=N'COLUMN',@level2name=N'Specialty'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'资质等级' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EnterpriseSpeciality', @level2type=N'COLUMN',@level2name=N'Grading'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'备注，是否主项(数据不全)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EnterpriseSpeciality', @level2type=N'COLUMN',@level2name=N'Bz'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'资质证书编号(数据不全)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EnterpriseSpeciality', @level2type=N'COLUMN',@level2name=N'Zzzsbh'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'资质有效期' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EnterpriseSpeciality', @level2type=N'COLUMN',@level2name=N'Yxsj'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'1匹配' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EnterpriseSpeciality', @level2type=N'COLUMN',@level2name=N'Match'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'1处理' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_EnterpriseSpeciality', @level2type=N'COLUMN',@level2name=N'Flag'
+GO
+
+
+
+/****** Object:  Table [dbo].[T_HY_Personnel]    Script Date: 12/20/2013 10:40:51 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[T_HY_Personnel](
+	[ID] [varchar](50) NOT NULL,
+	[UnionPersonID] [varchar](50) NULL,
+	[Fid] [varchar](50) NULL,
+	[MemberType] [varchar](50) NULL,
+	[EnterpriseID] [varchar](50) NULL,
+	[Xm] [varchar](50) NULL,
+	[Sfz] [varchar](50) NULL,
+	[SafeCert] [varchar](50) NULL,
+	[SafeCertValidTime] [varchar](50) NULL,
+	[Xmjlzsbh] [varchar](50) NULL,
+	[Sex] [varchar](50) NULL,
+	[Insert_date] [varchar](50) NULL,
+	[Shyx] [varchar](50) NULL,
+	[ChiefEngineer] [varchar](50) NULL,
+	[ChiefEngineer_sz] [varchar](50) NULL,
+	[ChiefEngiValidTime] [varchar](50) NULL,
+	[Aqjlsgz] [varchar](50) NULL,
+	[Sgzyxq] [varchar](50) NULL,
+	[Match] [int] NULL,
+	[Flag] [int] NULL,
+	[Remark] [varchar](max) NULL,
+	[CreateTm] [datetime] NULL,
+	[UpdateTm] [datetime] NULL,
+ CONSTRAINT [PK_dbo.T_HY_Personnel] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'人员联合标识' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_Personnel', @level2type=N'COLUMN',@level2name=N'UnionPersonID'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'人员标识（不同类型会重复）' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_Personnel', @level2type=N'COLUMN',@level2name=N'Fid'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'人员类型：' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_Personnel', @level2type=N'COLUMN',@level2name=N'MemberType'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'对应的企业标识' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_Personnel', @level2type=N'COLUMN',@level2name=N'EnterpriseID'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'姓名' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_Personnel', @level2type=N'COLUMN',@level2name=N'Xm'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'身份证号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_Personnel', @level2type=N'COLUMN',@level2name=N'Sfz'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'安全证书（B、C）编号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_Personnel', @level2type=N'COLUMN',@level2name=N'SafeCert'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'安全证书有效期' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_Personnel', @level2type=N'COLUMN',@level2name=N'SafeCertValidTime'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'资质证书编号（建造师） 注册证书编号（监理）' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_Personnel', @level2type=N'COLUMN',@level2name=N'Xmjlzsbh'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'性别' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_Personnel', @level2type=N'COLUMN',@level2name=N'Sex'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'创建时间' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_Personnel', @level2type=N'COLUMN',@level2name=N'Insert_date'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'是否审核通过（1是0否）' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_Personnel', @level2type=N'COLUMN',@level2name=N'Shyx'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'是否首席工程师（施工房建、监理、其他类）' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_Personnel', @level2type=N'COLUMN',@level2name=N'ChiefEngineer'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'是否首席工程师（施工市政）' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_Personnel', @level2type=N'COLUMN',@level2name=N'ChiefEngineer_sz'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'首席工程师有效期' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_Personnel', @level2type=N'COLUMN',@level2name=N'ChiefEngiValidTime'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'安全监理上岗证' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_Personnel', @level2type=N'COLUMN',@level2name=N'Aqjlsgz'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'安全监理上岗证有效期' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_Personnel', @level2type=N'COLUMN',@level2name=N'Sgzyxq'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'1匹配' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_Personnel', @level2type=N'COLUMN',@level2name=N'Match'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'1处理' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_Personnel', @level2type=N'COLUMN',@level2name=N'Flag'
+GO
+
+
+
+
+/****** Object:  Table [dbo].[T_HY_PersonnelSpeciality]    Script Date: 12/20/2013 10:40:54 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[T_HY_PersonnelSpeciality](
+	[ID] [varchar](50) NOT NULL,
+	[Fid] [varchar](50) NULL,
+	[UnionPersonID] [varchar](50) NULL,
+	[Memberid] [varchar](50) NULL,
+	[Zczs] [varchar](100) NULL,
+	[Zczy] [varchar](100) NULL,
+	[Zcdj] [varchar](100) NULL,
+	[Bz] [varchar](100) NULL,
+	[Match] [int] NULL,
+	[Flag] [int] NULL,
+	[Remark] [nvarchar](max) NULL,
+	[CreateTm] [datetime] NULL,
+	[UpdateTm] [datetime] NULL,
+ CONSTRAINT [PK_dbo.T_HY_PersonnelSpeciality] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'人员资质标识' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_PersonnelSpeciality', @level2type=N'COLUMN',@level2name=N'Fid'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'人员联合标识' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_PersonnelSpeciality', @level2type=N'COLUMN',@level2name=N'UnionPersonID'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'人员标识（不同类型会重复）' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_PersonnelSpeciality', @level2type=N'COLUMN',@level2name=N'Memberid'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'资质证书编号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_PersonnelSpeciality', @level2type=N'COLUMN',@level2name=N'Zczs'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'注册资质类型' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_PersonnelSpeciality', @level2type=N'COLUMN',@level2name=N'Zczy'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'注册等级' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_PersonnelSpeciality', @level2type=N'COLUMN',@level2name=N'Zcdj'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'备注（是否项目经理）' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_HY_PersonnelSpeciality', @level2type=N'COLUMN',@level2name=N'Bz'
+GO
+
+

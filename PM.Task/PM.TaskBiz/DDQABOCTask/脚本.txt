@@ -1,0 +1,166 @@
+﻿ 
+/****** Object:  Table [dbo].[T_DDQABOC]    Script Date: 01/10/2014 12:01:34 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[T_DDQABOC](
+	[ID] [varchar](50) NOT NULL,
+	[Prov] [varchar](50) NULL,
+	[AccNo] [varchar](50) NULL,
+	[Cur] [varchar](50) NULL,
+	[TrDate] [varchar](50) NULL,
+	[TimeStab] [varchar](50) NULL,
+	[TrJrn] [varchar](50) NULL,
+	[TrType] [varchar](50) NULL,
+	[TrBankNo] [varchar](50) NULL,
+	[AccName] [varchar](50) NULL,
+	[AmtIndex] [varchar](50) NULL,
+	[OppProv] [varchar](50) NULL,
+	[OppAccNo] [varchar](50) NULL,
+	[OppCur] [varchar](50) NULL,
+	[OppName] [varchar](50) NULL,
+	[OppBkName] [varchar](50) NULL,
+	[CshIndex] [varchar](50) NULL,
+	[ErrDate] [varchar](50) NULL,
+	[ErrVchNo] [varchar](50) NULL,
+	[Amt] [numeric](18, 2) NULL,
+	[Bal] [varchar](50) NULL,
+	[PreAmt] [varchar](50) NULL,
+	[TotChg] [varchar](50) NULL,
+	[VoucherType] [varchar](50) NULL,
+	[VoucherProv] [varchar](50) NULL,
+	[VoucherBat] [varchar](50) NULL,
+	[VoucherNo] [varchar](50) NULL,
+	[CustRef] [varchar](50) NULL,
+	[TransCode] [varchar](50) NULL,
+	[Teller] [varchar](100) NULL,
+	[VchNo] [varchar](100) NULL,
+	[Abs] [nvarchar](500) NULL,
+	[PostScript] [nvarchar](500) NULL,
+	[TrFrom] [nvarchar](500) NULL,
+	[CreateTm] [datetime] NULL,
+	[Match] [int] NULL,
+	[Flag] [int] NULL,
+ CONSTRAINT [PK_T_DDQABOC] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'省市代码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'Prov'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'账号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'AccNo'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'货币码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'Cur'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'交易日期' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'TrDate'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'交易时间' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'TimeStab'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'日志号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'TrJrn'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'交易类型' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'TrType'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'交易行号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'TrBankNo'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'户名' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'AccName'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'发生额标志' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'AmtIndex'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'对方账号省市代码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'OppProv'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'对方账号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'OppAccNo'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'对方账号货币码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'OppCur'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'对方账号户名' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'OppName'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'对方账号开户行' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'OppBkName'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'现转标志' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'CshIndex'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'错账日期' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'ErrDate'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'错账传票号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'ErrVchNo'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'交易金额' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'Amt'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'账户余额' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'Bal'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'上笔余额' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'PreAmt'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'手续费总额' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'TotChg'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'凭证种类' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'VoucherType'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'凭证省市代号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'VoucherProv'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'凭证批次号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'VoucherBat'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'凭证号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'VoucherNo'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'客户参考号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'CustRef'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'交易码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'TransCode'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'柜员号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'Teller'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'传票号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'VchNo'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'摘要' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'Abs'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'附言' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'PostScript'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'交易来源' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'TrFrom'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'匹配0 未匹配   1匹配' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'Match'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'是否处理（预留）【0未处理  1处理】' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_DDQABOC', @level2type=N'COLUMN',@level2name=N'Flag'
+GO
+
+

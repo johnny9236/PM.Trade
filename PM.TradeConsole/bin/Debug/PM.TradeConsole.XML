@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PM.TradeConsole</name>
+    </assembly>
+    <members>
+        <member name="M:PM.TradeConsole.Program.Main(System.String[])">
+            <summary>
+            控制台启动
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="T:PM.TradeConsole.BizInit">
+            <summary>
+            业务初始化(目前是支付证书初始化)
+            </summary>
+        </member>
+        <member name="M:PM.TradeConsole.BizInit.Init">
+            <summary>
+             初始化
+            </summary>
+        </member>
+        <member name="M:PM.TradeConsole.BizInit.NetbankInit">
+            <summary>
+            网银支付初始化
+            </summary>
+        </member>
+        <member name="T:PM.TradeConsole.Sever.SocketService">
+            <summary>
+            socket监听
+            </summary>
+        </member>
+        <member name="M:PM.TradeConsole.Sever.SocketService.SocketServiceStart">
+            <summary>
+            启动socket服务
+            </summary>
+        </member>
+        <member name="M:PM.TradeConsole.Sever.SocketService.SocketServiceStop">
+            <summary>
+            停止监听
+            </summary>
+        </member>
+        <member name="T:PM.TradeConsole.Sever.WCFServer">
+            <summary>
+            wcf服务
+            </summary>
+        </member>
+        <member name="M:PM.TradeConsole.Sever.WCFServer.WCFServerStart">
+            <summary>
+            Wcf服务开启
+            </summary>
+        </member>
+        <member name="T:PM.TradeConsole.InitServer">
+            <summary>
+            初始化各种服务
+            </summary>
+        </member>
+        <member name="M:PM.TradeConsole.InitServer.Init">
+            <summary>
+            定时、监听等 系统服务初始化
+            </summary>
+        </member>
+        <member name="M:PM.TradeConsole.InitServer.InitDispose">
+            <summary>
+            停止服务
+            </summary>
+        </member>
+        <member name="T:PM.TradeConsole.Sever.TimerService">
+            <summary>
+            定时任务服务
+            </summary>
+        </member>
+        <member name="M:PM.TradeConsole.Sever.TimerService.TimerServiceStart">
+            <summary>
+            定时服务启动
+            </summary>
+        </member>
+        <member name="M:PM.TradeConsole.Sever.TimerService.TimerServiceStop">
+            <summary>
+            停止job
+            </summary>
+        </member>
+    </members>
+</doc>

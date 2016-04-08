@@ -1,0 +1,8 @@
+非支付通用接口 PM.PaymentService\PM.PaymentModel\CommProtocolModel实现
+
+1、PM.PaymentBiz具体的业务实现 一般不处理业务数据（通过http回调方式），但是看情况是否需要把业务也写入
+2、PM.PaymentContracts 契约(对外开放)
+3、PM.PaymentModel对象
+4、PM.PaymentServices服务
+
+使用时把PM.PaymentContracts 契约(对外开放) 及PM.PaymentModel对象 供wcf客户端调用 或者直接生产 描述文件

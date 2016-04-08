@@ -1,0 +1,3 @@
+﻿ payRefundMode.TradeInfo;//标段编号
+
+                                     ReMark为  sectionNo;//标段号

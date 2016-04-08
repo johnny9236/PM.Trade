@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3103B58F-909F-4A7C-9B56-B38249DB7B72}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PM.PaymentModel</RootNamespace>
+    <AssemblyName>PM.PaymentModel</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\PM.PaymentModel.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\PM.PaymentModel.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BizModel\AHQY\QYBid.cs" />
+    <Compile Include="BizModel\AHQY\QYBZJ.cs" />
+    <Compile Include="BizModel\AHQY\QYCommBase.cs" />
+    <Compile Include="BizModel\AHQY\QYFinishPro.cs" />
+    <Compile Include="BizModel\HSICBC\HSICBCBid.cs" />
+    <Compile Include="BizModel\HSICBC\HSICBCBZJ.cs" />
+    <Compile Include="BizModel\HSTRCB\HSTRCBBid.cs" />
+    <Compile Include="BizModel\HSTRCB\HSTRCBBZJ.cs" />
+    <Compile Include="BizModel\HSTRCB\HSTRCBCommBase.cs" />
+    <Compile Include="BizModel\HSTRCB\HSTRCBFinishPro.cs" />
+    <Compile Include="BizModel\HSTRCB\HSTRCBVirtualAccount.cs" />
+    <Compile Include="BizModel\StringUtil.cs" />
+    <Compile Include="BizModel\AHQY\QYVirtualAccount.cs" />
+    <Compile Include="BizModel\HSICBC\HSICBCCommBase.cs" />
+    <Compile Include="BizModel\HSICBC\HSICBCVirtualAccount.cs" />
+    <Compile Include="CommServiceProtocolModel.cs" />
+    <Compile Include="PayStartModel.cs" />
+    <Compile Include="PayRefundModel.cs" />
+    <Compile Include="PayResopnseModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

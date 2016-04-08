@@ -1,0 +1,1613 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PM.PlaymentPersistence</name>
+    </assembly>
+    <members>
+        <member name="T:PM.PlaymentPersistence.Payment.PersistenceBiz.ALi.ALiPersistence">
+            <summary>
+            支付宝
+            </summary>
+        </member>
+        <member name="T:PM.PlaymentPersistence.Payment.Persistence.Persistence">
+            <summary>
+            支付基类
+            </summary>
+             <summary>
+            支付核心
+             </summary>
+            <summary>
+            转账 结算
+            </summary>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.Persistence.Persistence.SetRequestPayOrder(PM.PlaymentPersistence.ORM.T_Pay_Order)">
+            <summary>
+            设置支付请求订单信息
+            </summary>
+            <param name="order"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.Persistence.Persistence.OprationBKRequestPay(PM.PaymentProtocolModel.ResultInfo,PM.PlaymentPersistence.ORM.T_Pay_Order,System.String@)">
+            <summary>
+            支付请求后续处理业务 （继承类处理）[1、订单保存 2、业务关系表 保存  3获取请求输出 ]  
+            </summary>
+            <param name="info"></param>
+            <param name="order"></param>
+            <param name="rtnStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.Persistence.Persistence.PayRequest">
+            <summary>
+            发起支付
+            注意：如果返回字符串中带"■"; 标示错误的 需要前台提示
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.Persistence.Persistence.SetCallRemotePayCommunicationInfo(PM.PlaymentPersistence.ORM.T_Pay_Order)">
+            <summary>
+            支付请求发起信息
+            </summary>
+            <param name="order">订单</param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.Persistence.Persistence.SetCallBackRemotePayCommunicationInfo(System.String,System.String)">
+            <summary>
+            支付响应通讯
+            </summary>
+            <param name="signature"></param>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.Persistence.Persistence.SetResponsePayOrder(PM.PlaymentPersistence.ORM.T_Pay_Order)">
+            <summary>
+            设置支付返回订单信息
+            </summary>
+            <param name="order">订单</param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.Persistence.Persistence.OprationBKResponsePay(PM.PaymentProtocolModel.ResultInfo,System.Boolean,System.String@)">
+            <summary>
+            后续业务设置支付返回订单信息[1、订单信息修改2、订单返回请求信息保存3、业务表数据修改]
+            </summary>
+            <param name="info">获取返回对象</param> 
+            <param name="bkInfo">是否后台显示</param>
+            <param name="queryPayerBusinessNo">支付人业务功能号</param>
+            <param name="rtnStr">订单返回字串信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.Persistence.Persistence.PayResopnseOpration(System.String,System.String,System.Boolean,System.String@)">
+            <summary>
+            支付响应操作,内部需要在继承类中实现如下内容(响应总接口中使用)
+            1：获取响应信息解析
+            2：实现后续业务处理( 订单状态修改、业务关系表状态修改)
+            </summary>
+            <param name="signature"></param>
+            <param name="message"></param>
+            <param name="bkShow"></param>
+            <param name="showStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.Persistence.Persistence.Response(PM.PaymentModel.PayResopnseModel)">
+            <summary>
+               /// 响应返回
+            </summary>
+            <param name="resopnseModel">返回对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.Persistence.Persistence.GetOpKind(System.String,System.String)">
+            <summary>
+            获取当前是那种操作类型
+            </summary>
+            <param name="signature"></param>
+            <param name="message"></param> 
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.Persistence.Persistence.PostBackToBusinesss(PM.PlaymentPersistence.ORM.T_Pay_Order,System.String,System.String,System.String)">
+            <summary>
+            回调给业务系统
+            </summary>
+            <param name="order">订单</param>
+            <param name="urlStr">回调地址</param>
+            <param name="enCoding">编码</param>
+            <param name="rtnCheckStr">回调页面返回（用于比对是否处理成功）</param>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.Persistence.Persistence.SetResponseTransferPayOrder(PM.PlaymentPersistence.ORM.T_Pay_Order)">
+            <summary>
+            设置转账支付返回订单信息
+            </summary>
+            <param name="order"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.Persistence.Persistence.SetRequestTransferPayOrder(PM.PlaymentPersistence.ORM.T_Pay_Order)">
+            <summary>
+            设置转账支付请求订单信息
+            </summary>
+            <param name="order"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.Persistence.Persistence.SetResponseClearPayOrder(PM.PlaymentPersistence.ORM.T_Pay_Order)">
+            <summary>
+            设置结算支付返回订单信息
+            </summary>
+            <param name="order"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.Persistence.Persistence.SetClearPayRequestOrder(System.Collections.Generic.List{PM.PlaymentPersistence.ORM.T_Pay_Order})">
+            <summary>
+            设置结算支付请求订单信息
+            </summary>
+            <param name="order"></param>
+            <returns></returns>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.Persistence.Persistence.Entities">
+            <summary>
+            设置全局变量
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.Persistence.Persistence.Sys_ConfigModel">
+            <summary>
+            配置信息
+            </summary>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.ALi.ALiPersistence.SetRequestPayOrder(PM.PlaymentPersistence.ORM.T_Pay_Order)">
+            <summary>
+            支付请求发起前 获取订单信息  （业务数据）设置订单号  订单
+            </summary>
+            <param name="order"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.ALi.ALiPersistence.OprationBKRequestPay(PM.PaymentProtocolModel.ResultInfo,PM.PlaymentPersistence.ORM.T_Pay_Order,System.String@)">
+            <summary>
+            支付业务发起后  业务处理
+            </summary>
+            <param name="sendInfo"></param>
+            <param name="order"></param>
+            <param name="rtnStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.ALi.ALiPersistence.SetCallRemotePayCommunicationInfo(PM.PlaymentPersistence.ORM.T_Pay_Order)">
+            <summary>
+            支付请求
+            </summary>
+            <param name="order">订单</param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.ALi.ALiPersistence.SetCallBackRemotePayCommunicationInfo(System.String,System.String)">
+            <summary>
+            支付响应
+            </summary>
+            <param name="signature">签名</param>
+            <param name="message">信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.ALi.ALiPersistence.OprationBKResponsePay(PM.PaymentProtocolModel.ResultInfo,System.Boolean,System.String@)">
+            <summary>
+            后续业务设置支付返回订单信息[ 1、 获取付款信息  2、订单信息修改  3、订单返回请求信息保存   4、业务表数据修改  5回调业务系统]
+            </summary>
+            <param name="info"></param>
+            <param name="bkShow"></param>
+            <param name="rtnStr"></param>
+            <returns></returns>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.ALi.ALiPersistence.PayReceiveModel">
+            <summary>
+            业务系统发送  支付信息对象
+            </summary>
+        </member>
+        <member name="T:PM.PlaymentPersistence.Payment.PersistenceBiz.NetBankPersistence">
+            <summary>
+            银联支付业务
+            </summary>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.NetBankPersistence.SetRequestPayOrder(PM.PlaymentPersistence.ORM.T_Pay_Order)">
+            <summary>
+            支付请求发起前 获取订单信息  （业务数据）设置订单号  订单
+            </summary>
+            <param name="order"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.NetBankPersistence.OprationBKRequestPay(PM.PaymentProtocolModel.ResultInfo,PM.PlaymentPersistence.ORM.T_Pay_Order,System.String@)">
+            <summary>
+            支付业务发起后  业务处理
+            </summary>
+            <param name="sendInfo"></param>
+            <param name="order"></param>
+            <param name="rtnStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.NetBankPersistence.SetCallRemotePayCommunicationInfo(PM.PlaymentPersistence.ORM.T_Pay_Order)">
+            <summary>
+            支付请求发起
+            </summary>
+            <param name="order"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.NetBankPersistence.SetCallBackRemotePayCommunicationInfo(System.String,System.String)">
+            <summary>
+            支付响应通讯
+            </summary>
+            <param name="signature"></param>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.NetBankPersistence.OprationBKResponsePay(PM.PaymentProtocolModel.ResultInfo,System.Boolean,System.String@)">
+            <summary>
+            后续业务设置支付返回订单信息[ 1、 获取付款信息  2、订单信息修改  3、订单返回请求信息保存   4、业务表数据修改  5回调业务系统]
+            </summary>
+            <param name="info"></param>
+            <param name="bkShow"></param>
+            <param name="rtnStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.NetBankPersistence.GetOpKind(System.String,System.String)">
+            <summary>
+            操作类型获取(用于响应时 对应的操作)
+            </summary>
+            <param name="signature"></param>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.NetBankPersistence.GetTrader(PM.PlaymentPersistence.ORM.T_Pay_Order,System.String)">
+            <summary>
+            获取支付人信息
+            </summary>
+            <param name="order"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.NetBankPersistence.Build_Form(PM.PaymentProtocolModel.ResultInfo)">
+            <summary>
+            获取支付提交html
+            </summary>
+            <param name="sendInfo">支付消息</param>
+            <returns></returns>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.NetBankPersistence.PayReceiveModel">
+            <summary>
+            业务系统发送  支付信息对象
+            </summary>
+        </member>
+        <member name="T:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.JSABOCPersistence">
+            <summary>
+            退款
+            </summary>
+        </member>
+        <member name="F:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.JSABOCPersistence.dbEnter">
+            <summary>
+            数据库对象
+            </summary>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.JSABOCPersistence.DoRefundPay(PM.PaymentModel.PayRefundModel)">
+            <summary>
+            退保证金请求
+            </summary>
+            <param name="payRefundMode">业务退款对象</param>
+            <returns>返回  成功标段业务主键ID</returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.JSABOCPersistence.HttpPayCallback(System.String)">
+            <summary>
+            响应保证退回通知
+            </summary>
+            <param name="message">报文字符串</param>
+            <returns>返回给客户端报文</returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.JSABOCPersistence.RefoundToDB(PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRefoundModel)">
+            <summary> 
+            退保证金请求记录入库
+            </summary>
+            <param name="refoundModel">退款对象</param>
+            <returns>交易记录对象入库</returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.JSABOCPersistence.RefoundCallbackToDB(PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRtnModel)">
+            <summary> 
+            退保证金响应记录入库
+            </summary>
+            <param name="refoundModel">退款对象</param>
+            <returns>交易记录对象入库</returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.JSABOCPersistence.UpdatePaymentStatus(PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRtnModel,PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCBizModel@)">
+            <summary>
+            更新入账表退保证金状态
+            </summary> 
+            <param name="orderModel">协议对象</param>
+            <param name="rtnModel">业务返回对象</param>
+            <returns></returns>
+        </member>
+        <member name="T:PM.PlaymentPersistence.PlaymentPersistenceManager">
+            <summary>
+            业务管理
+            </summary>
+        </member>
+        <member name="M:PM.PlaymentPersistence.PlaymentPersistenceManager.DoPay(PM.PaymentModel.PayStartModel)">
+            <summary>
+            支付发起
+            </summary>
+            <param name="payModel">支付对象</param> 
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.PlaymentPersistenceManager.DoRefundPay(PM.PaymentModel.PayRefundModel)">
+            <summary>
+            退款
+            </summary>
+            <param name="refundMode">退款对象</param> 
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.PlaymentPersistenceManager.PayCallBack(System.Object)">
+            <summary>
+            交易响应
+            </summary>
+            <param name="callBackModel">响应对象</param> 
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.PlaymentPersistenceManager.CommonRemoteCall(System.Object)">
+            <summary>
+            非支付调用 如入账明细
+            </summary>
+            <param name="objModel">入账明细对象</param>
+        </member>
+        <member name="T:PM.PlaymentPersistence.PaymentServiceFactory.CommonFactory">
+            <summary>
+            非支付工厂
+            </summary>
+        </member>
+        <member name="M:PM.PlaymentPersistence.PaymentServiceFactory.CommonFactory.CommonRemoteCall(System.Object)">
+            <summary>
+            非支付调用 如入账明细
+            </summary>
+            <param name="objModel">入账明细对象</param>
+        </member>
+        <member name="T:PM.PlaymentPersistence.ORM.publicEntities">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.PlaymentPersistence.ORM.publicEntities.#ctor">
+            <summary>
+            请使用应用程序配置文件的“publicEntities”部分中的连接字符串初始化新 publicEntities 对象。
+            </summary>
+        </member>
+        <member name="M:PM.PlaymentPersistence.ORM.publicEntities.#ctor(System.String)">
+            <summary>
+            初始化新的 publicEntities 对象。
+            </summary>
+        </member>
+        <member name="M:PM.PlaymentPersistence.ORM.publicEntities.#ctor(System.Data.EntityClient.EntityConnection)">
+            <summary>
+            初始化新的 publicEntities 对象。
+            </summary>
+        </member>
+        <member name="M:PM.PlaymentPersistence.ORM.publicEntities.AddToT_Pay_Order(PM.PlaymentPersistence.ORM.T_Pay_Order)">
+            <summary>
+            用于向 T_Pay_Order EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+            </summary>
+        </member>
+        <member name="M:PM.PlaymentPersistence.ORM.publicEntities.AddToT_Pay_Log(PM.PlaymentPersistence.ORM.T_Pay_Log)">
+            <summary>
+            用于向 T_Pay_Log EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+            </summary>
+        </member>
+        <member name="M:PM.PlaymentPersistence.ORM.publicEntities.AddToT_Pay_OrderBusiness(PM.PlaymentPersistence.ORM.T_Pay_OrderBusiness)">
+            <summary>
+            用于向 T_Pay_OrderBusiness EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+            </summary>
+        </member>
+        <member name="M:PM.PlaymentPersistence.ORM.publicEntities.AddToT_Pay_OrderRequest(PM.PlaymentPersistence.ORM.T_Pay_OrderRequest)">
+            <summary>
+            用于向 T_Pay_OrderRequest EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+            </summary>
+        </member>
+        <member name="M:PM.PlaymentPersistence.ORM.publicEntities.AddToT_Pay_OrderResponse(PM.PlaymentPersistence.ORM.T_Pay_OrderResponse)">
+            <summary>
+            用于向 T_Pay_OrderResponse EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.publicEntities.T_Pay_Order">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.publicEntities.T_Pay_Log">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.publicEntities.T_Pay_OrderBusiness">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.publicEntities.T_Pay_OrderRequest">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.publicEntities.T_Pay_OrderResponse">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.PlaymentPersistence.ORM.T_Pay_Log">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.PlaymentPersistence.ORM.T_Pay_Log.CreateT_Pay_Log(System.Guid)">
+            <summary>
+            创建新的 T_Pay_Log 对象。
+            </summary>
+            <param name="id">ID 属性的初始值。</param>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.ID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.CaseID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.ProSectionID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.OrderNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.OrderName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.PayerID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.PayerName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.CostType">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.FeeAmount">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.Amount">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.Remark">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.InvoiceTitle">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.PayAccountNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.PayBankAccountType">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.PayAccountName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.PayBankName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.PayBankNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.PayBankID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.PayProvince">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.PayCity">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.PayCur">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.ReceiptBankAccountType">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.ReceiptAccountNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.ReceiptAccountName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.ReceiptBankName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.ReceiptBankNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.ReceiptBankID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.ReceiptProvince">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.ReceiptCity">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.ReceiptCur">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.OrderResult">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.OrderTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.OrderOpWay">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Log.OprationType">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.PlaymentPersistence.ORM.T_Pay_Order">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.PlaymentPersistence.ORM.T_Pay_Order.CreateT_Pay_Order(System.Guid)">
+            <summary>
+            创建新的 T_Pay_Order 对象。
+            </summary>
+            <param name="orderID">OrderID 属性的初始值。</param>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.OrderID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.CaseID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.PrimaryID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.PrimaryCode">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.PrimaryName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.SlaveID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.SlaveCode">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.SlaveName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.BusinessNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.OrderNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.OrderName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.PayerID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.PayerName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.CostType">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.FeeAmount">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.Amount">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.Remark">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.InvoiceTitle">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.PayAccountNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.PayBankAccountType">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.PayAccountName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.PayBankName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.PayBankNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.PayBankID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.PayProvince">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.PayCity">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.PaySettingAccNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.PayCur">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.ReceiptBankAccountType">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.ReceiptAccountNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.ReceiptAccountName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.ReceiptBankName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.ReceiptBankNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.ReceiptBankID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.ReceiptProvince">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.ReceiptCity">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.ReceiptCur">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.ReceiptSettingAccNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.OrderResult">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.OrderTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.OrderOpWay">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.OprationType">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.OrderCombination">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.OrderSerialNumber">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.PayRealAccountName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.PayRealAccountNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.PayRealBankName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.PayRealCity">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.PayRealProvince">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.PayRealBankNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.PayRealBankID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.PayRealSettingAccNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.PayInstitutionID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.ReceiptInstitutionID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_Order.NotificationURL">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.PlaymentPersistence.ORM.T_Pay_OrderBusiness">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.PlaymentPersistence.ORM.T_Pay_OrderBusiness.CreateT_Pay_OrderBusiness(System.String,System.String)">
+            <summary>
+            创建新的 T_Pay_OrderBusiness 对象。
+            </summary>
+            <param name="id">ID 属性的初始值。</param>
+            <param name="business_ID">Business_ID 属性的初始值。</param>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_OrderBusiness.ID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_OrderBusiness.Business_ID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_OrderBusiness.OrderNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_OrderBusiness.OrderStatus">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_OrderBusiness.MainOrderNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_OrderBusiness.PayMent_Tm">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_OrderBusiness.AccontType">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_OrderBusiness.InvoiceTitle">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_OrderBusiness.FeeType">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_OrderBusiness.ReMark">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_OrderBusiness.Create_Tm">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_OrderBusiness.Up_Tm">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.PlaymentPersistence.ORM.T_Pay_OrderRequest">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.PlaymentPersistence.ORM.T_Pay_OrderRequest.CreateT_Pay_OrderRequest(System.Guid)">
+            <summary>
+            创建新的 T_Pay_OrderRequest 对象。
+            </summary>
+            <param name="id">ID 属性的初始值。</param>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_OrderRequest.ID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_OrderRequest.PacketMessage">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_OrderRequest.Signature">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_OrderRequest.OrderNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_OrderRequest.RequestTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_OrderRequest.RequestUrl">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_OrderRequest.SerialNumber">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.PlaymentPersistence.ORM.T_Pay_OrderResponse">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.PlaymentPersistence.ORM.T_Pay_OrderResponse.CreateT_Pay_OrderResponse(System.Guid)">
+            <summary>
+            创建新的 T_Pay_OrderResponse 对象。
+            </summary>
+            <param name="id">ID 属性的初始值。</param>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_OrderResponse.ID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_OrderResponse.PacketMessage">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_OrderResponse.Signature">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_OrderResponse.OrderNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_OrderResponse.RequestTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_OrderResponse.NoticePacketMessage">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_OrderResponse.NoticeSignature">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.ORM.T_Pay_OrderResponse.SerialNumber">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.JSABOC">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.JSABOC.#ctor">
+            <summary>
+            请使用应用程序配置文件的“JSABOC”部分中的连接字符串初始化新 JSABOC 对象。
+            </summary>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.JSABOC.#ctor(System.String)">
+            <summary>
+            初始化新的 JSABOC 对象。
+            </summary>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.JSABOC.#ctor(System.Data.EntityClient.EntityConnection)">
+            <summary>
+            初始化新的 JSABOC 对象。
+            </summary>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.JSABOC.AddToT_ZTB_BidMoneyPayReturn(PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn)">
+            <summary>
+            用于向 T_ZTB_BidMoneyPayReturn EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+            </summary>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.JSABOC.AddToT_JSABOC(PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_JSABOC)">
+            <summary>
+            用于向 T_JSABOC EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.JSABOC.T_ZTB_BidMoneyPayReturn">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.JSABOC.T_JSABOC">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_JSABOC">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_JSABOC.CreateT_JSABOC(System.String)">
+            <summary>
+            创建新的 T_JSABOC 对象。
+            </summary>
+            <param name="id">ID 属性的初始值。</param>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_JSABOC.ID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_JSABOC.TradeCode">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_JSABOC.TradeStructNum">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_JSABOC.ReturneCode">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_JSABOC.ReturneMsg">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_JSABOC.DetailDataTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_JSABOC.Count">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_JSABOC.SectionNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_JSABOC.ReceiveAccNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_JSABOC.ReceiveAccDbName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_JSABOC.ReceiveAccDBBank">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_JSABOC.Used">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_JSABOC.PayAccNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_JSABOC.PayAccDbName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_JSABOC.PayAccDBBank">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_JSABOC.Amount">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_JSABOC.RealAmount">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_JSABOC.Summary">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_JSABOC.Remark">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_JSABOC.SerialNumber">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_JSABOC.OrderNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_JSABOC.IsAboc">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_JSABOC.IsMatch">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_JSABOC.Flag">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_JSABOC.CreateTm">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.CreateT_ZTB_BidMoneyPayReturn(System.Guid,System.Int32)">
+            <summary>
+            创建新的 T_ZTB_BidMoneyPayReturn 对象。
+            </summary>
+            <param name="id">Id 属性的初始值。</param>
+            <param name="autoId">AutoId 属性的初始值。</param>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.Id">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.CaseId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.BidderId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.IincurredTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.PayTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.PayFee">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.PayMoney">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.PayType">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.CardNum">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.IsCheck">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.ReturnManId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.ReturnTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.ReturnWindow">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.Phone">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.IsReturn">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.UnitId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.BankCardNum">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.PayBank">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.PayBankDes">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.BankName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.UnitCode">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.CaseCode">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.AutoId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.UnitName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.ProSectionId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.BidMoneyType">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.LinkPerson">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.LinkPersonPhone">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.LinkPersonMobilTel">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.submiter">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.submitername">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.submittime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.IsOnline">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.PayOrderNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.TransOrderNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.SearchOrderNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.OtherOrderNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.PayTotalMoney">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.RtnTotalMoney">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.RtnRateMoney">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.RtnRateDate">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.TransTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.SearchTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.ClearFlag">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.IsBidAgain">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.ABOCPayOrderNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.ABOCReturnOrderNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.PayAccNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.PayAccDbName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.PayAccDBBank">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.JSABOC.T_ZTB_BidMoneyPayReturn.Remark">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.PlaymentPersistence.Payment.PersistenceBiz.LPSBBC.LPSBBCPersistence">
+            <summary>
+            六盘水建行 
+            </summary>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.LPSBBC.LPSBBCPersistence.SetRequestPayOrder(PM.PlaymentPersistence.ORM.T_Pay_Order)">
+            <summary>
+            支付请求发起前 获取订单信息  （业务数据）设置订单号  订单
+            </summary>
+            <param name="order"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.LPSBBC.LPSBBCPersistence.OprationBKRequestPay(PM.PaymentProtocolModel.ResultInfo,PM.PlaymentPersistence.ORM.T_Pay_Order,System.String@)">
+            <summary>
+            支付业务发起后  业务处理
+            </summary>
+            <param name="sendInfo"></param>
+            <param name="order"></param>
+            <param name="rtnStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.LPSBBC.LPSBBCPersistence.SetCallRemotePayCommunicationInfo(PM.PlaymentPersistence.ORM.T_Pay_Order)">
+            <summary>
+            支付请求发起
+            </summary>
+            <param name="order"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.LPSBBC.LPSBBCPersistence.SetCallBackRemotePayCommunicationInfo(System.String,System.String)">
+            <summary>
+            支付响应通讯
+            </summary>
+            <param name="signature"></param>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.LPSBBC.LPSBBCPersistence.OprationBKResponsePay(PM.PaymentProtocolModel.ResultInfo,System.Boolean,System.String@)">
+            <summary>
+            后续业务设置支付返回订单信息[ 1、 获取付款信息  2、订单信息修改  3、订单返回请求信息保存   4、业务表数据修改  5回调业务系统]
+            </summary>
+            <param name="info"></param>
+            <param name="bkShow"></param>
+            <param name="rtnStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.LPSBBC.LPSBBCPersistence.GetOpKind(System.String,System.String)">
+            <summary>
+            操作类型获取(用于响应时 对应的操作)
+            </summary>
+            <param name="signature"></param>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.Payment.PersistenceBiz.LPSBBC.LPSBBCPersistence.Build_Form(PM.PaymentProtocolModel.ResultInfo)">
+            <summary>
+            获取支付提交html
+            </summary>
+            <param name="sendInfo">支付消息</param>
+            <returns></returns>
+        </member>
+        <member name="P:PM.PlaymentPersistence.Payment.PersistenceBiz.LPSBBC.LPSBBCPersistence.PayReceiveModel">
+            <summary>
+            业务系统发送  支付信息对象
+            </summary>
+        </member>
+        <member name="T:PM.PlaymentPersistence.PaymentServiceFactory.PayFactory">
+            <summary>
+            业务实现工厂
+            </summary>
+        </member>
+        <member name="M:PM.PlaymentPersistence.PaymentServiceFactory.PayFactory.DoPay(System.Object)">
+            <summary>
+            支付请求
+            </summary>
+            <param name="payModel">请求对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.PaymentServiceFactory.PayFactory.DoRefundPay(System.Object)">
+            <summary>
+            退款处理
+            </summary>
+            <param name="refundMode">退款对象</param>
+            <param name="cfg">配置对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.PaymentServiceFactory.PayFactory.PayCallback(System.Object)">
+            <summary>
+            支付响应
+            </summary>
+            <param name="callBackModel">响应对象PayResopnseModel</param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.PaymentServiceFactory.PayFactory.GetConfig">
+            <summary>
+            获取配置对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PM.PlaymentPersistence.PaymentServiceFactory.PayFactory.GetConfig(System.String)">
+            <summary>
+            获取具体配置对象
+            </summary>
+            <param name="bussNo">业务号</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

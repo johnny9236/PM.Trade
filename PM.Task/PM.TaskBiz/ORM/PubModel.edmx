@@ -1,0 +1,1141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Pub_Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="Pub_ModelStoreContainer">
+          <EntitySet Name="T_BOC" EntityType="Pub_Model.Store.T_BOC" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_BOC_OUT" EntityType="Pub_Model.Store.T_BOC_OUT" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_DDQABOC" EntityType="Pub_Model.Store.T_DDQABOC" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_HMPostal" EntityType="Pub_Model.Store.T_HMPostal" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_HuangShan_AcctDtl" EntityType="Pub_Model.Store.T_HuangShan_AcctDtl" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_HuangShan_ICBCRtn" EntityType="Pub_Model.Store.T_HuangShan_ICBCRtn" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_JHBOF" EntityType="Pub_Model.Store.T_JHBOF" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_JSABOC" EntityType="Pub_Model.Store.T_JSABOC" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_LPSBBC" EntityType="Pub_Model.Store.T_LPSBBC" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_Margin" EntityType="Pub_Model.Store.T_Margin" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_NetBankAccountQuery" EntityType="Pub_Model.Store.T_NetBankAccountQuery" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_Pay_VirtualAccount" EntityType="Pub_Model.Store.T_Pay_VirtualAccount" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="T_BOC">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="RspCod" Type="varchar" MaxLength="50" />
+          <Property Name="RspMsg" Type="nvarchar(max)" />
+          <Property Name="PayIbkNum" Type="varchar" MaxLength="50" />
+          <Property Name="PayIbkName" Type="nvarchar" MaxLength="100" />
+          <Property Name="PayActacn" Type="varchar" MaxLength="50" />
+          <Property Name="PayAcntName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ReciveToIbkn" Type="varchar" MaxLength="50" />
+          <Property Name="ReciveActacn" Type="varchar" MaxLength="50" />
+          <Property Name="ReciveToName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ReciveToBank" Type="nvarchar" MaxLength="100" />
+          <Property Name="MactIbkn" Type="varchar" MaxLength="50" />
+          <Property Name="Mactacn" Type="varchar" MaxLength="50" />
+          <Property Name="Mactname" Type="nvarchar" MaxLength="100" />
+          <Property Name="MactBank" Type="nvarchar" MaxLength="100" />
+          <Property Name="Vchnum" Type="varchar" MaxLength="50" />
+          <Property Name="TransId" Type="varchar" MaxLength="50" />
+          <Property Name="TxnDate" Type="varchar" MaxLength="50" />
+          <Property Name="TxnTime" Type="varchar" MaxLength="50" />
+          <Property Name="TxNamt" Type="varchar" MaxLength="50" />
+          <Property Name="Acctbal" Type="varchar" MaxLength="50" />
+          <Property Name="Avlbal" Type="varchar" MaxLength="50" />
+          <Property Name="FrzAmt" Type="varchar" MaxLength="50" />
+          <Property Name="OverdrAmt" Type="varchar" MaxLength="50" />
+          <Property Name="AvloverdrAmt" Type="varchar" MaxLength="50" />
+          <Property Name="UseInfo" Type="nvarchar(max)" />
+          <Property Name="FurInfo" Type="nvarchar(max)" />
+          <Property Name="TransType" Type="varchar" MaxLength="50" />
+          <Property Name="BusType" Type="varchar" MaxLength="50" />
+          <Property Name="TrnCur" Type="varchar" MaxLength="50" />
+          <Property Name="Direction" Type="char" MaxLength="10" />
+          <Property Name="FeeAct" Type="varchar" MaxLength="50" />
+          <Property Name="FeeAmt" Type="varchar" MaxLength="50" />
+          <Property Name="FeeCur" Type="varchar" MaxLength="50" />
+          <Property Name="ValDat" Type="varchar" MaxLength="50" />
+          <Property Name="VouchTp" Type="varchar" MaxLength="50" />
+          <Property Name="VouchNum" Type="varchar" MaxLength="100" />
+          <Property Name="FxRate" Type="varchar" MaxLength="50" />
+          <Property Name="InterInfo" Type="varchar" MaxLength="500" />
+          <Property Name="Reserve1" Type="nvarchar(max)" />
+          <Property Name="Reserve2" Type="nvarchar(max)" />
+          <Property Name="Reserve3" Type="nvarchar(max)" />
+          <Property Name="CreateTm" Type="datetime" />
+          <Property Name="Match" Type="int" />
+          <Property Name="Flag" Type="int" />
+        </EntityType>
+        <EntityType Name="T_BOC_OUT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="RspCod" Type="varchar" MaxLength="50" />
+          <Property Name="RspMsg" Type="nvarchar(max)" />
+          <Property Name="PayIbkNum" Type="varchar" MaxLength="50" />
+          <Property Name="PayIbkName" Type="nvarchar" MaxLength="100" />
+          <Property Name="PayActacn" Type="varchar" MaxLength="50" />
+          <Property Name="PayAcntName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ReciveToIbkn" Type="varchar" MaxLength="50" />
+          <Property Name="ReciveActacn" Type="varchar" MaxLength="50" />
+          <Property Name="ReciveToName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ReciveToBank" Type="nvarchar" MaxLength="100" />
+          <Property Name="MactIbkn" Type="varchar" MaxLength="50" />
+          <Property Name="Mactacn" Type="varchar" MaxLength="50" />
+          <Property Name="Mactname" Type="nvarchar" MaxLength="100" />
+          <Property Name="MactBank" Type="nvarchar" MaxLength="100" />
+          <Property Name="Vchnum" Type="varchar" MaxLength="50" />
+          <Property Name="TransId" Type="varchar" MaxLength="50" />
+          <Property Name="TxnDate" Type="varchar" MaxLength="50" />
+          <Property Name="TxnTime" Type="varchar" MaxLength="50" />
+          <Property Name="TxNamt" Type="varchar" MaxLength="50" />
+          <Property Name="Acctbal" Type="varchar" MaxLength="50" />
+          <Property Name="Avlbal" Type="varchar" MaxLength="50" />
+          <Property Name="FrzAmt" Type="varchar" MaxLength="50" />
+          <Property Name="OverdrAmt" Type="varchar" MaxLength="50" />
+          <Property Name="AvloverdrAmt" Type="varchar" MaxLength="50" />
+          <Property Name="UseInfo" Type="nvarchar(max)" />
+          <Property Name="FurInfo" Type="nvarchar(max)" />
+          <Property Name="TransType" Type="varchar" MaxLength="50" />
+          <Property Name="BusType" Type="varchar" MaxLength="50" />
+          <Property Name="TrnCur" Type="varchar" MaxLength="50" />
+          <Property Name="Direction" Type="char" MaxLength="10" />
+          <Property Name="FeeAct" Type="varchar" MaxLength="50" />
+          <Property Name="FeeAmt" Type="varchar" MaxLength="50" />
+          <Property Name="FeeCur" Type="varchar" MaxLength="50" />
+          <Property Name="ValDat" Type="varchar" MaxLength="50" />
+          <Property Name="VouchTp" Type="varchar" MaxLength="50" />
+          <Property Name="VouchNum" Type="varchar" MaxLength="100" />
+          <Property Name="FxRate" Type="varchar" MaxLength="50" />
+          <Property Name="InterInfo" Type="varchar" MaxLength="500" />
+          <Property Name="Reserve1" Type="nvarchar(max)" />
+          <Property Name="Reserve2" Type="nvarchar(max)" />
+          <Property Name="Reserve3" Type="nvarchar(max)" />
+          <Property Name="CreateTm" Type="datetime" />
+          <Property Name="Match" Type="int" />
+          <Property Name="Flag" Type="int" />
+        </EntityType>
+        <EntityType Name="T_DDQABOC">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Prov" Type="varchar" MaxLength="50" />
+          <Property Name="AccNo" Type="varchar" MaxLength="50" />
+          <Property Name="Cur" Type="varchar" MaxLength="50" />
+          <Property Name="TrDate" Type="varchar" MaxLength="50" />
+          <Property Name="TimeStab" Type="varchar" MaxLength="50" />
+          <Property Name="TrJrn" Type="varchar" MaxLength="50" />
+          <Property Name="TrType" Type="varchar" MaxLength="50" />
+          <Property Name="TrBankNo" Type="varchar" MaxLength="50" />
+          <Property Name="AccName" Type="varchar" MaxLength="50" />
+          <Property Name="AmtIndex" Type="varchar" MaxLength="50" />
+          <Property Name="OppProv" Type="varchar" MaxLength="50" />
+          <Property Name="OppAccNo" Type="varchar" MaxLength="50" />
+          <Property Name="OppCur" Type="varchar" MaxLength="50" />
+          <Property Name="OppName" Type="varchar" MaxLength="50" />
+          <Property Name="OppBkName" Type="varchar" MaxLength="50" />
+          <Property Name="CshIndex" Type="varchar" MaxLength="50" />
+          <Property Name="ErrDate" Type="varchar" MaxLength="50" />
+          <Property Name="ErrVchNo" Type="varchar" MaxLength="50" />
+          <Property Name="Amt" Type="numeric" Scale="2" />
+          <Property Name="Bal" Type="varchar" MaxLength="50" />
+          <Property Name="PreAmt" Type="varchar" MaxLength="50" />
+          <Property Name="TotChg" Type="varchar" MaxLength="50" />
+          <Property Name="VoucherType" Type="varchar" MaxLength="50" />
+          <Property Name="VoucherProv" Type="varchar" MaxLength="50" />
+          <Property Name="VoucherBat" Type="varchar" MaxLength="50" />
+          <Property Name="VoucherNo" Type="varchar" MaxLength="50" />
+          <Property Name="CustRef" Type="varchar" MaxLength="50" />
+          <Property Name="TransCode" Type="varchar" MaxLength="50" />
+          <Property Name="Teller" Type="varchar" MaxLength="100" />
+          <Property Name="VchNo" Type="varchar" MaxLength="100" />
+          <Property Name="Abs" Type="nvarchar" MaxLength="500" />
+          <Property Name="PostScript" Type="nvarchar" MaxLength="500" />
+          <Property Name="TrFrom" Type="nvarchar" MaxLength="500" />
+          <Property Name="CreateTm" Type="datetime" />
+          <Property Name="Match" Type="int" />
+          <Property Name="Flag" Type="int" />
+        </EntityType>
+        <EntityType Name="T_HMPostal">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="AccountNo" Type="varchar" MaxLength="50" />
+          <Property Name="TradeDate" Type="varchar" MaxLength="50" />
+          <Property Name="TradeSerialNumber" Type="varchar" MaxLength="50" />
+          <Property Name="ProofKind" Type="varchar" MaxLength="50" />
+          <Property Name="ProofNum" Type="varchar" MaxLength="50" />
+          <Property Name="Amount" Type="decimal" Scale="2" />
+          <Property Name="LoanMark" Type="varchar" MaxLength="50" />
+          <Property Name="RemainAmount" Type="decimal" Scale="2" />
+          <Property Name="Oprationer" Type="nvarchar" MaxLength="100" />
+          <Property Name="Checker" Type="nvarchar" MaxLength="100" />
+          <Property Name="Authorizer" Type="nvarchar" MaxLength="100" />
+          <Property Name="CounterpartAccountNo" Type="varchar" MaxLength="50" />
+          <Property Name="CounterpartAccountName" Type="nvarchar" MaxLength="200" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="200" />
+          <Property Name="TradeWay" Type="nvarchar" MaxLength="100" />
+          <Property Name="TradeNo" Type="varchar" MaxLength="50" />
+          <Property Name="TimeStamp" Type="varchar" MaxLength="50" />
+          <Property Name="DepartmentAccName" Type="nvarchar" MaxLength="200" />
+          <Property Name="Match" Type="int" />
+          <Property Name="Flag" Type="int" />
+          <Property Name="CreateTm" Type="datetime" />
+        </EntityType>
+        <EntityType Name="T_HuangShan_AcctDtl">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="SectionCode" Type="varchar" MaxLength="100" />
+          <Property Name="AuthCode" Type="varchar" MaxLength="50" />
+          <Property Name="QYType" Type="varchar" MaxLength="50" />
+          <Property Name="InDate" Type="varchar" MaxLength="50" />
+          <Property Name="InTime" Type="varchar" MaxLength="50" />
+          <Property Name="InAmount" Type="varchar" MaxLength="50" />
+          <Property Name="InName" Type="nvarchar(max)" />
+          <Property Name="InAcct" Type="varchar" MaxLength="50" />
+          <Property Name="InMemo" Type="nvarchar(max)" />
+          <Property Name="HstSeqNum" Type="varchar" MaxLength="50" />
+          <Property Name="PunInst" Type="varchar" MaxLength="50" />
+          <Property Name="Gernal" Type="varchar" MaxLength="50" />
+          <Property Name="Match" Type="int" />
+          <Property Name="Flag" Type="int" />
+          <Property Name="Remark" Type="nvarchar(max)" />
+          <Property Name="CreateTm" Type="datetime" />
+          <Property Name="UpdateTm" Type="datetime" />
+        </EntityType>
+        <EntityType Name="T_HuangShan_ICBCRtn">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="SectionCode" Type="varchar" MaxLength="100" />
+          <Property Name="AuthCode" Type="varchar" MaxLength="50" />
+          <Property Name="BusniessType" Type="varchar" MaxLength="50" />
+          <Property Name="RetDate" Type="varchar" MaxLength="50" />
+          <Property Name="RetTime" Type="varchar" MaxLength="50" />
+          <Property Name="RetAmount" Type="varchar" MaxLength="50" />
+          <Property Name="RetPunInst" Type="varchar" MaxLength="50" />
+          <Property Name="RetTotal" Type="varchar" MaxLength="50" />
+          <Property Name="RetName" Type="nvarchar(max)" />
+          <Property Name="RetAcct" Type="nvarchar(max)" />
+          <Property Name="HstSeqNum" Type="varchar" MaxLength="50" />
+          <Property Name="AcctNo" Type="varchar" MaxLength="50" />
+          <Property Name="Serial_No" Type="varchar" MaxLength="50" />
+          <Property Name="Match" Type="int" />
+          <Property Name="Flag" Type="int" />
+          <Property Name="Remark" Type="nvarchar(max)" />
+          <Property Name="CreateTm" Type="datetime" />
+          <Property Name="UpdateTm" Type="datetime" />
+          <Property Name="BankType" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="T_JHBOF">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="TradeDate" Type="varchar" MaxLength="50" />
+          <Property Name="TradeNo" Type="varchar" MaxLength="50" />
+          <Property Name="Amount" Type="money" />
+          <Property Name="AcountNo" Type="varchar" MaxLength="50" />
+          <Property Name="AcountName" Type="varchar" MaxLength="100" />
+          <Property Name="Match" Type="int" />
+          <Property Name="Remark" Type="nchar" MaxLength="10" />
+          <Property Name="Flag" Type="int" />
+          <Property Name="CreateTm" Type="datetime" />
+          <Property Name="CustomTradeNo" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="T_JSABOC">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="TradeCode" Type="varchar" MaxLength="50" />
+          <Property Name="TradeStructNum" Type="varchar" MaxLength="50" />
+          <Property Name="ReturneCode" Type="varchar" MaxLength="50" />
+          <Property Name="ReturneMsg" Type="varchar" MaxLength="100" />
+          <Property Name="DetailDataTime" Type="varchar" MaxLength="50" />
+          <Property Name="Count" Type="int" />
+          <Property Name="SectionNo" Type="varchar" MaxLength="50" />
+          <Property Name="ReceiveAccNo" Type="varchar" MaxLength="50" />
+          <Property Name="ReceiveAccDbName" Type="nvarchar" MaxLength="500" />
+          <Property Name="ReceiveAccDBBank" Type="nvarchar" MaxLength="500" />
+          <Property Name="Used" Type="nvarchar" MaxLength="500" />
+          <Property Name="PayAccNo" Type="varchar" MaxLength="50" />
+          <Property Name="PayAccDbName" Type="nvarchar" MaxLength="500" />
+          <Property Name="PayAccDBBank" Type="nvarchar" MaxLength="500" />
+          <Property Name="Amount" Type="money" />
+          <Property Name="RealAmount" Type="money" />
+          <Property Name="Summary" Type="nvarchar" MaxLength="500" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="500" />
+          <Property Name="SerialNumber" Type="varchar" MaxLength="50" />
+          <Property Name="OrderNo" Type="varchar" MaxLength="50" />
+          <Property Name="IsAboc" Type="int" />
+          <Property Name="IsMatch" Type="int" />
+          <Property Name="Flag" Type="int" />
+          <Property Name="accountType" Type="varchar" MaxLength="50" />
+          <Property Name="CreateTm" Type="datetime" />
+        </EntityType>
+        <EntityType Name="T_LPSBBC">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="MERCHANTID" Type="varchar" MaxLength="50" />
+          <Property Name="BRANCHID" Type="varchar" MaxLength="50" />
+          <Property Name="POSID" Type="varchar" MaxLength="50" />
+          <Property Name="ORDERID" Type="varchar" MaxLength="50" />
+          <Property Name="ORDERDATE" Type="varchar" MaxLength="50" />
+          <Property Name="ACCDATE" Type="varchar" MaxLength="50" />
+          <Property Name="AMOUNT" Type="varchar" MaxLength="50" />
+          <Property Name="STATUSCODE" Type="varchar" MaxLength="50" />
+          <Property Name="STATUS" Type="varchar" MaxLength="50" />
+          <Property Name="REFUND" Type="varchar" MaxLength="50" />
+          <Property Name="SIGN" Type="text" />
+          <Property Name="IsMatch" Type="int" />
+          <Property Name="Flag" Type="int" />
+          <Property Name="CreateTm" Type="datetime" />
+        </EntityType>
+        <EntityType Name="T_Margin">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="InDate" Type="varchar" MaxLength="50" />
+          <Property Name="InTime" Type="varchar" MaxLength="50" />
+          <Property Name="InAmount" Type="varchar" MaxLength="50" />
+          <Property Name="InName" Type="varchar" MaxLength="50" />
+          <Property Name="InAcct" Type="varchar" MaxLength="50" />
+          <Property Name="InMemo" Type="varchar" MaxLength="50" />
+          <Property Name="HstSeqNum" Type="varchar" MaxLength="50" />
+          <Property Name="PunInst" Type="varchar" MaxLength="50" />
+          <Property Name="Gernal" Type="varchar" MaxLength="50" />
+          <Property Name="BackResult" Type="varchar" MaxLength="50" />
+          <Property Name="AddWord" Type="nvarchar" MaxLength="500" />
+          <Property Name="BusniessType" Type="char" MaxLength="2" />
+          <Property Name="CreateTm" Type="datetime" />
+          <Property Name="Match" Type="int" />
+          <Property Name="Flag" Type="int" />
+          <Property Name="AuthCode" Type="varchar" MaxLength="50" />
+          <Property Name="SectionCode" Type="varchar" MaxLength="50" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="500" />
+          <Property Name="BankType" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="T_NetBankAccountQuery">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="TxType" Type="varchar" MaxLength="50" />
+          <Property Name="TxSn" Type="varchar" MaxLength="50" />
+          <Property Name="TxAmount" Type="varchar" MaxLength="50" />
+          <Property Name="InstitutionAmount" Type="varchar" MaxLength="50" />
+          <Property Name="PaymentAmount" Type="varchar" MaxLength="50" />
+          <Property Name="InstitutionFee" Type="varchar" MaxLength="50" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="500" />
+          <Property Name="BankNotificationTime" Type="varchar" MaxLength="50" />
+          <Property Name="SettlementFlag" Type="varchar" MaxLength="50" />
+          <Property Name="IsMatch" Type="int" />
+          <Property Name="Flag" Type="int" />
+          <Property Name="CreateTm" Type="datetime" />
+        </EntityType>
+        <EntityType Name="T_Pay_VirtualAccount">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SectionId" Type="uniqueidentifier" />
+          <Property Name="SectionCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="SectionName" Type="nvarchar" MaxLength="200" />
+          <Property Name="Projectid" Type="uniqueidentifier" />
+          <Property Name="ProjectCode" Type="varchar" MaxLength="50" />
+          <Property Name="ProjectName" Type="nvarchar" MaxLength="200" />
+          <Property Name="UnitId" Type="uniqueidentifier" />
+          <Property Name="UnitName" Type="nvarchar" MaxLength="200" />
+          <Property Name="VirtualAccount" Type="varchar" MaxLength="50" />
+          <Property Name="VirtualAccountName" Type="nvarchar" MaxLength="200" />
+          <Property Name="SerialKey" Type="varchar" MaxLength="50" />
+          <Property Name="Status" Type="char" MaxLength="1" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="500" />
+          <Property Name="OpenBankNo" Type="varchar" MaxLength="50" />
+          <Property Name="Createdate" Type="datetime" />
+          <Property Name="UpdataDate" Type="datetime" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Pub_Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="Pub_Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="T_BOC" EntityType="Pub_Model.T_BOC" />
+          <EntitySet Name="T_HMPostal" EntityType="Pub_Model.T_HMPostal" />
+          <EntitySet Name="T_HuangShan_AcctDtl" EntityType="Pub_Model.T_HuangShan_AcctDtl" />
+          <EntitySet Name="T_JHBOF" EntityType="Pub_Model.T_JHBOF" />
+          <EntitySet Name="T_JSABOC" EntityType="Pub_Model.T_JSABOC" />
+          <EntitySet Name="T_LPSBBC" EntityType="Pub_Model.T_LPSBBC" />
+          <EntitySet Name="T_NetBankAccountQuery" EntityType="Pub_Model.T_NetBankAccountQuery" />
+          <EntitySet Name="T_Pay_VirtualAccount" EntityType="Pub_Model.T_Pay_VirtualAccount" />
+          <EntitySet Name="T_DDQABOC" EntityType="Pub_Model.T_DDQABOC" />
+          <EntitySet Name="T_Margin" EntityType="Pub_Model.T_Margin" />
+          <EntitySet Name="T_HuangShan_ICBCRtn" EntityType="Pub_Model.T_HuangShan_ICBCRtn" />
+          <EntitySet Name="T_BOC_OUT" EntityType="Pub_Model.T_BOC_OUT" />
+        </EntityContainer>
+        <EntityType Name="T_BOC">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RspCod" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RspMsg" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PayIbkNum" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayIbkName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PayActacn" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayAcntName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ReciveToIbkn" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReciveActacn" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReciveToName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ReciveToBank" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MactIbkn" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Mactacn" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Mactname" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MactBank" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Vchnum" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TransId" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TxnDate" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TxnTime" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TxNamt" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Acctbal" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Avlbal" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FrzAmt" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OverdrAmt" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AvloverdrAmt" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UseInfo" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FurInfo" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TransType" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BusType" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TrnCur" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Direction" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="FeeAct" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FeeAmt" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FeeCur" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ValDat" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="VouchTp" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="VouchNum" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FxRate" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InterInfo" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Reserve1" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Reserve2" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Reserve3" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateTm" />
+          <Property Type="Int32" Name="Match" />
+          <Property Type="Int32" Name="Flag" />
+        </EntityType>
+        <EntityType Name="T_HMPostal">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AccountNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TradeDate" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TradeSerialNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ProofKind" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ProofNum" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Amount" Precision="18" Scale="2" />
+          <Property Type="String" Name="LoanMark" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="RemainAmount" Precision="18" Scale="2" />
+          <Property Type="String" Name="Oprationer" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Checker" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Authorizer" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CounterpartAccountNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CounterpartAccountName" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Remark" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TradeWay" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TradeNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TimeStamp" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DepartmentAccName" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Match" />
+          <Property Type="Int32" Name="Flag" />
+          <Property Type="DateTime" Name="CreateTm" />
+        </EntityType>
+        <EntityType Name="T_HuangShan_AcctDtl">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SectionCode" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AuthCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="QYType" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InDate" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InTime" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InAmount" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InName" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="InAcct" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InMemo" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="HstSeqNum" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PunInst" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Gernal" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Match" />
+          <Property Type="Int32" Name="Flag" />
+          <Property Type="String" Name="Remark" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateTm" />
+          <Property Type="DateTime" Name="UpdateTm" />
+        </EntityType>
+        <EntityType Name="T_JHBOF">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TradeDate" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TradeNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Amount" Precision="19" Scale="4" />
+          <Property Type="String" Name="AcountNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AcountName" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Match" />
+          <Property Type="String" Name="Remark" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="Int32" Name="Flag" />
+          <Property Type="DateTime" Name="CreateTm" />
+          <Property Type="String" Name="CustomTradeNo" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="T_JSABOC">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TradeCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TradeStructNum" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReturneCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReturneMsg" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DetailDataTime" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Count" />
+          <Property Type="String" Name="SectionNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReceiveAccNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReceiveAccDbName" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ReceiveAccDBBank" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Used" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PayAccNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayAccDbName" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PayAccDBBank" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Amount" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="RealAmount" Precision="19" Scale="4" />
+          <Property Type="String" Name="Summary" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Remark" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SerialNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OrderNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IsAboc" />
+          <Property Type="Int32" Name="IsMatch" />
+          <Property Type="Int32" Name="Flag" />
+          <Property Type="String" Name="accountType" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateTm" />
+        </EntityType>
+        <EntityType Name="T_LPSBBC">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MERCHANTID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BRANCHID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="POSID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ORDERID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ORDERDATE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ACCDATE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AMOUNT" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="STATUSCODE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="STATUS" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="REFUND" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SIGN" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IsMatch" />
+          <Property Type="Int32" Name="Flag" />
+          <Property Type="DateTime" Name="CreateTm" />
+        </EntityType>
+        <EntityType Name="T_NetBankAccountQuery">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TxType" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TxSn" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TxAmount" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InstitutionAmount" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PaymentAmount" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InstitutionFee" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Remark" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BankNotificationTime" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SettlementFlag" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IsMatch" />
+          <Property Type="Int32" Name="Flag" />
+          <Property Type="DateTime" Name="CreateTm" />
+        </EntityType>
+        <EntityType Name="T_Pay_VirtualAccount">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Guid" Name="id" Nullable="false" />
+          <Property Type="Guid" Name="SectionId" />
+          <Property Type="String" Name="SectionCode" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SectionName" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="Projectid" />
+          <Property Type="String" Name="ProjectCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ProjectName" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="UnitId" />
+          <Property Type="String" Name="UnitName" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="VirtualAccount" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="VirtualAccountName" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SerialKey" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Status" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="Remark" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="OpenBankNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Createdate" />
+          <Property Type="DateTime" Name="UpdataDate" />
+        </EntityType>
+        <EntityType Name="T_DDQABOC">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Prov" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AccNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Cur" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TrDate" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TimeStab" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TrJrn" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TrType" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TrBankNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AccName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AmtIndex" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OppProv" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OppAccNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OppCur" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OppName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OppBkName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CshIndex" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ErrDate" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ErrVchNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Amt" Precision="18" Scale="2" />
+          <Property Type="String" Name="Bal" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PreAmt" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TotChg" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="VoucherType" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="VoucherProv" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="VoucherBat" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="VoucherNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustRef" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TransCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Teller" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="VchNo" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Abs" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PostScript" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TrFrom" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateTm" />
+          <Property Type="Int32" Name="Match" />
+          <Property Type="Int32" Name="Flag" />
+        </EntityType>
+        <EntityType Name="T_Margin">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InDate" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InTime" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InAmount" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InAcct" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InMemo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HstSeqNum" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PunInst" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Gernal" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BackResult" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AddWord" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BusniessType" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Type="DateTime" Name="CreateTm" />
+          <Property Type="Int32" Name="Match" />
+          <Property Type="Int32" Name="Flag" />
+          <Property Type="String" Name="AuthCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SectionCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Remark" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BankType" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="T_HuangShan_ICBCRtn">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SectionCode" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AuthCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BusniessType" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RetDate" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RetTime" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RetAmount" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RetPunInst" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RetTotal" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RetName" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="RetAcct" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="HstSeqNum" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AcctNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Serial_No" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Match" />
+          <Property Type="Int32" Name="Flag" />
+          <Property Type="String" Name="Remark" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateTm" />
+          <Property Type="DateTime" Name="UpdateTm" />
+          <Property Type="String" Name="BankType" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="T_BOC_OUT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RspCod" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RspMsg" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PayIbkNum" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayIbkName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PayActacn" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayAcntName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ReciveToIbkn" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReciveActacn" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReciveToName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ReciveToBank" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MactIbkn" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Mactacn" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Mactname" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MactBank" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Vchnum" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TransId" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TxnDate" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TxnTime" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TxNamt" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Acctbal" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Avlbal" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FrzAmt" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OverdrAmt" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AvloverdrAmt" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UseInfo" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FurInfo" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TransType" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BusType" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TrnCur" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Direction" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="FeeAct" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FeeAmt" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FeeCur" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ValDat" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="VouchTp" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="VouchNum" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FxRate" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InterInfo" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Reserve1" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Reserve2" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Reserve3" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateTm" />
+          <Property Type="Int32" Name="Match" />
+          <Property Type="Int32" Name="Flag" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Pub_ModelStoreContainer" CdmEntityContainer="Pub_Entities">
+          <EntitySetMapping Name="T_BOC">
+            <EntityTypeMapping TypeName="Pub_Model.T_BOC">
+              <MappingFragment StoreEntitySet="T_BOC">
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="Match" ColumnName="Match" />
+                <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+                <ScalarProperty Name="Reserve3" ColumnName="Reserve3" />
+                <ScalarProperty Name="Reserve2" ColumnName="Reserve2" />
+                <ScalarProperty Name="Reserve1" ColumnName="Reserve1" />
+                <ScalarProperty Name="InterInfo" ColumnName="InterInfo" />
+                <ScalarProperty Name="FxRate" ColumnName="FxRate" />
+                <ScalarProperty Name="VouchNum" ColumnName="VouchNum" />
+                <ScalarProperty Name="VouchTp" ColumnName="VouchTp" />
+                <ScalarProperty Name="ValDat" ColumnName="ValDat" />
+                <ScalarProperty Name="FeeCur" ColumnName="FeeCur" />
+                <ScalarProperty Name="FeeAmt" ColumnName="FeeAmt" />
+                <ScalarProperty Name="FeeAct" ColumnName="FeeAct" />
+                <ScalarProperty Name="Direction" ColumnName="Direction" />
+                <ScalarProperty Name="TrnCur" ColumnName="TrnCur" />
+                <ScalarProperty Name="BusType" ColumnName="BusType" />
+                <ScalarProperty Name="TransType" ColumnName="TransType" />
+                <ScalarProperty Name="FurInfo" ColumnName="FurInfo" />
+                <ScalarProperty Name="UseInfo" ColumnName="UseInfo" />
+                <ScalarProperty Name="AvloverdrAmt" ColumnName="AvloverdrAmt" />
+                <ScalarProperty Name="OverdrAmt" ColumnName="OverdrAmt" />
+                <ScalarProperty Name="FrzAmt" ColumnName="FrzAmt" />
+                <ScalarProperty Name="Avlbal" ColumnName="Avlbal" />
+                <ScalarProperty Name="Acctbal" ColumnName="Acctbal" />
+                <ScalarProperty Name="TxNamt" ColumnName="TxNamt" />
+                <ScalarProperty Name="TxnTime" ColumnName="TxnTime" />
+                <ScalarProperty Name="TxnDate" ColumnName="TxnDate" />
+                <ScalarProperty Name="TransId" ColumnName="TransId" />
+                <ScalarProperty Name="Vchnum" ColumnName="Vchnum" />
+                <ScalarProperty Name="MactBank" ColumnName="MactBank" />
+                <ScalarProperty Name="Mactname" ColumnName="Mactname" />
+                <ScalarProperty Name="Mactacn" ColumnName="Mactacn" />
+                <ScalarProperty Name="MactIbkn" ColumnName="MactIbkn" />
+                <ScalarProperty Name="ReciveToBank" ColumnName="ReciveToBank" />
+                <ScalarProperty Name="ReciveToName" ColumnName="ReciveToName" />
+                <ScalarProperty Name="ReciveActacn" ColumnName="ReciveActacn" />
+                <ScalarProperty Name="ReciveToIbkn" ColumnName="ReciveToIbkn" />
+                <ScalarProperty Name="PayAcntName" ColumnName="PayAcntName" />
+                <ScalarProperty Name="PayActacn" ColumnName="PayActacn" />
+                <ScalarProperty Name="PayIbkName" ColumnName="PayIbkName" />
+                <ScalarProperty Name="PayIbkNum" ColumnName="PayIbkNum" />
+                <ScalarProperty Name="RspMsg" ColumnName="RspMsg" />
+                <ScalarProperty Name="RspCod" ColumnName="RspCod" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_HMPostal">
+            <EntityTypeMapping TypeName="Pub_Model.T_HMPostal">
+              <MappingFragment StoreEntitySet="T_HMPostal">
+                <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="Match" ColumnName="Match" />
+                <ScalarProperty Name="DepartmentAccName" ColumnName="DepartmentAccName" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="TradeNo" ColumnName="TradeNo" />
+                <ScalarProperty Name="TradeWay" ColumnName="TradeWay" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="CounterpartAccountName" ColumnName="CounterpartAccountName" />
+                <ScalarProperty Name="CounterpartAccountNo" ColumnName="CounterpartAccountNo" />
+                <ScalarProperty Name="Authorizer" ColumnName="Authorizer" />
+                <ScalarProperty Name="Checker" ColumnName="Checker" />
+                <ScalarProperty Name="Oprationer" ColumnName="Oprationer" />
+                <ScalarProperty Name="RemainAmount" ColumnName="RemainAmount" />
+                <ScalarProperty Name="LoanMark" ColumnName="LoanMark" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="ProofNum" ColumnName="ProofNum" />
+                <ScalarProperty Name="ProofKind" ColumnName="ProofKind" />
+                <ScalarProperty Name="TradeSerialNumber" ColumnName="TradeSerialNumber" />
+                <ScalarProperty Name="TradeDate" ColumnName="TradeDate" />
+                <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_HuangShan_AcctDtl">
+            <EntityTypeMapping TypeName="Pub_Model.T_HuangShan_AcctDtl">
+              <MappingFragment StoreEntitySet="T_HuangShan_AcctDtl">
+                <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+                <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="Match" ColumnName="Match" />
+                <ScalarProperty Name="Gernal" ColumnName="Gernal" />
+                <ScalarProperty Name="PunInst" ColumnName="PunInst" />
+                <ScalarProperty Name="HstSeqNum" ColumnName="HstSeqNum" />
+                <ScalarProperty Name="InMemo" ColumnName="InMemo" />
+                <ScalarProperty Name="InAcct" ColumnName="InAcct" />
+                <ScalarProperty Name="InName" ColumnName="InName" />
+                <ScalarProperty Name="InAmount" ColumnName="InAmount" />
+                <ScalarProperty Name="InTime" ColumnName="InTime" />
+                <ScalarProperty Name="InDate" ColumnName="InDate" />
+                <ScalarProperty Name="QYType" ColumnName="QYType" />
+                <ScalarProperty Name="AuthCode" ColumnName="AuthCode" />
+                <ScalarProperty Name="SectionCode" ColumnName="SectionCode" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_JHBOF">
+            <EntityTypeMapping TypeName="Pub_Model.T_JHBOF">
+              <MappingFragment StoreEntitySet="T_JHBOF">
+                <ScalarProperty Name="CustomTradeNo" ColumnName="CustomTradeNo" />
+                <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Match" ColumnName="Match" />
+                <ScalarProperty Name="AcountName" ColumnName="AcountName" />
+                <ScalarProperty Name="AcountNo" ColumnName="AcountNo" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="TradeNo" ColumnName="TradeNo" />
+                <ScalarProperty Name="TradeDate" ColumnName="TradeDate" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_JSABOC">
+            <EntityTypeMapping TypeName="Pub_Model.T_JSABOC">
+              <MappingFragment StoreEntitySet="T_JSABOC">
+                <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+                <ScalarProperty Name="accountType" ColumnName="accountType" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="IsMatch" ColumnName="IsMatch" />
+                <ScalarProperty Name="IsAboc" ColumnName="IsAboc" />
+                <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+                <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Summary" ColumnName="Summary" />
+                <ScalarProperty Name="RealAmount" ColumnName="RealAmount" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="PayAccDBBank" ColumnName="PayAccDBBank" />
+                <ScalarProperty Name="PayAccDbName" ColumnName="PayAccDbName" />
+                <ScalarProperty Name="PayAccNo" ColumnName="PayAccNo" />
+                <ScalarProperty Name="Used" ColumnName="Used" />
+                <ScalarProperty Name="ReceiveAccDBBank" ColumnName="ReceiveAccDBBank" />
+                <ScalarProperty Name="ReceiveAccDbName" ColumnName="ReceiveAccDbName" />
+                <ScalarProperty Name="ReceiveAccNo" ColumnName="ReceiveAccNo" />
+                <ScalarProperty Name="SectionNo" ColumnName="SectionNo" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="DetailDataTime" ColumnName="DetailDataTime" />
+                <ScalarProperty Name="ReturneMsg" ColumnName="ReturneMsg" />
+                <ScalarProperty Name="ReturneCode" ColumnName="ReturneCode" />
+                <ScalarProperty Name="TradeStructNum" ColumnName="TradeStructNum" />
+                <ScalarProperty Name="TradeCode" ColumnName="TradeCode" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_LPSBBC">
+            <EntityTypeMapping TypeName="Pub_Model.T_LPSBBC">
+              <MappingFragment StoreEntitySet="T_LPSBBC">
+                <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="IsMatch" ColumnName="IsMatch" />
+                <ScalarProperty Name="SIGN" ColumnName="SIGN" />
+                <ScalarProperty Name="REFUND" ColumnName="REFUND" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="STATUSCODE" ColumnName="STATUSCODE" />
+                <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+                <ScalarProperty Name="ACCDATE" ColumnName="ACCDATE" />
+                <ScalarProperty Name="ORDERDATE" ColumnName="ORDERDATE" />
+                <ScalarProperty Name="ORDERID" ColumnName="ORDERID" />
+                <ScalarProperty Name="POSID" ColumnName="POSID" />
+                <ScalarProperty Name="BRANCHID" ColumnName="BRANCHID" />
+                <ScalarProperty Name="MERCHANTID" ColumnName="MERCHANTID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_NetBankAccountQuery">
+            <EntityTypeMapping TypeName="Pub_Model.T_NetBankAccountQuery">
+              <MappingFragment StoreEntitySet="T_NetBankAccountQuery">
+                <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="IsMatch" ColumnName="IsMatch" />
+                <ScalarProperty Name="SettlementFlag" ColumnName="SettlementFlag" />
+                <ScalarProperty Name="BankNotificationTime" ColumnName="BankNotificationTime" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="InstitutionFee" ColumnName="InstitutionFee" />
+                <ScalarProperty Name="PaymentAmount" ColumnName="PaymentAmount" />
+                <ScalarProperty Name="InstitutionAmount" ColumnName="InstitutionAmount" />
+                <ScalarProperty Name="TxAmount" ColumnName="TxAmount" />
+                <ScalarProperty Name="TxSn" ColumnName="TxSn" />
+                <ScalarProperty Name="TxType" ColumnName="TxType" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Pay_VirtualAccount">
+            <EntityTypeMapping TypeName="Pub_Model.T_Pay_VirtualAccount">
+              <MappingFragment StoreEntitySet="T_Pay_VirtualAccount">
+                <ScalarProperty Name="UpdataDate" ColumnName="UpdataDate" />
+                <ScalarProperty Name="Createdate" ColumnName="Createdate" />
+                <ScalarProperty Name="OpenBankNo" ColumnName="OpenBankNo" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="SerialKey" ColumnName="SerialKey" />
+                <ScalarProperty Name="VirtualAccountName" ColumnName="VirtualAccountName" />
+                <ScalarProperty Name="VirtualAccount" ColumnName="VirtualAccount" />
+                <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+                <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+                <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+                <ScalarProperty Name="ProjectCode" ColumnName="ProjectCode" />
+                <ScalarProperty Name="Projectid" ColumnName="Projectid" />
+                <ScalarProperty Name="SectionName" ColumnName="SectionName" />
+                <ScalarProperty Name="SectionCode" ColumnName="SectionCode" />
+                <ScalarProperty Name="SectionId" ColumnName="SectionId" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_DDQABOC">
+            <EntityTypeMapping TypeName="Pub_Model.T_DDQABOC">
+              <MappingFragment StoreEntitySet="T_DDQABOC">
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="Match" ColumnName="Match" />
+                <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+                <ScalarProperty Name="TrFrom" ColumnName="TrFrom" />
+                <ScalarProperty Name="PostScript" ColumnName="PostScript" />
+                <ScalarProperty Name="Abs" ColumnName="Abs" />
+                <ScalarProperty Name="VchNo" ColumnName="VchNo" />
+                <ScalarProperty Name="Teller" ColumnName="Teller" />
+                <ScalarProperty Name="TransCode" ColumnName="TransCode" />
+                <ScalarProperty Name="CustRef" ColumnName="CustRef" />
+                <ScalarProperty Name="VoucherNo" ColumnName="VoucherNo" />
+                <ScalarProperty Name="VoucherBat" ColumnName="VoucherBat" />
+                <ScalarProperty Name="VoucherProv" ColumnName="VoucherProv" />
+                <ScalarProperty Name="VoucherType" ColumnName="VoucherType" />
+                <ScalarProperty Name="TotChg" ColumnName="TotChg" />
+                <ScalarProperty Name="PreAmt" ColumnName="PreAmt" />
+                <ScalarProperty Name="Bal" ColumnName="Bal" />
+                <ScalarProperty Name="Amt" ColumnName="Amt" />
+                <ScalarProperty Name="ErrVchNo" ColumnName="ErrVchNo" />
+                <ScalarProperty Name="ErrDate" ColumnName="ErrDate" />
+                <ScalarProperty Name="CshIndex" ColumnName="CshIndex" />
+                <ScalarProperty Name="OppBkName" ColumnName="OppBkName" />
+                <ScalarProperty Name="OppName" ColumnName="OppName" />
+                <ScalarProperty Name="OppCur" ColumnName="OppCur" />
+                <ScalarProperty Name="OppAccNo" ColumnName="OppAccNo" />
+                <ScalarProperty Name="OppProv" ColumnName="OppProv" />
+                <ScalarProperty Name="AmtIndex" ColumnName="AmtIndex" />
+                <ScalarProperty Name="AccName" ColumnName="AccName" />
+                <ScalarProperty Name="TrBankNo" ColumnName="TrBankNo" />
+                <ScalarProperty Name="TrType" ColumnName="TrType" />
+                <ScalarProperty Name="TrJrn" ColumnName="TrJrn" />
+                <ScalarProperty Name="TimeStab" ColumnName="TimeStab" />
+                <ScalarProperty Name="TrDate" ColumnName="TrDate" />
+                <ScalarProperty Name="Cur" ColumnName="Cur" />
+                <ScalarProperty Name="AccNo" ColumnName="AccNo" />
+                <ScalarProperty Name="Prov" ColumnName="Prov" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Margin">
+            <EntityTypeMapping TypeName="Pub_Model.T_Margin">
+              <MappingFragment StoreEntitySet="T_Margin">
+                <ScalarProperty Name="BankType" ColumnName="BankType" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="SectionCode" ColumnName="SectionCode" />
+                <ScalarProperty Name="AuthCode" ColumnName="AuthCode" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="Match" ColumnName="Match" />
+                <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+                <ScalarProperty Name="BusniessType" ColumnName="BusniessType" />
+                <ScalarProperty Name="AddWord" ColumnName="AddWord" />
+                <ScalarProperty Name="BackResult" ColumnName="BackResult" />
+                <ScalarProperty Name="Gernal" ColumnName="Gernal" />
+                <ScalarProperty Name="PunInst" ColumnName="PunInst" />
+                <ScalarProperty Name="HstSeqNum" ColumnName="HstSeqNum" />
+                <ScalarProperty Name="InMemo" ColumnName="InMemo" />
+                <ScalarProperty Name="InAcct" ColumnName="InAcct" />
+                <ScalarProperty Name="InName" ColumnName="InName" />
+                <ScalarProperty Name="InAmount" ColumnName="InAmount" />
+                <ScalarProperty Name="InTime" ColumnName="InTime" />
+                <ScalarProperty Name="InDate" ColumnName="InDate" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_HuangShan_ICBCRtn">
+            <EntityTypeMapping TypeName="Pub_Model.T_HuangShan_ICBCRtn">
+              <MappingFragment StoreEntitySet="T_HuangShan_ICBCRtn">
+                <ScalarProperty Name="BankType" ColumnName="BankType" />
+                <ScalarProperty Name="UpdateTm" ColumnName="UpdateTm" />
+                <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="Match" ColumnName="Match" />
+                <ScalarProperty Name="Serial_No" ColumnName="Serial_No" />
+                <ScalarProperty Name="AcctNo" ColumnName="AcctNo" />
+                <ScalarProperty Name="HstSeqNum" ColumnName="HstSeqNum" />
+                <ScalarProperty Name="RetAcct" ColumnName="RetAcct" />
+                <ScalarProperty Name="RetName" ColumnName="RetName" />
+                <ScalarProperty Name="RetTotal" ColumnName="RetTotal" />
+                <ScalarProperty Name="RetPunInst" ColumnName="RetPunInst" />
+                <ScalarProperty Name="RetAmount" ColumnName="RetAmount" />
+                <ScalarProperty Name="RetTime" ColumnName="RetTime" />
+                <ScalarProperty Name="RetDate" ColumnName="RetDate" />
+                <ScalarProperty Name="BusniessType" ColumnName="BusniessType" />
+                <ScalarProperty Name="AuthCode" ColumnName="AuthCode" />
+                <ScalarProperty Name="SectionCode" ColumnName="SectionCode" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_BOC_OUT">
+            <EntityTypeMapping TypeName="Pub_Model.T_BOC_OUT">
+              <MappingFragment StoreEntitySet="T_BOC_OUT">
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="Match" ColumnName="Match" />
+                <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+                <ScalarProperty Name="Reserve3" ColumnName="Reserve3" />
+                <ScalarProperty Name="Reserve2" ColumnName="Reserve2" />
+                <ScalarProperty Name="Reserve1" ColumnName="Reserve1" />
+                <ScalarProperty Name="InterInfo" ColumnName="InterInfo" />
+                <ScalarProperty Name="FxRate" ColumnName="FxRate" />
+                <ScalarProperty Name="VouchNum" ColumnName="VouchNum" />
+                <ScalarProperty Name="VouchTp" ColumnName="VouchTp" />
+                <ScalarProperty Name="ValDat" ColumnName="ValDat" />
+                <ScalarProperty Name="FeeCur" ColumnName="FeeCur" />
+                <ScalarProperty Name="FeeAmt" ColumnName="FeeAmt" />
+                <ScalarProperty Name="FeeAct" ColumnName="FeeAct" />
+                <ScalarProperty Name="Direction" ColumnName="Direction" />
+                <ScalarProperty Name="TrnCur" ColumnName="TrnCur" />
+                <ScalarProperty Name="BusType" ColumnName="BusType" />
+                <ScalarProperty Name="TransType" ColumnName="TransType" />
+                <ScalarProperty Name="FurInfo" ColumnName="FurInfo" />
+                <ScalarProperty Name="UseInfo" ColumnName="UseInfo" />
+                <ScalarProperty Name="AvloverdrAmt" ColumnName="AvloverdrAmt" />
+                <ScalarProperty Name="OverdrAmt" ColumnName="OverdrAmt" />
+                <ScalarProperty Name="FrzAmt" ColumnName="FrzAmt" />
+                <ScalarProperty Name="Avlbal" ColumnName="Avlbal" />
+                <ScalarProperty Name="Acctbal" ColumnName="Acctbal" />
+                <ScalarProperty Name="TxNamt" ColumnName="TxNamt" />
+                <ScalarProperty Name="TxnTime" ColumnName="TxnTime" />
+                <ScalarProperty Name="TxnDate" ColumnName="TxnDate" />
+                <ScalarProperty Name="TransId" ColumnName="TransId" />
+                <ScalarProperty Name="Vchnum" ColumnName="Vchnum" />
+                <ScalarProperty Name="MactBank" ColumnName="MactBank" />
+                <ScalarProperty Name="Mactname" ColumnName="Mactname" />
+                <ScalarProperty Name="Mactacn" ColumnName="Mactacn" />
+                <ScalarProperty Name="MactIbkn" ColumnName="MactIbkn" />
+                <ScalarProperty Name="ReciveToBank" ColumnName="ReciveToBank" />
+                <ScalarProperty Name="ReciveToName" ColumnName="ReciveToName" />
+                <ScalarProperty Name="ReciveActacn" ColumnName="ReciveActacn" />
+                <ScalarProperty Name="ReciveToIbkn" ColumnName="ReciveToIbkn" />
+                <ScalarProperty Name="PayAcntName" ColumnName="PayAcntName" />
+                <ScalarProperty Name="PayActacn" ColumnName="PayActacn" />
+                <ScalarProperty Name="PayIbkName" ColumnName="PayIbkName" />
+                <ScalarProperty Name="PayIbkNum" ColumnName="PayIbkNum" />
+                <ScalarProperty Name="RspMsg" ColumnName="RspMsg" />
+                <ScalarProperty Name="RspCod" ColumnName="RspCod" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="PubModel" ZoomLevel="64">
+        <EntityTypeShape EntityType="Pub_Model.T_BOC" Width="1.5" PointX="2.75" PointY="0.75" Height="9.6108203125" />
+        <EntityTypeShape EntityType="Pub_Model.T_HMPostal" Width="1.5" PointX="8.75" PointY="0.75" Height="5.2173673502604174" />
+        <EntityTypeShape EntityType="Pub_Model.T_HuangShan_AcctDtl" Width="1.5" PointX="8.75" PointY="6.75" Height="4.45328857421875" />
+        <EntityTypeShape EntityType="Pub_Model.T_JHBOF" Width="1.5" PointX="10.75" PointY="6.75" Height="3.1161507161458317" />
+        <EntityTypeShape EntityType="Pub_Model.T_JSABOC" Width="1.5" PointX="10.75" PointY="10.75" Height="5.9814461263020853" />
+        <EntityTypeShape EntityType="Pub_Model.T_LPSBBC" Width="1.5" PointX="0.75" PointY="11.75" Height="3.8802294921875031" />
+        <EntityTypeShape EntityType="Pub_Model.T_NetBankAccountQuery" Width="1.5" PointX="2.75" PointY="11.75" Height="3.4981901041666674" />
+        <EntityTypeShape EntityType="Pub_Model.T_Pay_VirtualAccount" Width="1.5" PointX="5.375" PointY="11.75" Height="4.2622688802083317" />
+        <EntityTypeShape EntityType="Pub_Model.T_DDQABOC" Width="1.5" PointX="7.375" PointY="12.75" Height="8.0826627604166674" />
+        <EntityTypeShape EntityType="Pub_Model.T_Margin" Width="1.5" PointX="13.375" PointY="0.75" Height="4.8353279622395817" />
+        <EntityTypeShape EntityType="Pub_Model.T_HuangShan_ICBCRtn" Width="1.5" PointX="13.375" PointY="6.75" Height="4.8353279622395817" />
+        <EntityTypeShape EntityType="Pub_Model.T_BOC_OUT" Width="1.5" PointX="5.375" PointY="0.75" Height="9.6108203125000031" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

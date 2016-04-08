@@ -1,0 +1,3529 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PM.TaskBiz</name>
+    </assembly>
+    <members>
+        <member name="T:PM.TaskBiz.JSABOCTask.ORM.GovPmBidOnline_BusinessJSEntities">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.JSABOCTask.ORM.GovPmBidOnline_BusinessJSEntities.#ctor">
+            <summary>
+            请使用应用程序配置文件的“GovPmBidOnline_BusinessJSEntities”部分中的连接字符串初始化新 GovPmBidOnline_BusinessJSEntities 对象。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.JSABOCTask.ORM.GovPmBidOnline_BusinessJSEntities.#ctor(System.String)">
+            <summary>
+            初始化新的 GovPmBidOnline_BusinessJSEntities 对象。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.JSABOCTask.ORM.GovPmBidOnline_BusinessJSEntities.#ctor(System.Data.EntityClient.EntityConnection)">
+            <summary>
+            初始化新的 GovPmBidOnline_BusinessJSEntities 对象。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.JSABOCTask.ORM.GovPmBidOnline_BusinessJSEntities.AddToT_ZTB_BidMoneyPayReturn(PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn)">
+            <summary>
+            用于向 T_ZTB_BidMoneyPayReturn EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.JSABOCTask.ORM.GovPmBidOnline_BusinessJSEntities.AddToT_JSABOC(PM.TaskBiz.JSABOCTask.ORM.T_JSABOC)">
+            <summary>
+            用于向 T_JSABOC EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.GovPmBidOnline_BusinessJSEntities.T_ZTB_BidMoneyPayReturn">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.GovPmBidOnline_BusinessJSEntities.T_JSABOC">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.JSABOCTask.ORM.T_JSABOC">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.JSABOCTask.ORM.T_JSABOC.CreateT_JSABOC(System.String)">
+            <summary>
+            创建新的 T_JSABOC 对象。
+            </summary>
+            <param name="id">ID 属性的初始值。</param>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_JSABOC.ID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_JSABOC.TradeCode">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_JSABOC.TradeStructNum">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_JSABOC.ReturneCode">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_JSABOC.ReturneMsg">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_JSABOC.DetailDataTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_JSABOC.Count">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_JSABOC.SectionNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_JSABOC.ReceiveAccNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_JSABOC.ReceiveAccDbName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_JSABOC.ReceiveAccDBBank">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_JSABOC.Used">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_JSABOC.PayAccNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_JSABOC.PayAccDbName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_JSABOC.PayAccDBBank">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_JSABOC.Amount">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_JSABOC.RealAmount">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_JSABOC.Summary">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_JSABOC.Remark">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_JSABOC.SerialNumber">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_JSABOC.OrderNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_JSABOC.IsAboc">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_JSABOC.IsMatch">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_JSABOC.Flag">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_JSABOC.CreateTm">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.CreateT_ZTB_BidMoneyPayReturn(System.Guid,System.Int32)">
+            <summary>
+            创建新的 T_ZTB_BidMoneyPayReturn 对象。
+            </summary>
+            <param name="id">Id 属性的初始值。</param>
+            <param name="autoId">AutoId 属性的初始值。</param>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.Id">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.CaseId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.BidderId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.IincurredTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.PayTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.PayFee">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.PayMoney">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.PayType">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.CardNum">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.IsCheck">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.ReturnManId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.ReturnTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.ReturnWindow">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.Phone">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.IsReturn">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.UnitId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.BankCardNum">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.PayBank">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.PayBankDes">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.BankName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.UnitCode">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.CaseCode">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.AutoId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.UnitName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.ProSectionId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.BidMoneyType">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.LinkPerson">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.LinkPersonPhone">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.LinkPersonMobilTel">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.submiter">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.submitername">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.submittime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.IsOnline">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.PayOrderNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.TransOrderNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.SearchOrderNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.OtherOrderNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.PayTotalMoney">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.RtnTotalMoney">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.RtnRateMoney">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.RtnRateDate">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.TransTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.SearchTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.ClearFlag">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.IsBidAgain">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.ABOCPayOrderNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.ABOCReturnOrderNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.PayAccNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.PayAccDbName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.PayAccDBBank">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JSABOCTask.ORM.T_ZTB_BidMoneyPayReturn.Remark">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.LPSBBCTask.LPSBBCCall">
+            <summary>
+            六盘水建行 对账单
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.HuangShiCCBTask.HuangShiCCBTaskJob">
+            <summary>
+            执行黄石入账明细匹配job
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.LPSBBCTask.ORM.PM_IntegratedEntities">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.LPSBBCTask.ORM.PM_IntegratedEntities.#ctor">
+            <summary>
+            请使用应用程序配置文件的“PM_IntegratedEntities”部分中的连接字符串初始化新 PM_IntegratedEntities 对象。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.LPSBBCTask.ORM.PM_IntegratedEntities.#ctor(System.String)">
+            <summary>
+            初始化新的 PM_IntegratedEntities 对象。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.LPSBBCTask.ORM.PM_IntegratedEntities.#ctor(System.Data.EntityClient.EntityConnection)">
+            <summary>
+            初始化新的 PM_IntegratedEntities 对象。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.LPSBBCTask.ORM.PM_IntegratedEntities.AddToT_ZTB_MoneyPayment(PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment)">
+            <summary>
+            用于向 T_ZTB_MoneyPayment EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.LPSBBCTask.ORM.PM_IntegratedEntities.AddToT_LPSBBC(PM.TaskBiz.LPSBBCTask.ORM.T_LPSBBC)">
+            <summary>
+            用于向 T_LPSBBC EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.PM_IntegratedEntities.T_ZTB_MoneyPayment">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.PM_IntegratedEntities.T_LPSBBC">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.LPSBBCTask.ORM.T_LPSBBC">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.LPSBBCTask.ORM.T_LPSBBC.CreateT_LPSBBC(System.String)">
+            <summary>
+            创建新的 T_LPSBBC 对象。
+            </summary>
+            <param name="id">ID 属性的初始值。</param>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_LPSBBC.ID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_LPSBBC.MERCHANTID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_LPSBBC.BRANCHID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_LPSBBC.POSID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_LPSBBC.ORDERID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_LPSBBC.ORDERDATE">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_LPSBBC.ACCDATE">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_LPSBBC.AMOUNT">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_LPSBBC.STATUSCODE">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_LPSBBC.STATUS">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_LPSBBC.REFUND">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_LPSBBC.SIGN">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_LPSBBC.IsMatch">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_LPSBBC.Flag">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_LPSBBC.CreateTm">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.CreateT_ZTB_MoneyPayment(System.Guid)">
+            <summary>
+            创建新的 T_ZTB_MoneyPayment 对象。
+            </summary>
+            <param name="id">Id 属性的初始值。</param>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.Id">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.ProSectionID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.ProSectionName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.ProSectionCode">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.UserId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.PayTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.PayMoney">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.PayType">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.CardNum">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.IsCheck">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.ReturnUserId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.ReTurnUserName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.ReturnTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.ReturnWindow">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.ReturnPhone">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.ReturnYingGaiMon">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.ReturnShiJiMon">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.ReturnBaoHanYouXiaoQi">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.ReturnBaoHanBank">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.ReturnBaoHanNum">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.IsReturn">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.UnitId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.UnitName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.UnitCode">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.BankCardNum">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.BankName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.CaseID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.ProName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.ProCode">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.PayPage">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.PayPageText">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.FromSystem">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.PayID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.Out_trade_no">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.QueRenRuZhangTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.QueRenRuZhangPerson">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.PayLinkPerson">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.PayLinkPersonTel">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.PayLinkPersonMobileTel">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.IsWinBid">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.TouBiaoEndTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.JiaoFeiBiLv">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.Contentv">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.LPSBBCTask.ORM.T_ZTB_MoneyPayment.InvoiceTitle">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.LPSBBCTask.LPSBBCCallBack">
+            <summary>
+            六盘水入账对比
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.LPSBBCTask.LPSBBCCallBack.IncrementToDB(System.Collections.Generic.List{PM.PaymentProtocolModel.BankCommModel.LPSBBC.BBCQueryAccountRtnModel})">
+            <summary>
+            增量入库
+            </summary>
+            <param name="modelList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.TaskBiz.LPSBBCTask.LPSBBCCallBack.Match">
+            <summary>
+            匹配操作
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.LPSBBCTask.LPSBBCCallBack.GetDbcNumStr(System.String)">
+            <summary>
+            订单号转半角字符
+            </summary>
+            <param name="inputStr">输入字符</param>
+            <returns></returns>
+        </member>
+        <member name="T:PM.TaskBiz.NetBankTask.NetBankQueryAccountCallBack">
+            <summary>
+            回调处理
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.NetBankTask.NetBankQueryAccountCallBack.IncrementToDB(PM.PaymentProtocolModel.BankCommModel.Netbank.NetBankQueryStatementListModel)">
+            <summary>
+            增量入库
+            </summary>
+            <param name="modelList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.TaskBiz.NetBankTask.NetBankQueryAccountCallBack.Match">
+            <summary>
+            匹配操作
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.NetBankTask.NetBankQueryAccountCallBack.GetDbcNumStr(System.String)">
+            <summary>
+            订单号转半角字符
+            </summary>
+            <param name="inputStr">输入字符</param>
+            <returns></returns>
+        </member>
+        <member name="T:PM.TaskBiz.HuangShiCCBTask.ORM.GovPmBidOnline_BusinessEntities">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangShiCCBTask.ORM.GovPmBidOnline_BusinessEntities.#ctor">
+            <summary>
+            请使用应用程序配置文件的“GovPmBidOnline_BusinessEntities”部分中的连接字符串初始化新 GovPmBidOnline_BusinessEntities 对象。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangShiCCBTask.ORM.GovPmBidOnline_BusinessEntities.#ctor(System.String)">
+            <summary>
+            初始化新的 GovPmBidOnline_BusinessEntities 对象。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangShiCCBTask.ORM.GovPmBidOnline_BusinessEntities.#ctor(System.Data.EntityClient.EntityConnection)">
+            <summary>
+            初始化新的 GovPmBidOnline_BusinessEntities 对象。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangShiCCBTask.ORM.GovPmBidOnline_BusinessEntities.AddToT_BASE_Banks(PM.TaskBiz.HuangShiCCBTask.ORM.T_BASE_Banks)">
+            <summary>
+            用于向 T_BASE_Banks EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangShiCCBTask.ORM.GovPmBidOnline_BusinessEntities.AddToT_ZTB_BidMoneyPayReturn(PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_BidMoneyPayReturn)">
+            <summary>
+            用于向 T_ZTB_BidMoneyPayReturn EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangShiCCBTask.ORM.GovPmBidOnline_BusinessEntities.AddToT_ZTB_DepositCCB(PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_DepositCCB)">
+            <summary>
+            用于向 T_ZTB_DepositCCB EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.GovPmBidOnline_BusinessEntities.T_BASE_Banks">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.GovPmBidOnline_BusinessEntities.T_ZTB_BidMoneyPayReturn">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.GovPmBidOnline_BusinessEntities.T_ZTB_DepositCCB">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.HuangShiCCBTask.ORM.T_BASE_Banks">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangShiCCBTask.ORM.T_BASE_Banks.CreateT_BASE_Banks(System.Guid,System.Guid,System.Guid)">
+            <summary>
+            创建新的 T_BASE_Banks 对象。
+            </summary>
+            <param name="id">Id 属性的初始值。</param>
+            <param name="userId">UserId 属性的初始值。</param>
+            <param name="unitId">UnitId 属性的初始值。</param>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_BASE_Banks.Id">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_BASE_Banks.UserId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_BASE_Banks.UserName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_BASE_Banks.UnitId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_BASE_Banks.UnitName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_BASE_Banks.BankName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_BASE_Banks.BankNum">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_BASE_Banks.GongYao">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_BASE_Banks.MerchantId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_BASE_Banks.PosId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_BASE_Banks.BranchId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_BASE_Banks.AccountName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_BidMoneyPayReturn">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_BidMoneyPayReturn.CreateT_ZTB_BidMoneyPayReturn(System.Guid,System.Int32)">
+            <summary>
+            创建新的 T_ZTB_BidMoneyPayReturn 对象。
+            </summary>
+            <param name="id">Id 属性的初始值。</param>
+            <param name="autoId">AutoId 属性的初始值。</param>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_BidMoneyPayReturn.Id">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_BidMoneyPayReturn.CaseId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_BidMoneyPayReturn.BidderId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_BidMoneyPayReturn.PayTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_BidMoneyPayReturn.PayMoney">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_BidMoneyPayReturn.PayType">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_BidMoneyPayReturn.CardNum">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_BidMoneyPayReturn.IsCheck">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_BidMoneyPayReturn.ReturnManId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_BidMoneyPayReturn.ReturnTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_BidMoneyPayReturn.ReturnWindow">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_BidMoneyPayReturn.Phone">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_BidMoneyPayReturn.IsReturn">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_BidMoneyPayReturn.UnitId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_BidMoneyPayReturn.BankCardNum">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_BidMoneyPayReturn.BankName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_BidMoneyPayReturn.UnitCode">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_BidMoneyPayReturn.CaseCode">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_BidMoneyPayReturn.AutoId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_BidMoneyPayReturn.UnitName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_BidMoneyPayReturn.ProID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_BidMoneyPayReturn.BidMoneyType">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_BidMoneyPayReturn.LinkPerson">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_BidMoneyPayReturn.LinkPersonPhone">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_BidMoneyPayReturn.LinkPersonMobilTel">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_BidMoneyPayReturn.OrderNum">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_DepositCCB">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_DepositCCB.CreateT_ZTB_DepositCCB(System.Guid)">
+            <summary>
+            创建新的 T_ZTB_DepositCCB 对象。
+            </summary>
+            <param name="id">ID 属性的初始值。</param>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_DepositCCB.ID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_DepositCCB.REQUEST_SN">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_DepositCCB.CUST_ID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_DepositCCB.TX_CODE">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_DepositCCB.TRAN_DATE">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_DepositCCB.TRAN_TIME">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_DepositCCB.TRAN_SQ">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_DepositCCB.ACCOUNT">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_DepositCCB.ACCOUNT_NAME">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_DepositCCB.MONEY">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_DepositCCB.OTHER_ACCOUNT">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_DepositCCB.OTHER_ACCOUNT_NAME">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_DepositCCB.ORDERS">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_DepositCCB.RETURN_CODE">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_DepositCCB.RETURN_MSG">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_DepositCCB.ISMATCH">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_DepositCCB.CREATETIME">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.JSABOCTask.JSABOCCall">
+            <summary>
+            嘉善农行 入账明细处理
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.JSABOCTask.JSABOCCall.GetCallbackInterface">
+            <summary>
+            获取回调实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PM.TaskBiz.JHBOFTask.JHBOFTaskJob">
+            <summary>
+            job执行
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.HuangMeiPostlTask.ORM.GovPublic_jinhuaEntities">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangMeiPostlTask.ORM.GovPublic_jinhuaEntities.#ctor">
+            <summary>
+            请使用应用程序配置文件的“GovPublic_jinhuaEntities”部分中的连接字符串初始化新 GovPublic_jinhuaEntities 对象。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangMeiPostlTask.ORM.GovPublic_jinhuaEntities.#ctor(System.String)">
+            <summary>
+            初始化新的 GovPublic_jinhuaEntities 对象。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangMeiPostlTask.ORM.GovPublic_jinhuaEntities.#ctor(System.Data.EntityClient.EntityConnection)">
+            <summary>
+            初始化新的 GovPublic_jinhuaEntities 对象。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangMeiPostlTask.ORM.GovPublic_jinhuaEntities.AddToT_HMPostal(PM.TaskBiz.HuangMeiPostlTask.ORM.T_HMPostal)">
+            <summary>
+            用于向 T_HMPostal EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangMeiPostlTask.ORM.GovPublic_jinhuaEntities.T_HMPostal">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.HuangMeiPostlTask.ORM.T_HMPostal">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangMeiPostlTask.ORM.T_HMPostal.CreateT_HMPostal(System.String)">
+            <summary>
+            创建新的 T_HMPostal 对象。
+            </summary>
+            <param name="id">ID 属性的初始值。</param>
+        </member>
+        <member name="P:PM.TaskBiz.HuangMeiPostlTask.ORM.T_HMPostal.ID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangMeiPostlTask.ORM.T_HMPostal.AccountNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangMeiPostlTask.ORM.T_HMPostal.TradeDate">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangMeiPostlTask.ORM.T_HMPostal.TradeSerialNumber">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangMeiPostlTask.ORM.T_HMPostal.ProofKind">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangMeiPostlTask.ORM.T_HMPostal.ProofNum">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangMeiPostlTask.ORM.T_HMPostal.Amount">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangMeiPostlTask.ORM.T_HMPostal.LoanMark">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangMeiPostlTask.ORM.T_HMPostal.RemainAmount">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangMeiPostlTask.ORM.T_HMPostal.Oprationer">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangMeiPostlTask.ORM.T_HMPostal.Checker">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangMeiPostlTask.ORM.T_HMPostal.Authorizer">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangMeiPostlTask.ORM.T_HMPostal.CounterpartAccountNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangMeiPostlTask.ORM.T_HMPostal.CounterpartAccountName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangMeiPostlTask.ORM.T_HMPostal.Remark">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangMeiPostlTask.ORM.T_HMPostal.TradeWay">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangMeiPostlTask.ORM.T_HMPostal.TradeNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangMeiPostlTask.ORM.T_HMPostal.TimeStamp">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangMeiPostlTask.ORM.T_HMPostal.DepartmentAccName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangMeiPostlTask.ORM.T_HMPostal.Match">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangMeiPostlTask.ORM.T_HMPostal.Flag">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangMeiPostlTask.ORM.T_HMPostal.CreateTm">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.JHBOFTask.ORM.jinhuaEntities">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.JHBOFTask.ORM.jinhuaEntities.#ctor">
+            <summary>
+            请使用应用程序配置文件的“jinhuaEntities”部分中的连接字符串初始化新 jinhuaEntities 对象。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.JHBOFTask.ORM.jinhuaEntities.#ctor(System.String)">
+            <summary>
+            初始化新的 jinhuaEntities 对象。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.JHBOFTask.ORM.jinhuaEntities.#ctor(System.Data.EntityClient.EntityConnection)">
+            <summary>
+            初始化新的 jinhuaEntities 对象。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.JHBOFTask.ORM.jinhuaEntities.AddToT_PayOrder(PM.TaskBiz.JHBOFTask.ORM.T_PayOrder)">
+            <summary>
+            用于向 T_PayOrder EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.JHBOFTask.ORM.jinhuaEntities.AddToT_PayOrderBusiness(PM.TaskBiz.JHBOFTask.ORM.T_PayOrderBusiness)">
+            <summary>
+            用于向 T_PayOrderBusiness EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.JHBOFTask.ORM.jinhuaEntities.AddToT_JHBOF(PM.TaskBiz.JHBOFTask.ORM.T_JHBOF)">
+            <summary>
+            用于向 T_JHBOF EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.JHBOFTask.ORM.jinhuaEntities.AddToT_ZTB_MoneyPayment(PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment)">
+            <summary>
+            用于向 T_ZTB_MoneyPayment EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.jinhuaEntities.T_PayOrder">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.jinhuaEntities.T_PayOrderBusiness">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.jinhuaEntities.T_JHBOF">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.jinhuaEntities.T_ZTB_MoneyPayment">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.JHBOFTask.ORM.T_JHBOF">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.JHBOFTask.ORM.T_JHBOF.CreateT_JHBOF(System.String)">
+            <summary>
+            创建新的 T_JHBOF 对象。
+            </summary>
+            <param name="id">ID 属性的初始值。</param>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_JHBOF.ID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_JHBOF.TradeDate">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_JHBOF.TradeNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_JHBOF.Amount">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_JHBOF.AcountNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_JHBOF.AcountName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_JHBOF.Match">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_JHBOF.Remark">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_JHBOF.Flag">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_JHBOF.CreateTm">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.CreateT_PayOrder(System.Guid)">
+            <summary>
+            创建新的 T_PayOrder 对象。
+            </summary>
+            <param name="orderID">OrderID 属性的初始值。</param>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.OrderID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.CaseID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.ProSectionID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.ProSectionNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.OrderNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.OrderName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.PayerID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.PayerName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.CostType">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.FeeAmount">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.Amount">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.Remark">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.InvoiceTitle">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.PayAccountNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.PayBankAccountType">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.PayAccountName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.PayBankName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.PayBankNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.PayBankID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.PayProvince">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.PayCity">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.PaySettingAccNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.PayCur">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.ReceiptBankAccountType">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.ReceiptAccountNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.ReceiptAccountName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.ReceiptBankName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.ReceiptBankNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.ReceiptBankID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.ReceiptProvince">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.ReceiptCity">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.ReceiptCur">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.ReceiptSettingAccNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.OrderResult">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.OrderTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.OrderOpWay">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.OprationType">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.OrderCombination">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.OrderSerialNumber">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.PayRealAccountName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.PayRealAccountNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.PayRealBankName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.PayRealCity">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.PayRealProvince">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.PayRealBankNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.PayRealBankID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.PayRealSettingAccNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.PayInstitutionID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrder.ReceiptInstitutionID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.JHBOFTask.ORM.T_PayOrderBusiness">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.JHBOFTask.ORM.T_PayOrderBusiness.CreateT_PayOrderBusiness(System.String)">
+            <summary>
+            创建新的 T_PayOrderBusiness 对象。
+            </summary>
+            <param name="id">ID 属性的初始值。</param>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrderBusiness.ID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrderBusiness.PayOrderNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrderBusiness.TransOrderNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrderBusiness.SearchOrderNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrderBusiness.OtherOrderNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrderBusiness.PayOrderStatus">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrderBusiness.TransOrderStatus">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrderBusiness.SearchOrderStatus">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrderBusiness.OtherOrderStatus">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrderBusiness.Create_Tm">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_PayOrderBusiness.Up_Tm">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.CreateT_ZTB_MoneyPayment(System.Guid)">
+            <summary>
+            创建新的 T_ZTB_MoneyPayment 对象。
+            </summary>
+            <param name="id">Id 属性的初始值。</param>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.Id">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.ProSectionID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.ProSectionName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.ProSectionCode">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.UserId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.PayTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.PayMoney">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.PayType">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.CardNum">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.IsCheck">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.ReturnUserId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.ReTurnUserName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.ReturnTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.ReturnWindow">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.ReturnPhone">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.ReturnYingGaiMon">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.ReturnShiJiMon">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.ReturnBaoHanYouXiaoQi">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.ReturnBaoHanBank">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.ReturnBaoHanNum">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.IsReturn">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.UnitId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.UnitName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.UnitCode">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.BankCardNum">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.BankName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.CaseID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.ProName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.ProCode">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.PayPage">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.PayPageText">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.FromSystem">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.PayID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.Out_trade_no">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.QueRenRuZhangTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.QueRenRuZhangPerson">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.PayLinkPerson">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.PayLinkPersonTel">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.PayLinkPersonMobileTel">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.IsWinBid">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.TouBiaoEndTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.JiaoFeiBiLv">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.PayOrderNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.TransOrderNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.SearchOrderNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.OtherOrderNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.PayTotalMoney">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.RtnRateTotalMoney">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.RtnRateMoney">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.RtnRateDate">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.TransTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.SearchTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.ClearFlag">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.VBeginTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.VEndTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.IsOnline">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.PayFee">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.ReceiptBankAccountType">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.ReceiptAccountNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.ReceiptAccountName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.ReceiptBankName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.ReceiptBankNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.ReceiptBankID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.ReceiptProvince">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.ReceiptCity">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.ReceiptCur">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.ReceiptSettingAccNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.ReceiptInstitutionID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.Remark">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.InvoiceTitle">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.PayRealSettingAccNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.PayBankID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.ReColumn1">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.BaseAccountNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.BaseAccountName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.NormalAccountNo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment.NormalAccountName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBusiness.JHBOFTask.JHBOFCall.TimerCall">
+            <summary>
+            调用任务
+            </summary>
+        </member>
+        <member name="M:PM.TaskBusiness.JHBOFTask.JHBOFCall.GetCallbackInterface">
+            <summary>
+            获取回调实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PM.TaskBiz.HuangMeiPostlTask.HuangMeiPostlTaskJob">
+            <summary>
+            黄梅定时任务
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangMeiPostlTask.HuangMeiPostlTaskJob.InternalExecute(Quartz.IJobExecutionContext)">
+            <summary>
+            任务入口
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:PM.TaskBiz.LPSBBCTask.LPSBBCTaskJob">
+            <summary>
+            六盘水入账
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.JSABOCTask.JSABOCCallBack">
+            <summary>
+            嘉善农行入账明细回调
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.JSABOCTask.JSABOCCallBack.CallBack(System.Object)">
+             <summary>
+            嘉善农行入账明细回调
+             </summary>
+             <param name="dyObj"></param>
+        </member>
+        <member name="M:PM.TaskBiz.JSABOCTask.JSABOCCallBack.IncrementToDB(System.Collections.Generic.List{PM.PaymentProtocolModel.BankCommModel.JSABOC.JSABOCRtnModel})">
+            <summary>
+            增量入库
+            </summary>
+            <param name="modelList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.TaskBiz.JSABOCTask.JSABOCCallBack.Match">
+            <summary>
+            匹配操作
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.JSABOCTask.JSABOCCallBack.GetIsAboc(System.String)">
+            <summary>
+            是否农行判断
+            </summary>
+            <param name="bankName">开户行</param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.TaskBiz.JSABOCTask.JSABOCCallBack.GetDbcNumStr(System.String)">
+            <summary>
+            订单号转半角字符
+            </summary>
+            <param name="inputStr">输入字符</param>
+            <returns></returns>
+        </member>
+        <member name="T:PM.TaskBiz.HuangShiCCBTask.ORM.Gov_publicHSEntities">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangShiCCBTask.ORM.Gov_publicHSEntities.#ctor">
+            <summary>
+            请使用应用程序配置文件的“Gov_publicHSEntities”部分中的连接字符串初始化新 Gov_publicHSEntities 对象。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangShiCCBTask.ORM.Gov_publicHSEntities.#ctor(System.String)">
+            <summary>
+            初始化新的 Gov_publicHSEntities 对象。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangShiCCBTask.ORM.Gov_publicHSEntities.#ctor(System.Data.EntityClient.EntityConnection)">
+            <summary>
+            初始化新的 Gov_publicHSEntities 对象。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangShiCCBTask.ORM.Gov_publicHSEntities.AddToT_ZTB_MoneyBankRequestSn(PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankRequestSn)">
+            <summary>
+            用于向 T_ZTB_MoneyBankRequestSn EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangShiCCBTask.ORM.Gov_publicHSEntities.AddToT_ZTB_MoneyBankResponse(PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankResponse)">
+            <summary>
+            用于向 T_ZTB_MoneyBankResponse EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangShiCCBTask.ORM.Gov_publicHSEntities.AddToT_ZTB_MoneyBankReturn(PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankReturn)">
+            <summary>
+            用于向 T_ZTB_MoneyBankReturn EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangShiCCBTask.ORM.Gov_publicHSEntities.AddToT_ZTB_MoneyPayment(PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment)">
+            <summary>
+            用于向 T_ZTB_MoneyPayment EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangShiCCBTask.ORM.Gov_publicHSEntities.AddToT_ZTB_Order(PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_Order)">
+            <summary>
+            用于向 T_ZTB_Order EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangShiCCBTask.ORM.Gov_publicHSEntities.AddToT_ZTB_ReservePlace(PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace)">
+            <summary>
+            用于向 T_ZTB_ReservePlace EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangShiCCBTask.ORM.Gov_publicHSEntities.AddToT_ZTB_ValueReturn(PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ValueReturn)">
+            <summary>
+            用于向 T_ZTB_ValueReturn EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.Gov_publicHSEntities.T_ZTB_MoneyBankRequestSn">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.Gov_publicHSEntities.T_ZTB_MoneyBankResponse">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.Gov_publicHSEntities.T_ZTB_MoneyBankReturn">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.Gov_publicHSEntities.T_ZTB_MoneyPayment">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.Gov_publicHSEntities.T_ZTB_Order">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.Gov_publicHSEntities.T_ZTB_ReservePlace">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.Gov_publicHSEntities.T_ZTB_ValueReturn">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankRequestSn">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankRequestSn.CreateT_ZTB_MoneyBankRequestSn(System.Int32)">
+            <summary>
+            创建新的 T_ZTB_MoneyBankRequestSn 对象。
+            </summary>
+            <param name="requestSn">RequestSn 属性的初始值。</param>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankRequestSn.RequestSn">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankResponse">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankResponse.CreateT_ZTB_MoneyBankResponse(System.Guid,System.String,System.String,System.Int32)">
+            <summary>
+            创建新的 T_ZTB_MoneyBankResponse 对象。
+            </summary>
+            <param name="id">Id 属性的初始值。</param>
+            <param name="orderId">OrderId 属性的初始值。</param>
+            <param name="requestSN">RequestSN 属性的初始值。</param>
+            <param name="requestType">RequestType 属性的初始值。</param>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankResponse.Id">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankResponse.OrderId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankResponse.RequestSN">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankResponse.RequestType">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankResponse.ResponseXml">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankResponse.IsResponseSuccess">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankResponse.CustomerResult">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankResponse.ExceptionMsg">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankResponse.ExecStatus">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankReturn">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankReturn.CreateT_ZTB_MoneyBankReturn(System.Guid)">
+            <summary>
+            创建新的 T_ZTB_MoneyBankReturn 对象。
+            </summary>
+            <param name="id">Id 属性的初始值。</param>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankReturn.Id">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankReturn.MPOSID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankReturn.ORDER_NUMBER">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankReturn.CUST_ID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankReturn.ACC_NO">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankReturn.ACC_NAME">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankReturn.AMOUNT">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankReturn.STATUS">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankReturn.REMARK1">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankReturn.REMARK2">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankReturn.TRAN_FLAG">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankReturn.TRAN_TIME">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankReturn.BRANCH_NAME">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankReturn.SIGNSTRING">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyBankReturn.CHECKOK">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.CreateT_ZTB_MoneyPayment(System.Guid)">
+            <summary>
+            创建新的 T_ZTB_MoneyPayment 对象。
+            </summary>
+            <param name="id">Id 属性的初始值。</param>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.Id">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.ProSectionID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.ProSectionName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.ProSectionCode">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.UserId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.PayTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.PayMoney">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.PayType">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.CardNum">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.IsCheck">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.ReturnUserId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.ReTurnUserName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.ReturnTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.ReturnWindow">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.ReturnPhone">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.ReturnYingGaiMon">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.ReturnShiJiMon">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.ReturnBaoHanYouXiaoQi">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.ReturnBaoHanBank">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.ReturnBaoHanNum">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.IsReturn">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.UnitId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.UnitName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.UnitCode">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.BankCardNum">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.BankName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.CaseID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.ProName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.ProCode">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.PayPage">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.PayPageText">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.FromSystem">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.PayID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.Out_trade_no">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.QueRenRuZhangTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.QueRenRuZhangPerson">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.PayLinkPerson">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.PayLinkPersonTel">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.PayLinkPersonMobileTel">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.IsWinBid">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.TouBiaoEndTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.JiaoFeiBiLv">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_MoneyPayment.Contentv">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_Order">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_Order.CreateT_ZTB_Order(System.Guid)">
+            <summary>
+            创建新的 T_ZTB_Order 对象。
+            </summary>
+            <param name="id">Id 属性的初始值。</param>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_Order.Id">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_Order.ProName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_Order.ProCode">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_Order.ProCaseid">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_Order.UnitName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_Order.UnitID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_Order.PayFee">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_Order.MoneyPayID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_Order.FromSystem">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_Order.Out_Trade_No">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_Order.InvoiceTitle">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_Order.ProInfo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_Order.PayTypeStr">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_Order.OrderRemark">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_Order.ProTitle">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_Order.PubKey">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.CreateT_ZTB_ReservePlace(System.Guid)">
+            <summary>
+            创建新的 T_ZTB_ReservePlace 对象。
+            </summary>
+            <param name="id">Id 属性的初始值。</param>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.Id">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.CaseId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.ResType">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.Traderers">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.Regulators">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.OtherPeople">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.Applicants">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.SiteSet">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.Logo">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.NoteBook">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.NumMachine">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.Projector">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.OtherRquest">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.SiteName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.UseStartTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.UseEndTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.ManagerId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.AcceptName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.Phone">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.TradeOrgId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.ResNum">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.ResMemberNum">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.ManagerName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.OtherYq">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.ProName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.ProCode">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.TradeOrg">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.ManagerPhone">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.Statu">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.Reason">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ReservePlace.ComeFrom">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ValueReturn">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ValueReturn.CreateT_ZTB_ValueReturn(System.Guid)">
+            <summary>
+            创建新的 T_ZTB_ValueReturn 对象。
+            </summary>
+            <param name="id">ID 属性的初始值。</param>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ValueReturn.ID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ValueReturn.Value">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.HuangShiCCBTask.ORM.T_ZTB_ValueReturn.XmlValue">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.HuangMeiPostlTask.HuangMeiPostlCall">
+            <summary>
+            任务调用
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangMeiPostlTask.HuangMeiPostlCall.GetCallbackInterface">
+            <summary>
+            回调对象实例化
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PM.TaskBiz.HuangShiCCBTask.HuangShiCCBCall">
+            <summary>
+            调用任务
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangShiCCBTask.HuangShiCCBCall.GetCallbackInterface">
+            <summary>
+            回调对象实例化
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PM.TaskBiz.NetBankTask.ORM.Netbank_IntegratedEntities">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.NetBankTask.ORM.Netbank_IntegratedEntities.#ctor">
+            <summary>
+            请使用应用程序配置文件的“Netbank_IntegratedEntities”部分中的连接字符串初始化新 Netbank_IntegratedEntities 对象。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.NetBankTask.ORM.Netbank_IntegratedEntities.#ctor(System.String)">
+            <summary>
+            初始化新的 Netbank_IntegratedEntities 对象。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.NetBankTask.ORM.Netbank_IntegratedEntities.#ctor(System.Data.EntityClient.EntityConnection)">
+            <summary>
+            初始化新的 Netbank_IntegratedEntities 对象。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.NetBankTask.ORM.Netbank_IntegratedEntities.AddToT_ZTB_MoneyPayment(PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment)">
+            <summary>
+            用于向 T_ZTB_MoneyPayment EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.NetBankTask.ORM.Netbank_IntegratedEntities.AddToT_NetBankAccountQuery(PM.TaskBiz.NetBankTask.ORM.T_NetBankAccountQuery)">
+            <summary>
+            用于向 T_NetBankAccountQuery EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.Netbank_IntegratedEntities.T_ZTB_MoneyPayment">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.Netbank_IntegratedEntities.T_NetBankAccountQuery">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.NetBankTask.ORM.T_NetBankAccountQuery">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.NetBankTask.ORM.T_NetBankAccountQuery.CreateT_NetBankAccountQuery(System.String)">
+            <summary>
+            创建新的 T_NetBankAccountQuery 对象。
+            </summary>
+            <param name="id">ID 属性的初始值。</param>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_NetBankAccountQuery.ID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_NetBankAccountQuery.TxType">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_NetBankAccountQuery.TxSn">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_NetBankAccountQuery.TxAmount">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_NetBankAccountQuery.InstitutionAmount">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_NetBankAccountQuery.PaymentAmount">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_NetBankAccountQuery.InstitutionFee">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_NetBankAccountQuery.Remark">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_NetBankAccountQuery.BankNotificationTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_NetBankAccountQuery.SettlementFlag">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_NetBankAccountQuery.IsMatch">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_NetBankAccountQuery.Flag">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_NetBankAccountQuery.CreateTm">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.CreateT_ZTB_MoneyPayment(System.Guid)">
+            <summary>
+            创建新的 T_ZTB_MoneyPayment 对象。
+            </summary>
+            <param name="id">Id 属性的初始值。</param>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.Id">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.ProSectionID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.ProSectionName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.ProSectionCode">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.UserId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.PayTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.PayMoney">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.PayType">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.CardNum">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.IsCheck">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.ReturnUserId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.ReTurnUserName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.ReturnTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.ReturnWindow">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.ReturnPhone">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.ReturnYingGaiMon">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.ReturnShiJiMon">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.ReturnBaoHanYouXiaoQi">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.ReturnBaoHanBank">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.ReturnBaoHanNum">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.IsReturn">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.UnitId">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.UnitName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.UnitCode">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.BankCardNum">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.BankName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.CaseID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.ProName">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.ProCode">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.PayPage">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.PayPageText">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.FromSystem">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.PayID">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.Out_trade_no">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.QueRenRuZhangTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.QueRenRuZhangPerson">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.PayLinkPerson">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.PayLinkPersonTel">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.PayLinkPersonMobileTel">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.IsWinBid">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.TouBiaoEndTime">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.JiaoFeiBiLv">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.Contentv">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="P:PM.TaskBiz.NetBankTask.ORM.T_ZTB_MoneyPayment.InvoiceTitle">
+            <summary>
+            没有元数据文档可用。
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.HuangMeiPostlTask.HuangMeiPostlCallBack">
+            <summary>
+            回调执行任务
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangMeiPostlTask.HuangMeiPostlCallBack.CallBack(System.Object)">
+            <summary>
+            回调任务
+            </summary>
+            <param name="dyObj"></param>
+        </member>
+        <member name="M:PM.TaskBiz.HuangMeiPostlTask.HuangMeiPostlCallBack.IncrementToDB(System.Collections.Generic.List{PM.PaymentProtocolModel.BankCommModel.HuangMeiPostal.HuangMeiQueryResult})">
+            <summary>
+            增量入库
+            </summary>
+            <param name="modelList">报文返回列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.TaskBiz.HuangMeiPostlTask.HuangMeiPostlCallBack.Match">
+            <summary>
+            匹配操作
+            </summary>
+        </member>
+        <member name="T:PM.TaskBiz.JSABOCTask.JSABOCTaskJob">
+            <summary>
+            嘉善入账明细任务
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.JSABOCTask.JSABOCTaskJob.InternalExecute(Quartz.IJobExecutionContext)">
+            <summary>
+            执行
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:PM.TaskBusiness.JHBOFTask.JHBOFCallBack">
+            <summary>
+            回调执行业务
+            </summary>
+        </member>
+        <member name="M:PM.TaskBusiness.JHBOFTask.JHBOFCallBack.CallBack(System.Object)">
+            <summary>
+            回调
+            </summary>
+            <param name="dyObj"></param>
+        </member>
+        <member name="M:PM.TaskBusiness.JHBOFTask.JHBOFCallBack.IncrementToDB(System.Collections.Generic.List{PM.PaymentProtocolModel.BankCommModel.JHBOF.JHBofQueryResult})">
+            <summary>
+            增量入库
+            </summary>
+            <param name="modelList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.TaskBusiness.JHBOFTask.JHBOFCallBack.Match">
+            <summary>
+            匹配操作
+            </summary>
+        </member>
+        <member name="M:PM.TaskBusiness.JHBOFTask.JHBOFCallBack.MatchOpration(PM.TaskBiz.JHBOFTask.ORM.jinhuaEntities,PM.TaskBiz.JHBOFTask.ORM.T_ZTB_MoneyPayment,PM.TaskBiz.JHBOFTask.ORM.T_JHBOF,System.String)">
+            <summary>
+            匹配操作
+            </summary>
+            <param name="dbEnter">数据库对象</param>
+            <param name="chk">入账记录</param>
+            <param name="lst">银行明细记录</param>
+            <param name="payAccount">银行摘要中获取支付账号</param>
+            <returns></returns>
+        </member>
+        <member name="M:PM.TaskBusiness.JHBOFTask.JHBOFCallBack.GetDbcNumStr(System.String,System.String@)">
+            <summary>
+            订单号转半角字符
+            </summary>
+            <param name="inputStr">输入字符</param>
+            <param name="PayAccount">支付账号</param>
+            <returns></returns>
+        </member>
+        <member name="T:PM.TaskBiz.HuangShiCCBTask.HuangShiCCBCallBack">
+            <summary>
+            回调执行黄石job
+            </summary>
+        </member>
+        <member name="F:PM.TaskBiz.HuangShiCCBTask.HuangShiCCBCallBack.dbEnter">
+            <summary>
+            黄石建设工程数据操作对象
+            </summary>
+        </member>
+        <member name="M:PM.TaskBiz.HuangShiCCBTask.HuangShiCCBCallBack.CallBack(System.Object)">
+            <summary>
+            回调
+            </summary>
+            <param name="dyObj"></param>
+        </member>
+        <member name="M:PM.TaskBiz.HuangShiCCBTask.HuangShiCCBCallBack.IncrementToDB(PM.PaymentProtocolModel.BankCommModel.HuangShi.HuangShiDepositResponseModel)">
+            <summary>
+            查询明细结果增量入库
+            </summary>
+            <param name="modResponse">明细结果实体集合</param>
+            <returns>是否入库成功</returns>
+        </member>
+        <member name="M:PM.TaskBiz.HuangShiCCBTask.HuangShiCCBCallBack.DataMatch">
+            <summary>
+            匹配操作
+            </summary>
+        </member>
+    </members>
+</doc>

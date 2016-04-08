@@ -1,0 +1,568 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PM_IntegratedModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="PM_IntegratedModelStoreContainer">
+          <EntitySet Name="T_AHQY" EntityType="PM_IntegratedModel.Store.T_AHQY" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_Pay_Log" EntityType="PM_IntegratedModel.Store.T_Pay_Log" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_Pay_Order" EntityType="PM_IntegratedModel.Store.T_Pay_Order" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_Pay_OrderBusiness" EntityType="PM_IntegratedModel.Store.T_Pay_OrderBusiness" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_Pay_OrderRequest" EntityType="PM_IntegratedModel.Store.T_Pay_OrderRequest" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_Pay_OrderResponse" EntityType="PM_IntegratedModel.Store.T_Pay_OrderResponse" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="T_AHQY">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="InDate" Type="varchar" MaxLength="50" />
+          <Property Name="InTime" Type="varchar" MaxLength="50" />
+          <Property Name="InAmount" Type="varchar" MaxLength="50" />
+          <Property Name="InName" Type="varchar" MaxLength="50" />
+          <Property Name="InAcct" Type="varchar" MaxLength="50" />
+          <Property Name="InMemo" Type="varchar" MaxLength="50" />
+          <Property Name="HstSeqNum" Type="varchar" MaxLength="50" />
+          <Property Name="PunInst" Type="varchar" MaxLength="50" />
+          <Property Name="Gernal" Type="varchar" MaxLength="50" />
+          <Property Name="BackResult" Type="varchar" MaxLength="50" />
+          <Property Name="AddWord" Type="nvarchar" MaxLength="500" />
+          <Property Name="QYType" Type="char" MaxLength="2" />
+          <Property Name="CreateTm" Type="datetime" />
+          <Property Name="Match" Type="int" />
+          <Property Name="Flag" Type="int" />
+          <Property Name="AuthCode" Type="varchar" MaxLength="50" />
+          <Property Name="SectionCode" Type="varchar" MaxLength="50" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="T_Pay_Log">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CaseID" Type="varchar" MaxLength="50" />
+          <Property Name="ProSectionID" Type="varchar" MaxLength="50" />
+          <Property Name="OrderNo" Type="varchar" MaxLength="100" />
+          <Property Name="OrderName" Type="nvarchar" MaxLength="500" />
+          <Property Name="PayerID" Type="varchar" MaxLength="50" />
+          <Property Name="PayerName" Type="nvarchar" MaxLength="100" />
+          <Property Name="CostType" Type="nvarchar" MaxLength="100" />
+          <Property Name="FeeAmount" Type="money" />
+          <Property Name="Amount" Type="money" />
+          <Property Name="Remark" Type="text" />
+          <Property Name="InvoiceTitle" Type="nvarchar" MaxLength="500" />
+          <Property Name="PayAccountNo" Type="varchar" MaxLength="100" />
+          <Property Name="PayBankAccountType" Type="varchar" MaxLength="50" />
+          <Property Name="PayAccountName" Type="nvarchar" MaxLength="500" />
+          <Property Name="PayBankName" Type="nvarchar" MaxLength="500" />
+          <Property Name="PayBankNo" Type="varchar" MaxLength="50" />
+          <Property Name="PayBankID" Type="varchar" MaxLength="50" />
+          <Property Name="PayProvince" Type="varchar" MaxLength="50" />
+          <Property Name="PayCity" Type="varchar" MaxLength="50" />
+          <Property Name="PayCur" Type="varchar" MaxLength="50" />
+          <Property Name="ReceiptBankAccountType" Type="varchar" MaxLength="50" />
+          <Property Name="ReceiptAccountNo" Type="varchar" MaxLength="100" />
+          <Property Name="ReceiptAccountName" Type="nvarchar" MaxLength="500" />
+          <Property Name="ReceiptBankName" Type="nvarchar" MaxLength="500" />
+          <Property Name="ReceiptBankNo" Type="varchar" MaxLength="50" />
+          <Property Name="ReceiptBankID" Type="varchar" MaxLength="50" />
+          <Property Name="ReceiptProvince" Type="varchar" MaxLength="50" />
+          <Property Name="ReceiptCity" Type="varchar" MaxLength="50" />
+          <Property Name="ReceiptCur" Type="varchar" MaxLength="50" />
+          <Property Name="OrderResult" Type="int" />
+          <Property Name="OrderTime" Type="datetime" />
+          <Property Name="OrderOpWay" Type="nvarchar" MaxLength="50" />
+          <Property Name="OprationType" Type="int" />
+        </EntityType>
+        <EntityType Name="T_Pay_Order">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="OrderID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CaseID" Type="varchar" MaxLength="50" />
+          <Property Name="PrimaryID" Type="varchar" MaxLength="50" />
+          <Property Name="PrimaryCode" Type="varchar" MaxLength="100" />
+          <Property Name="PrimaryName" Type="varchar" MaxLength="200" />
+          <Property Name="SlaveID" Type="varchar" MaxLength="100" />
+          <Property Name="SlaveCode" Type="varchar" MaxLength="100" />
+          <Property Name="SlaveName" Type="varchar" MaxLength="200" />
+          <Property Name="BusinessNo" Type="varchar" MaxLength="50" />
+          <Property Name="OrderNo" Type="varchar" MaxLength="100" />
+          <Property Name="OrderName" Type="nvarchar" MaxLength="500" />
+          <Property Name="PayerID" Type="varchar" MaxLength="50" />
+          <Property Name="PayerName" Type="nvarchar" MaxLength="100" />
+          <Property Name="CostType" Type="nvarchar" MaxLength="100" />
+          <Property Name="FeeAmount" Type="money" />
+          <Property Name="Amount" Type="money" />
+          <Property Name="Remark" Type="text" />
+          <Property Name="InvoiceTitle" Type="nvarchar" MaxLength="500" />
+          <Property Name="PayAccountNo" Type="varchar" MaxLength="100" />
+          <Property Name="PayBankAccountType" Type="varchar" MaxLength="50" />
+          <Property Name="PayAccountName" Type="nvarchar" MaxLength="500" />
+          <Property Name="PayBankName" Type="nvarchar" MaxLength="500" />
+          <Property Name="PayBankNo" Type="varchar" MaxLength="50" />
+          <Property Name="PayBankID" Type="varchar" MaxLength="50" />
+          <Property Name="PayProvince" Type="varchar" MaxLength="50" />
+          <Property Name="PayCity" Type="varchar" MaxLength="50" />
+          <Property Name="PaySettingAccNo" Type="varchar" MaxLength="50" />
+          <Property Name="PayCur" Type="varchar" MaxLength="50" />
+          <Property Name="ReceiptBankAccountType" Type="varchar" MaxLength="50" />
+          <Property Name="ReceiptAccountNo" Type="varchar" MaxLength="100" />
+          <Property Name="ReceiptAccountName" Type="nvarchar" MaxLength="500" />
+          <Property Name="ReceiptBankName" Type="nvarchar" MaxLength="500" />
+          <Property Name="ReceiptBankNo" Type="varchar" MaxLength="50" />
+          <Property Name="ReceiptBankID" Type="varchar" MaxLength="50" />
+          <Property Name="ReceiptProvince" Type="varchar" MaxLength="50" />
+          <Property Name="ReceiptCity" Type="varchar" MaxLength="50" />
+          <Property Name="ReceiptCur" Type="varchar" MaxLength="50" />
+          <Property Name="ReceiptSettingAccNo" Type="varchar" MaxLength="50" />
+          <Property Name="OrderResult" Type="int" />
+          <Property Name="OrderTime" Type="datetime" />
+          <Property Name="OrderOpWay" Type="nvarchar" MaxLength="50" />
+          <Property Name="OprationType" Type="int" />
+          <Property Name="OrderCombination" Type="varchar" MaxLength="50" />
+          <Property Name="OrderSerialNumber" Type="varchar" MaxLength="100" />
+          <Property Name="PayRealAccountName" Type="nvarchar" MaxLength="500" />
+          <Property Name="PayRealAccountNo" Type="nvarchar" MaxLength="500" />
+          <Property Name="PayRealBankName" Type="nvarchar" MaxLength="500" />
+          <Property Name="PayRealCity" Type="varchar" MaxLength="50" />
+          <Property Name="PayRealProvince" Type="varchar" MaxLength="50" />
+          <Property Name="PayRealBankNo" Type="varchar" MaxLength="50" />
+          <Property Name="PayRealBankID" Type="varchar" MaxLength="50" />
+          <Property Name="PayRealSettingAccNo" Type="varchar" MaxLength="50" />
+          <Property Name="PayInstitutionID" Type="varchar" MaxLength="100" />
+          <Property Name="ReceiptInstitutionID" Type="varchar" MaxLength="100" />
+          <Property Name="NotificationURL" Type="varchar" MaxLength="500" />
+          <Property Name="MainOrderNo" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="T_Pay_OrderBusiness">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Business_ID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="OrderNo" Type="varchar" MaxLength="50" />
+          <Property Name="OrderStatus" Type="varchar" MaxLength="50" />
+          <Property Name="MainOrderNo" Type="varchar" MaxLength="50" />
+          <Property Name="PayMent_Tm" Type="datetime" />
+          <Property Name="AccontType" Type="varchar" MaxLength="20" />
+          <Property Name="InvoiceTitle" Type="varchar" MaxLength="100" />
+          <Property Name="FeeType" Type="nvarchar" MaxLength="500" />
+          <Property Name="ReMark" Type="nvarchar" MaxLength="500" />
+          <Property Name="Create_Tm" Type="datetime" />
+          <Property Name="Up_Tm" Type="datetime" />
+        </EntityType>
+        <EntityType Name="T_Pay_OrderRequest">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PacketMessage" Type="text" />
+          <Property Name="Signature" Type="text" />
+          <Property Name="OrderNo" Type="varchar" MaxLength="50" />
+          <Property Name="RequestTime" Type="datetime" />
+          <Property Name="RequestUrl" Type="text" />
+          <Property Name="SerialNumber" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="T_Pay_OrderResponse">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PacketMessage" Type="text" />
+          <Property Name="Signature" Type="text" />
+          <Property Name="OrderNo" Type="varchar" MaxLength="50" />
+          <Property Name="RequestTime" Type="datetime" />
+          <Property Name="NoticePacketMessage" Type="text" />
+          <Property Name="NoticeSignature" Type="text" />
+          <Property Name="SerialNumber" Type="varchar" MaxLength="100" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PM_IntegratedModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="publicEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="T_Pay_Log" EntityType="PM_IntegratedModel.T_Pay_Log" />
+          <EntitySet Name="T_Pay_OrderBusiness" EntityType="PM_IntegratedModel.T_Pay_OrderBusiness" />
+          <EntitySet Name="T_Pay_OrderRequest" EntityType="PM_IntegratedModel.T_Pay_OrderRequest" />
+          <EntitySet Name="T_Pay_OrderResponse" EntityType="PM_IntegratedModel.T_Pay_OrderResponse" />
+          <EntitySet Name="T_AHQY" EntityType="PM_IntegratedModel.T_AHQY" />
+          <EntitySet Name="T_Pay_Order" EntityType="PM_IntegratedModel.T_Pay_Order" />
+        </EntityContainer>
+        <EntityType Name="T_Pay_Log">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Guid" Name="ID" Nullable="false" />
+          <Property Type="String" Name="CaseID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ProSectionID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OrderNo" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OrderName" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PayerID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayerName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CostType" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="FeeAmount" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="Amount" Precision="19" Scale="4" />
+          <Property Type="String" Name="Remark" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InvoiceTitle" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PayAccountNo" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayBankAccountType" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayAccountName" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PayBankName" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PayBankNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayBankID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayProvince" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayCity" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayCur" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReceiptBankAccountType" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReceiptAccountNo" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReceiptAccountName" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ReceiptBankName" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ReceiptBankNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReceiptBankID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReceiptProvince" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReceiptCity" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReceiptCur" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="OrderResult" />
+          <Property Type="DateTime" Name="OrderTime" />
+          <Property Type="String" Name="OrderOpWay" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="OprationType" />
+        </EntityType>
+        <EntityType Name="T_Pay_OrderBusiness">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Business_ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OrderNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OrderStatus" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MainOrderNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="PayMent_Tm" />
+          <Property Type="String" Name="AccontType" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InvoiceTitle" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FeeType" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ReMark" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Create_Tm" />
+          <Property Type="DateTime" Name="Up_Tm" />
+        </EntityType>
+        <EntityType Name="T_Pay_OrderRequest">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Guid" Name="ID" Nullable="false" />
+          <Property Type="String" Name="PacketMessage" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Signature" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OrderNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="RequestTime" />
+          <Property Type="String" Name="RequestUrl" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SerialNumber" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="T_Pay_OrderResponse">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Guid" Name="ID" Nullable="false" />
+          <Property Type="String" Name="PacketMessage" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Signature" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OrderNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="RequestTime" />
+          <Property Type="String" Name="NoticePacketMessage" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NoticeSignature" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SerialNumber" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="T_AHQY">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InDate" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InTime" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InAmount" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InAcct" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InMemo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HstSeqNum" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PunInst" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Gernal" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BackResult" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AddWord" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="QYType" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Type="DateTime" Name="CreateTm" />
+          <Property Type="Int32" Name="Match" />
+          <Property Type="Int32" Name="Flag" />
+          <Property Type="String" Name="AuthCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SectionCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Remark" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="T_Pay_Order">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Type="Guid" Name="OrderID" Nullable="false" />
+          <Property Type="String" Name="CaseID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PrimaryID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PrimaryCode" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PrimaryName" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SlaveID" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SlaveCode" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SlaveName" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BusinessNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OrderNo" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OrderName" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PayerID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayerName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CostType" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="FeeAmount" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="Amount" Precision="19" Scale="4" />
+          <Property Type="String" Name="Remark" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InvoiceTitle" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PayAccountNo" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayBankAccountType" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayAccountName" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PayBankName" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PayBankNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayBankID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayProvince" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayCity" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PaySettingAccNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayCur" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReceiptBankAccountType" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReceiptAccountNo" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReceiptAccountName" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ReceiptBankName" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ReceiptBankNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReceiptBankID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReceiptProvince" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReceiptCity" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReceiptCur" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReceiptSettingAccNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="OrderResult" />
+          <Property Type="DateTime" Name="OrderTime" />
+          <Property Type="String" Name="OrderOpWay" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="OprationType" />
+          <Property Type="String" Name="OrderCombination" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OrderSerialNumber" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayRealAccountName" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PayRealAccountNo" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PayRealBankName" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PayRealCity" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayRealProvince" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayRealBankNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayRealBankID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayRealSettingAccNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayInstitutionID" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReceiptInstitutionID" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NotificationURL" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MainOrderNo" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PM_IntegratedModelStoreContainer" CdmEntityContainer="publicEntities">
+          <EntitySetMapping Name="T_Pay_Log">
+            <EntityTypeMapping TypeName="PM_IntegratedModel.T_Pay_Log">
+              <MappingFragment StoreEntitySet="T_Pay_Log">
+                <ScalarProperty Name="OprationType" ColumnName="OprationType" />
+                <ScalarProperty Name="OrderOpWay" ColumnName="OrderOpWay" />
+                <ScalarProperty Name="OrderTime" ColumnName="OrderTime" />
+                <ScalarProperty Name="OrderResult" ColumnName="OrderResult" />
+                <ScalarProperty Name="ReceiptCur" ColumnName="ReceiptCur" />
+                <ScalarProperty Name="ReceiptCity" ColumnName="ReceiptCity" />
+                <ScalarProperty Name="ReceiptProvince" ColumnName="ReceiptProvince" />
+                <ScalarProperty Name="ReceiptBankID" ColumnName="ReceiptBankID" />
+                <ScalarProperty Name="ReceiptBankNo" ColumnName="ReceiptBankNo" />
+                <ScalarProperty Name="ReceiptBankName" ColumnName="ReceiptBankName" />
+                <ScalarProperty Name="ReceiptAccountName" ColumnName="ReceiptAccountName" />
+                <ScalarProperty Name="ReceiptAccountNo" ColumnName="ReceiptAccountNo" />
+                <ScalarProperty Name="ReceiptBankAccountType" ColumnName="ReceiptBankAccountType" />
+                <ScalarProperty Name="PayCur" ColumnName="PayCur" />
+                <ScalarProperty Name="PayCity" ColumnName="PayCity" />
+                <ScalarProperty Name="PayProvince" ColumnName="PayProvince" />
+                <ScalarProperty Name="PayBankID" ColumnName="PayBankID" />
+                <ScalarProperty Name="PayBankNo" ColumnName="PayBankNo" />
+                <ScalarProperty Name="PayBankName" ColumnName="PayBankName" />
+                <ScalarProperty Name="PayAccountName" ColumnName="PayAccountName" />
+                <ScalarProperty Name="PayBankAccountType" ColumnName="PayBankAccountType" />
+                <ScalarProperty Name="PayAccountNo" ColumnName="PayAccountNo" />
+                <ScalarProperty Name="InvoiceTitle" ColumnName="InvoiceTitle" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="FeeAmount" ColumnName="FeeAmount" />
+                <ScalarProperty Name="CostType" ColumnName="CostType" />
+                <ScalarProperty Name="PayerName" ColumnName="PayerName" />
+                <ScalarProperty Name="PayerID" ColumnName="PayerID" />
+                <ScalarProperty Name="OrderName" ColumnName="OrderName" />
+                <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+                <ScalarProperty Name="ProSectionID" ColumnName="ProSectionID" />
+                <ScalarProperty Name="CaseID" ColumnName="CaseID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Pay_OrderBusiness">
+            <EntityTypeMapping TypeName="PM_IntegratedModel.T_Pay_OrderBusiness">
+              <MappingFragment StoreEntitySet="T_Pay_OrderBusiness">
+                <ScalarProperty Name="Up_Tm" ColumnName="Up_Tm" />
+                <ScalarProperty Name="Create_Tm" ColumnName="Create_Tm" />
+                <ScalarProperty Name="ReMark" ColumnName="ReMark" />
+                <ScalarProperty Name="FeeType" ColumnName="FeeType" />
+                <ScalarProperty Name="InvoiceTitle" ColumnName="InvoiceTitle" />
+                <ScalarProperty Name="AccontType" ColumnName="AccontType" />
+                <ScalarProperty Name="PayMent_Tm" ColumnName="PayMent_Tm" />
+                <ScalarProperty Name="MainOrderNo" ColumnName="MainOrderNo" />
+                <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
+                <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+                <ScalarProperty Name="Business_ID" ColumnName="Business_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Pay_OrderRequest">
+            <EntityTypeMapping TypeName="PM_IntegratedModel.T_Pay_OrderRequest">
+              <MappingFragment StoreEntitySet="T_Pay_OrderRequest">
+                <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+                <ScalarProperty Name="RequestUrl" ColumnName="RequestUrl" />
+                <ScalarProperty Name="RequestTime" ColumnName="RequestTime" />
+                <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+                <ScalarProperty Name="Signature" ColumnName="Signature" />
+                <ScalarProperty Name="PacketMessage" ColumnName="PacketMessage" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Pay_OrderResponse">
+            <EntityTypeMapping TypeName="PM_IntegratedModel.T_Pay_OrderResponse">
+              <MappingFragment StoreEntitySet="T_Pay_OrderResponse">
+                <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+                <ScalarProperty Name="NoticeSignature" ColumnName="NoticeSignature" />
+                <ScalarProperty Name="NoticePacketMessage" ColumnName="NoticePacketMessage" />
+                <ScalarProperty Name="RequestTime" ColumnName="RequestTime" />
+                <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+                <ScalarProperty Name="Signature" ColumnName="Signature" />
+                <ScalarProperty Name="PacketMessage" ColumnName="PacketMessage" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_AHQY">
+            <EntityTypeMapping TypeName="PM_IntegratedModel.T_AHQY">
+              <MappingFragment StoreEntitySet="T_AHQY">
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="SectionCode" ColumnName="SectionCode" />
+                <ScalarProperty Name="AuthCode" ColumnName="AuthCode" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="Match" ColumnName="Match" />
+                <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+                <ScalarProperty Name="QYType" ColumnName="QYType" />
+                <ScalarProperty Name="AddWord" ColumnName="AddWord" />
+                <ScalarProperty Name="BackResult" ColumnName="BackResult" />
+                <ScalarProperty Name="Gernal" ColumnName="Gernal" />
+                <ScalarProperty Name="PunInst" ColumnName="PunInst" />
+                <ScalarProperty Name="HstSeqNum" ColumnName="HstSeqNum" />
+                <ScalarProperty Name="InMemo" ColumnName="InMemo" />
+                <ScalarProperty Name="InAcct" ColumnName="InAcct" />
+                <ScalarProperty Name="InName" ColumnName="InName" />
+                <ScalarProperty Name="InAmount" ColumnName="InAmount" />
+                <ScalarProperty Name="InTime" ColumnName="InTime" />
+                <ScalarProperty Name="InDate" ColumnName="InDate" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Pay_Order">
+            <EntityTypeMapping TypeName="PM_IntegratedModel.T_Pay_Order">
+              <MappingFragment StoreEntitySet="T_Pay_Order">
+                <ScalarProperty Name="MainOrderNo" ColumnName="MainOrderNo" />
+                <ScalarProperty Name="NotificationURL" ColumnName="NotificationURL" />
+                <ScalarProperty Name="ReceiptInstitutionID" ColumnName="ReceiptInstitutionID" />
+                <ScalarProperty Name="PayInstitutionID" ColumnName="PayInstitutionID" />
+                <ScalarProperty Name="PayRealSettingAccNo" ColumnName="PayRealSettingAccNo" />
+                <ScalarProperty Name="PayRealBankID" ColumnName="PayRealBankID" />
+                <ScalarProperty Name="PayRealBankNo" ColumnName="PayRealBankNo" />
+                <ScalarProperty Name="PayRealProvince" ColumnName="PayRealProvince" />
+                <ScalarProperty Name="PayRealCity" ColumnName="PayRealCity" />
+                <ScalarProperty Name="PayRealBankName" ColumnName="PayRealBankName" />
+                <ScalarProperty Name="PayRealAccountNo" ColumnName="PayRealAccountNo" />
+                <ScalarProperty Name="PayRealAccountName" ColumnName="PayRealAccountName" />
+                <ScalarProperty Name="OrderSerialNumber" ColumnName="OrderSerialNumber" />
+                <ScalarProperty Name="OrderCombination" ColumnName="OrderCombination" />
+                <ScalarProperty Name="OprationType" ColumnName="OprationType" />
+                <ScalarProperty Name="OrderOpWay" ColumnName="OrderOpWay" />
+                <ScalarProperty Name="OrderTime" ColumnName="OrderTime" />
+                <ScalarProperty Name="OrderResult" ColumnName="OrderResult" />
+                <ScalarProperty Name="ReceiptSettingAccNo" ColumnName="ReceiptSettingAccNo" />
+                <ScalarProperty Name="ReceiptCur" ColumnName="ReceiptCur" />
+                <ScalarProperty Name="ReceiptCity" ColumnName="ReceiptCity" />
+                <ScalarProperty Name="ReceiptProvince" ColumnName="ReceiptProvince" />
+                <ScalarProperty Name="ReceiptBankID" ColumnName="ReceiptBankID" />
+                <ScalarProperty Name="ReceiptBankNo" ColumnName="ReceiptBankNo" />
+                <ScalarProperty Name="ReceiptBankName" ColumnName="ReceiptBankName" />
+                <ScalarProperty Name="ReceiptAccountName" ColumnName="ReceiptAccountName" />
+                <ScalarProperty Name="ReceiptAccountNo" ColumnName="ReceiptAccountNo" />
+                <ScalarProperty Name="ReceiptBankAccountType" ColumnName="ReceiptBankAccountType" />
+                <ScalarProperty Name="PayCur" ColumnName="PayCur" />
+                <ScalarProperty Name="PaySettingAccNo" ColumnName="PaySettingAccNo" />
+                <ScalarProperty Name="PayCity" ColumnName="PayCity" />
+                <ScalarProperty Name="PayProvince" ColumnName="PayProvince" />
+                <ScalarProperty Name="PayBankID" ColumnName="PayBankID" />
+                <ScalarProperty Name="PayBankNo" ColumnName="PayBankNo" />
+                <ScalarProperty Name="PayBankName" ColumnName="PayBankName" />
+                <ScalarProperty Name="PayAccountName" ColumnName="PayAccountName" />
+                <ScalarProperty Name="PayBankAccountType" ColumnName="PayBankAccountType" />
+                <ScalarProperty Name="PayAccountNo" ColumnName="PayAccountNo" />
+                <ScalarProperty Name="InvoiceTitle" ColumnName="InvoiceTitle" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="FeeAmount" ColumnName="FeeAmount" />
+                <ScalarProperty Name="CostType" ColumnName="CostType" />
+                <ScalarProperty Name="PayerName" ColumnName="PayerName" />
+                <ScalarProperty Name="PayerID" ColumnName="PayerID" />
+                <ScalarProperty Name="OrderName" ColumnName="OrderName" />
+                <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+                <ScalarProperty Name="BusinessNo" ColumnName="BusinessNo" />
+                <ScalarProperty Name="SlaveName" ColumnName="SlaveName" />
+                <ScalarProperty Name="SlaveCode" ColumnName="SlaveCode" />
+                <ScalarProperty Name="SlaveID" ColumnName="SlaveID" />
+                <ScalarProperty Name="PrimaryName" ColumnName="PrimaryName" />
+                <ScalarProperty Name="PrimaryCode" ColumnName="PrimaryCode" />
+                <ScalarProperty Name="PrimaryID" ColumnName="PrimaryID" />
+                <ScalarProperty Name="CaseID" ColumnName="CaseID" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="publicEntities" ZoomLevel="71">
+        <EntityTypeShape EntityType="PM_IntegratedModel.T_Pay_Log" Width="1.5" PointX="3.375" PointY="0.75" Height="7.5096036783854156" />
+        <EntityTypeShape EntityType="PM_IntegratedModel.T_Pay_OrderBusiness" Width="1.5" PointX="5.375" PointY="0.75" Height="3.3071704101562496" />
+        <EntityTypeShape EntityType="PM_IntegratedModel.T_Pay_OrderRequest" Width="1.5" PointX="5.375" PointY="5.75" Height="2.3520719401041656" />
+        <EntityTypeShape EntityType="PM_IntegratedModel.T_Pay_OrderResponse" Width="1.5" PointX="7.375" PointY="0.75" Height="2.5430916341145835" />
+        <EntityTypeShape EntityType="PM_IntegratedModel.T_AHQY" Width="1.5" PointX="7.375" PointY="4.75" Height="4.6443082682291674" />
+        <EntityTypeShape EntityType="PM_IntegratedModel.T_Pay_Order" Width="1.5" PointX="0.75" PointY="0.75" Height="11.712036946614582" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

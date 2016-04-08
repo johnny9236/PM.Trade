@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="HM.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="HMStoreContainer">
+          <EntitySet Name="T_HMPostal" EntityType="HM.Store.T_HMPostal" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="T_HMPostal">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="AccountNo" Type="varchar" MaxLength="50" />
+          <Property Name="TradeDate" Type="varchar" MaxLength="50" />
+          <Property Name="TradeSerialNumber" Type="varchar" MaxLength="50" />
+          <Property Name="ProofKind" Type="varchar" MaxLength="50" />
+          <Property Name="ProofNum" Type="varchar" MaxLength="50" />
+          <Property Name="Amount" Type="decimal" Scale="2" />
+          <Property Name="LoanMark" Type="varchar" MaxLength="50" />
+          <Property Name="RemainAmount" Type="decimal" Scale="2" />
+          <Property Name="Oprationer" Type="nvarchar" MaxLength="100" />
+          <Property Name="Checker" Type="nvarchar" MaxLength="100" />
+          <Property Name="Authorizer" Type="nvarchar" MaxLength="100" />
+          <Property Name="CounterpartAccountNo" Type="varchar" MaxLength="50" />
+          <Property Name="CounterpartAccountName" Type="nvarchar" MaxLength="200" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="200" />
+          <Property Name="TradeWay" Type="nvarchar" MaxLength="100" />
+          <Property Name="TradeNo" Type="varchar" MaxLength="50" />
+          <Property Name="TimeStamp" Type="varchar" MaxLength="50" />
+          <Property Name="DepartmentAccName" Type="nvarchar" MaxLength="200" />
+          <Property Name="Match" Type="int" />
+          <Property Name="Flag" Type="int" />
+          <Property Name="CreateTm" Type="datetime" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HM" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="GovPublic_jinhuaEntities" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="T_HMPostal" EntityType="HM.T_HMPostal" />
+        </EntityContainer>
+        <EntityType Name="T_HMPostal">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AccountNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TradeDate" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TradeSerialNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ProofKind" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ProofNum" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Amount" Precision="18" Scale="2" />
+          <Property Type="String" Name="LoanMark" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="RemainAmount" Precision="18" Scale="2" />
+          <Property Type="String" Name="Oprationer" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Checker" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Authorizer" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CounterpartAccountNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CounterpartAccountName" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Remark" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TradeWay" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TradeNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TimeStamp" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DepartmentAccName" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Match" />
+          <Property Type="Int32" Name="Flag" />
+          <Property Type="DateTime" Name="CreateTm" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HMStoreContainer" CdmEntityContainer="GovPublic_jinhuaEntities" >
+          <EntitySetMapping Name="T_HMPostal">
+            <EntityTypeMapping TypeName="HM.T_HMPostal">
+              <MappingFragment StoreEntitySet="T_HMPostal">
+                <ScalarProperty Name="CreateTm" ColumnName="CreateTm" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="Match" ColumnName="Match" />
+                <ScalarProperty Name="DepartmentAccName" ColumnName="DepartmentAccName" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="TradeNo" ColumnName="TradeNo" />
+                <ScalarProperty Name="TradeWay" ColumnName="TradeWay" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="CounterpartAccountName" ColumnName="CounterpartAccountName" />
+                <ScalarProperty Name="CounterpartAccountNo" ColumnName="CounterpartAccountNo" />
+                <ScalarProperty Name="Authorizer" ColumnName="Authorizer" />
+                <ScalarProperty Name="Checker" ColumnName="Checker" />
+                <ScalarProperty Name="Oprationer" ColumnName="Oprationer" />
+                <ScalarProperty Name="RemainAmount" ColumnName="RemainAmount" />
+                <ScalarProperty Name="LoanMark" ColumnName="LoanMark" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="ProofNum" ColumnName="ProofNum" />
+                <ScalarProperty Name="ProofKind" ColumnName="ProofKind" />
+                <ScalarProperty Name="TradeSerialNumber" ColumnName="TradeSerialNumber" />
+                <ScalarProperty Name="TradeDate" ColumnName="TradeDate" />
+                <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="HMModel" ZoomLevel="70" >
+        <EntityTypeShape EntityType="HM.T_HMPostal" Width="1.5" PointX="0.75" PointY="0.75" Height="5.2173673502604156" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Gov_publicHSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="Gov_publicHSModelStoreContainer">
+          <EntitySet Name="T_ZTB_MoneyBankRequestSn" EntityType="Gov_publicHSModel.Store.T_ZTB_MoneyBankRequestSn" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_ZTB_MoneyBankResponse" EntityType="Gov_publicHSModel.Store.T_ZTB_MoneyBankResponse" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_ZTB_MoneyBankReturn" EntityType="Gov_publicHSModel.Store.T_ZTB_MoneyBankReturn" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_ZTB_MoneyPayment" EntityType="Gov_publicHSModel.Store.T_ZTB_MoneyPayment" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_ZTB_Order" EntityType="Gov_publicHSModel.Store.T_ZTB_Order" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_ZTB_ReservePlace" EntityType="Gov_publicHSModel.Store.T_ZTB_ReservePlace" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_ZTB_ValueReturn" EntityType="Gov_publicHSModel.Store.T_ZTB_ValueReturn" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="T_ZTB_MoneyBankRequestSn">
+          <Key>
+            <PropertyRef Name="RequestSn" />
+          </Key>
+          <Property Name="RequestSn" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="T_ZTB_MoneyBankResponse">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="OrderId" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="RequestSN" Type="varchar" Nullable="false" MaxLength="16" />
+          <Property Name="RequestType" Type="int" Nullable="false" />
+          <Property Name="ResponseXml" Type="xml" />
+          <Property Name="IsResponseSuccess" Type="bit" />
+          <Property Name="CustomerResult" Type="varchar" MaxLength="255" />
+          <Property Name="ExceptionMsg" Type="varchar" MaxLength="255" />
+          <Property Name="ExecStatus" Type="int" />
+        </EntityType>
+        <EntityType Name="T_ZTB_MoneyBankReturn">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="MPOSID" Type="nvarchar" MaxLength="50" />
+          <Property Name="ORDER_NUMBER" Type="nvarchar" MaxLength="50" />
+          <Property Name="CUST_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="ACC_NO" Type="nvarchar" MaxLength="50" />
+          <Property Name="ACC_NAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="AMOUNT" Type="numeric" Precision="16" Scale="2" />
+          <Property Name="STATUS" Type="nvarchar" MaxLength="20" />
+          <Property Name="REMARK1" Type="nvarchar" MaxLength="50" />
+          <Property Name="REMARK2" Type="nvarchar" MaxLength="50" />
+          <Property Name="TRAN_FLAG" Type="nvarchar" MaxLength="50" />
+          <Property Name="TRAN_TIME" Type="nvarchar" MaxLength="30" />
+          <Property Name="BRANCH_NAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="SIGNSTRING" Type="nvarchar" MaxLength="500" />
+          <Property Name="CHECKOK" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="T_ZTB_MoneyPayment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProSectionID" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProSectionName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ProSectionCode" Type="nvarchar" MaxLength="100" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+          <Property Name="PayTime" Type="datetime" />
+          <Property Name="PayMoney" Type="money" />
+          <Property Name="PayType" Type="nvarchar" MaxLength="10" />
+          <Property Name="CardNum" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsCheck" Type="int" />
+          <Property Name="ReturnUserId" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReTurnUserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReturnTime" Type="datetime" />
+          <Property Name="ReturnWindow" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReturnPhone" Type="nvarchar" MaxLength="20" />
+          <Property Name="ReturnYingGaiMon" Type="money" />
+          <Property Name="ReturnShiJiMon" Type="money" />
+          <Property Name="ReturnBaoHanYouXiaoQi" Type="datetime" />
+          <Property Name="ReturnBaoHanBank" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReturnBaoHanNum" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsReturn" Type="int" />
+          <Property Name="UnitId" Type="nvarchar" MaxLength="50" />
+          <Property Name="UnitName" Type="nvarchar" MaxLength="200" />
+          <Property Name="UnitCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="BankCardNum" Type="nvarchar" MaxLength="50" />
+          <Property Name="BankName" Type="nvarchar" MaxLength="100" />
+          <Property Name="CaseID" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ProCode" Type="nvarchar" MaxLength="100" />
+          <Property Name="PayPage" Type="int" />
+          <Property Name="PayPageText" Type="nvarchar" MaxLength="50" />
+          <Property Name="FromSystem" Type="nvarchar" MaxLength="50" />
+          <Property Name="PayID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Out_trade_no" Type="nvarchar" MaxLength="50" />
+          <Property Name="QueRenRuZhangTime" Type="datetime" />
+          <Property Name="QueRenRuZhangPerson" Type="nvarchar" MaxLength="50" />
+          <Property Name="PayLinkPerson" Type="nvarchar" MaxLength="50" />
+          <Property Name="PayLinkPersonTel" Type="nvarchar" MaxLength="50" />
+          <Property Name="PayLinkPersonMobileTel" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsWinBid" Type="int" />
+          <Property Name="TouBiaoEndTime" Type="datetime" />
+          <Property Name="JiaoFeiBiLv" Type="nvarchar" MaxLength="20" />
+          <Property Name="Contentv" Type="text" />
+        </EntityType>
+        <EntityType Name="T_ZTB_Order">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProCode" Type="nvarchar(max)" />
+          <Property Name="ProCaseid" Type="nvarchar(max)" />
+          <Property Name="UnitName" Type="nvarchar" MaxLength="100" />
+          <Property Name="UnitID" Type="nvarchar" MaxLength="50" />
+          <Property Name="PayFee" Type="money" />
+          <Property Name="MoneyPayID" Type="nvarchar(max)" />
+          <Property Name="FromSystem" Type="nvarchar" MaxLength="50" />
+          <Property Name="Out_Trade_No" Type="nvarchar" MaxLength="50" />
+          <Property Name="InvoiceTitle" Type="nvarchar" MaxLength="200" />
+          <Property Name="ProInfo" Type="nvarchar(max)" />
+          <Property Name="PayTypeStr" Type="nvarchar" MaxLength="50" />
+          <Property Name="OrderRemark" Type="nvarchar" MaxLength="200" />
+          <Property Name="ProTitle" Type="nvarchar" MaxLength="50" />
+          <Property Name="PubKey" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="T_ZTB_ReservePlace">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CaseId" Type="nvarchar" MaxLength="50" />
+          <Property Name="ResType" Type="int" />
+          <Property Name="Traderers" Type="int" />
+          <Property Name="Regulators" Type="int" />
+          <Property Name="OtherPeople" Type="int" />
+          <Property Name="Applicants" Type="int" />
+          <Property Name="SiteSet" Type="int" />
+          <Property Name="Logo" Type="int" />
+          <Property Name="NoteBook" Type="int" />
+          <Property Name="NumMachine" Type="int" />
+          <Property Name="Projector" Type="int" />
+          <Property Name="OtherRquest" Type="int" />
+          <Property Name="SiteName" Type="nvarchar" MaxLength="50" />
+          <Property Name="UseStartTime" Type="datetime" />
+          <Property Name="UseEndTime" Type="datetime" />
+          <Property Name="ManagerId" Type="nvarchar" MaxLength="50" />
+          <Property Name="AcceptName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+          <Property Name="TradeOrgId" Type="nvarchar" MaxLength="50" />
+          <Property Name="ResNum" Type="nvarchar" MaxLength="50" />
+          <Property Name="ResMemberNum" Type="int" />
+          <Property Name="ManagerName" Type="nvarchar" MaxLength="50" />
+          <Property Name="OtherYq" Type="nvarchar" MaxLength="200" />
+          <Property Name="ProName" Type="nvarchar" MaxLength="200" />
+          <Property Name="ProCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="TradeOrg" Type="nvarchar" MaxLength="200" />
+          <Property Name="ManagerPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Statu" Type="int" />
+          <Property Name="Reason" Type="nvarchar" MaxLength="200" />
+          <Property Name="ComeFrom" Type="int" />
+        </EntityType>
+        <EntityType Name="T_ZTB_ValueReturn">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Value" Type="nvarchar" MaxLength="50" />
+          <Property Name="XmlValue" Type="xml" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Gov_publicHSModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="Gov_publicHSEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="T_ZTB_MoneyBankRequestSn" EntityType="Gov_publicHSModel.T_ZTB_MoneyBankRequestSn" />
+          <EntitySet Name="T_ZTB_MoneyBankResponse" EntityType="Gov_publicHSModel.T_ZTB_MoneyBankResponse" />
+          <EntitySet Name="T_ZTB_MoneyBankReturn" EntityType="Gov_publicHSModel.T_ZTB_MoneyBankReturn" />
+          <EntitySet Name="T_ZTB_MoneyPayment" EntityType="Gov_publicHSModel.T_ZTB_MoneyPayment" />
+          <EntitySet Name="T_ZTB_Order" EntityType="Gov_publicHSModel.T_ZTB_Order" />
+          <EntitySet Name="T_ZTB_ReservePlace" EntityType="Gov_publicHSModel.T_ZTB_ReservePlace" />
+          <EntitySet Name="T_ZTB_ValueReturn" EntityType="Gov_publicHSModel.T_ZTB_ValueReturn" />
+        </EntityContainer>
+        <EntityType Name="T_ZTB_MoneyBankRequestSn">
+          <Key>
+            <PropertyRef Name="RequestSn" />
+          </Key>
+          <Property Name="RequestSn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="T_ZTB_MoneyBankResponse">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="OrderId" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="RequestSN" Type="String" Nullable="false" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="RequestType" Type="Int32" Nullable="false" />
+          <Property Name="ResponseXml" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="IsResponseSuccess" Type="Boolean" />
+          <Property Name="CustomerResult" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="ExceptionMsg" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="ExecStatus" Type="Int32" />
+        </EntityType>
+        <EntityType Name="T_ZTB_MoneyBankReturn">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="MPOSID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ORDER_NUMBER" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CUST_ID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ACC_NO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ACC_NAME" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="AMOUNT" Type="Decimal" Precision="16" Scale="2" />
+          <Property Name="STATUS" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="REMARK1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="REMARK2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TRAN_FLAG" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TRAN_TIME" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="BRANCH_NAME" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SIGNSTRING" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="CHECKOK" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="T_ZTB_MoneyPayment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="ProSectionID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ProSectionName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="ProSectionCode" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="UserId" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PayTime" Type="DateTime" />
+          <Property Name="PayMoney" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="PayType" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="CardNum" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="IsCheck" Type="Int32" />
+          <Property Name="ReturnUserId" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ReTurnUserName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ReturnTime" Type="DateTime" />
+          <Property Name="ReturnWindow" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ReturnPhone" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ReturnYingGaiMon" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="ReturnShiJiMon" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="ReturnBaoHanYouXiaoQi" Type="DateTime" />
+          <Property Name="ReturnBaoHanBank" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ReturnBaoHanNum" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="IsReturn" Type="Int32" />
+          <Property Name="UnitId" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="UnitName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="UnitCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="BankCardNum" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="BankName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="CaseID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ProName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="ProCode" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="PayPage" Type="Int32" />
+          <Property Name="PayPageText" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FromSystem" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PayID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Out_trade_no" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="QueRenRuZhangTime" Type="DateTime" />
+          <Property Name="QueRenRuZhangPerson" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PayLinkPerson" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PayLinkPersonTel" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PayLinkPersonMobileTel" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="IsWinBid" Type="Int32" />
+          <Property Name="TouBiaoEndTime" Type="DateTime" />
+          <Property Name="JiaoFeiBiLv" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Contentv" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="T_ZTB_Order">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="ProName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ProCode" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ProCaseid" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="UnitName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="UnitID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PayFee" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="MoneyPayID" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="FromSystem" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Out_Trade_No" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="InvoiceTitle" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="ProInfo" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="PayTypeStr" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="OrderRemark" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="ProTitle" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PubKey" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="T_ZTB_ReservePlace">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="CaseId" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ResType" Type="Int32" />
+          <Property Name="Traderers" Type="Int32" />
+          <Property Name="Regulators" Type="Int32" />
+          <Property Name="OtherPeople" Type="Int32" />
+          <Property Name="Applicants" Type="Int32" />
+          <Property Name="SiteSet" Type="Int32" />
+          <Property Name="Logo" Type="Int32" />
+          <Property Name="NoteBook" Type="Int32" />
+          <Property Name="NumMachine" Type="Int32" />
+          <Property Name="Projector" Type="Int32" />
+          <Property Name="OtherRquest" Type="Int32" />
+          <Property Name="SiteName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="UseStartTime" Type="DateTime" />
+          <Property Name="UseEndTime" Type="DateTime" />
+          <Property Name="ManagerId" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="AcceptName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="TradeOrgId" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ResNum" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ResMemberNum" Type="Int32" />
+          <Property Name="ManagerName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="OtherYq" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="ProName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="ProCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TradeOrg" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="ManagerPhone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Statu" Type="Int32" />
+          <Property Name="Reason" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="ComeFrom" Type="Int32" />
+        </EntityType>
+        <EntityType Name="T_ZTB_ValueReturn">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="Value" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="XmlValue" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Gov_publicHSModelStoreContainer" CdmEntityContainer="Gov_publicHSEntities">
+          <EntitySetMapping Name="T_ZTB_MoneyBankRequestSn"><EntityTypeMapping TypeName="Gov_publicHSModel.T_ZTB_MoneyBankRequestSn"><MappingFragment StoreEntitySet="T_ZTB_MoneyBankRequestSn">
+            <ScalarProperty Name="RequestSn" ColumnName="RequestSn" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_ZTB_MoneyBankResponse"><EntityTypeMapping TypeName="Gov_publicHSModel.T_ZTB_MoneyBankResponse"><MappingFragment StoreEntitySet="T_ZTB_MoneyBankResponse">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+            <ScalarProperty Name="RequestSN" ColumnName="RequestSN" />
+            <ScalarProperty Name="RequestType" ColumnName="RequestType" />
+            <ScalarProperty Name="ResponseXml" ColumnName="ResponseXml" />
+            <ScalarProperty Name="IsResponseSuccess" ColumnName="IsResponseSuccess" />
+            <ScalarProperty Name="CustomerResult" ColumnName="CustomerResult" />
+            <ScalarProperty Name="ExceptionMsg" ColumnName="ExceptionMsg" />
+            <ScalarProperty Name="ExecStatus" ColumnName="ExecStatus" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_ZTB_MoneyBankReturn"><EntityTypeMapping TypeName="Gov_publicHSModel.T_ZTB_MoneyBankReturn"><MappingFragment StoreEntitySet="T_ZTB_MoneyBankReturn">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="MPOSID" ColumnName="MPOSID" />
+            <ScalarProperty Name="ORDER_NUMBER" ColumnName="ORDER_NUMBER" />
+            <ScalarProperty Name="CUST_ID" ColumnName="CUST_ID" />
+            <ScalarProperty Name="ACC_NO" ColumnName="ACC_NO" />
+            <ScalarProperty Name="ACC_NAME" ColumnName="ACC_NAME" />
+            <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+            <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+            <ScalarProperty Name="REMARK1" ColumnName="REMARK1" />
+            <ScalarProperty Name="REMARK2" ColumnName="REMARK2" />
+            <ScalarProperty Name="TRAN_FLAG" ColumnName="TRAN_FLAG" />
+            <ScalarProperty Name="TRAN_TIME" ColumnName="TRAN_TIME" />
+            <ScalarProperty Name="BRANCH_NAME" ColumnName="BRANCH_NAME" />
+            <ScalarProperty Name="SIGNSTRING" ColumnName="SIGNSTRING" />
+            <ScalarProperty Name="CHECKOK" ColumnName="CHECKOK" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_ZTB_MoneyPayment"><EntityTypeMapping TypeName="Gov_publicHSModel.T_ZTB_MoneyPayment"><MappingFragment StoreEntitySet="T_ZTB_MoneyPayment">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="ProSectionID" ColumnName="ProSectionID" />
+            <ScalarProperty Name="ProSectionName" ColumnName="ProSectionName" />
+            <ScalarProperty Name="ProSectionCode" ColumnName="ProSectionCode" />
+            <ScalarProperty Name="UserId" ColumnName="UserId" />
+            <ScalarProperty Name="PayTime" ColumnName="PayTime" />
+            <ScalarProperty Name="PayMoney" ColumnName="PayMoney" />
+            <ScalarProperty Name="PayType" ColumnName="PayType" />
+            <ScalarProperty Name="CardNum" ColumnName="CardNum" />
+            <ScalarProperty Name="IsCheck" ColumnName="IsCheck" />
+            <ScalarProperty Name="ReturnUserId" ColumnName="ReturnUserId" />
+            <ScalarProperty Name="ReTurnUserName" ColumnName="ReTurnUserName" />
+            <ScalarProperty Name="ReturnTime" ColumnName="ReturnTime" />
+            <ScalarProperty Name="ReturnWindow" ColumnName="ReturnWindow" />
+            <ScalarProperty Name="ReturnPhone" ColumnName="ReturnPhone" />
+            <ScalarProperty Name="ReturnYingGaiMon" ColumnName="ReturnYingGaiMon" />
+            <ScalarProperty Name="ReturnShiJiMon" ColumnName="ReturnShiJiMon" />
+            <ScalarProperty Name="ReturnBaoHanYouXiaoQi" ColumnName="ReturnBaoHanYouXiaoQi" />
+            <ScalarProperty Name="ReturnBaoHanBank" ColumnName="ReturnBaoHanBank" />
+            <ScalarProperty Name="ReturnBaoHanNum" ColumnName="ReturnBaoHanNum" />
+            <ScalarProperty Name="IsReturn" ColumnName="IsReturn" />
+            <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+            <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+            <ScalarProperty Name="UnitCode" ColumnName="UnitCode" />
+            <ScalarProperty Name="BankCardNum" ColumnName="BankCardNum" />
+            <ScalarProperty Name="BankName" ColumnName="BankName" />
+            <ScalarProperty Name="CaseID" ColumnName="CaseID" />
+            <ScalarProperty Name="ProName" ColumnName="ProName" />
+            <ScalarProperty Name="ProCode" ColumnName="ProCode" />
+            <ScalarProperty Name="PayPage" ColumnName="PayPage" />
+            <ScalarProperty Name="PayPageText" ColumnName="PayPageText" />
+            <ScalarProperty Name="FromSystem" ColumnName="FromSystem" />
+            <ScalarProperty Name="PayID" ColumnName="PayID" />
+            <ScalarProperty Name="Out_trade_no" ColumnName="Out_trade_no" />
+            <ScalarProperty Name="QueRenRuZhangTime" ColumnName="QueRenRuZhangTime" />
+            <ScalarProperty Name="QueRenRuZhangPerson" ColumnName="QueRenRuZhangPerson" />
+            <ScalarProperty Name="PayLinkPerson" ColumnName="PayLinkPerson" />
+            <ScalarProperty Name="PayLinkPersonTel" ColumnName="PayLinkPersonTel" />
+            <ScalarProperty Name="PayLinkPersonMobileTel" ColumnName="PayLinkPersonMobileTel" />
+            <ScalarProperty Name="IsWinBid" ColumnName="IsWinBid" />
+            <ScalarProperty Name="TouBiaoEndTime" ColumnName="TouBiaoEndTime" />
+            <ScalarProperty Name="JiaoFeiBiLv" ColumnName="JiaoFeiBiLv" />
+            <ScalarProperty Name="Contentv" ColumnName="Contentv" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_ZTB_Order"><EntityTypeMapping TypeName="Gov_publicHSModel.T_ZTB_Order"><MappingFragment StoreEntitySet="T_ZTB_Order">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="ProName" ColumnName="ProName" />
+            <ScalarProperty Name="ProCode" ColumnName="ProCode" />
+            <ScalarProperty Name="ProCaseid" ColumnName="ProCaseid" />
+            <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+            <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+            <ScalarProperty Name="PayFee" ColumnName="PayFee" />
+            <ScalarProperty Name="MoneyPayID" ColumnName="MoneyPayID" />
+            <ScalarProperty Name="FromSystem" ColumnName="FromSystem" />
+            <ScalarProperty Name="Out_Trade_No" ColumnName="Out_Trade_No" />
+            <ScalarProperty Name="InvoiceTitle" ColumnName="InvoiceTitle" />
+            <ScalarProperty Name="ProInfo" ColumnName="ProInfo" />
+            <ScalarProperty Name="PayTypeStr" ColumnName="PayTypeStr" />
+            <ScalarProperty Name="OrderRemark" ColumnName="OrderRemark" />
+            <ScalarProperty Name="ProTitle" ColumnName="ProTitle" />
+            <ScalarProperty Name="PubKey" ColumnName="PubKey" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_ZTB_ReservePlace"><EntityTypeMapping TypeName="Gov_publicHSModel.T_ZTB_ReservePlace"><MappingFragment StoreEntitySet="T_ZTB_ReservePlace">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="CaseId" ColumnName="CaseId" />
+            <ScalarProperty Name="ResType" ColumnName="ResType" />
+            <ScalarProperty Name="Traderers" ColumnName="Traderers" />
+            <ScalarProperty Name="Regulators" ColumnName="Regulators" />
+            <ScalarProperty Name="OtherPeople" ColumnName="OtherPeople" />
+            <ScalarProperty Name="Applicants" ColumnName="Applicants" />
+            <ScalarProperty Name="SiteSet" ColumnName="SiteSet" />
+            <ScalarProperty Name="Logo" ColumnName="Logo" />
+            <ScalarProperty Name="NoteBook" ColumnName="NoteBook" />
+            <ScalarProperty Name="NumMachine" ColumnName="NumMachine" />
+            <ScalarProperty Name="Projector" ColumnName="Projector" />
+            <ScalarProperty Name="OtherRquest" ColumnName="OtherRquest" />
+            <ScalarProperty Name="SiteName" ColumnName="SiteName" />
+            <ScalarProperty Name="UseStartTime" ColumnName="UseStartTime" />
+            <ScalarProperty Name="UseEndTime" ColumnName="UseEndTime" />
+            <ScalarProperty Name="ManagerId" ColumnName="ManagerId" />
+            <ScalarProperty Name="AcceptName" ColumnName="AcceptName" />
+            <ScalarProperty Name="Phone" ColumnName="Phone" />
+            <ScalarProperty Name="TradeOrgId" ColumnName="TradeOrgId" />
+            <ScalarProperty Name="ResNum" ColumnName="ResNum" />
+            <ScalarProperty Name="ResMemberNum" ColumnName="ResMemberNum" />
+            <ScalarProperty Name="ManagerName" ColumnName="ManagerName" />
+            <ScalarProperty Name="OtherYq" ColumnName="OtherYq" />
+            <ScalarProperty Name="ProName" ColumnName="ProName" />
+            <ScalarProperty Name="ProCode" ColumnName="ProCode" />
+            <ScalarProperty Name="TradeOrg" ColumnName="TradeOrg" />
+            <ScalarProperty Name="ManagerPhone" ColumnName="ManagerPhone" />
+            <ScalarProperty Name="Statu" ColumnName="Statu" />
+            <ScalarProperty Name="Reason" ColumnName="Reason" />
+            <ScalarProperty Name="ComeFrom" ColumnName="ComeFrom" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_ZTB_ValueReturn"><EntityTypeMapping TypeName="Gov_publicHSModel.T_ZTB_ValueReturn"><MappingFragment StoreEntitySet="T_ZTB_ValueReturn">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Value" ColumnName="Value" />
+            <ScalarProperty Name="XmlValue" ColumnName="XmlValue" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="modelzhyw">
+        <EntityTypeShape EntityType="Gov_publicHSModel.T_ZTB_MoneyBankRequestSn" Width="1.5" PointX="0.75" PointY="0.75" Height="1.205953776041667" IsExpanded="true" />
+        <EntityTypeShape EntityType="Gov_publicHSModel.T_ZTB_MoneyBankResponse" Width="1.5" PointX="2.75" PointY="0.75" Height="2.7341113281249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="Gov_publicHSModel.T_ZTB_MoneyBankReturn" Width="1.5" PointX="4.75" PointY="0.75" Height="3.8802294921874996" IsExpanded="true" />
+        <EntityTypeShape EntityType="Gov_publicHSModel.T_ZTB_MoneyPayment" Width="1.5" PointX="0.75" PointY="4.75" Height="9.2287809244791674" IsExpanded="true" />
+        <EntityTypeShape EntityType="Gov_publicHSModel.T_ZTB_Order" Width="1.5" PointX="2.75" PointY="5.75" Height="4.0712491861979174" IsExpanded="true" />
+        <EntityTypeShape EntityType="Gov_publicHSModel.T_ZTB_ReservePlace" Width="1.5" PointX="4.75" PointY="5.75" Height="6.9365445963541674" IsExpanded="true" />
+        <EntityTypeShape EntityType="Gov_publicHSModel.T_ZTB_ValueReturn" Width="1.5" PointX="6.75" PointY="0.75" Height="1.5879931640624996" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

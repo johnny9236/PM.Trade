@@ -1,0 +1,2 @@
+﻿BZJ(保证金)
+QT（非保证金）(回调给业务系统地址统一 PM.PaymentService)

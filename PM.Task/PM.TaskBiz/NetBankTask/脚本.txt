@@ -1,0 +1,66 @@
+﻿SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[T_NetBankAccountQuery](
+	[ID] [varchar](50) NOT NULL,
+	[TxType] [varchar](50) NULL,
+	[TxSn] [varchar](50) NULL,
+	[TxAmount] [varchar](50) NULL,
+	[InstitutionAmount] [varchar](50) NULL,
+	[PaymentAmount] [varchar](50) NULL,
+	[InstitutionFee] [varchar](50) NULL,
+	[Remark] [nvarchar](500) NULL,
+	[BankNotificationTime] [varchar](50) NULL,
+	[SettlementFlag] [varchar](50) NULL,
+	[IsMatch] [int] NULL,
+	[Flag] [int] NULL,
+	[CreateTm] [datetime] NULL,
+ CONSTRAINT [PK_T_NetBankAccountQuery] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'交易类型' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_NetBankAccountQuery', @level2type=N'COLUMN',@level2name=N'TxType'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'交易编号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_NetBankAccountQuery', @level2type=N'COLUMN',@level2name=N'TxSn'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'交易金额' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_NetBankAccountQuery', @level2type=N'COLUMN',@level2name=N'TxAmount'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'机构应收的金额' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_NetBankAccountQuery', @level2type=N'COLUMN',@level2name=N'InstitutionAmount'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付平台应收的金额' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_NetBankAccountQuery', @level2type=N'COLUMN',@level2name=N'PaymentAmount'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'机构手续费' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_NetBankAccountQuery', @level2type=N'COLUMN',@level2name=N'InstitutionFee'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'备注' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_NetBankAccountQuery', @level2type=N'COLUMN',@level2name=N'Remark'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'支付平台收到银行通知时间' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_NetBankAccountQuery', @level2type=N'COLUMN',@level2name=N'BankNotificationTime'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'结算标识' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_NetBankAccountQuery', @level2type=N'COLUMN',@level2name=N'SettlementFlag'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'是否匹配处理 (用于查询入账明细) 1是 0否' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_NetBankAccountQuery', @level2type=N'COLUMN',@level2name=N'IsMatch'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'处理结果  1成功 0或空未返回处理' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'T_NetBankAccountQuery', @level2type=N'COLUMN',@level2name=N'Flag'
+GO
